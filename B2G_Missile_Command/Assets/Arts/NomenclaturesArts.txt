@@ -1,0 +1,12 @@
+!! LANGUE : ANGLAIS !!
+!! LES ARTS DOIVENT ETRE EN PNG !!
+Convention de nomage (https://wprock.fr/blog/conventions-nommage-programmation/) :
+
+	nom des arts UI : UI suivis de NomDeLUI - type = PascalCase
+	nom des arts InGame (terrain, ennemi, perso, ...) : IG suivis de NomDeLArt - type = PascalCase
+
+	ex : IGMissile
+
+Si ce sont des test, rajouté Test à la fin du nom
+
+ex : IGMissileTest

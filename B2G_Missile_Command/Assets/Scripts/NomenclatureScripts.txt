@@ -1,0 +1,28 @@
+!! LANGUE : ANGLAIS !!
+Convention de nomage (https://wprock.fr/blog/conventions-nommage-programmation/) :
+
+	nom du script : NomDeLaMécaniquePrincipale - type = PascalCase
+	variable(int,flot,vector,bool,...) : type = camelCase
+	gameobject : type = PascalCase
+	fonction : type = PascalCase
+
+Si ce sont des test, rajouté Test à la fin du nom
+
+ex : PlayerShootTest
+
+Lorsque vous écrivez une partie de code vous commencez par //NomPrénom au début de la partie que vous faites 
+et //..NomPrénom à la fin de la partie que vous faites.
+
+ex :
+
+//MachadoJulien
+
+public void Fonction()
+{
+j'ecris ma fonction
+}
+
+//..MachadoJulien
+
+
+Si vous créer juste une variable, pas besoin de marquer son nom.

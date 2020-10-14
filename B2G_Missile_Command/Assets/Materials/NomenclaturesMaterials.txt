@@ -1,0 +1,11 @@
+!! LANGUE : ANGLAIS !!
+Convention de nomage (https://wprock.fr/blog/conventions-nommage-programmation/) :
+
+	nom de matérials avec couleurs unies : Color suivis de NomDeLaCouleur - type = PascalCase
+	nom de matérials avec textures spé : Texture suivis de NomDeLObjetDestiné - type = PascalCase
+
+	ex : ColorRed
+
+Si ce sont des test, rajouté Test à la fin du nom
+
+ex : ColorRedTest

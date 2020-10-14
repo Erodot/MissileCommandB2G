@@ -1,0 +1,11 @@
+!! LANGUE : ANGLAIS !!
+Convention de nomage (https://wprock.fr/blog/conventions-nommage-programmation/) :
+
+	nom du prefabs UI : UI suivis de NomDeLObjetCréer - type = PascalCase
+	nom du prefabs InGame (terrain, ennemi, perso, ...) : IG suivis de NomDeLObjetCréer - type = PascalCase
+
+	ex : UIStartButton
+
+Si ce sont des test, rajouté Test à la fin du nom
+
+ex : UIStartButtonTest
