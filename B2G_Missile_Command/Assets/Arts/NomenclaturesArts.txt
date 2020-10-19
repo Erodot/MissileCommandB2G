@@ -2,11 +2,11 @@
 !! LES ARTS DOIVENT ETRE EN PNG !!
 Convention de nomage (https://wprock.fr/blog/conventions-nommage-programmation/) :
 
-	nom des arts UI : UI suivis de NomDeLUI - type = PascalCase
-	nom des arts InGame (terrain, ennemi, perso, ...) : IG suivis de NomDeLArt - type = PascalCase
+	nom des arts UI : UI suivis de NomDeLUI - type = UnderscoreCase
+	nom des arts InGame (terrain, ennemi, perso, ...) : IG suivis de NomDeLArt - type = UnderscoreCase
 
-	ex : IGMissile
+	ex : IG_Player_Head
 
 Si ce sont des test, rajouté Test à la fin du nom
 
-ex : IGMissileTest
+ex : IG_Missile_Test

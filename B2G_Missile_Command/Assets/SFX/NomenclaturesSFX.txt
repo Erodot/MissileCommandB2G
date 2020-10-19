@@ -1,0 +1,12 @@
+!! LANGUE : ANGLAIS !!
+!! LES SON DOIVENT ETRE EN MP3 !!
+Convention de nomage (https://wprock.fr/blog/conventions-nommage-programmation/) :
+
+	nom des musiques : Music suivis de NomDeLaMusique - type = UnderscoreCase
+	nom des arts sound effetcs : SFX suivis de NomDuSoundEffect - type = UnderscoreCase
+
+	ex : Music_Ambiance_01
+
+Si ce sont des test, rajouté Test à la fin du nom
+
+ex : SFX_Button_Clic_Test

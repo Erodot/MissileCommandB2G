@@ -1,11 +1,11 @@
 !! LANGUE : ANGLAIS !!
 Convention de nomage (https://wprock.fr/blog/conventions-nommage-programmation/) :
 
-	nom des animation UI : UI suivis de NomDeLAnimationUI - type = PascalCase
-	nom des animation InGame (terrain, ennemi, perso, ...) : IG suivis de NomDeLAnimation - type = PascalCase
+	nom des animation UI : UI suivis de NomDeLAnimationUI - type = UnderscoreCase
+	nom des animation InGame (terrain, ennemi, perso, ...) : IG suivis de NomDeLAnimation - type = UnderscoreCase
 
-	ex : IGDeathPlayer
+	ex : IG_Player_Death
 
 Si ce sont des test, rajouté Test à la fin du nom
 
-ex : IGDeathPlayerTest
+ex : IG_Missile_Explosion_Test

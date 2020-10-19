@@ -1,0 +1,10 @@
+!! LANGUE : ANGLAIS !!
+Convention de nomage (https://wprock.fr/blog/conventions-nommage-programmation/) :
+
+	nom des VFX : VFX suivis de NomDuVFX - type = UnderscoreCase
+
+	ex : VFX_Blood_Effusion_03
+
+Si ce sont des test, rajouté Test à la fin du nom
+
+ex : VFX_Tnt_Explosion_Test
