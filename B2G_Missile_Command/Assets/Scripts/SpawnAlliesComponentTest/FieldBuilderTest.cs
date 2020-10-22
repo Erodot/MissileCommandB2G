@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FieldBuilderTest : MonoBehaviour
+public class FieldBuilderTest : MonoBehaviour //Script by Corentin SABIAUX GCC2, don't hesitate to ask some questions.
 {
     //This script have to be set into a blank gameObject.
 
