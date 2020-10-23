@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 5687956985261239859}
   - component: {fileID: 1136397032659613606}
   - component: {fileID: 6861693566084962852}
-  - component: {fileID: 5386347048123382548}
+  - component: {fileID: -8816684348787674387}
   m_Layer: 0
-  m_Name: IGTurretTest 1
+  m_Name: IGTurretTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82,8 +82,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &5386347048123382548
-CapsuleCollider:
+--- !u!65 &-8816684348787674387
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -92,7 +92,6 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
