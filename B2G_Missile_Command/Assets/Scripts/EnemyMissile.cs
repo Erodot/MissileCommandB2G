@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyMissile : MonoBehaviour
 {
+    //MACHADO Julien
 
     GameObject[] targets;
     Transform target;
@@ -30,4 +31,6 @@ public class EnemyMissile : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
+    //..MACHADO Julien
 }
