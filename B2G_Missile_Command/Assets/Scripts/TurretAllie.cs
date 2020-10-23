@@ -10,6 +10,7 @@ public class TurretAllie : MonoBehaviour
     public float distance;
     public Camera mainCamera;
     public bool tir = false;
+    public bool isDestroy;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +30,7 @@ public class TurretAllie : MonoBehaviour
         shootDirection = mouseDirection;
 
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !isDestroy)
         {
             GameObject bullet;
 

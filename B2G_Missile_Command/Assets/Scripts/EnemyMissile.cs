@@ -26,8 +26,23 @@ public class EnemyMissile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if(other.gameObject.CompareTag("Player"))
         {
+            other.gameObject.GetComponent<MeshRenderer>().enabled = false;
+            other.gameObject.GetComponent<BoxCollider>().enabled = false;
+            if(other.gameObject.GetComponent<TurretAllie>() != null)
+            {
+                other.gameObject.GetComponent<TurretAllie>().isDestroy = true;
+            }
+            Destroy(this.gameObject);
+        }
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            Destroy(this.gameObject);
+        }
+        if (other.gameObject.CompareTag("Bullet"))
+        {
+            Destroy(other.gameObject);
             Destroy(this.gameObject);
         }
     }
