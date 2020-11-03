@@ -25,6 +25,7 @@ public class TurretAllie : MonoBehaviour
 
     public virtual void Shoot()
     {
+
         mouseDirection = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -mainCamera.transform.position.z));
         mouseDirection -= transform.position;
         shootDirection = mouseDirection;

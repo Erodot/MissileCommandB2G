@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7383714541906478952
+--- !u!1 &4988724062270726289
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1430122412566431735}
-  - component: {fileID: 8452516309850248330}
-  - component: {fileID: 4565048897724567722}
-  - component: {fileID: 3786911823452448674}
-  - component: {fileID: 6482758895407950177}
-  - component: {fileID: 6990058036482424441}
+  - component: {fileID: 4988724062270726319}
+  - component: {fileID: 4988724062270726318}
+  - component: {fileID: 4988724062270726317}
+  - component: {fileID: 4988724062270726316}
+  - component: {fileID: 4988724062270726291}
+  - component: {fileID: 4988724062270726290}
   m_Layer: 0
-  m_Name: Bullet
-  m_TagString: Bullet
+  m_Name: Playerprojectile_Explosion
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1430122412566431735
+--- !u!4 &4988724062270726319
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7383714541906478952}
+  m_GameObject: {fileID: 4988724062270726289}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8452516309850248330
+--- !u!33 &4988724062270726318
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7383714541906478952}
+  m_GameObject: {fileID: 4988724062270726289}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &4565048897724567722
+--- !u!23 &4988724062270726317
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7383714541906478952}
+  m_GameObject: {fileID: 4988724062270726289}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -84,26 +84,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &3786911823452448674
+--- !u!135 &4988724062270726316
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7383714541906478952}
+  m_GameObject: {fileID: 4988724062270726289}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &6482758895407950177
+--- !u!54 &4988724062270726291
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7383714541906478952}
+  m_GameObject: {fileID: 4988724062270726289}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -113,19 +113,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6990058036482424441
+--- !u!114 &4988724062270726290
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7383714541906478952}
+  m_GameObject: {fileID: 4988724062270726289}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9ca5064a07e494479a0763a8682bd34, type: 3}
+  m_Script: {fileID: 11500000, guid: 55b66b22819668d4bbec82c974e544c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Explosion: {fileID: 4988724062270726289, guid: f1f65eee0c8933f418bf0ff1be26801c, type: 3}
-  direction: {x: 0, y: 0, z: 0}
-  speed: 10
-  mousePosition: {x: 0, y: 0, z: 0}
+  radiusMultiplier: 45
