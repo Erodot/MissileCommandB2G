@@ -228,6 +228,8 @@ GameObject:
   - component: {fileID: 445061302}
   - component: {fileID: 445061301}
   - component: {fileID: 445061304}
+  - component: {fileID: 445061305}
+  - component: {fileID: 445061306}
   m_Layer: 0
   m_Name: Field
   m_TagString: Untagged
@@ -350,6 +352,40 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 20}
   - {x: 0, y: 0, z: 95}
   - {x: 0, y: 0, z: -35}
+--- !u!143 &445061305
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445061299}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 1
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &445061306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445061299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51cca43f62e68324b9fd1090e373d134, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 445061305}
+  fieldTransform: {fileID: 445061300}
+  rotationSpeed: 1
+  isRotationAccurate: 0
 --- !u!1 &990872347
 GameObject:
   m_ObjectHideFlags: 0
