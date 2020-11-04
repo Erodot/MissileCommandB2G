@@ -103,7 +103,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1918626375815017537}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8e47aef00ad5a248ab3a0268f7f929c, type: 3}
   m_Name: 
@@ -114,3 +114,4 @@ MonoBehaviour:
   distance: 0
   mainCamera: {fileID: 0}
   tir: 0
+  isDestroy: 0

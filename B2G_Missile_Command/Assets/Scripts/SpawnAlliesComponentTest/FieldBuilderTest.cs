@@ -42,7 +42,7 @@ public class FieldBuilderTest : MonoBehaviour //Script by Corentin SABIAUX GCC2,
         }
 
         //Let's create some cities.
-         
+
         GameObject CityCategorie = new GameObject("Cities"); //We create a category into the Unity Scene for better management.
         CityCategorie.transform.parent = transform; //We set this category as a child of the field.
         for (int i = 0; i < cityNumbers; i++) //How many cities do you want ?
@@ -53,5 +53,28 @@ public class FieldBuilderTest : MonoBehaviour //Script by Corentin SABIAUX GCC2,
             CityCreated.name = "IGCity " + (i + 1); //Set City name | Welcome to City 17.
             yield return new WaitForSeconds(builderWaiting); //How many times do you want to wait before construct the next city ?
         }
+
+        //..Corentin SABIAUX GCC2
+
+        //MACHADO Julien
+        //Let's activate the spawner
+
+        GameObject spawner = GameObject.Find("Spawner");
+        spawner.GetComponent<EnemySpawnTest2>().enabled = true;
+
+        //..MACHADO Julien
+
+        //Corentin SABIAUX GCC2
+        //Let's activate the planet rotation by Horizontal input axis.
+
+        GetComponent<PlanetControllerTest>().enabled = true;
+
+        //Let's activate the fire capability of the turrets.
+        for (int i = 0; i < turretNumbers; i++)
+        {
+            TurretList[i].GetComponent<TurretAllie>().enabled = true;
+        }
+
+        //..Corentin SABIAUX GCC2
     }
 }
