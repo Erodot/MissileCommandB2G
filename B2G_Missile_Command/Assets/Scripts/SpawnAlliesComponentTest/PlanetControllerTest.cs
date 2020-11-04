@@ -19,12 +19,12 @@ public class PlanetControllerTest : MonoBehaviour //Script by Corentin SABIAUX G
 
         if (isRotationAccurate == true)
         {
-            horizontalMove += Input.GetAxisRaw("Horizontal") * rotationSpeed; //The planet is rotating accurately by horizontal positive and negative button.
+            horizontalMove += Input.GetAxisRaw("Horizontal") * rotationSpeed * Time.deltaTime; //The planet is rotating accurately by horizontal positive and negative button.
         } else
         {
-            horizontalMove += Input.GetAxis("Horizontal") * rotationSpeed; //The planet is rotating smoothly by horizontal positive and negative button.
+            horizontalMove += Input.GetAxis("Horizontal") * rotationSpeed * Time.deltaTime; //The planet is rotating smoothly by horizontal positive and negative button.
         }
-        
-        
     }
+
+    //..Corentin SABIAUX GCC2
 }

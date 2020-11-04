@@ -384,7 +384,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 445061305}
   fieldTransform: {fileID: 445061300}
-  rotationSpeed: 1
+  rotationSpeed: 120
   isRotationAccurate: 0
 --- !u!1 &990872347
 GameObject:
