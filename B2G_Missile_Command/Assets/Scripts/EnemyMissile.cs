@@ -6,6 +6,7 @@ public class EnemyMissile : MonoBehaviour
 {
     //MACHADO Julien
 
+    public GameObject Explosion;
     GameObject[] primaryTargets;
     List<Transform> finalTargets = new List<Transform>();
     Vector3 target;
@@ -45,9 +46,9 @@ public class EnemyMissile : MonoBehaviour
         {
             Destroy(this.gameObject); //destroy the missile
         }
-        if (other.gameObject.CompareTag("Bullet")) //if the missile hit a player bullet
+        if (other.gameObject.CompareTag("Explosion")) //if the missile hit a player bullet
         {
-            Destroy(other.gameObject);//destroy the player bullet
+            Instantiate(Explosion, transform.position, Quaternion.identity);
             Destroy(this.gameObject); //destroy the missile
         }
     }
