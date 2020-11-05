@@ -2,24 +2,39 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FieldBuilderTest : MonoBehaviour //Script by Corentin SABIAUX GCC2, don't hesitate to ask some questions.
+public class FieldBuilderTest : MonoBehaviour 
 {
+    //Script by Corentin SABIAUX GCC2, don't hesitate to ask some questions.
     //This script have to be set into a blank gameObject.
 
-    public int turretNumbers; //We need 3 to fit the original game.
+    [Header("Turret Manager")]
+    [Tooltip("We need 3 turrets to fit the original game.")]
+    public int turretNumbers;
+    [Tooltip("Prefab of the turret.")]
     public GameObject Turret;
+    [Tooltip("You need to set the position of every turret on this list | Size = turretNumbers.")]
+    public List<Vector3> positionTurretList = new List<Vector3>();
+    [Tooltip("You need to set the angle of every turret on this list | Size = turretNumbers.")]
+    public List<Vector3> rotationTurretList = new List<Vector3>();
+    private List<GameObject> TurretList = new List<GameObject>(); //Internal Use, if you want to getComponent of a specific turret.
 
-    public List<Vector3> positionTurretList = new List<Vector3>(); //Size = turretNumbers
-    public List<Vector3> rotationTurretList = new List<Vector3>(); //Size = turretNumbers
-    private List<GameObject> TurretList = new List<GameObject>(); //Internal Use.
-
-    public int cityNumbers; //We need 6 to fit the original game.
-    public float builderWaiting;
+    [Header("City Manager")]
+    [Tooltip("We need 6 cities to fit the original game.")]
+    public int cityNumbers;
+    [Tooltip("Prefab of the city.")]
     public GameObject City;
+    [Tooltip("You need to set the position of every city on this list | Size = cityNumbers.")]
+    public List<Vector3> positionCityList = new List<Vector3>();
+    [Tooltip("You need to set the position of every city on this list | Size = cityNumbers.")]
+    public List<Vector3> rotationCityList = new List<Vector3>();
+    private List<GameObject> CityList = new List<GameObject>(); //Internal Use, if you want to getComponent of a specific city.
 
-    public List<Vector3> positionCityList = new List<Vector3>(); //Size = cityNumbers
-    public List<Vector3> rotationCityList = new List<Vector3>(); //Size = cityNumbers
-    private List<GameObject> CityList = new List<GameObject>(); //Internal Use.
+    [Header("Time Builder Manager")]
+    [Tooltip("Set the waiting time you want for every gameObject instantiate.")]
+    public float builderWaiting;
+
+    [HideInInspector]
+    public bool builderIsOver = false; //Internal Use, tell to others scripts that FieldBuilder had finished is work.
 
     void Start()
     {
@@ -53,20 +68,16 @@ public class FieldBuilderTest : MonoBehaviour //Script by Corentin SABIAUX GCC2,
             CityCreated.name = "IGCity " + (i + 1); //Set City name | Welcome to City 17.
             yield return new WaitForSeconds(builderWaiting); //How many times do you want to wait before construct the next city ?
         }
-
         //..Corentin SABIAUX GCC2
 
         //MACHADO Julien
-        //Let's activate the spawner
-
+        //Let's activate the spawner.
         GameObject spawner = GameObject.Find("Spawner");
         spawner.GetComponent<EnemySpawnTest2>().enabled = true;
-
         //..MACHADO Julien
 
         //Corentin SABIAUX GCC2
         //Let's activate the planet rotation by Horizontal input axis.
-
         GetComponent<PlanetControllerTest>().enabled = true;
 
         //Let's activate the fire capability of the turrets.
@@ -74,14 +85,18 @@ public class FieldBuilderTest : MonoBehaviour //Script by Corentin SABIAUX GCC2,
         {
             TurretList[i].GetComponent<TurretAllie>().enabled = true;
         }
-
         //..Corentin SABIAUX GCC2
 
         //Coline Marchal
         GameManager gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        if(gameManager != null)
+        if (gameManager != null)
         {
             gameManager.Init();
         }
+        //..Coline Marchal
+
+        //Corentin SABIAUX GCC2
+        builderIsOver = true;
+        //..Corentin SABIAUX GCC2
     }
 }

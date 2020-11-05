@@ -11,7 +11,7 @@ public class EnemySpawnTest2 : MonoBehaviour
     [SerializeField]
     GameObject Enemy;
 
-    int enemyToSpawn; //number of enemy to spawn
+    public int enemyToSpawn; //number of enemy to spawn
     [Range(0, 50)]
     public int enemyMin; //number min of enemy to spawn
     [Range(0, 50)]

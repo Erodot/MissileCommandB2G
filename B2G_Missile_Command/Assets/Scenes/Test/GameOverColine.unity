@@ -230,7 +230,6 @@ GameObject:
   - component: {fileID: 445061305}
   - component: {fileID: 445061306}
   - component: {fileID: 445061304}
-  - component: {fileID: 445061307}
   m_Layer: 0
   m_Name: Field
   m_TagString: Ground
@@ -387,27 +386,6 @@ MonoBehaviour:
   fieldTransform: {fileID: 445061300}
   rotationSpeed: 120
   isRotationAccurate: 0
---- !u!114 &445061307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 445061299}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abafe0885ba840442816624392e05ceb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  turretNumbers: 3
-  Turret: {fileID: 1918626375815017537, guid: d54ac1287621ec54ea58bf0a838ef8d9, type: 3}
-  positionTurretList: []
-  rotationTurretList: []
-  cityNumbers: 6
-  builderWaiting: 0.2
-  City: {fileID: 3518374030793000378, guid: 7085c7c10055ffc4cbed81e45442f43e, type: 3}
-  positionCityList: []
-  rotationCityList: []
 --- !u!1 &591623211
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,15 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlanetControllerTest : MonoBehaviour //Script by Corentin SABIAUX GCC2, don't hesitate to ask some questions.
+public class PlanetControllerTest : MonoBehaviour 
 {
-    public CharacterController controller; //We need the controller from the gameObject field.
-    public Transform fieldTransform; //We need the transform from the gameObject field.
+    //Script by Corentin SABIAUX GCC2, don't hesitate to ask some questions.
 
-    public float rotationSpeed = 1f; //Here, you can choose the speed of rotation.
-    private float horizontalMove = 0f;
+    [Header("Get the Planet")]
+    [Header("Planet Controller Manager")]
+    [Tooltip("We need the controller from the gameObject field.")]
+    public CharacterController controller;
+    [Tooltip("We need the transform from the gameObject field.")]
+    public Transform fieldTransform;
 
-    public bool isRotationAccurate; //Internal use, check-it if you want to have a more accurate rotation of the planet.
+    [Header("Speed and Rotation")]
+    [Tooltip("Here, you can choose the speed of rotation.")]
+    public float rotationSpeed = 1f;
+    private float horizontalMove = 0f; //Internal-use, we need it for stocking the movement.
+    [Tooltip("Check-it if you want to have a more accurate rotation of the planet.")]
+    public bool isRotationAccurate;
 
     // Update is called once per frame
     void Update()
@@ -31,6 +39,5 @@ public class PlanetControllerTest : MonoBehaviour //Script by Corentin SABIAUX G
             horizontalMove += Input.GetAxis("Horizontal") * rotationSpeed * Time.deltaTime; //The planet is rotating smoothly by horizontal positive and negative button.
         }
     }
-
     //..Corentin SABIAUX GCC2
 }
