@@ -76,5 +76,12 @@ public class FieldBuilderTest : MonoBehaviour //Script by Corentin SABIAUX GCC2,
         }
 
         //..Corentin SABIAUX GCC2
+
+        //Coline Marchal
+        GameManager gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        if(gameManager != null)
+        {
+            gameManager.Init();
+        }
     }
 }

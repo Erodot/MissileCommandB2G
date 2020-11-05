@@ -6,6 +6,7 @@ public class EnemyMissile : MonoBehaviour
 {
     //MACHADO Julien
 
+    public GameManager gameManager;
     public GameObject Explosion;
     GameObject[] primaryTargets;
     List<Transform> finalTargets = new List<Transform>();
@@ -19,7 +20,7 @@ public class EnemyMissile : MonoBehaviour
         //primaryTargets = GameObject.FindGameObjectsWithTag("Player"); //find randomly the target of the missile
         //TestRaycast();
         //target = finalTargets[Random.Range(0, finalTargets.Count)].position; //set this target as a vector 3
-
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         target = FindClosestTarget("Player").transform.position; //find closest target
         gameObject.transform.LookAt(target); //rotate towards his target
     }
@@ -36,9 +37,21 @@ public class EnemyMissile : MonoBehaviour
         {
             other.gameObject.GetComponent<MeshRenderer>().enabled = false; //deactivate building renderer
             other.gameObject.GetComponent<BoxCollider>().enabled = false; //deactivate building boxcollider
-            if(other.gameObject.GetComponent<TurretAllie>() != null) //if the building is a turret
+            TurretAllie turret;
+            if (other.gameObject.TryGetComponent<TurretAllie>(out turret)) //if the building is a turret
             {
-                other.gameObject.GetComponent<TurretAllie>().isDestroy = true; //deactivate his TurretAllie component
+                turret.isDestroy = true; //deactivate his TurretAllie component
+                if(gameManager != null)
+                {
+                    gameManager.TurretList.Remove(turret);
+                }
+            }
+            else //the building is a city
+            {
+                if (gameManager != null)
+                {
+                    gameManager.CitiesList.Remove(other.gameObject);
+                }
             }
             Destroy(this.gameObject); //destroy the missile
         }

@@ -15,12 +15,18 @@ public class PlanetControllerTest : MonoBehaviour //Script by Corentin SABIAUX G
     // Update is called once per frame
     void Update()
     {
+        Move();
+    }
+
+    private void Move()
+    {
         fieldTransform.rotation = Quaternion.Euler(0, 0, horizontalMove); //Rotation is refreshed every single frame | Rotation at Z axis.
 
         if (isRotationAccurate == true)
         {
             horizontalMove += Input.GetAxisRaw("Horizontal") * rotationSpeed * Time.deltaTime; //The planet is rotating accurately by horizontal positive and negative button.
-        } else
+        }
+        else
         {
             horizontalMove += Input.GetAxis("Horizontal") * rotationSpeed * Time.deltaTime; //The planet is rotating smoothly by horizontal positive and negative button.
         }
