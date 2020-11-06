@@ -52,7 +52,6 @@ public class FieldBuilder : MonoBehaviour //Script by Corentin SABIAUX GCC2, don
             yield return new WaitForSeconds(builderWaiting); //How many times do you want to wait before construct the next city ?
         }
 
-        Debug.Log("fdp");
 
         //MACHADO Julien
 

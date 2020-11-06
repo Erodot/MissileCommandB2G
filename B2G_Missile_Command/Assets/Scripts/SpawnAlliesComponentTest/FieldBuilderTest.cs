@@ -83,7 +83,8 @@ public class FieldBuilderTest : MonoBehaviour
         //Let's activate the fire capability of the turrets.
         for (int i = 0; i < turretNumbers; i++)
         {
-            TurretList[i].GetComponent<TurretAllie>().enabled = true;
+            //TurretList[i].GetComponent<TurretAllie>().enabled = true;
+            TurretList[i].transform.Find("Zone").gameObject.GetComponent<ShootingZoneTest>().enabled = true;  //MACHADO Julien
         }
         //..Corentin SABIAUX GCC2
 

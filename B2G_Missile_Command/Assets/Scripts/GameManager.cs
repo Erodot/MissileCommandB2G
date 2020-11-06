@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
 
     //Coline Marchal
 
-    public List<TurretAllie> TurretList = new List<TurretAllie>();
+    public List<ShootingZoneTest> TurretList = new List<ShootingZoneTest>();
     public List<GameObject> CitiesList = new List<GameObject>();
     bool gameOver;
     bool victory;
@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
         {
             if (go.name.Contains("Turret"))
             {
-                TurretList.Add(go.GetComponent<TurretAllie>());
+                TurretList.Add(go.transform.Find("Zone").gameObject.GetComponent<ShootingZoneTest>());
             }
             else if (go.name.Contains("City"))
             {
@@ -91,7 +91,7 @@ public class GameManager : MonoBehaviour
             StopInteractiveElements();
         }
 
-        if (GameObject.Find("Spawner").GetComponent<EnemySpawnTest2>().enemyToSpawn <= 0 && GameObject.Find("Field").GetComponent<FieldBuilderTest>().builderIsOver == true && !GameObject.Find("Capsule(Clone)"))
+        if (GameObject.Find("Spawner").GetComponent<EnemySpawnTest2>().enemyToSpawn <= 0 && GameObject.Find("Field").GetComponent<FieldBuilderTest>().builderIsOver == true && !GameObject.Find("Capsule(Clone)") && !gameOver)
         //Check if there's no more ennemy to spawn, if the builder field is over and if there's no ennemies bullets into the scene.
         {
             ui.Victory(); //Call victory screen.
@@ -146,7 +146,7 @@ public class GameManager : MonoBehaviour
             {
                 if (go.name.Contains("Turret"))
                 {
-                    go.GetComponent<TurretAllie>().enabled = false;
+                    go.transform.Find("Zone").gameObject.GetComponent<ShootingZoneTest>();
                 }
             }
         }

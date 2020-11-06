@@ -37,11 +37,13 @@ public class EnemyMissile : MonoBehaviour
         {
             other.gameObject.GetComponent<MeshRenderer>().enabled = false; //deactivate building renderer
             other.gameObject.GetComponent<BoxCollider>().enabled = false; //deactivate building boxcollider
-            TurretAllie turret;
-            if (other.gameObject.TryGetComponent<TurretAllie>(out turret)) //if the building is a turret
+            ShootingZoneTest turret;
+            if (other.gameObject.transform.Find("Zone")) //if the building is a turret
             {
-                turret.isDestroy = true; //deactivate his TurretAllie component
-                if(gameManager != null)
+                turret = other.gameObject.transform.Find("Zone").gameObject.GetComponent<ShootingZoneTest>();
+                turret.isDestroy = true; //deactivate his ShootingZoneTest component
+                //turret.isDestroy = true; //deactivate his TurretAllie component
+                if (gameManager != null)
                 {
                     gameManager.TurretList.Remove(turret);
                 }
