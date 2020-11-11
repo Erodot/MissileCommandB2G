@@ -7,24 +7,28 @@ public class ShootingZoneTest : MonoBehaviour
     //MACHADO Julien
     private void OnMouseDown()
     {
-        mouseDirection = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -mainCamera.transform.position.z));
-        mouseDirection -= transform.position;
-        shootDirection = mouseDirection;
-
-
-        if (!isDestroy)
+        if(Time.timeScale == 1)
         {
-            GameObject bullet;
+            mouseDirection = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -mainCamera.transform.position.z));
+            mouseDirection -= transform.position;
+            shootDirection = mouseDirection;
 
-            bullet = GameObject.Instantiate(Bullet, transform.position, Quaternion.identity);
 
-            bullet.GetComponent<PlayerMissile>().direction = new Vector3(shootDirection.x * Time.deltaTime, shootDirection.y * Time.deltaTime, 0);
-            tir = true;
+            if (!isDestroy)
+            {
+                GameObject bullet;
+
+                bullet = GameObject.Instantiate(Bullet, transform.position, Quaternion.identity);
+
+                bullet.GetComponent<PlayerMissile>().direction = new Vector3(shootDirection.x * Time.deltaTime, shootDirection.y * Time.deltaTime, 0);
+                tir = true;
+            }
+            else
+            {
+                tir = false;
+            }
         }
-        else
-        {
-            tir = false;
-        }
+
     }
     //..MACHADO Julien
 
