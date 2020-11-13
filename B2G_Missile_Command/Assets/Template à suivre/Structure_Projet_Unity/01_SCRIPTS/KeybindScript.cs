@@ -7,7 +7,7 @@ public class KeybindScript : MonoBehaviour
 {
     public Dictionary<string, KeyCode> keys = new Dictionary<string, KeyCode>();
 
-    public Text left, right, shoot;
+    public Text left, right;
 
     private GameObject currentKey;
 
@@ -16,11 +16,9 @@ public class KeybindScript : MonoBehaviour
     {
         keys.Add("Left", KeyCode.LeftArrow);
         keys.Add("Right", KeyCode.RightArrow);
-        keys.Add("Shoot", KeyCode.Mouse0);
 
         left.text = keys["Left"].ToString();
         right.text = keys["Right"].ToString();
-        shoot.text = keys["Shoot"].ToString();
 
     }
 
