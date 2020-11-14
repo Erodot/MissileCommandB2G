@@ -12,7 +12,6 @@ public class GameManager : MonoBehaviour
     //..Coline Marchal
 
     //Corentin SABIAUX GCC2
-
     [Header("During Game Over and Victory scene")]
     [Tooltip("Check-it if you want to stop ennemySpawn during the gameover scene.")]
     public bool stopEnemySpawner;
@@ -26,9 +25,24 @@ public class GameManager : MonoBehaviour
     public float shootingCoolDown;
     [HideInInspector]
     public bool turretCanShoot = true; //ShootingZone used this bool for knowing if the turret can shoot or not.
-    [Tooltip("Size = number of points. Content = position X and Y. As we have a triangle, you need to set 3 points.")]
-    public List<Vector2> pointsTurretZone = new List<Vector2>();
 
+    //The idea here is to used 3 lists nested for having an adjustable shooting zone for every turrets.
+    [Tooltip("Adjustable shooting zone for each turrets")]
+    public ListOfTurrets listOfTurrets = new ListOfTurrets();
+
+    [System.Serializable]
+    public class ListOfTurrets
+    {
+        [Tooltip("Size = number of turrets. '1' will be the first initialized into the scene.")]
+        public List<Point> listTurretZone;
+    }
+
+    [System.Serializable]
+    public class Point
+    {
+        [Tooltip("Size = number of points. Content = position X and Y. As we have a triangle, you need to set 3 points.")]
+        public List<Vector2> pointsTurretZone;
+    }
     //..Corentin SABIAUX GCC2
 
     //Coline Marchal

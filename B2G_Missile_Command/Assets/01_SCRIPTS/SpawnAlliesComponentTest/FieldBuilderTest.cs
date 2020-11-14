@@ -83,8 +83,9 @@ public class FieldBuilderTest : MonoBehaviour
         //Let's activate the fire capability of the turrets.
         for (int i = 0; i < turretNumbers; i++)
         {
-            //TurretList[i].GetComponent<TurretAllie>().enabled = true;
             TurretList[i].transform.Find("Zone").gameObject.GetComponent<ShootingZoneTest>().enabled = true;  //MACHADO Julien
+            TurretList[i].transform.Find("Zone").gameObject.GetComponent<ShootingZoneTest>().indexTurret = i; //Corentin SABIAUX GCC2
+            //We set an index number for the turret. It's used by gameManager for defining the adjustable shooting zone.
         }
         //..Corentin SABIAUX GCC2
 

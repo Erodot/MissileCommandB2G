@@ -16,6 +16,7 @@ public class ShootingZoneTest : MonoBehaviour
 
     //Corentin SABIAUX GCC2
     public GameManager gameManager; //We need to stock the gameManager of the scene.
+    public int indexTurret; //Indicate wich turret he is.
     
     private void OnMouseDown()
     {
@@ -61,8 +62,8 @@ public class ShootingZoneTest : MonoBehaviour
         //Corentin SABIAUX GCC2
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>(); //We stock the gameManager of the scene.
 
-        gameObject.GetComponent<PolygonCollider2D>().SetPath(0, gameManager.pointsTurretZone); 
-        //We set the PolygonCollider points of the turret by the points included into the Vector2 list on gameManager.
+        gameObject.GetComponent<PolygonCollider2D>().SetPath(0, gameManager.listOfTurrets.listTurretZone[indexTurret].pointsTurretZone); 
+        //We set the PolygonCollider points of the turret by the points included into the 3 lists nested on gameManager.
         //..Corentin SABIAUX GCC2
     }
 
