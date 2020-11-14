@@ -76,7 +76,11 @@ MonoBehaviour:
   groundPosition: {x: 0, y: 0, z: 0}
   mouseDirection: {x: -8.05767, y: 6.1148686, z: 0}
   shootDirection: {x: -8.05767, y: 6.1148686, z: 0}
-  distance: 0
   mainCamera: {fileID: 0}
   tir: 1
   isDestroy: 0
+  gameManager: {fileID: 0}
+  points:
+  - {x: 1.5, y: 1.5}
+  - {x: -1.5, y: 1.5}
+  - {x: 0, y: 0}

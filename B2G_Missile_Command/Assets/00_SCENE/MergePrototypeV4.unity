@@ -1815,6 +1815,12 @@ MonoBehaviour:
   stopEnemySpawner: 0
   stopPlanetController: 1
   stopFireCapability: 1
+  shootingCoolDown: 0.6
+  turretCanShoot: 1
+  pointsTurretZone:
+  - {x: 1.5, y: 1.5}
+  - {x: -1.5, y: 1.5}
+  - {x: 0, y: 0}
   TurretList: []
   CitiesList: []
 --- !u!4 &808077393

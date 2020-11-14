@@ -20,6 +20,15 @@ public class GameManager : MonoBehaviour
     public bool stopPlanetController;
     [Tooltip("Check-it if you want to stop fire capability of the turrets during the gameover scene.")]
     public bool stopFireCapability;
+
+    [Header("Shooting Manager")]
+    [Tooltip("Set the amount of time you want between shoots.")]
+    public float shootingCoolDown;
+    [HideInInspector]
+    public bool turretCanShoot = true; //ShootingZone used this bool for knowing if the turret can shoot or not.
+    [Tooltip("Size = number of points. Content = position X and Y. As we have a triangle, you need to set 3 points.")]
+    public List<Vector2> pointsTurretZone = new List<Vector2>();
+
     //..Corentin SABIAUX GCC2
 
     //Coline Marchal
@@ -48,8 +57,6 @@ public class GameManager : MonoBehaviour
             Destroy(this);
         }
     }*/
-
-
 
     public void Init()
     {
@@ -150,6 +157,12 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
-        //..Corentin SABIAUX GCC2
     }
+    public IEnumerator CoolDown()
+    {
+        turretCanShoot = false;
+        yield return new WaitForSeconds(shootingCoolDown);
+        turretCanShoot = true;
+    }
+    //..Corentin SABIAUX GCC2
 }
