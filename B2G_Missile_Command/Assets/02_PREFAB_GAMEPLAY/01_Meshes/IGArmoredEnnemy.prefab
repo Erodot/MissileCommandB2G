@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -928614459087312163}
   - component: {fileID: 3048141030897770999}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: IGArmoredEnnemy
   m_TagString: Ennemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 60598e1256e7517439ff78a129486518, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -112,6 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   Explosion: {fileID: 4988724062270726289, guid: f1f65eee0c8933f418bf0ff1be26801c, type: 3}
+  lifePoint: 3
   speed: 2
 --- !u!54 &3048141030897770999
 Rigidbody:

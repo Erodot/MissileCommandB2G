@@ -8,12 +8,16 @@ public class EnemyMissile : MonoBehaviour
 
     public GameManager gameManager;
     public GameObject Explosion;
+
+    //Nicolas Pupulin
+    public int lifePoint;
+    //..Nicolas Pupulin
+
     GameObject[] primaryTargets;
     List<Transform> finalTargets = new List<Transform>();
     Vector3 target;
     [Range(0.0f, 10.0f)]
     public float speed; //speed of the missile
-    public int value = 1; //points you get if you kill it
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +38,7 @@ public class EnemyMissile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Player")) //if the missile hit a building
+        if (other.gameObject.CompareTag("Player")) //if the missile hit a building
         {
             other.gameObject.GetComponent<MeshRenderer>().enabled = false; //deactivate building renderer
             other.gameObject.GetComponent<BoxCollider>().enabled = false; //deactivate building boxcollider
@@ -64,9 +68,14 @@ public class EnemyMissile : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Explosion")) //if the missile hit a player bullet
         {
-            Instantiate(Explosion, transform.position, Quaternion.identity);
-            GameObject.Find("Canvas").GetComponent<GameOverAndCie>().SetScore(value);   //Coline M
-            Destroy(this.gameObject); //destroy the missile
+            //Nicolas Pupulin
+            lifePoint--;
+            if (lifePoint == 0)
+            {
+                Instantiate(Explosion, transform.position, Quaternion.identity);
+                Destroy(this.gameObject); //destroy the missile
+            }
+            //..Nicolas Pupulin
         }
     }
 
