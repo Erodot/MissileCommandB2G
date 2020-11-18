@@ -112,7 +112,7 @@ public class GameManager : MonoBehaviour
             StopInteractiveElements();
         }
 
-        if (GameObject.Find("Spawner").GetComponent<EnemySpawnTest2>().enemyToSpawn <= 0 && GameObject.Find("Field").GetComponent<FieldBuilderTest>().builderIsOver == true && !GameObject.Find("Capsule(Clone)") && !gameOver)
+        /*if (GameObject.Find("Spawner").GetComponent<EnemySpawnTest2>().enemyToSpawn <= 0 && GameObject.Find("Field").GetComponent<FieldBuilderTest>().builderIsOver == true && !GameObject.Find("Capsule(Clone)") && !gameOver)
         //Check if there's no more ennemy to spawn, if the builder field is over and if there's no ennemies bullets into the scene.
         {
             ui.Victory(); //Call victory screen.
@@ -120,7 +120,7 @@ public class GameManager : MonoBehaviour
 
             StopInteractiveElements();
             //..Corentin SABIAUX GCC2
-        }
+        }*/
     }
 
     //Coline Marchal

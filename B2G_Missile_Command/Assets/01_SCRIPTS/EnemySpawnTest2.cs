@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemySpawnTest2 : MonoBehaviour
 {
@@ -12,14 +13,46 @@ public class EnemySpawnTest2 : MonoBehaviour
     GameObject simpleEnemy;
     public GameObject armoredEnemy;
 
+    public int waveNumber;
+
+
+
+    int difficultyAugmentation;
+
+    [Header("Enemy augmentation")]
+    [Range(0, 10), Tooltip("Maximum addition of enemy for a wave")]
+    public int enemyGainMax;
+    [Range(0, 10), Tooltip("Minimum addition of enemy for a wave")]
+    public int enemyGainMin;
+
+    [Header("Enemy basic spawn")]
+    int enemyToSpawnBank;
     public int enemyToSpawn; //number of enemy to spawn
     [Range(0, 50)]
     public int enemyMin; //number min of enemy to spawn
     [Range(0, 50)]
     public int enemyMax; //number max of enemy to spawn
+
+    [Header("Time between waves Manager")]
+    [Range(0.0f, 10.0f), Tooltip("The time between wave at start")]
+    public float timeBetweenWaveStart;
+    [Range(0.0f, 5.0f), Tooltip("Maximum reduction that can have the time between wave")]
+    public float timeBetweenWaveReductionMax;
+    [Range(0.0f, 5.0f), Tooltip("Minimum reduction that can have the time between wave")]
+    public float timeBetweenWaveReductionMin;
+    float actualTime2; //actual time of the clock
+
+    [Header("Time between enemy spawn Manger")]
     [Range(0.0f, 5.0f)]
     public float timeToSpawn; //time between the enemy spawn
+    [Range(1.0f, 5.0f), Tooltip("Number used to divide the time between the enemy spawn")]
+    public float timeDiviser;
     float actualTime; //actual time of the clock
+
+    public GameManager gameManager;
+
+    public Text wave;
+
 
 
 
@@ -27,7 +60,10 @@ public class EnemySpawnTest2 : MonoBehaviour
     void Start()
     {
         enemyToSpawn = Random.Range(enemyMin, enemyMax); //choose the number of enemy to spawn between enemyMin and enemyMax
+        enemyToSpawnBank = enemyToSpawn;
         actualTime = timeToSpawn; //set the actual time to to the time chosen for the clock
+        actualTime2 = timeBetweenWaveStart;
+        wave.text = "\r\n" + waveNumber;
     }
 
     // Update is called once per frame
@@ -49,6 +85,55 @@ public class EnemySpawnTest2 : MonoBehaviour
             {
                 actualTime = timeToSpawn; //reset the clock
             }
+        }
+        else
+        {
+
+            if (actualTime2 > 0) //if the time has'nt reached 0
+            {
+                actualTime2 -= Time.deltaTime; //make it decrease
+            }
+            else
+            {
+                int citiesNumber = 0;
+                timeBetweenWaveStart -= Random.Range(timeBetweenWaveReductionMin, timeBetweenWaveReductionMax);
+                foreach (GameObject cities in gameManager.CitiesList)
+                {
+                    if (cities.GetComponent<MeshRenderer>())
+                    {
+                        citiesNumber += 1;
+                    }
+                }
+                if (citiesNumber <= 6 && citiesNumber > 4)
+                {
+                    difficultyAugmentation = 3;
+                    Debug.Log("3");
+                }
+                else if (citiesNumber <= 4 && citiesNumber > 2)
+                {
+                    difficultyAugmentation = 2;
+                    Debug.Log("2");
+                }
+                else if (citiesNumber <= 2)
+                {
+                    difficultyAugmentation = 1;
+                    Debug.Log("1");
+                }
+                timeToSpawn -= ((waveNumber + 1) * difficultyAugmentation) / (10 * timeDiviser);
+                Debug.Log(timeToSpawn);
+                actualTime = timeToSpawn;
+
+
+                enemyToSpawn = enemyToSpawnBank + Random.Range(enemyGainMin, enemyGainMax) + difficultyAugmentation;
+                enemyToSpawnBank = enemyToSpawn;
+                actualTime2 = timeBetweenWaveStart;
+                
+                LevelsManager lvlManager = LevelsManager.instance;
+                lvlManager.currentLevel += 1;
+                waveNumber += 1;
+                wave.text = "\r\n" + waveNumber;
+            }
+            //StartCoroutine(Wave());
         }
     }
 

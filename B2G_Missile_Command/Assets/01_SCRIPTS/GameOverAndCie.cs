@@ -16,7 +16,7 @@ public class GameOverAndCie : MonoBehaviour //Coline Marchal
     // Start is called before the first frame update
     void Start()
     {
-        SetWave();
+        //SetWave();
     }
 
     // Update is called once per frame
@@ -30,7 +30,7 @@ public class GameOverAndCie : MonoBehaviour //Coline Marchal
         myScore += nbScore;
         score.text = "\r\n" + myScore;
     }
-    public void SetWave()//int nbScore)
+    /*public void SetWave()//int nbScore)
     {
         //myWave += nbScore;
 
@@ -43,7 +43,7 @@ public class GameOverAndCie : MonoBehaviour //Coline Marchal
             
 
         wave.text = "\r\n~" + myWave;
-    }
+    }*/
 
     public void GameOver()
     {

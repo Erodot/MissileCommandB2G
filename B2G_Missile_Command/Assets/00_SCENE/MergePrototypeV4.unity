@@ -2464,11 +2464,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   simpleEnemy: {fileID: 2087319397564193456, guid: 7e8b82ed35c0c1b4eb770c60293dc0b3, type: 3}
-  armoredEnemy: {fileID: 2087319397564193456, guid: a7da26291c258674f86daef17588a659, type: 3}
+  armoredEnemy: {fileID: 2087319397564193456, guid: 7e8b82ed35c0c1b4eb770c60293dc0b3, type: 3}
+  waveNumber: 0
+  timeBetweenWaveStart: 10
+  timeBetweenWaveReductionMax: 1.5
+  timeBetweenWaveReductionMin: 0.25
+  timeDiviser: 4
+  enemyGainMax: 5
+  enemyGainMin: 2
   enemyToSpawn: 0
-  enemyMin: 10
-  enemyMax: 25
+  enemyMin: 2
+  enemyMax: 5
   timeToSpawn: 2
+  gameManager: {fileID: 808077392}
+  wave: {fileID: 12987539}
 --- !u!4 &1417013113
 Transform:
   m_ObjectHideFlags: 0
