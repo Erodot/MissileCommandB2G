@@ -9,7 +9,7 @@ public class EnemyMissile : MonoBehaviour
     public GameManager gameManager;
     public GameObject Explosion;
 
-    int damageIndex = 0;
+    int damageIndex = 100;
 
     //Nicolas Pupulin
     public int lifePoint;
@@ -64,13 +64,14 @@ public class EnemyMissile : MonoBehaviour
             }
             else
             {
+                Debug.Log("connard");
                 damageIndex = gameManager.BuildingList.IndexOf(other.gameObject);
             }
         }
 
         if (other.gameObject.CompareTag("Ground")) //if the missile hit the ground
         {
-            if(damageIndex != 0)
+            if(damageIndex != 100)
             {
                 if (damageIndex == 0)
                 {
@@ -87,7 +88,7 @@ public class EnemyMissile : MonoBehaviour
                     gameManager.BuildingList[damageIndex + 1].GetComponent<BuildingLifeDamage>().Damaged(1);
                     gameManager.BuildingList[damageIndex - 1].GetComponent<BuildingLifeDamage>().Damaged(1);
                 }
-                damageIndex = 0;
+                damageIndex = 100;
             }
 
             if (gameManager != null && FindClosestTarget("Player") != null)
