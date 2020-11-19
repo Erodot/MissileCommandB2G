@@ -64,7 +64,6 @@ public class EnemyMissile : MonoBehaviour
             }
             else
             {
-                Debug.Log("connard");
                 damageIndex = gameManager.BuildingList.IndexOf(other.gameObject);
             }
         }

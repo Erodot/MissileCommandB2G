@@ -243,7 +243,7 @@ public class GameManager : MonoBehaviour
     }
     bool CheckTurretsLeft()
     {
-        if (ShootingZoneList.Count > 0)
+        if (TurretList.Count > 0)
             return true;
         else
             return false;
