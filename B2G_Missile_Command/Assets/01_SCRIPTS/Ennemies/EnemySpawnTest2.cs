@@ -99,7 +99,7 @@ public class EnemySpawnTest2 : MonoBehaviour
                 timeBetweenWaveStart -= Random.Range(timeBetweenWaveReductionMin, timeBetweenWaveReductionMax);
                 foreach (GameObject cities in gameManager.CitiesList)
                 {
-                    if (cities.GetComponent<MeshRenderer>())
+                    if (cities != null && cities.GetComponent<MeshRenderer>())
                     {
                         citiesNumber += 1;
                     }
@@ -107,20 +107,20 @@ public class EnemySpawnTest2 : MonoBehaviour
                 if (citiesNumber <= 6 && citiesNumber > 4)
                 {
                     difficultyAugmentation = 3;
-                    Debug.Log("3");
+                    //Debug.Log("3");
                 }
                 else if (citiesNumber <= 4 && citiesNumber > 2)
                 {
                     difficultyAugmentation = 2;
-                    Debug.Log("2");
+                    //Debug.Log("2");
                 }
                 else if (citiesNumber <= 2)
                 {
                     difficultyAugmentation = 1;
-                    Debug.Log("1");
+                    //Debug.Log("1");
                 }
                 timeToSpawn -= ((waveNumber + 1) * difficultyAugmentation) / (10 * timeDiviser);
-                Debug.Log(timeToSpawn);
+                //Debug.Log(timeToSpawn);
                 actualTime = timeToSpawn;
 
 

@@ -53,7 +53,7 @@ public class FieldBuilderTest : MonoBehaviour
             TurretCreated.transform.parent = TurretCategorie.transform; //Turret became children of spawner.
             TurretList.Add(TurretCreated);
             TurretCreated.name = "IGTurret " + (i + 1); //Set turret name.
-            yield return new WaitForSeconds(builderWaiting); //How many times do you want to wait before construct the next city ?
+            yield return new WaitForSeconds(builderWaiting); //How many times do you want to wait before construct the next turret ?
         }
 
         //Let's create some cities.

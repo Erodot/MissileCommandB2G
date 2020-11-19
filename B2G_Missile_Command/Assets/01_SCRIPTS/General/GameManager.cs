@@ -47,8 +47,10 @@ public class GameManager : MonoBehaviour
 
     //Coline Marchal
 
-    public List<ShootingZoneTest> TurretList = new List<ShootingZoneTest>();
+    public List<ShootingZoneTest> ShootingZoneList = new List<ShootingZoneTest>(); //rename turretList to recupere a game object list
+    public List<GameObject> TurretList = new List<GameObject>();
     public List<GameObject> CitiesList = new List<GameObject>();
+    public List<GameObject> BuildingList = new List<GameObject>();
     bool gameOver;
     bool victory;
     bool terrainOK;
@@ -75,17 +77,33 @@ public class GameManager : MonoBehaviour
     public void Init()
     {
         playerProperty = GameObject.FindGameObjectsWithTag("Player");
+        List<GameObject> allBuildings = new List<GameObject>();
+
         foreach (GameObject go in playerProperty)
         {
             if (go.name.Contains("Turret"))
             {
-                TurretList.Add(go.transform.Find("Zone").gameObject.GetComponent<ShootingZoneTest>());
+                TurretList.Add(go);
+                ShootingZoneList.Add(go.transform.Find("Zone").gameObject.GetComponent<ShootingZoneTest>());
             }
             else if (go.name.Contains("City"))
             {
                 CitiesList.Add(go);
             }
+            allBuildings.Add(go);
         }
+        #region buildingList
+        //sort by position
+        BuildingList.Add(allBuildings[1]);
+        BuildingList.Add(allBuildings[3]);
+        BuildingList.Add(allBuildings[4]);
+        BuildingList.Add(allBuildings[0]);
+        BuildingList.Add(allBuildings[5]);
+        BuildingList.Add(allBuildings[6]);
+        BuildingList.Add(allBuildings[2]);
+        BuildingList.Add(allBuildings[7]);
+        BuildingList.Add(allBuildings[8]);
+        #endregion
 
         terrainOK = true;
     }
@@ -123,7 +141,98 @@ public class GameManager : MonoBehaviour
         }*/
     }
 
-    //Coline Marchal
+    public void CheckNeighbour(GameObject go)
+    {
+        //Debug.Log("neigbhour");
+
+        int index = BuildingList.IndexOf(go);
+        int nIndex1; //neigbhour 1
+        int nIndex2; //neigbhour 2
+
+        if(index == 0)
+        {
+            nIndex1 = 1;
+            nIndex2 = BuildingList.Count-1;
+        }
+        else if(index == BuildingList.Count-1)
+        {
+            nIndex1 = index - 1;
+            nIndex2 = 0;
+        }
+        else
+        {
+            nIndex1 = index - 1;
+            nIndex2 = index + 1;
+        }
+        //Debug.Log(nIndex1 + " | "+ index + " | "+ nIndex2);
+
+        BuildingList[index].GetComponent<BuildingLifeDamage>().DestroyThis();
+
+        if(BuildingList[nIndex1] != null)
+            BuildingList[nIndex1].GetComponent<BuildingLifeDamage>().Damaged();
+
+        if (BuildingList[nIndex2] != null)
+            BuildingList[nIndex2].GetComponent<BuildingLifeDamage>().Damaged();
+    }
+    public void CheckNeighbour(GameObject go, string rightOrLeft) //hit the ground
+    {
+        //Debug.Log("neigbhour");
+
+        int index = 0;
+        int nIndex1; //neigbhour 1
+        int nIndex2; //neigbhour 2
+
+        if(rightOrLeft == "left")
+        {
+            nIndex1 = BuildingList.IndexOf(go);
+            nIndex2 = nIndex1 + 2;
+            index = nIndex1 + 1;
+        }
+        else if(rightOrLeft == "right")
+        {
+            nIndex1 = BuildingList.IndexOf(go);
+            //nIndex2 = BuildingList.IndexOf(go);
+            nIndex2 = nIndex1 - 2;
+            //nIndex1 = nIndex2 - 2;
+            index = nIndex1 + 1;
+        }
+
+        if (index == 0)
+        {
+            nIndex1 = 1;
+            nIndex2 = BuildingList.Count - 1;
+        }
+        else if (index == BuildingList.Count - 1)
+        {
+            nIndex1 = index - 1;
+            nIndex2 = 0;
+        }
+        else
+        {
+            nIndex1 = index - 1;
+            nIndex2 = index + 1;
+        }
+
+        float distanceToBase;
+        if (BuildingList[nIndex1] != null)
+        {
+            //if the closest object was on the right and the left one is no to far awar
+            BuildingList[nIndex1].GetComponent<BuildingLifeDamage>().Damaged();
+        }
+        if (BuildingList[nIndex2] != null)
+        {
+            distanceToBase = Vector3.Distance(go.transform.position, BuildingList[nIndex2].transform.position); //distance between the clostest turret/city and the closest in the other direction
+            Debug.Log(distanceToBase + "  " + BuildingList[nIndex2].name);
+            if (distanceToBase != 0 && distanceToBase < 3f)
+            {
+                //if the closest object was on the left and the right one is no to far awar
+
+                BuildingList[nIndex2].GetComponent<BuildingLifeDamage>().Damaged();
+
+            }
+        }
+        Debug.Log("debug");
+    }
 
     bool CheckCitiesLeft()
     {
@@ -134,12 +243,13 @@ public class GameManager : MonoBehaviour
     }
     bool CheckTurretsLeft()
     {
-        if (TurretList.Count > 0)
+        if (ShootingZoneList.Count > 0)
             return true;
         else
             return false;
     }
     //..Coline Marchal
+
 
     //Corentin SABIAUX GCC2
 
@@ -165,7 +275,7 @@ public class GameManager : MonoBehaviour
         {
             foreach (GameObject go in playerProperty)
             {
-                if (go.name.Contains("Turret"))
+                if (go != null && go.name.Contains("Turret"))
                 {
                     go.transform.Find("Zone").gameObject.GetComponent<ShootingZoneTest>();
                 }

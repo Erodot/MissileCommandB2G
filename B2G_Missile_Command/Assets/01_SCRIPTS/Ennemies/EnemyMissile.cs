@@ -51,24 +51,37 @@ public class EnemyMissile : MonoBehaviour
                 turret = other.gameObject.transform.Find("Zone").gameObject.GetComponent<ShootingZoneTest>();
                 turret.isDestroy = true; //deactivate his ShootingZoneTest component
                 //turret.isDestroy = true; //deactivate his TurretAllie component
+
+                HitSomething(other.gameObject);//Coline Marchal
+
                 if (gameManager != null)
                 {
-                    gameManager.TurretList.Remove(turret);
+                    gameManager.ShootingZoneList.Remove(turret);
                 }
             }
             else //the building is a city
             {
-                if (gameManager != null)
-                {
-                    gameManager.CitiesList.Remove(other.gameObject);
-                }
+                HitSomething(other.gameObject);
             }
             Destroy(this.gameObject); //destroy the missile
         }
+
         if (other.gameObject.CompareTag("Ground")) //if the missile hit the ground
         {
+
+            if (gameManager != null && FindClosestTarget("Player") != null)
+            {
+                Vector3 closestTarget = FindClosestTarget("Player").transform.position;
+
+                if(Vector3.Distance(closestTarget, transform.position) < 2f)
+                {
+                    gameManager.CheckNeighbour(FindClosestTarget("Player"), OnMyLeftOrOnMyRight(closestTarget));
+                }
+            }
+
             Destroy(this.gameObject); //destroy the missile
         }
+
         if (other.gameObject.CompareTag("Explosion")) //if the missile hit a player bullet
         {
             //Nicolas Pupulin
@@ -119,6 +132,48 @@ public class EnemyMissile : MonoBehaviour
         }
 
     }*/
-
     //..MACHADO Julien
+
+    //Coline Marchal
+    public string OnMyLeftOrOnMyRight (Vector3 targetPos)
+    {
+        Vector3 forward = transform.forward;
+        Vector3 up = transform.up;
+        Vector3 targetDirection = targetPos - transform.position;
+
+        //-1 = left
+        //1 = right
+        Vector3 perp = Vector3.Cross(forward, targetDirection);
+        float dir = Vector3.Dot(perp, up);
+        string toReturn;
+
+        if (dir > 0.0f)
+        {
+            toReturn = "left";
+        }
+        else if (dir < 0.0f)
+        {
+            toReturn = "right";
+        }
+        else
+        {
+            toReturn = "fwd";
+        }
+        //Debug.Log(toReturn);
+        return toReturn;
+    }
+
+
+
+    public void HitSomething(GameObject building)
+    {
+        if (gameManager != null)
+        {
+            //gameManager.TurretList.Remove(building);
+            gameManager.CheckNeighbour(building);
+        }
+    }
+
+    //..Coline Marchal
+
 }
