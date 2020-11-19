@@ -22,9 +22,9 @@ public class BuildingLifeDamage : MonoBehaviour
         }
     }
 
-    public void Damaged() //damage if neighour attacked
+    public void Damaged(int damagedAmount) //damage if neighour attacked
     {
-        lifes--;
+        lifes -= damagedAmount;
         //Debug.Log("ouch");
         if (gameManager != null)
         {
@@ -49,6 +49,7 @@ public class BuildingLifeDamage : MonoBehaviour
     {
         //Debug.Log("destroy " + name);
         GameObject go = this.gameObject;
+        go.GetComponent<MeshRenderer>().enabled = false;
         if (gameManager != null)
         {
             if (gameManager.CitiesList.Contains(go))//city
@@ -61,6 +62,6 @@ public class BuildingLifeDamage : MonoBehaviour
             }
         }
 
-        Destroy(this.gameObject);
+        //Destroy(this.gameObject);
     }
 }

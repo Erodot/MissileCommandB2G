@@ -9,6 +9,8 @@ public class EnemyMissile : MonoBehaviour
     public GameManager gameManager;
     public GameObject Explosion;
 
+    int damageIndex = 0;
+
     //Nicolas Pupulin
     public int lifePoint;
     //..Nicolas Pupulin
@@ -43,31 +45,50 @@ public class EnemyMissile : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player")) //if the missile hit a building
         {
-            other.gameObject.GetComponent<MeshRenderer>().enabled = false; //deactivate building renderer
-            other.gameObject.GetComponent<BoxCollider>().enabled = false; //deactivate building boxcollider
-            ShootingZoneTest turret;
-            if (other.gameObject.transform.Find("Zone")) //if the building is a turret
+            if (other.gameObject.GetComponent<MeshRenderer>().enabled == true)
             {
-                turret = other.gameObject.transform.Find("Zone").gameObject.GetComponent<ShootingZoneTest>();
-                turret.isDestroy = true; //deactivate his ShootingZoneTest component
-                //turret.isDestroy = true; //deactivate his TurretAllie component
+                other.gameObject.GetComponent<BuildingLifeDamage>().Damaged(2);
 
-                HitSomething(other.gameObject);//Coline Marchal
-
-                if (gameManager != null)
+                ShootingZoneTest turret;
+                if (other.gameObject.transform.Find("Zone")) //if the building is a turret
                 {
-                    gameManager.ShootingZoneList.Remove(turret);
+                    turret = other.gameObject.transform.Find("Zone").gameObject.GetComponent<ShootingZoneTest>();
+                    turret.isDestroy = true; //deactivate his ShootingZoneTest component
+
+                    if (gameManager != null)
+                    {
+                        gameManager.ShootingZoneList.Remove(turret);
+                    }
                 }
+                Destroy(this.gameObject); //destroy the missile
             }
-            else //the building is a city
+            else
             {
-                HitSomething(other.gameObject);
+                damageIndex = gameManager.BuildingList.IndexOf(other.gameObject);
             }
-            Destroy(this.gameObject); //destroy the missile
         }
 
         if (other.gameObject.CompareTag("Ground")) //if the missile hit the ground
         {
+            if(damageIndex != 0)
+            {
+                if (damageIndex == 0)
+                {
+                    gameManager.BuildingList[damageIndex + 1].GetComponent<BuildingLifeDamage>().Damaged(1);
+                    gameManager.BuildingList[gameManager.BuildingList.Count - 1].GetComponent<BuildingLifeDamage>().Damaged(1);
+                }
+                else if (damageIndex == gameManager.BuildingList.Count - 1)
+                {
+                    gameManager.BuildingList[0].GetComponent<BuildingLifeDamage>().Damaged(1);
+                    gameManager.BuildingList[damageIndex - 1].GetComponent<BuildingLifeDamage>().Damaged(1);
+                }
+                else
+                {
+                    gameManager.BuildingList[damageIndex + 1].GetComponent<BuildingLifeDamage>().Damaged(1);
+                    gameManager.BuildingList[damageIndex - 1].GetComponent<BuildingLifeDamage>().Damaged(1);
+                }
+                damageIndex = 0;
+            }
 
             if (gameManager != null && FindClosestTarget("Player") != null)
             {
@@ -75,7 +96,7 @@ public class EnemyMissile : MonoBehaviour
 
                 if(Vector3.Distance(closestTarget, transform.position) < 2f)
                 {
-                    gameManager.CheckNeighbour(FindClosestTarget("Player"), OnMyLeftOrOnMyRight(closestTarget));
+                    //gameManager.CheckNeighbour(FindClosestTarget("Player"), OnMyLeftOrOnMyRight(closestTarget));
                 }
             }
 
@@ -135,7 +156,7 @@ public class EnemyMissile : MonoBehaviour
     //..MACHADO Julien
 
     //Coline Marchal
-    public string OnMyLeftOrOnMyRight (Vector3 targetPos)
+    /*public string OnMyLeftOrOnMyRight (Vector3 targetPos)
     {
         Vector3 forward = transform.forward;
         Vector3 up = transform.up;
@@ -172,7 +193,7 @@ public class EnemyMissile : MonoBehaviour
             //gameManager.TurretList.Remove(building);
             gameManager.CheckNeighbour(building);
         }
-    }
+    }*/
 
     //..Coline Marchal
 

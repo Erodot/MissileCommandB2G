@@ -141,7 +141,7 @@ public class GameManager : MonoBehaviour
         }*/
     }
 
-    public void CheckNeighbour(GameObject go)
+    /*public void CheckNeighbour(GameObject go)
     {
         //Debug.Log("neigbhour");
 
@@ -232,7 +232,7 @@ public class GameManager : MonoBehaviour
             }
         }
         Debug.Log("debug");
-    }
+    }*/
 
     bool CheckCitiesLeft()
     {

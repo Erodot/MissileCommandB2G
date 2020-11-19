@@ -1307,7 +1307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turretNumbers: 3
-  Turret: {fileID: 1918626375815017537, guid: d54ac1287621ec54ea58bf0a838ef8d9, type: 3}
+  Turret: {fileID: 1918626375815017537, guid: 1731afc0a1985344b9ce9b0092edd1ad, type: 3}
   positionTurretList:
   - {x: -1.7, y: 4.25, z: 0}
   - {x: 0, y: 7.2, z: 0}
@@ -1317,7 +1317,7 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: -120}
   cityNumbers: 6
-  City: {fileID: 3518374030793000378, guid: 7085c7c10055ffc4cbed81e45442f43e, type: 3}
+  City: {fileID: 3518374030793000378, guid: 0c13a765fb239484b87d99d83e25c417, type: 3}
   positionCityList:
   - {x: -1, y: 6.65, z: 0}
   - {x: -1.63, y: 5.49, z: 0}
@@ -1831,8 +1831,10 @@ MonoBehaviour:
       - {x: 1.5, y: 1.5}
       - {x: -1.5, y: 1.5}
       - {x: 0, y: 0}
+  ShootingZoneList: []
   TurretList: []
   CitiesList: []
+  BuildingList: []
 --- !u!4 &808077393
 Transform:
   m_ObjectHideFlags: 0
@@ -2466,16 +2468,16 @@ MonoBehaviour:
   simpleEnemy: {fileID: 2087319397564193456, guid: 7e8b82ed35c0c1b4eb770c60293dc0b3, type: 3}
   armoredEnemy: {fileID: 2087319397564193456, guid: 7e8b82ed35c0c1b4eb770c60293dc0b3, type: 3}
   waveNumber: 0
-  timeBetweenWaveStart: 10
-  timeBetweenWaveReductionMax: 1.5
-  timeBetweenWaveReductionMin: 0.25
-  timeDiviser: 4
   enemyGainMax: 5
   enemyGainMin: 2
   enemyToSpawn: 0
   enemyMin: 2
   enemyMax: 5
+  timeBetweenWaveStart: 10
+  timeBetweenWaveReductionMax: 1.5
+  timeBetweenWaveReductionMin: 0.25
   timeToSpawn: 2
+  timeDiviser: 4
   gameManager: {fileID: 808077392}
   wave: {fileID: 12987539}
 --- !u!4 &1417013113
