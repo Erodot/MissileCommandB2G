@@ -9,15 +9,15 @@ public class EnemySpawnTest2 : MonoBehaviour
 
     Vector3 screenPos;
 
-    [SerializeField]
-    GameObject simpleEnemy;
-    public GameObject armoredEnemy;
+    public GameObject[] enemys;
 
     public int waveNumber;
 
 
 
     int difficultyAugmentation;
+    public int difficultySpawn;
+    public int diffModifier = 1;
 
     [Header("Enemy augmentation")]
     [Range(0, 10), Tooltip("Maximum addition of enemy for a wave")]
@@ -127,7 +127,16 @@ public class EnemySpawnTest2 : MonoBehaviour
                 enemyToSpawn = enemyToSpawnBank + Random.Range(enemyGainMin, enemyGainMax) + difficultyAugmentation;
                 enemyToSpawnBank = enemyToSpawn;
                 actualTime2 = timeBetweenWaveStart;
-                
+                difficultySpawn += difficultyAugmentation;
+                if (difficultySpawn >= 9)
+                {
+                    if (diffModifier < enemys.Length)
+                    {
+                        diffModifier++;
+                    }
+                    difficultySpawn = 0;
+                }
+
                 LevelsManager lvlManager = LevelsManager.instance;
                 lvlManager.currentLevel += 1;
                 waveNumber += 1;
@@ -141,82 +150,41 @@ public class EnemySpawnTest2 : MonoBehaviour
     {
         int whereSpawn;
         whereSpawn = Random.Range(0, 4); //choose between 4 place to spawn, top, bottom, left, right
+        //int enemyType = Random.Range(0, enemys.Length); //Choose between all type of enemys
         if (whereSpawn == 0) //top
         {
-            //Nicolas Pupulin
-            int ennemyType = Random.Range(0, 2); //Choose between 2 type of ennemy
-            if (ennemyType == 0) //Simple ennemy
-            {
-                screenPos = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(0, Screen.width), Screen.height, 10)); //pick a random place on the top of the screen
+            screenPos = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(0, Screen.width), Screen.height, 10)); //pick a random place on the top of the screen
 
-                GameObject go = Instantiate(simpleEnemy, screenPos, Quaternion.identity); //spawn an enemy at this random place
-            }
-            else if (ennemyType == 1) //Armored ennemy 
-            {
-                screenPos = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(0, Screen.width), Screen.height, 10)); //pick a random place on the top of the screen
-
-                GameObject ga = Instantiate(armoredEnemy, screenPos, Quaternion.identity); //spawn an enemy at this random place
-            }
-            //..Nicolas Pupulin
+            GameObject go = Instantiate(enemys[randomEnemy()], screenPos, Quaternion.identity); //spawn an enemy at this random place
         }
         else if (whereSpawn == 1) //left
         {
-            //Nicolas Pupulin
-            int ennemyType = Random.Range(0, 2); //Choose between 2 type of ennemy
+            screenPos = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Random.Range(0, Screen.height), 10)); //pick a random place on the right of the screen
 
-            if (ennemyType == 0) //Simple ennemy
-            {
-                screenPos = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Random.Range(0, Screen.height), 10)); //pick a random place on the right of the screen
-
-                GameObject go = Instantiate(simpleEnemy, screenPos, Quaternion.identity); //spawn an enemy at this random place
-            }
-            else if (ennemyType == 1) //Armored ennemy 
-            {
-                screenPos = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Random.Range(0, Screen.height), 10)); //pick a random place on the right of the screen
-
-                GameObject ga = Instantiate(armoredEnemy, screenPos, Quaternion.identity); //spawn an enemy at this random place
-            }
-            //..Nicolas Pupulin
+            GameObject go = Instantiate(enemys[randomEnemy()], screenPos, Quaternion.identity); //spawn an enemy at this random place
         }
         else if (whereSpawn == 2) //bottom
         {
-            //Nicolas Pupulin
-            int ennemyType = Random.Range(0, 2); //Choose between 2 type of ennemy
+            screenPos = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(0, Screen.width), -5.5f, 10)); //pick a random place on the bottom of the screen
 
-            if (ennemyType == 0) //Simple ennemy
-            {
-                screenPos = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(0, Screen.width), -5.5f, 10)); //pick a random place on the bottom of the screen
-
-                GameObject go = Instantiate(simpleEnemy, screenPos, Quaternion.identity); //spawn an enemy at this random place
-            }
-            else if (ennemyType == 1) //Armored ennemy 
-            {
-                screenPos = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(0, Screen.width), -5.5f, 10)); //pick a random place on the bottom of the screen
-
-                GameObject ga = Instantiate(armoredEnemy, screenPos, Quaternion.identity); //spawn an enemy at this random place
-            }
-            //..Nicolas Pupulin
+            GameObject go = Instantiate(enemys[randomEnemy()], screenPos, Quaternion.identity); //spawn an enemy at this random place
         }
         else if (whereSpawn == 3) //right
         {
-            //Nicolas Pupulin
-            int ennemyType = Random.Range(0, 2); //Choose between 2 type of ennemy
+            screenPos = Camera.main.ScreenToWorldPoint(new Vector3(-9.5f, Random.Range(0, Screen.height), 10)); //pick a random place on the left of the screen
 
-            if (ennemyType == 0) //Simple ennemy
-            {
-                screenPos = Camera.main.ScreenToWorldPoint(new Vector3(-9.5f, Random.Range(0, Screen.height), 10)); //pick a random place on the left of the screen
-
-                GameObject go = Instantiate(simpleEnemy, screenPos, Quaternion.identity); //spawn an enemy at this random place
-            }
-            else if (ennemyType == 1) //Armored ennemy 
-            {
-                screenPos = Camera.main.ScreenToWorldPoint(new Vector3(-9.5f, Random.Range(0, Screen.height), 10)); //pick a random place on the left of the screen
-
-                GameObject ga = Instantiate(armoredEnemy, screenPos, Quaternion.identity); //spawn an enemy at this random place
-            }
-            //..Nicolas Pupulin
+            GameObject go = Instantiate(enemys[randomEnemy()], screenPos, Quaternion.identity); //spawn an enemy at this random place
         }
         enemyToSpawn -= 1; //decrease the enemy spawn counter
+    }
+
+    int randomEnemy()
+    {
+        int rngSpawn = Random.Range(1, 101);
+        int diffCoeff = 100 / diffModifier;
+
+        rngSpawn = Mathf.RoundToInt(rngSpawn / diffCoeff);
+        return rngSpawn;
     }
 
     //..MACHADO Julien

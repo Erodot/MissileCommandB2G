@@ -15,9 +15,6 @@ public class EnemyMissile : MonoBehaviour
     public int lifePoint;
     //..Nicolas Pupulin
 
-    [Range(0, 5)]
-    public int ennemyDifficulty;
-
     GameObject[] primaryTargets;
     List<Transform> finalTargets = new List<Transform>();
     Vector3 target;
