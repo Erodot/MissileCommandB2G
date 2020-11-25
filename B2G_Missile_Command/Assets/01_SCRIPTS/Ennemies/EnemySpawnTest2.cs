@@ -70,14 +70,14 @@ public class EnemySpawnTest2 : MonoBehaviour
     void Update()
     {
         //clock for the enemy spawning
-        if (enemyToSpawn > 0) //while there's still enemy to spawn
+        if (enemyToSpawn > 0) //while there's still enemy to spawn in the wave
         {
             if (actualTime == timeToSpawn) //if the actual time is the time to spawn enemy
             {
                 InstantiateEnemy(); //spawn an enemy
             }
 
-            if (actualTime > 0) //if the time has'nt reached 0
+            if (actualTime > 0) //if the time between enemy spawn has'nt reached 0
             {
                 actualTime -= Time.deltaTime; //make it decrease
             }
@@ -86,61 +86,57 @@ public class EnemySpawnTest2 : MonoBehaviour
                 actualTime = timeToSpawn; //reset the clock
             }
         }
-        else
+        else //if the wave has ended
         {
 
-            if (actualTime2 > 0) //if the time has'nt reached 0
+            if (actualTime2 > 0) //if the time between wave has'nt reached 0
             {
                 actualTime2 -= Time.deltaTime; //make it decrease
             }
-            else
+            else 
             {
-                int citiesNumber = 0;
-                timeBetweenWaveStart -= Random.Range(timeBetweenWaveReductionMin, timeBetweenWaveReductionMax);
-                foreach (GameObject cities in gameManager.CitiesList)
+                int citiesNumber = 0; //city count number
+                timeBetweenWaveStart -= Random.Range(timeBetweenWaveReductionMin, timeBetweenWaveReductionMax); //decrease the time between wave
+                foreach (GameObject cities in gameManager.CitiesList) //check for all the building
                 {
-                    if (cities != null && cities.GetComponent<MeshRenderer>())
+                    if (cities != null && cities.GetComponent<MeshRenderer>()) //if he is still alive
                     {
-                        citiesNumber += 1;
+                        citiesNumber += 1; //add it to the city count
                     }
                 }
-                if (citiesNumber <= 6 && citiesNumber > 4)
+                if (citiesNumber <= 6 && citiesNumber > 4) //if there is between 4 and 6 cities left
                 {
-                    difficultyAugmentation = 3;
-                    //Debug.Log("3");
+                    difficultyAugmentation = 3; //set difficulty increment to 3
                 }
-                else if (citiesNumber <= 4 && citiesNumber > 2)
+                else if (citiesNumber <= 4 && citiesNumber > 2)  //if there is between 2 and 4 cities left
                 {
-                    difficultyAugmentation = 2;
-                    //Debug.Log("2");
+                    difficultyAugmentation = 2; //set difficulty increment to 2
                 }
-                else if (citiesNumber <= 2)
+                else if (citiesNumber <= 2)  //if there is less than 2 cities left
                 {
-                    difficultyAugmentation = 1;
-                    //Debug.Log("1");
+                    difficultyAugmentation = 1; //set difficulty increment to 1
                 }
-                timeToSpawn -= ((waveNumber + 1) * difficultyAugmentation) / (10 * timeDiviser);
-                //Debug.Log(timeToSpawn);
-                actualTime = timeToSpawn;
+                timeToSpawn -= ((waveNumber + 1) * difficultyAugmentation) / (10 * timeDiviser); //lower the time between enemy spawn 
+                actualTime = timeToSpawn; //set the actual time between enemy spawn
 
 
-                enemyToSpawn = enemyToSpawnBank + Random.Range(enemyGainMin, enemyGainMax) + difficultyAugmentation;
-                enemyToSpawnBank = enemyToSpawn;
-                actualTime2 = timeBetweenWaveStart;
-                difficultySpawn += difficultyAugmentation;
-                if (difficultySpawn >= 9)
+                enemyToSpawn = enemyToSpawnBank + Random.Range(enemyGainMin, enemyGainMax) + difficultyAugmentation; //choose the number of ennemy to spawn for the next wave
+                enemyToSpawnBank = enemyToSpawn; //reset the max enemy spawn
+                actualTime2 = timeBetweenWaveStart; //reset the actual time between wave
+                difficultySpawn += difficultyAugmentation; //add to the difficulty for the spawn
+                if (difficultySpawn >= 9) //if the difficulty for the spawn is higher or equal to 9
                 {
-                    if (diffModifier < enemys.Length)
+                    if (diffModifier < enemys.Length) //if the difficulty of enemy is lower than the number of enemy
                     {
-                        diffModifier++;
+                        diffModifier++; 
                     }
-                    difficultySpawn = 0;
+                    difficultySpawn = 0; //reset the difficulty for the spawn
                 }
 
-                LevelsManager lvlManager = LevelsManager.instance;
-                lvlManager.currentLevel += 1;
-                waveNumber += 1;
-                wave.text = "\r\n" + waveNumber;
+                LevelsManager lvlManager = LevelsManager.instance; //get the level manager
+                lvlManager.currentLevel += 1; 
+                waveNumber += 1; // add one to the wave number
+                wave.text = "\r\n" + waveNumber; //set the text on screen
             }
             //StartCoroutine(Wave());
         }
@@ -155,36 +151,36 @@ public class EnemySpawnTest2 : MonoBehaviour
         {
             screenPos = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(0, Screen.width), Screen.height, 10)); //pick a random place on the top of the screen
 
-            GameObject go = Instantiate(enemys[randomEnemy()], screenPos, Quaternion.identity); //spawn an enemy at this random place
+            GameObject go = Instantiate(enemys[randomEnemy()], screenPos, Quaternion.identity); //spawn a random enemy at this random place
         }
         else if (whereSpawn == 1) //left
         {
             screenPos = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Random.Range(0, Screen.height), 10)); //pick a random place on the right of the screen
 
-            GameObject go = Instantiate(enemys[randomEnemy()], screenPos, Quaternion.identity); //spawn an enemy at this random place
+            GameObject go = Instantiate(enemys[randomEnemy()], screenPos, Quaternion.identity); //spawn a random enemy at this random place
         }
         else if (whereSpawn == 2) //bottom
         {
             screenPos = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(0, Screen.width), -5.5f, 10)); //pick a random place on the bottom of the screen
 
-            GameObject go = Instantiate(enemys[randomEnemy()], screenPos, Quaternion.identity); //spawn an enemy at this random place
+            GameObject go = Instantiate(enemys[randomEnemy()], screenPos, Quaternion.identity); //spawn a random enemy at this random place
         }
         else if (whereSpawn == 3) //right
         {
             screenPos = Camera.main.ScreenToWorldPoint(new Vector3(-9.5f, Random.Range(0, Screen.height), 10)); //pick a random place on the left of the screen
 
-            GameObject go = Instantiate(enemys[randomEnemy()], screenPos, Quaternion.identity); //spawn an enemy at this random place
+            GameObject go = Instantiate(enemys[randomEnemy()], screenPos, Quaternion.identity); //spawn a random enemy at this random place
         }
         enemyToSpawn -= 1; //decrease the enemy spawn counter
     }
 
     int randomEnemy()
     {
-        int rngSpawn = Random.Range(1, 101);
-        int diffCoeff = 100 / diffModifier;
+        int rngSpawn = Random.Range(1, 101); //pick a number between 1 and 100
+        int diffCoeff = 100 / diffModifier; //lower it to be between 1 and the diff modifier
 
-        rngSpawn = Mathf.RoundToInt(rngSpawn / diffCoeff);
-        return rngSpawn;
+        rngSpawn = Mathf.RoundToInt(rngSpawn / diffCoeff); //round it to get an int
+        return rngSpawn; //return this number
     }
 
     //..MACHADO Julien
