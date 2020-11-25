@@ -13,6 +13,8 @@ public class EnemySpawnTest2 : MonoBehaviour
 
     public int waveNumber;
 
+    public int bonusChance;
+    public int bonusFix;
 
 
     int difficultyAugmentation;
