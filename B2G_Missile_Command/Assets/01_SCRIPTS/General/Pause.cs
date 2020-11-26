@@ -5,6 +5,7 @@ using UnityEngine;
 public class Pause : MonoBehaviour
 {
     public GameObject PauseMenu;
+    public GameManager gameManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,11 +21,13 @@ public class Pause : MonoBehaviour
             {
                 PauseMenu.SetActive(true);
                 Time.timeScale = 0;
+                gameManager.turretCanShoot = false;
             }
             else
             {
                 PauseMenu.SetActive(false);
                 Time.timeScale = 1;
+                gameManager.turretCanShoot = true;
             }
         }
     }
@@ -33,5 +36,6 @@ public class Pause : MonoBehaviour
     {
         PauseMenu.SetActive(false);
         Time.timeScale = 1;
+        gameManager.turretCanShoot = true;
     }
 }

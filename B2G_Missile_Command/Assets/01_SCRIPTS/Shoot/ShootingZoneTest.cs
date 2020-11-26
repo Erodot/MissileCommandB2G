@@ -61,13 +61,18 @@ public class ShootingZoneTest : MonoBehaviour
         //..MACHADO Julien
 
         //Corentin SABIAUX GCC2
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>(); //We stock the gameManager of the scene.
+
 
         //gameObject.GetComponent<PolygonCollider2D>().SetPath(0, gameManager.listOfTurrets.listTurretZone[indexTurret].pointsTurretZone); 
         //We set the PolygonCollider points of the turret by the points included into the 3 lists nested on gameManager.
         //..Corentin SABIAUX GCC2
         /// >> I change manually the polygon on another prefab, so this was a problem to keep the new zoning (i didn't know how to change easily the points, so I thought changin the polygon directly was maybe a best way
         /// >> Coline Marchal
+    }
+
+    void Awake()
+    {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();  //We stock the gameManager of the scene.
     }
 
     //MACHADO Julien

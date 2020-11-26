@@ -2465,10 +2465,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c806e26aa1af0648890846be1d86184, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  screenPos: {x: 0, y: 0, z: 0}
   enemys:
   - {fileID: 2087319397564193456, guid: 7e8b82ed35c0c1b4eb770c60293dc0b3, type: 3}
   - {fileID: 2087319397564193456, guid: a7da26291c258674f86daef17588a659, type: 3}
+  bonus: {fileID: 8463603656933705450, guid: 03723a3137a3b3046b45737248bc94e3, type: 3}
   waveNumber: 0
+  bonusRngMax: 0
+  bonusFixe: 2
   difficultySpawn: 0
   diffModifier: 1
   enemyGainMax: 5
@@ -2632,6 +2636,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseMenu: {fileID: 349642702}
+  gameManager: {fileID: 808077392}
 --- !u!1 &1497815629
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,14 +7,17 @@ public class EnemySpawnTest2 : MonoBehaviour
 {
     //MACHADO Julien
 
-    Vector3 screenPos;
+    public Vector3 screenPos;
 
     public GameObject[] enemys;
+    public GameObject bonus;
 
     public int waveNumber;
 
-    public int bonusChance;
-    public int bonusFix;
+    public int bonusRngMax;
+    public int bonusFixe;
+    float bonusTimeInterval;
+    float actualTime3;
 
 
     int difficultyAugmentation;
@@ -66,6 +69,15 @@ public class EnemySpawnTest2 : MonoBehaviour
         actualTime = timeToSpawn; //set the actual time to to the time chosen for the clock
         actualTime2 = timeBetweenWaveStart;
         wave.text = "\r\n" + waveNumber;
+        if (bonusFixe > 0)
+        {
+            bonusTimeInterval = (enemyToSpawn * timeToSpawn) / (bonusFixe + 1);
+        }
+        else
+        {
+            bonusTimeInterval = timeToSpawn / Random.Range(0, bonusRngMax);
+        }
+        actualTime3 = bonusTimeInterval - Time.deltaTime;
     }
 
     // Update is called once per frame
@@ -87,6 +99,22 @@ public class EnemySpawnTest2 : MonoBehaviour
             {
                 actualTime = timeToSpawn; //reset the clock
             }
+
+
+            if (actualTime3 == bonusTimeInterval) //if the actual time is the time to spawn bonus
+            {
+                InstantiateBonus(); //spawn bonus
+            }
+
+            if (actualTime3 > 0) //if the time between bonus spawn has'nt reached 0
+            {
+                actualTime3 -= Time.deltaTime; //make it decrease
+            }
+            else
+            {
+                actualTime3 = bonusTimeInterval; //reset the clock
+            }
+
         }
         else //if the wave has ended
         {
@@ -135,6 +163,16 @@ public class EnemySpawnTest2 : MonoBehaviour
                     difficultySpawn = 0; //reset the difficulty for the spawn
                 }
 
+                if (bonusFixe > 0)
+                {
+                    bonusTimeInterval = (enemyToSpawn * timeToSpawn) / (bonusFixe + 1);
+                }
+                else
+                {
+                    bonusTimeInterval = (enemyToSpawn * timeToSpawn) / Random.Range(0, bonusRngMax);
+                }
+                actualTime3 = bonusTimeInterval - Time.deltaTime;
+
                 LevelsManager lvlManager = LevelsManager.instance; //get the level manager
                 lvlManager.currentLevel += 1; 
                 waveNumber += 1; // add one to the wave number
@@ -179,10 +217,44 @@ public class EnemySpawnTest2 : MonoBehaviour
     int randomEnemy()
     {
         int rngSpawn = Random.Range(1, 101); //pick a number between 1 and 100
-        int diffCoeff = 100 / diffModifier; //lower it to be between 1 and the diff modifier
+        int diffCoeff = 100 / diffModifier; //get the diff coeff
 
-        rngSpawn = Mathf.RoundToInt(rngSpawn / diffCoeff); //round it to get an int
+        rngSpawn = Mathf.RoundToInt(rngSpawn / diffCoeff); //get the number between 1 and diffModifier and round it
         return rngSpawn; //return this number
+    }
+
+    void InstantiateBonus()
+    {
+        int whereSpawn;
+        whereSpawn = Random.Range(0, 4); //choose between 4 place to spawn, top, bottom, left, right
+        if (whereSpawn == 0) //top
+        {
+            screenPos = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(0, Screen.width), Screen.height, 10)); //pick a random place on the top of the screen
+
+            GameObject go = Instantiate(bonus, screenPos, Quaternion.identity); //spawn a bonus at this random place
+            go.GetComponent<bonusdeplac>().direction = 3;
+        }
+        else if (whereSpawn == 1) //left
+        {
+            screenPos = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Random.Range(0, Screen.height), 10)); //pick a random place on the right of the screen
+
+            GameObject go = Instantiate(bonus, screenPos, Quaternion.identity); //spawn a bonus at this random place
+            go.GetComponent<bonusdeplac>().direction = 1;
+        }
+        else if (whereSpawn == 2) //bottom
+        {
+            screenPos = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(0, Screen.width), -5.5f, 10)); //pick a random place on the bottom of the screen
+
+            GameObject go = Instantiate(bonus, screenPos, Quaternion.identity); //spawn a bonus at this random place
+            go.GetComponent<bonusdeplac>().direction = 2;
+        }
+        else if (whereSpawn == 3) //right
+        {
+            screenPos = Camera.main.ScreenToWorldPoint(new Vector3(-9.5f, Random.Range(0, Screen.height), 10)); //pick a random place on the left of the screen
+
+            GameObject go = Instantiate(bonus, screenPos, Quaternion.identity); //spawn a bonus at this random place
+            go.GetComponent<bonusdeplac>().direction = 0;
+        }
     }
 
     //..MACHADO Julien
