@@ -8,6 +8,7 @@ TagManager:
   - Bullet
   - Explosion
   - Ennemy
+  - Bonus
   layers:
   - Default
   - TransparentFX

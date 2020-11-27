@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class bonusdeplac : MonoBehaviour
 {
-    public int moveSpeed;
-    public int oscillationSpeed;
+    public float moveSpeed;
+    public float baseMoveSpeed;
+    public float oscillationSpeed;
     public int direction;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        baseMoveSpeed = moveSpeed;
     }
 
     // Update is called once per frame

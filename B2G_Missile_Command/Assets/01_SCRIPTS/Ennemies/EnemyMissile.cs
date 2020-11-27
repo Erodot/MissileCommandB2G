@@ -20,6 +20,7 @@ public class EnemyMissile : MonoBehaviour
     Vector3 target;
     [Range(0.0f, 10.0f)]
     public float speed; //speed of the missile
+    public float baseSpeed;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,7 @@ public class EnemyMissile : MonoBehaviour
         //primaryTargets = GameObject.FindGameObjectsWithTag("Player"); //find randomly the target of the missile
         //TestRaycast();
         //target = finalTargets[Random.Range(0, finalTargets.Count)].position; //set this target as a vector 3
+        baseSpeed = speed;
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         target = FindClosestTarget("Player").transform.position; //find closest target
         gameObject.transform.LookAt(target); //rotate towards his target
