@@ -29,6 +29,8 @@ public class EnemySpawnTest2 : MonoBehaviour
     public int enemyGainMax;
     [Range(0, 10), Tooltip("Minimum addition of enemy for a wave")]
     public int enemyGainMin;
+    [Tooltip("Maximum number of enemy during a wave")]
+    public int maxEnemy;
 
     [Header("Enemy basic spawn")]
     int enemyToSpawnBank;
@@ -45,6 +47,8 @@ public class EnemySpawnTest2 : MonoBehaviour
     public float timeBetweenWaveReductionMax;
     [Range(0.0f, 5.0f), Tooltip("Minimum reduction that can have the time between wave")]
     public float timeBetweenWaveReductionMin;
+    [Tooltip("Minimum time possible between wave")]
+    public float minimumWaveTime; 
     float actualTime2; //actual time of the clock
 
     [Header("Time between enemy spawn Manger")]
@@ -52,6 +56,8 @@ public class EnemySpawnTest2 : MonoBehaviour
     public float timeToSpawn; //time between the enemy spawn
     [Range(1.0f, 5.0f), Tooltip("Number used to divide the time between the enemy spawn")]
     public float timeDiviser;
+    [Tooltip("Minimum time possible between wave")]
+    public float minimumSpawnTime;
     float actualTime; //actual time of the clock
 
     public GameManager gameManager;
@@ -126,7 +132,11 @@ public class EnemySpawnTest2 : MonoBehaviour
             else 
             {
                 int citiesNumber = 0; //city count number
-                timeBetweenWaveStart -= Random.Range(timeBetweenWaveReductionMin, timeBetweenWaveReductionMax); //decrease the time between wave
+                if(timeBetweenWaveStart > minimumWaveTime)
+                {
+                    timeBetweenWaveStart -= Random.Range(timeBetweenWaveReductionMin, timeBetweenWaveReductionMax); //decrease the time between wave
+                }
+
                 foreach (GameObject cities in gameManager.CitiesList) //check for all the building
                 {
                     if (cities != null && cities.GetComponent<MeshRenderer>()) //if he is still alive
@@ -146,11 +156,19 @@ public class EnemySpawnTest2 : MonoBehaviour
                 {
                     difficultyAugmentation = 1; //set difficulty increment to 1
                 }
-                timeToSpawn -= ((waveNumber + 1) * difficultyAugmentation) / (10 * timeDiviser); //lower the time between enemy spawn 
+
+                if(timeToSpawn > minimumSpawnTime)
+                {
+                    timeToSpawn -= ((waveNumber + 1) * difficultyAugmentation) / (10 * timeDiviser); //lower the time between enemy spawn 
+                }
+
                 actualTime = timeToSpawn; //set the actual time between enemy spawn
 
+                if(enemyToSpawnBank < maxEnemy)
+                {
+                    enemyToSpawn = enemyToSpawnBank + Random.Range(enemyGainMin, enemyGainMax) + difficultyAugmentation; //choose the number of ennemy to spawn for the next wave
+                }
 
-                enemyToSpawn = enemyToSpawnBank + Random.Range(enemyGainMin, enemyGainMax) + difficultyAugmentation; //choose the number of ennemy to spawn for the next wave
                 enemyToSpawnBank = enemyToSpawn; //reset the max enemy spawn
                 actualTime2 = timeBetweenWaveStart; //reset the actual time between wave
                 difficultySpawn += difficultyAugmentation; //add to the difficulty for the spawn
@@ -216,10 +234,11 @@ public class EnemySpawnTest2 : MonoBehaviour
 
     int randomEnemy()
     {
-        int rngSpawn = Random.Range(1, 101); //pick a number between 1 and 100
-        int diffCoeff = 100 / diffModifier; //get the diff coeff
+        int rngSpawn = Random.Range(0, diffModifier);
+        //int rngSpawn = Random.Range(1, 101); //pick a number between 1 and 100
+        //int diffCoeff = 100 / diffModifier; //get the diff coeff
 
-        rngSpawn = Mathf.RoundToInt(rngSpawn / diffCoeff); //get the number between 1 and diffModifier and round it
+        //rngSpawn = Mathf.RoundToInt(rngSpawn / diffCoeff); //get the number between 1 and diffModifier and round it
         return rngSpawn; //return this number
     }
 

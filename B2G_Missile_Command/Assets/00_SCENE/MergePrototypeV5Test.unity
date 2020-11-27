@@ -2477,14 +2477,17 @@ MonoBehaviour:
   diffModifier: 1
   enemyGainMax: 5
   enemyGainMin: 2
+  maxEnemy: 50
   enemyToSpawn: 0
   enemyMin: 2
   enemyMax: 5
   timeBetweenWaveStart: 10
   timeBetweenWaveReductionMax: 1.5
   timeBetweenWaveReductionMin: 0.25
+  minimumWaveTime: 5
   timeToSpawn: 2
   timeDiviser: 4
+  minimumSpawnTime: 1
   gameManager: {fileID: 808077392}
   wave: {fileID: 12987539}
 --- !u!4 &1417013113
