@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -928614459087312163}
   - component: {fileID: 3048141030897770999}
   m_Layer: 0
-  m_Name: IGSimpleEnnemy
+  m_Name: IGHiveEnnemy
   m_TagString: Ennemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2e26e47047281c84887ee7c3ce5f68f0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -111,11 +111,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
-  Explosion: {fileID: 4988724062270726289, guid: f1f65eee0c8933f418bf0ff1be26801c, type: 3}
+  explosion: {fileID: 0}
+  ennemiesPrefab:
+  - {fileID: 2087319397564193456, guid: 7e8b82ed35c0c1b4eb770c60293dc0b3, type: 3}
   lifePoint: 1
-  speed: 2
+  speed: 0.7
   baseSpeed: 0
-  type: simple
+  type: hive
 --- !u!54 &3048141030897770999
 Rigidbody:
   m_ObjectHideFlags: 0

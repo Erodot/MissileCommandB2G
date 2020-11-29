@@ -7,7 +7,8 @@ public class EnemyMissile : MonoBehaviour
     //MACHADO Julien
 
     public GameManager gameManager;
-    public GameObject Explosion;
+    public GameObject explosion;
+    public List<GameObject> ennemiesPrefab = new List<GameObject>();
 
     int damageIndex = 100;
 
@@ -21,6 +22,7 @@ public class EnemyMissile : MonoBehaviour
     [Range(0.0f, 10.0f)]
     public float speed; //speed of the missile
     public float baseSpeed;
+    public string type;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +38,11 @@ public class EnemyMissile : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+        GoToTarget();
+    }
+
+    void GoToTarget()
     {
         transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime); //make the missile move towards the target
     }
@@ -59,7 +66,7 @@ public class EnemyMissile : MonoBehaviour
                         gameManager.ShootingZoneList.Remove(turret);
                     }
                 }
-                Destroy(this.gameObject); //destroy the missile
+                DestroyThis(); //destroy the missile
             }
             else
             {
@@ -99,7 +106,7 @@ public class EnemyMissile : MonoBehaviour
                 }
             }
 
-            Destroy(this.gameObject); //destroy the missile
+            DestroyThis(); //destroy the missile
         }
 
         if (other.gameObject.CompareTag("Explosion")) //if the missile hit a player bullet
@@ -108,8 +115,8 @@ public class EnemyMissile : MonoBehaviour
             lifePoint--;
             if (lifePoint == 0)
             {
-                Instantiate(Explosion, transform.position, Quaternion.identity);
-                Destroy(this.gameObject); //destroy the missile
+                Instantiate(explosion, transform.position, Quaternion.identity);
+                DestroyThis(); //destroy the missile
             }
             //..Nicolas Pupulin
         }
@@ -194,6 +201,34 @@ public class EnemyMissile : MonoBehaviour
         }
     }*/
 
-    //..Coline Marchal
+    [ContextMenu("DestroyHive")]
+    public void DestroyThis()
+    {
+        if (type == "hive") //ruche
+        {
+            //instanciate 5 simple ennemies
+            for (int i = 0; i < 5; i++)
+            {
+                float angle = 360f / 5;
+                float rayon = 3f;
+                Vector3 newEnnemyPos = new Vector3(transform.position.x + rayon, transform.position.y, transform.position.z + rayon);
+                Quaternion q = Quaternion.Euler(0,90,0);
+                GameObject nmi = Instantiate(ennemiesPrefab[0], newEnnemyPos, q);
+                Debug.Log(q);
 
+                //rotation
+                transform.RotateAround(transform.position, Vector3.back, angle);
+
+
+                nmi.transform.parent = transform;
+            }
+            for (int i = 0; i < 5; i++)
+            {
+                transform.GetChild(0).transform.parent = null;
+            }
+        }
+
+        Destroy(this.gameObject);
+    }
+    //..Coline Marchal
 }

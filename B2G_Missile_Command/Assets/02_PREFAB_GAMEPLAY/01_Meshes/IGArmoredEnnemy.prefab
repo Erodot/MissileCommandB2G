@@ -113,8 +113,9 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   Explosion: {fileID: 4988724062270726289, guid: f1f65eee0c8933f418bf0ff1be26801c, type: 3}
   lifePoint: 3
-  ennemyDifficulty: 0
   speed: 1
+  baseSpeed: 0
+  type: armored
 --- !u!54 &3048141030897770999
 Rigidbody:
   m_ObjectHideFlags: 0
