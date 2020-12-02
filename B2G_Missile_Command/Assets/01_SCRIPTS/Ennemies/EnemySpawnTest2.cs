@@ -195,8 +195,8 @@ public class EnemySpawnTest2 : MonoBehaviour
                 }
                 actualTime3 = bonusTimeInterval - Time.deltaTime;
 
-                LevelsManager lvlManager = LevelsManager.instance; //get the level manager
-                lvlManager.currentLevel += 1; 
+                //LevelsManager lvlManager = LevelsManager.instance; //get the level manager
+                //lvlManager.currentLevel += 1; 
                 waveNumber += 1; // add one to the wave number
                 wave.text = "\r\n" + waveNumber; //set the text on screen
             }

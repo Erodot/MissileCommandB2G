@@ -8,6 +8,7 @@ public class BuildingLifeDamage : MonoBehaviour
     GameManager gameManager;
     public int lifes;
     public bool destroyed;
+    public string type;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,46 @@ public class BuildingLifeDamage : MonoBehaviour
         {
             DestroyThis();
         }
+    }
+
+    public void ManageSound(string what)
+    {
+        AudioSource audioSource = GetComponent<AudioSource>();
+        AudioClip sound = null;
+        SoundManager sm = GameObject.FindGameObjectWithTag("audio").GetComponent<SoundManager>();
+        if(type == "turret")
+        {
+            if (what == "shoot")
+            {
+                int r = Random.Range(0, sm.sounds[3].list.Count - 1);
+                sound = sm.sounds[3].list[r];
+            }
+            else if (what == "damage")
+            {
+                
+            }
+            else if (what == "destroy")
+            {
+                Debug.Log("brolhomom");
+                sound = sm.sounds[5].list[1];
+            }
+        }
+        else //city
+        {
+            if (what == "damage")
+            {
+                
+            }
+            else if (what == "destroy")
+            {
+                Debug.Log("brolhomom");
+                sound = sm.sounds[5].list[2];
+            }
+        }
+
+        audioSource.clip = sound;
+        audioSource.Play();
+        
     }
 
     public void Damaged(int damagedAmount) //damage if neighour attacked
@@ -43,7 +84,7 @@ public class BuildingLifeDamage : MonoBehaviour
 
             transform.GetChild(0).transform.GetChild(0).gameObject.SetActive(false);
             transform.GetChild(0).transform.GetChild(1).gameObject.SetActive(true);
-
+            ManageSound("damage");
             //GetComponent<Renderer>().material.color = damagedColor;
         }
     }
@@ -58,6 +99,8 @@ public class BuildingLifeDamage : MonoBehaviour
         transform.GetChild(0).transform.GetChild(0).gameObject.SetActive(false);
         transform.GetChild(0).transform.GetChild(1).gameObject.SetActive(false);
         transform.GetChild(0).transform.GetChild(2).gameObject.SetActive(true);
+
+        ManageSound("destroy");
 
         if (gameManager != null)
         {

@@ -125,4 +125,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55b66b22819668d4bbec82c974e544c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radiusMultiplier: 45
+  radiusMultiplier: 30
+  explosionTime: 10
