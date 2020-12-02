@@ -40,8 +40,9 @@ public class bonusdeplac : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Explosion")) //if the bonus hit a player bullet
+        if (other.gameObject.CompareTag("Bullet")) //if the bonus hit a player bullet
         {
+            Destroy(other.gameObject);
             Destroy(gameObject);
         } 
     }

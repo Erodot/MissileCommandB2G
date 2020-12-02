@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlanetControllerTest : MonoBehaviour 
 {
     public KeybindScript keybindScript;
+    public ControlSettings controlSettings;
 
     //Script by Corentin SABIAUX GCC2, don't hesitate to ask some questions.
 
@@ -34,25 +35,28 @@ public class PlanetControllerTest : MonoBehaviour
 
         if (isRotationAccurate == true)
         {
-            if (Input.GetKey(keybindScript.keys["Right"]))
+            /*if (Input.GetKey(keybindScript.keys["Right"]))
             {
                 horizontalMove -= 1 * rotationSpeed * Time.deltaTime; //The planet is rotating accurately by horizontal positive and negative button.
             }
             else if (Input.GetKey(keybindScript.keys["Left"]))
             {
                 horizontalMove -= -1 * rotationSpeed * Time.deltaTime; //The planet is rotating accurately by horizontal positive and negative button.
-            }
+            }*/
+            horizontalMove -= controlSettings.Rotate.ReadValue<float>() * rotationSpeed * Time.deltaTime; //The planet is rotating smoothly by horizontal positive and negative button.
+
         }
         else
         {
-            if (Input.GetKey(keybindScript.keys["Right"]))
+            /*if (Input.GetKey(keybindScript.keys["Right"]))
             {
                 horizontalMove -= 1 * rotationSpeed * Time.deltaTime; //The planet is rotating smoothly by horizontal positive and negative button.
             }
             else if (Input.GetKey(keybindScript.keys["Left"]))
             {
                 horizontalMove -= -1 * rotationSpeed * Time.deltaTime; //The planet is rotating smoothly by horizontal positive and negative button.
-            }
+            }*/
+            horizontalMove -= controlSettings.Rotate.ReadValue<float>() * rotationSpeed * Time.deltaTime; //The planet is rotating smoothly by horizontal positive and negative button.
         }
     }
     //..Corentin SABIAUX GCC2

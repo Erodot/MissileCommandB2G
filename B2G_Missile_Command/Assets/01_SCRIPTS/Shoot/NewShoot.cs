@@ -6,20 +6,19 @@ public class NewShoot : MonoBehaviour
 {
 
     public GameObject Bullet;
-    public Vector3 groundPosition;//planet
-    public Vector3 mouseDirection;
-    public Vector3 shootDirection;
-    public Camera mainCamera;
     public bool tir = false;
     public bool isDestroy;
     public int indexTurret; //Indicate wich turret he is.
     public GameObject Canon;
     public bool isActivated;
 
+    bool shoot = true;
+    public ControlSettings controlSettings;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        controlSettings = GameObject.Find("ControlManager").GetComponent<ControlSettings>();
     }
 
     // Update is called once per frame
@@ -27,10 +26,17 @@ public class NewShoot : MonoBehaviour
     {
         if (isActivated)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Mathf.RoundToInt(controlSettings.Shoot.ReadValue<float>()) == 1 && shoot == true)
             {
+                Debug.Log("shoot");
                 GameObject go = Instantiate(Bullet, Canon.transform.position, gameObject.transform.rotation);
                 go.GetComponent<NewBullet>().direction = Canon.transform.position - transform.position;
+
+                shoot = false;
+            }
+            else if (Mathf.RoundToInt(controlSettings.Shoot.ReadValue<float>()) != 1 && shoot == false)
+            {
+                shoot = true;
             }
         }
     }

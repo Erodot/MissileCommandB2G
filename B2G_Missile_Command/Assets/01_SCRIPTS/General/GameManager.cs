@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     GameObject[] playerProperty;
     //..Coline Marchal
 
+    public ControlSettings controlSettings;
+
     //Corentin SABIAUX GCC2
     [Header("During Game Over and Victory scene")]
     [Tooltip("Check-it if you want to stop ennemySpawn during the gameover scene.")]
@@ -120,32 +122,32 @@ public class GameManager : MonoBehaviour
             CheckGame();
         }
 
-
-        if (Input.GetKeyDown(KeyCode.I) && TurretList2[0] != null)
+        if (Mathf.RoundToInt(controlSettings.Turret1.ReadValue<float>()) == 1 && TurretList2[0] != null)
         {
-            TurretList2[0].GetComponent<NewShoot>().isActivated = true;
+            Debug.Log("turret");
             if (LastActivated != null)
             {
                 LastActivated.GetComponent<NewShoot>().isActivated = false;
             }
+            TurretList2[0].GetComponent<NewShoot>().isActivated = true;
             LastActivated = TurretList2[0];
         }
-        if (Input.GetKeyDown(KeyCode.O) && TurretList2[1] != null)
+        if (Mathf.RoundToInt(controlSettings.Turret2.ReadValue<float>()) == 1 && TurretList2[1] != null)
         {
-            TurretList2[1].GetComponent<NewShoot>().isActivated = true;
             if (LastActivated != null)
             {
                 LastActivated.GetComponent<NewShoot>().isActivated = false;
             }
+            TurretList2[1].GetComponent<NewShoot>().isActivated = true;
             LastActivated = TurretList2[1];
         }
-        if (Input.GetKeyDown(KeyCode.P) && TurretList2[2] != null)
+        if (Mathf.RoundToInt(controlSettings.Turret3.ReadValue<float>()) == 1 && TurretList2[2] != null)
         {
-            TurretList2[2].GetComponent<NewShoot>().isActivated = true;
             if (LastActivated != null)
             {
                 LastActivated.GetComponent<NewShoot>().isActivated = false;
             }
+            TurretList2[2].GetComponent<NewShoot>().isActivated = true;
             LastActivated = TurretList2[2];
         }
     }
