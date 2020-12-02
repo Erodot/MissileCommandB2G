@@ -47,13 +47,16 @@ public class GameManager : MonoBehaviour
 
     //Coline Marchal
 
-    public List<ShootingZoneTest> ShootingZoneList = new List<ShootingZoneTest>(); //rename turretList to recupere a game object list
+    //public List<ShootingZoneTest> ShootingZoneList = new List<ShootingZoneTest>(); //rename turretList to recupere a game object list
     public List<GameObject> TurretList = new List<GameObject>();
+    public List<GameObject> TurretList2 = new List<GameObject>();
     public List<GameObject> CitiesList = new List<GameObject>();
     public List<GameObject> BuildingList = new List<GameObject>();
     bool gameOver;
     bool victory;
     bool terrainOK;
+
+    GameObject LastActivated;
 
     /*  singleton
     void Awake()
@@ -84,7 +87,8 @@ public class GameManager : MonoBehaviour
             if (go.name.Contains("Turret"))
             {
                 TurretList.Add(go);
-                ShootingZoneList.Add(go.transform.Find("Zone").gameObject.GetComponent<ShootingZoneTest>());
+                TurretList2.Add(go);
+                //ShootingZoneList.Add(go.transform.Find("Zone").gameObject.GetComponent<ShootingZoneTest>());
             }
             else if (go.name.Contains("City"))
             {
@@ -114,6 +118,35 @@ public class GameManager : MonoBehaviour
         if (terrainOK)
         {
             CheckGame();
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.I) && TurretList2[0] != null)
+        {
+            TurretList2[0].GetComponent<NewShoot>().isActivated = true;
+            if (LastActivated != null)
+            {
+                LastActivated.GetComponent<NewShoot>().isActivated = false;
+            }
+            LastActivated = TurretList2[0];
+        }
+        if (Input.GetKeyDown(KeyCode.O) && TurretList2[1] != null)
+        {
+            TurretList2[1].GetComponent<NewShoot>().isActivated = true;
+            if (LastActivated != null)
+            {
+                LastActivated.GetComponent<NewShoot>().isActivated = false;
+            }
+            LastActivated = TurretList2[1];
+        }
+        if (Input.GetKeyDown(KeyCode.P) && TurretList2[2] != null)
+        {
+            TurretList2[2].GetComponent<NewShoot>().isActivated = true;
+            if (LastActivated != null)
+            {
+                LastActivated.GetComponent<NewShoot>().isActivated = false;
+            }
+            LastActivated = TurretList2[2];
         }
     }
 
@@ -277,7 +310,8 @@ public class GameManager : MonoBehaviour
             {
                 if (go != null && go.name.Contains("Turret"))
                 {
-                    go.transform.Find("Zone").gameObject.GetComponent<ShootingZoneTest>();
+                    //go.transform.Find("Zone").gameObject.GetComponent<ShootingZoneTest>();
+                    go.GetComponent<NewShoot>().enabled = false;
                 }
             }
         }

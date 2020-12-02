@@ -29,8 +29,8 @@ public class NewShoot : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                GameObject go = Instantiate(Bullet, Canon.transform.position, Quaternion.identity);
-                go.transform.parent = Canon.transform;
+                GameObject go = Instantiate(Bullet, Canon.transform.position, gameObject.transform.rotation);
+                go.GetComponent<NewBullet>().direction = Canon.transform.position - transform.position;
             }
         }
     }

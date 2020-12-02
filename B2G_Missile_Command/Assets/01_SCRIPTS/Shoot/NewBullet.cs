@@ -8,6 +8,7 @@ public class NewBullet : MonoBehaviour
     public GameObject Explosion;
     public int speed;
     public int lifeTime;
+    public Vector3 direction;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +19,7 @@ public class NewBullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.localPosition += Vector3.up * Time.deltaTime * speed;
+        transform.position += direction.normalized * Time.deltaTime * speed;
     }
 
     private void OnTriggerEnter(Collider other)

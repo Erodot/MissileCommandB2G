@@ -56,14 +56,15 @@ public class EnemyMissile : MonoBehaviour
                 other.gameObject.GetComponent<BuildingLifeDamage>().Damaged(2);
 
                 ShootingZoneTest turret;
-                if (other.gameObject.transform.Find("Zone")) //if the building is a turret
+                if (other.GetComponent<NewShoot>() != null) //if the building is a turret
                 {
-                    turret = other.gameObject.transform.Find("Zone").gameObject.GetComponent<ShootingZoneTest>();
-                    turret.isDestroy = true; //deactivate his ShootingZoneTest component
+                    //turret = other.gameObject.transform.Find("Zone").gameObject.GetComponent<ShootingZoneTest>();
+                    //turret.isDestroy = true; //deactivate his ShootingZoneTest component
+                    other.GetComponent<NewShoot>().enabled = false;
 
                     if (gameManager != null)
                     {
-                        gameManager.ShootingZoneList.Remove(turret);
+                        //gameManager.ShootingZoneList.Remove(turret);
                     }
                 }
                 DestroyThis(); //destroy the missile
