@@ -111,7 +111,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
-  Explosion: {fileID: 4988724062270726289, guid: f1f65eee0c8933f418bf0ff1be26801c, type: 3}
+  explosion: {fileID: 4988724062270726289, guid: f1f65eee0c8933f418bf0ff1be26801c, type: 3}
+  ennemiesPrefab: []
   lifePoint: 3
   speed: 1
   baseSpeed: 0
