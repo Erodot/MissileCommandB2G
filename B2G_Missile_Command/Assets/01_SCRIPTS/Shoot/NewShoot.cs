@@ -14,6 +14,7 @@ public class NewShoot : MonoBehaviour
     public bool isDestroy;
     public int indexTurret; //Indicate wich turret he is.
     public GameObject Canon;
+    public bool isActivated;
 
     // Start is called before the first frame update
     void Start()
@@ -24,10 +25,13 @@ public class NewShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (isActivated)
         {
-            GameObject go = Instantiate(Bullet, Canon.transform.position, Quaternion.identity);
-            go.transform.parent = Canon.transform;
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                GameObject go = Instantiate(Bullet, Canon.transform.position, Quaternion.identity);
+                go.transform.parent = Canon.transform;
+            }
         }
     }
 }
