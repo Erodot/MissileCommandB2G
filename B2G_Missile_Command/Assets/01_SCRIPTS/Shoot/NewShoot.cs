@@ -29,33 +29,36 @@ public class NewShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isActivated && canShoot)
+        if (gameManager.turretCanShoot)
         {
-            if (Mathf.RoundToInt(controlSettings.Shoot.ReadValue<float>()) == 1 && shoot == true)
+            if (isActivated && canShoot)
             {
-                Debug.Log("shoot");
-                GameObject go = Instantiate(Bullet, Canon.transform.position, gameObject.transform.rotation);
-                go.GetComponent<NewBullet>().direction = Canon.transform.position - transform.position;
+                if (Mathf.RoundToInt(controlSettings.Shoot.ReadValue<float>()) == 1 && shoot == true)
+                {
+                    Debug.Log("shoot");
+                    GameObject go = Instantiate(Bullet, Canon.transform.position, gameObject.transform.rotation);
+                    go.GetComponent<NewBullet>().direction = Canon.transform.position - transform.position;
 
-                shoot = false;
-                canShoot = false;
-                StartCoroutine(Reload());
+                    shoot = false;
+                    canShoot = false;
+                    StartCoroutine(Reload());
+                }
+                else if (Mathf.RoundToInt(controlSettings.Shoot.ReadValue<float>()) != 1 && shoot == false)
+                {
+                    shoot = true;
+                }
             }
-            else if (Mathf.RoundToInt(controlSettings.Shoot.ReadValue<float>()) != 1 && shoot == false)
-            {
-                shoot = true;
-            }
-        }
 
-        if (gameManager.controlKeyboard)
-        {
-            if (Keyboard.current.spaceKey.wasPressedThisFrame && isActivated && canShoot)
+            if (gameManager.controlKeyboard)
             {
-                GameObject go = Instantiate(Bullet, Canon.transform.position, gameObject.transform.rotation);
-                go.GetComponent<NewBullet>().direction = Canon.transform.position - transform.position;
+                if (Keyboard.current.spaceKey.wasPressedThisFrame && isActivated && canShoot)
+                {
+                    GameObject go = Instantiate(Bullet, Canon.transform.position, gameObject.transform.rotation);
+                    go.GetComponent<NewBullet>().direction = Canon.transform.position - transform.position;
 
-                canShoot = false;
-                StartCoroutine(Reload());
+                    canShoot = false;
+                    StartCoroutine(Reload());
+                }
             }
         }
     }
