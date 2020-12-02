@@ -7,6 +7,7 @@ public class BuildingLifeDamage : MonoBehaviour
     //Coline Marchal
     GameManager gameManager;
     public int lifes;
+    public bool destroyed;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +29,7 @@ public class BuildingLifeDamage : MonoBehaviour
         //Debug.Log("ouch");
         if (gameManager != null)
         {
-            Color damagedColor = new Color();
+            /*/Color damagedColor = new Color();
 
             if (gameManager.CitiesList.Contains(this.gameObject))//city
             {
@@ -38,10 +39,12 @@ public class BuildingLifeDamage : MonoBehaviour
             else if (gameManager.TurretList.Contains(this.gameObject))//turret
             {
                 damagedColor = new Color(1f, 0.19f, 0f);
-            }
+            }*/
 
+            transform.GetChild(0).transform.GetChild(0).gameObject.SetActive(false);
+            transform.GetChild(0).transform.GetChild(1).gameObject.SetActive(true);
 
-            GetComponent<Renderer>().material.color = damagedColor;
+            //GetComponent<Renderer>().material.color = damagedColor;
         }
     }
 
@@ -49,7 +52,13 @@ public class BuildingLifeDamage : MonoBehaviour
     {
         //Debug.Log("destroy " + name);
         GameObject go = this.gameObject;
-        go.GetComponent<MeshRenderer>().enabled = false;
+        //go.GetComponent<MeshRenderer>().enabled = false;
+        destroyed = true;
+
+        transform.GetChild(0).transform.GetChild(0).gameObject.SetActive(false);
+        transform.GetChild(0).transform.GetChild(1).gameObject.SetActive(false);
+        transform.GetChild(0).transform.GetChild(2).gameObject.SetActive(true);
+
         if (gameManager != null)
         {
             if (gameManager.CitiesList.Contains(go))//city

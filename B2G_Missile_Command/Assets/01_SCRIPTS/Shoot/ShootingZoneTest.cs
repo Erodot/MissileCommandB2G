@@ -20,8 +20,9 @@ public class ShootingZoneTest : MonoBehaviour
     
     private void OnMouseDown()
     {
+
         Vector3 canonPosition = transform.parent.position; //where do you shoot from
-        if (gameManager.turretCanShoot == true) //If the turrets can shoot.
+        if (mainCamera != null && gameManager.turretCanShoot) //If the turrets can shoot.
         {
             //..Corentin SABIAUX GCC2
 

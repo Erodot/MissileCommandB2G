@@ -51,7 +51,7 @@ public class EnemyMissile : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player")) //if the missile hit a building
         {
-            if (other.gameObject.GetComponent<MeshRenderer>().enabled == true)
+            if (!other.gameObject.GetComponent<BuildingLifeDamage>().destroyed)
             {
                 other.gameObject.GetComponent<BuildingLifeDamage>().Damaged(2);
 
@@ -115,7 +115,7 @@ public class EnemyMissile : MonoBehaviour
             lifePoint--;
             if (lifePoint == 0)
             {
-                Instantiate(explosion, transform.position, Quaternion.identity);
+                //Instantiate(explosion, transform.position, Quaternion.identity);
                 DestroyThis(); //destroy the missile
             }
             //..Nicolas Pupulin

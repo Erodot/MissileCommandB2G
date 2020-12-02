@@ -42,8 +42,11 @@ public class PlayerMissile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Instantiate(Explosion, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+        if (other.tag == "Ennemy")
+        {
+            Instantiate(Explosion, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
     }
 
     private void Explose()
