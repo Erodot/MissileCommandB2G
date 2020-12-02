@@ -1413,7 +1413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51cca43f62e68324b9fd1090e373d134, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keybindScript: {fileID: 0}
+  gameManager: {fileID: 808077392}
   controlSettings: {fileID: 1792446248}
   controller: {fileID: 445061305}
   fieldTransform: {fileID: 445061300}
@@ -2115,6 +2115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ui: {fileID: 1419993777}
   controlSettings: {fileID: 1792446248}
+  controlKeyboard: 0
   stopEnemySpawner: 0
   stopPlanetController: 1
   stopFireCapability: 1

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class GameManager : MonoBehaviour
     //..Coline Marchal
 
     public ControlSettings controlSettings;
+
+    public bool controlKeyboard;
 
     //Corentin SABIAUX GCC2
     [Header("During Game Over and Victory scene")]
@@ -149,6 +152,38 @@ public class GameManager : MonoBehaviour
             }
             TurretList2[2].GetComponent<NewShoot>().isActivated = true;
             LastActivated = TurretList2[2];
+        }
+
+        if (controlKeyboard)
+        {
+            if (Keyboard.current.qKey.isPressed && TurretList2[0] != null)
+            {
+                Debug.Log("turret");
+                if (LastActivated != null)
+                {
+                    LastActivated.GetComponent<NewShoot>().isActivated = false;
+                }
+                TurretList2[0].GetComponent<NewShoot>().isActivated = true;
+                LastActivated = TurretList2[0];
+            }
+            if (Keyboard.current.wKey.wasPressedThisFrame && TurretList2[1] != null)
+            {
+                if (LastActivated != null)
+                {
+                    LastActivated.GetComponent<NewShoot>().isActivated = false;
+                }
+                TurretList2[1].GetComponent<NewShoot>().isActivated = true;
+                LastActivated = TurretList2[1];
+            }
+            if (Keyboard.current.eKey.wasPressedThisFrame && TurretList2[2] != null)
+            {
+                if (LastActivated != null)
+                {
+                    LastActivated.GetComponent<NewShoot>().isActivated = false;
+                }
+                TurretList2[2].GetComponent<NewShoot>().isActivated = true;
+                LastActivated = TurretList2[2];
+            }
         }
     }
 

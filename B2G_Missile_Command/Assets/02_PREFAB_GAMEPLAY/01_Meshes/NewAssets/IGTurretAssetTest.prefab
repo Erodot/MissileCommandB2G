@@ -229,6 +229,7 @@ MonoBehaviour:
   indexTurret: 0
   Canon: {fileID: 4500256060581646316}
   isActivated: 0
+  reloadTime: 0.2
   controlSettings: {fileID: 0}
 --- !u!1 &4500256060581646316
 GameObject:
