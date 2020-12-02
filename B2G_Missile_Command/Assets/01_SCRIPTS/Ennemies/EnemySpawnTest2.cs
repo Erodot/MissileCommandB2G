@@ -60,6 +60,10 @@ public class EnemySpawnTest2 : MonoBehaviour
     public float minimumSpawnTime;
     float actualTime; //actual time of the clock
 
+    public int whereSpawn;
+
+    public EnemyAnnouncerTest announcerScript;
+
     public GameManager gameManager;
 
     public Text wave;
@@ -202,7 +206,6 @@ public class EnemySpawnTest2 : MonoBehaviour
 
     void InstantiateEnemy()
     {
-        int whereSpawn;
         whereSpawn = Random.Range(0, 4); //choose between 4 place to spawn, top, bottom, left, right
         //int enemyType = Random.Range(0, enemys.Length); //Choose between all type of enemys
         if (whereSpawn == 0) //top
