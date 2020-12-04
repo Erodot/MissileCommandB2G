@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5246904628363276486}
-  - component: {fileID: -7675534538482172032}
+  - component: {fileID: -1407074261416148597}
   m_Layer: 0
-  m_Name: ClearBonus
+  m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-7675534538482172032
+--- !u!114 &-1407074261416148597
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,7 +40,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 997198618776077637}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22cb53be65f9c4e4998005d4f8de7f6d, type: 3}
+  m_Script: {fileID: 11500000, guid: 4eb528717c159964ba9728b8dbdf523d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timeEffect: 0

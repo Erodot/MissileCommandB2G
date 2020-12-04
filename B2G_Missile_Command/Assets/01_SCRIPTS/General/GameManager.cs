@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public ControlSettings controlSettings;
 
     public bool controlKeyboard;
+    public bool isShieldActivated;
 
     //Corentin SABIAUX GCC2
     [Header("During Game Over and Victory scene")]

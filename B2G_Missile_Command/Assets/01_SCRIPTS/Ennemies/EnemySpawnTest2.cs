@@ -11,6 +11,7 @@ public class EnemySpawnTest2 : MonoBehaviour
 
     public GameObject[] enemys;
     public GameObject bonus;
+    public GameObject[] bonusEffect;
 
     public int waveNumber;
 
@@ -255,6 +256,7 @@ public class EnemySpawnTest2 : MonoBehaviour
 
             GameObject go = Instantiate(bonus, screenPos, Quaternion.identity); //spawn a bonus at this random place
             go.GetComponent<bonusdeplac>().direction = 3;
+            go.GetComponent<bonusdeplac>().bonusEffect = bonusEffect[Random.Range(0, bonusEffect.Length)];
         }
         else if (whereSpawn == 1) //left
         {
@@ -262,6 +264,8 @@ public class EnemySpawnTest2 : MonoBehaviour
 
             GameObject go = Instantiate(bonus, screenPos, Quaternion.identity); //spawn a bonus at this random place
             go.GetComponent<bonusdeplac>().direction = 1;
+            go.GetComponent<bonusdeplac>().bonusEffect = bonusEffect[Random.Range(0, bonusEffect.Length)];
+
         }
         else if (whereSpawn == 2) //bottom
         {
@@ -269,6 +273,8 @@ public class EnemySpawnTest2 : MonoBehaviour
 
             GameObject go = Instantiate(bonus, screenPos, Quaternion.identity); //spawn a bonus at this random place
             go.GetComponent<bonusdeplac>().direction = 2;
+            go.GetComponent<bonusdeplac>().bonusEffect = bonusEffect[Random.Range(0, bonusEffect.Length)];
+
         }
         else if (whereSpawn == 3) //right
         {
@@ -276,6 +282,8 @@ public class EnemySpawnTest2 : MonoBehaviour
 
             GameObject go = Instantiate(bonus, screenPos, Quaternion.identity); //spawn a bonus at this random place
             go.GetComponent<bonusdeplac>().direction = 0;
+            go.GetComponent<bonusdeplac>().bonusEffect = bonusEffect[Random.Range(0, bonusEffect.Length)];
+
         }
     }
 

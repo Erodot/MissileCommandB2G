@@ -19,8 +19,8 @@ public class EnemyMissile : MonoBehaviour
     GameObject[] primaryTargets;
     List<Transform> finalTargets = new List<Transform>();
     Vector3 target;
-    [Range(0.0f, 10.0f)]
     public float speed; //speed of the missile
+    [Range(0.0f, 10.0f)]
     public float baseSpeed;
     public string type;
 
@@ -30,7 +30,7 @@ public class EnemyMissile : MonoBehaviour
         //primaryTargets = GameObject.FindGameObjectsWithTag("Player"); //find randomly the target of the missile
         //TestRaycast();
         //target = finalTargets[Random.Range(0, finalTargets.Count)].position; //set this target as a vector 3
-        baseSpeed = speed;
+        speed = baseSpeed;
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         target = FindClosestTarget("Player").transform.position; //find closest target
         gameObject.transform.LookAt(target); //rotate towards his target
@@ -51,60 +51,63 @@ public class EnemyMissile : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player")) //if the missile hit a building
         {
-            if (!other.gameObject.GetComponent<BuildingLifeDamage>().destroyed)
+            if (!gameManager.isShieldActivated)
             {
-                other.gameObject.GetComponent<BuildingLifeDamage>().Damaged(2);
-
-                ShootingZoneTest turret;
-                if (other.GetComponent<NewShoot>() != null) //if the building is a turret
+                if (!other.gameObject.GetComponent<BuildingLifeDamage>().destroyed)
                 {
-                    //turret = other.gameObject.transform.Find("Zone").gameObject.GetComponent<ShootingZoneTest>();
-                    //turret.isDestroy = true; //deactivate his ShootingZoneTest component
-                    other.GetComponent<NewShoot>().enabled = false;
+                    other.gameObject.GetComponent<BuildingLifeDamage>().Damaged(2);
 
-                    if (gameManager != null)
+                    ShootingZoneTest turret;
+                    if (other.GetComponent<NewShoot>() != null) //if the building is a turret
                     {
-                        //gameManager.ShootingZoneList.Remove(turret);
+                        other.GetComponent<NewShoot>().enabled = false;
                     }
+                    DestroyThis(); //destroy the missile
                 }
-                DestroyThis(); //destroy the missile
+                else
+                {
+                    damageIndex = gameManager.BuildingList.IndexOf(other.gameObject);
+                }
             }
             else
             {
-                damageIndex = gameManager.BuildingList.IndexOf(other.gameObject);
+                gameManager.isShieldActivated = false;
+                DestroyThis(); //destroy the missile
             }
         }
 
         if (other.gameObject.CompareTag("Ground")) //if the missile hit the ground
         {
-            if(damageIndex != 100)
+            if (!gameManager.isShieldActivated)
             {
-                if (damageIndex == 0)
+                if (damageIndex != 100)
                 {
-                    gameManager.BuildingList[damageIndex + 1].GetComponent<BuildingLifeDamage>().Damaged(1);
-                    gameManager.BuildingList[gameManager.BuildingList.Count - 1].GetComponent<BuildingLifeDamage>().Damaged(1);
+                    if (damageIndex == 0)
+                    {
+                        gameManager.BuildingList[damageIndex + 1].GetComponent<BuildingLifeDamage>().Damaged(1);
+                        gameManager.BuildingList[gameManager.BuildingList.Count - 1].GetComponent<BuildingLifeDamage>().Damaged(1);
+                    }
+                    else if (damageIndex == gameManager.BuildingList.Count - 1)
+                    {
+                        gameManager.BuildingList[0].GetComponent<BuildingLifeDamage>().Damaged(1);
+                        gameManager.BuildingList[damageIndex - 1].GetComponent<BuildingLifeDamage>().Damaged(1);
+                    }
+                    else
+                    {
+                        gameManager.BuildingList[damageIndex + 1].GetComponent<BuildingLifeDamage>().Damaged(1);
+                        gameManager.BuildingList[damageIndex - 1].GetComponent<BuildingLifeDamage>().Damaged(1);
+                    }
+                    damageIndex = 100;
                 }
-                else if (damageIndex == gameManager.BuildingList.Count - 1)
+
+                if (gameManager != null && FindClosestTarget("Player") != null)
                 {
-                    gameManager.BuildingList[0].GetComponent<BuildingLifeDamage>().Damaged(1);
-                    gameManager.BuildingList[damageIndex - 1].GetComponent<BuildingLifeDamage>().Damaged(1);
+                    Vector3 closestTarget = FindClosestTarget("Player").transform.position;
                 }
-                else
-                {
-                    gameManager.BuildingList[damageIndex + 1].GetComponent<BuildingLifeDamage>().Damaged(1);
-                    gameManager.BuildingList[damageIndex - 1].GetComponent<BuildingLifeDamage>().Damaged(1);
-                }
-                damageIndex = 100;
             }
-
-            if (gameManager != null && FindClosestTarget("Player") != null)
+            else
             {
-                Vector3 closestTarget = FindClosestTarget("Player").transform.position;
-
-                if(Vector3.Distance(closestTarget, transform.position) < 2f)
-                {
-                    //gameManager.CheckNeighbour(FindClosestTarget("Player"), OnMyLeftOrOnMyRight(closestTarget));
-                }
+                gameManager.isShieldActivated = false;
             }
 
             DestroyThis(); //destroy the missile

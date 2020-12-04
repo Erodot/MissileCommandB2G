@@ -9,11 +9,12 @@ public class bonusdeplac : MonoBehaviour
     public float oscillationSpeed;
     public int direction;
 
+    public GameObject bonusEffect;
 
     // Start is called before the first frame update
     void Start()
     {
-        baseMoveSpeed = moveSpeed;
+        moveSpeed = baseMoveSpeed;
     }
 
     // Update is called once per frame
@@ -43,6 +44,8 @@ public class bonusdeplac : MonoBehaviour
         Debug.Log("hit");
         if (other.gameObject.CompareTag("Bullet")) //if the bonus hit a player bullet
         {
+            GameObject go = Instantiate(bonusEffect, Vector3.zero, Quaternion.identity);
+            go.transform.parent = null;
             Destroy(other.gameObject);
             Destroy(gameObject);
         } 

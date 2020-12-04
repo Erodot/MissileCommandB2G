@@ -14,7 +14,7 @@ public class FreezeTime : BonusEffect
     // Start is called before the first frame update
     void Start()
     {
-        
+        Effect();
     }
 
     // Update is called once per frame
@@ -24,12 +24,15 @@ public class FreezeTime : BonusEffect
 
         if (startEffect)
         {
+            Debug.Log("Hello, I have been born");
+
             enemysArray = GameObject.FindGameObjectsWithTag("Ennemy");
             bonusArray = GameObject.FindGameObjectsWithTag("Bonus");
 
             foreach (GameObject enemy in enemysArray)
             {
                 enemy.GetComponent<EnemyMissile>().speed = enemy.GetComponent<EnemyMissile>().baseSpeed / speedDivider;
+                Debug.Log(enemy.GetComponent<EnemyMissile>().speed);
             }
             foreach (GameObject bonus in bonusArray)
             {

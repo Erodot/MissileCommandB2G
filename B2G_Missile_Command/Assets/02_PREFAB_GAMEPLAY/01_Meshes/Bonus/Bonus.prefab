@@ -111,9 +111,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2
-  baseMoveSpeed: 0
+  baseMoveSpeed: 2
   oscillationSpeed: 5
   direction: 0
+  bonusEffect: {fileID: 0}
 --- !u!82 &-8641189352266052094
 AudioSource:
   m_ObjectHideFlags: 0
