@@ -121,14 +121,6 @@ public class EnemyMissile : MonoBehaviour
             }
             //..Nicolas Pupulin
         }
-
-        if (other.gameObject.CompareTag("Bonus")) //if the missile hit a player bullet
-        {
-            //Nicolas Pupulin
-            Destroy(other.gameObject);
-            DestroyThis();
-            //..Nicolas Pupulin
-        }
     }
 
     GameObject FindClosestTarget(string trgt)

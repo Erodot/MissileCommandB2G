@@ -3113,9 +3113,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverObject: {fileID: 1147078898}
   victoryObject: {fileID: 1416901655}
+  gameManager: {fileID: 808077392}
   score: {fileID: 376446900}
   combo: {fileID: 106684433}
   wave: {fileID: 12987539}
+  firstButton: {fileID: 603997718}
 --- !u!224 &1419993778
 RectTransform:
   m_ObjectHideFlags: 0

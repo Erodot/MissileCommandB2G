@@ -40,6 +40,7 @@ public class bonusdeplac : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("hit");
         if (other.gameObject.CompareTag("Bullet")) //if the bonus hit a player bullet
         {
             Destroy(other.gameObject);

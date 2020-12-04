@@ -82,6 +82,11 @@ public class GameManager : MonoBehaviour
         }
     }*/
 
+    void Awake()
+    {
+        Time.timeScale = 1;
+    }
+
     public void Init()
     {
         playerProperty = GameObject.FindGameObjectsWithTag("Player");
@@ -127,7 +132,6 @@ public class GameManager : MonoBehaviour
 
         if (Mathf.RoundToInt(controlSettings.Turret1.ReadValue<float>()) == 1 && TurretList2[0] != null)
         {
-            Debug.Log("turret");
             if (LastActivated != null)
             {
                 LastActivated.GetComponent<NewShoot>().isActivated = false;
