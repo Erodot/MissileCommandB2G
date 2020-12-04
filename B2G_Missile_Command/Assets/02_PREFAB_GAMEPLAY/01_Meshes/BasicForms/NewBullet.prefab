@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5948337723193693962}
   m_Layer: 0
   m_Name: NewBullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,3 +111,4 @@ MonoBehaviour:
   Explosion: {fileID: 4988724062270726289, guid: f1f65eee0c8933f418bf0ff1be26801c, type: 3}
   speed: 5
   lifeTime: 3
+  direction: {x: 0, y: 0, z: 0}
