@@ -4,100 +4,71 @@ using UnityEngine;
 
 public class EnemyAnnouncerTest : MonoBehaviour
 {
-    public EnemySpawnTest2 spawner;
-    public FieldBuilderTest fieldBuilder;
-    public GameObject announcer;
+    //Script by Corentin SABIAUX GCC2, don't hesitate to ask some questions.
+    //Not finalized, have been paused due to task ambiguity.
+
+    public EnemySpawnTest2 spawner; //Stock the class EnemySpawnTest2. 
+    public FieldBuilderTest fieldBuilder; //Stock the class FieldBuilderTest.
+    public GameObject announcer; //Stock the announcer Prefab.
 
     public int toSpawnEnemy;
     public int previousWave;
 
     public int i = 0;
 
-    // Start is called before the first frame update
     void Start()
     {
-        previousWave = spawner.waveNumber;
+        previousWave = spawner.waveNumber; //We stock here the first waveNumber into the int previousWave.
     }
 
-    // Update is called once per frame
     void Update()
     {
-        EnemyAnnouncer();
+        EnemyAnnouncer(); //We called the function EnemyAnnouncer.
     }
 
     public void EnemyAnnouncer()
     {
-        if (i < 1 && fieldBuilder.builderIsOver == true)
+        if (i < 1 && fieldBuilder.builderIsOver == true) //When the planet is totally builded and we have to spawn some announcers.
         {
             previousWave = spawner.waveNumber;
-            toSpawnEnemy = spawner.enemyToSpawn;
-            StartCoroutine(AnnouncerAnimation());
+            toSpawnEnemy = spawner.enemyToSpawn; //We stock the number of enemies to spawn into an int dedicated. 
+            StartCoroutine(AnnouncerAnimation()); //We called the coroutine AnnouncerAnimation.
             i += 1;
         }
 
-        if (previousWave != spawner.waveNumber)
+        if (previousWave != spawner.waveNumber) //When a new wave is coming.
         {
             Refresh();
         }
-
-        Debug.Log(i);
     }
 
     IEnumerator AnnouncerAnimation()
     {
-        yield return new WaitForSeconds(.001f);
-        for (int j = 0; j <= toSpawnEnemy; j++)
-        {
-            if (spawner.whereSpawn == 0) //top
+        yield return new WaitForSeconds(.001f); //Security time, let the program get all he need before instantiate.
+        for (int j = 0; j <= toSpawnEnemy; j++) //For each enemies to spawn. 
+        { //Check where he will spawn into the screen.
+            if (spawner.whereSpawn == 0) //Is it top ?
             {
-                GameObject go = Instantiate(announcer, spawner.screenPos + (Vector3.down * 2), Quaternion.identity);
-                yield return new WaitForSeconds(spawner.timeToSpawn);
-                /*for (int i = 0; i < 5; i++)
-                {
-                    go.GetComponent<MeshRenderer>().enabled = true;
-                    yield return new WaitForSeconds(.2f);
-                    go.GetComponent<MeshRenderer>().enabled = false;
-                    yield return new WaitForSeconds(.2f);
-                }*/
-                Destroy(go);
+                GameObject go = Instantiate(announcer, spawner.screenPos + (Vector3.down * 2), Quaternion.identity); //Announcer is spawned with a little gap in positions.
+                yield return new WaitForSeconds(spawner.timeToSpawn); //When the next enemy have to spawn.
+                Destroy(go); //Destroy the previous Announcer.
             }
-            else if (spawner.whereSpawn == 1) //left
+            else if (spawner.whereSpawn == 1) //Is it left ?
             {
                 GameObject go = Instantiate(announcer, spawner.screenPos + (Vector3.left * 4), Quaternion.identity);
                 yield return new WaitForSeconds(spawner.timeToSpawn);
-                /*for (int i = 0; i < 5; i++)
-                {
-                    go.GetComponent<MeshRenderer>().enabled = true;
-                    yield return new WaitForSeconds(.2f);
-                    go.GetComponent<MeshRenderer>().enabled = false;
-                    yield return new WaitForSeconds(.2f);
-                }*/
                 Destroy(go);
             }
-            else if (spawner.whereSpawn == 2) //bottom
+            else if (spawner.whereSpawn == 2) //Is it bottom ?
             {
                 GameObject go = Instantiate(announcer, spawner.screenPos + (Vector3.up * 2), Quaternion.identity);
                 yield return new WaitForSeconds(spawner.timeToSpawn);
-                /*for (int i = 0; i < 5; i++)
-                {
-                    go.GetComponent<MeshRenderer>().enabled = true;
-                    yield return new WaitForSeconds(.2f);
-                    go.GetComponent<MeshRenderer>().enabled = false;
-                    yield return new WaitForSeconds(.2f);
-                }*/
                 Destroy(go);
             }
-            else if (spawner.whereSpawn == 3) //right
+            else if (spawner.whereSpawn == 3) //Is it right ?
             {
                 GameObject go = Instantiate(announcer, spawner.screenPos + (Vector3.right * 4), Quaternion.identity);
                 yield return new WaitForSeconds(spawner.timeToSpawn);
-                /*for (int i = 0; i < 5; i++)
-                {
-                    go.GetComponent<MeshRenderer>().enabled = true;
-                    yield return new WaitForSeconds(.2f);
-                    go.GetComponent<MeshRenderer>().enabled = false;
-                    yield return new WaitForSeconds(.2f);
-                }*/
                 Destroy(go);
             }
         }
@@ -107,4 +78,6 @@ public class EnemyAnnouncerTest : MonoBehaviour
     {
         i = 0;
     }
+
+    //..Corentin SABIAUX GCC2
 }
