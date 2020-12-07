@@ -112,25 +112,6 @@ public class EnemyMissile : MonoBehaviour
                         }
                     }
                 }
-                /*if (damageIndex != 100)
-                {
-                    if (damageIndex == 0)
-                    {
-                        gameManager.BuildingList[damageIndex + 1].GetComponent<BuildingLifeDamage>().Damaged(1);
-                        gameManager.BuildingList[gameManager.BuildingList.Count - 1].GetComponent<BuildingLifeDamage>().Damaged(1);
-                    }
-                    else if (damageIndex == gameManager.BuildingList.Count - 1)
-                    {
-                        gameManager.BuildingList[0].GetComponent<BuildingLifeDamage>().Damaged(1);
-                        gameManager.BuildingList[damageIndex - 1].GetComponent<BuildingLifeDamage>().Damaged(1);
-                    }
-                    else
-                    {
-                        gameManager.BuildingList[damageIndex + 1].GetComponent<BuildingLifeDamage>().Damaged(1);
-                        gameManager.BuildingList[damageIndex - 1].GetComponent<BuildingLifeDamage>().Damaged(1);
-                    }
-                    damageIndex = 100;
-                }*/
 
                 if (gameManager != null && FindClosestTarget("Player") != null)
                 {
