@@ -3226,6 +3226,9 @@ MonoBehaviour:
   bonusEffect:
   - {fileID: 997198618776077637, guid: d0162a957f85c754bab659ea223647ab, type: 3}
   - {fileID: 997198618776077637, guid: 879da62a8f1562a41b3f4b50e86bdfcd, type: 3}
+  Alert: {fileID: 1263445968820432441, guid: 1485b67e07808774499fa431b5c34192, type: 3}
+  alertDispawnTime: 0.7
+  afterAlertSpawnTime: 1
   waveNumber: 0
   bonusRngMax: 2
   bonusFixe: 0

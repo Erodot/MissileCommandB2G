@@ -13,6 +13,13 @@ public class EnemySpawnTest2 : MonoBehaviour
     public GameObject bonus;
     public GameObject[] bonusEffect;
 
+    public GameObject Alert;
+    [Tooltip("Life time of the alert on the screen")]
+    public float alertDispawnTime;
+    [Tooltip("Spawn time of the enemy after the alert")]
+    public float afterAlertSpawnTime;
+
+
     public int waveNumber;
 
     public int bonusRngMax;
@@ -213,25 +220,26 @@ public class EnemySpawnTest2 : MonoBehaviour
         {
             screenPos = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(0, Screen.width), Screen.height, 10)); //pick a random place on the top of the screen
 
-            GameObject go = Instantiate(enemys[randomEnemy()], screenPos, Quaternion.identity); //spawn a random enemy at this random place
+            //GameObject go = Instantiate(enemys[randomEnemy()], screenPos, Quaternion.identity); //spawn a random enemy at this random place
+            StartCoroutine(EnemySequencer(screenPos));
         }
         else if (whereSpawn == 1) //left
         {
             screenPos = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Random.Range(0, Screen.height), 10)); //pick a random place on the right of the screen
 
-            GameObject go = Instantiate(enemys[randomEnemy()], screenPos, Quaternion.identity); //spawn a random enemy at this random place
+            StartCoroutine(EnemySequencer(screenPos));
         }
         else if (whereSpawn == 2) //bottom
         {
             screenPos = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(0, Screen.width), -5.5f, 10)); //pick a random place on the bottom of the screen
 
-            GameObject go = Instantiate(enemys[randomEnemy()], screenPos, Quaternion.identity); //spawn a random enemy at this random place
+            StartCoroutine(EnemySequencer(screenPos));
         }
         else if (whereSpawn == 3) //right
         {
             screenPos = Camera.main.ScreenToWorldPoint(new Vector3(-9.5f, Random.Range(0, Screen.height), 10)); //pick a random place on the left of the screen
 
-            GameObject go = Instantiate(enemys[randomEnemy()], screenPos, Quaternion.identity); //spawn a random enemy at this random place
+            StartCoroutine(EnemySequencer(screenPos));
         }
         enemyToSpawn -= 1; //decrease the enemy spawn counter
     }
@@ -285,6 +293,21 @@ public class EnemySpawnTest2 : MonoBehaviour
             go.GetComponent<bonusdeplac>().bonusEffect = bonusEffect[Random.Range(0, bonusEffect.Length)];
 
         }
+    }
+
+    IEnumerator EnemySequencer(Vector3 spawnPos)
+    {
+        Vector3 alertPos = spawnPos + (GameObject.Find("Field").transform.position - spawnPos) * 0.2f;
+        GameObject alert = Instantiate(Alert, alertPos, Quaternion.identity);
+
+        yield return new WaitForSeconds(alertDispawnTime);
+
+        Destroy(alert);
+
+        yield return new WaitForSeconds(afterAlertSpawnTime - alertDispawnTime);
+
+        GameObject go = Instantiate(enemys[randomEnemy()], spawnPos, Quaternion.identity); //spawn a random enemy at this random place
+
     }
 
     //..MACHADO Julien
