@@ -86,7 +86,7 @@ public class EnemySpawnTest2 : MonoBehaviour
         }
         else
         {
-            bonusTimeInterval = timeToSpawn / Random.Range(0, bonusRngMax);
+            bonusTimeInterval = (enemyToSpawn * timeToSpawn) / Random.Range(1, bonusRngMax + 1);
         }
         actualTime3 = bonusTimeInterval - Time.deltaTime;
     }
@@ -192,7 +192,7 @@ public class EnemySpawnTest2 : MonoBehaviour
                 }
                 else
                 {
-                    bonusTimeInterval = (enemyToSpawn * timeToSpawn) / Random.Range(0, bonusRngMax);
+                    bonusTimeInterval = (enemyToSpawn * timeToSpawn) / Random.Range(1, bonusRngMax + 1);
                 }
                 actualTime3 = bonusTimeInterval - Time.deltaTime;
 

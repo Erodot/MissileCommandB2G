@@ -58,6 +58,7 @@ public class GameManager : MonoBehaviour
     public List<GameObject> TurretList2 = new List<GameObject>();
     public List<GameObject> CitiesList = new List<GameObject>();
     public List<GameObject> BuildingList = new List<GameObject>();
+
     bool gameOver;
     bool victory;
     bool terrainOK;

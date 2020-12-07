@@ -80,7 +80,39 @@ public class EnemyMissile : MonoBehaviour
         {
             if (!gameManager.isShieldActivated)
             {
-                if (damageIndex != 100)
+                for (int i = damageIndex; i < gameManager.BuildingList.Count;)
+                {
+                    if(gameManager.BuildingList[i].GetComponent<BuildingLifeDamage>().destroyed == false)
+                    {
+                        Debug.Log("Destroy");
+                        gameManager.BuildingList[i].GetComponent<BuildingLifeDamage>().Damaged(1);
+                        i = gameManager.BuildingList.Count;
+                    }
+                    else
+                    {
+                        i = (i + 1) % gameManager.BuildingList.Count;
+                    }
+                }
+                for (int i = damageIndex; i < gameManager.BuildingList.Count;)
+                {
+                    if (gameManager.BuildingList[i].GetComponent<BuildingLifeDamage>().destroyed == false)
+                    {
+                        gameManager.BuildingList[i].GetComponent<BuildingLifeDamage>().Damaged(1);
+                        i = gameManager.BuildingList.Count;
+                    }
+                    else
+                    {
+                        if(i == 0)
+                        {
+                            i = gameManager.BuildingList.Count-1;
+                        }
+                        else
+                        {
+                            i--;
+                        }
+                    }
+                }
+                /*if (damageIndex != 100)
                 {
                     if (damageIndex == 0)
                     {
@@ -98,7 +130,7 @@ public class EnemyMissile : MonoBehaviour
                         gameManager.BuildingList[damageIndex - 1].GetComponent<BuildingLifeDamage>().Damaged(1);
                     }
                     damageIndex = 100;
-                }
+                }*/
 
                 if (gameManager != null && FindClosestTarget("Player") != null)
                 {
