@@ -54,12 +54,6 @@ public class EnemySpawnTest2 : MonoBehaviour
     [Header("Time between waves Manager")]
     [Range(0.0f, 10.0f), Tooltip("The time between wave at start")]
     public float timeBetweenWaveStart;
-    [Range(0.0f, 5.0f), Tooltip("Maximum reduction that can have the time between wave")]
-    public float timeBetweenWaveReductionMax;
-    [Range(0.0f, 5.0f), Tooltip("Minimum reduction that can have the time between wave")]
-    public float timeBetweenWaveReductionMin;
-    [Tooltip("Minimum time possible between wave")]
-    public float minimumWaveTime; 
     float actualTime2; //actual time of the clock
 
     [Header("Time between enemy spawn Manger")]
@@ -147,10 +141,6 @@ public class EnemySpawnTest2 : MonoBehaviour
             else 
             {
                 int citiesNumber = 0; //city count number
-                if(timeBetweenWaveStart > minimumWaveTime)
-                {
-                    timeBetweenWaveStart -= Random.Range(timeBetweenWaveReductionMin, timeBetweenWaveReductionMax); //decrease the time between wave
-                }
 
                 foreach (GameObject cities in gameManager.CitiesList) //check for all the building
                 {
