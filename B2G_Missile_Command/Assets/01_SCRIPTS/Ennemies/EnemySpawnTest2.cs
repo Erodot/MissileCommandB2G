@@ -32,6 +32,9 @@ public class EnemySpawnTest2 : MonoBehaviour
     public int difficultySpawn;
     public int diffModifier = 1;
 
+    float _totalSpawnWeight;
+
+
     [Header("Enemy augmentation")]
     [Range(0, 10), Tooltip("Maximum addition of enemy for a wave")]
     public int enemyGainMax;
@@ -184,7 +187,7 @@ public class EnemySpawnTest2 : MonoBehaviour
                 enemyToSpawnBank = enemyToSpawn; //reset the max enemy spawn
                 actualTime2 = timeBetweenWaveStart; //reset the actual time between wave
                 difficultySpawn += difficultyAugmentation; //add to the difficulty for the spawn
-                if (difficultySpawn >= 9) //if the difficulty for the spawn is higher or equal to 9
+                if (difficultySpawn >= 5) //if the difficulty for the spawn is higher or equal to 9
                 {
                     if (diffModifier < enemys.Length) //if the difficulty of enemy is lower than the number of enemy
                     {
@@ -246,12 +249,25 @@ public class EnemySpawnTest2 : MonoBehaviour
 
     int randomEnemy()
     {
-        int rngSpawn = Random.Range(0, diffModifier);
-        //int rngSpawn = Random.Range(1, 101); //pick a number between 1 and 100
-        //int diffCoeff = 100 / diffModifier; //get the diff coeff
+        _totalSpawnWeight = 0f;
+        for (int i = 0; i < diffModifier; i++)
+        {
+            _totalSpawnWeight += enemys[i].GetComponent<EnemyMissile>().weight;
+        }
 
-        //rngSpawn = Mathf.RoundToInt(rngSpawn / diffCoeff); //get the number between 1 and diffModifier and round it
-        return rngSpawn; //return this number
+        float pick = Random.value * _totalSpawnWeight;
+        int chosenIndex = 0;
+        float cumulativeWeight = enemys[0].GetComponent<EnemyMissile>().weight;
+
+        // Step through the list until we've accumulated more weight than this.
+        // The length check is for safety in case rounding errors accumulate.
+        while (pick > cumulativeWeight && chosenIndex < diffModifier - 1)
+        {
+            chosenIndex++;
+            cumulativeWeight += enemys[chosenIndex].GetComponent<EnemyMissile>().weight;
+        }
+
+        return chosenIndex;
     }
 
     void InstantiateBonus()

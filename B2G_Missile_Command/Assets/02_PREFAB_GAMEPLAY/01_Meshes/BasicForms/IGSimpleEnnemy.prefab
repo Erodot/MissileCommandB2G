@@ -115,8 +115,9 @@ MonoBehaviour:
   ennemiesPrefab: []
   lifePoint: 1
   speed: 2
-  baseSpeed: 0
+  baseSpeed: 2
   type: simple
+  weight: 10
 --- !u!54 &3048141030897770999
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -116,8 +116,9 @@ MonoBehaviour:
   - {fileID: 2087319397564193456, guid: 7e8b82ed35c0c1b4eb770c60293dc0b3, type: 3}
   lifePoint: 1
   speed: 0.7
-  baseSpeed: 0
+  baseSpeed: 0.7
   type: hive
+  weight: 2
 --- !u!54 &3048141030897770999
 Rigidbody:
   m_ObjectHideFlags: 0

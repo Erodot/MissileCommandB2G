@@ -23,6 +23,7 @@ public class EnemyMissile : MonoBehaviour
     [Range(0.0f, 10.0f)]
     public float baseSpeed;
     public string type;
+    public float weight;
 
     // Start is called before the first frame update
     void Start()
@@ -227,8 +228,8 @@ public class EnemyMissile : MonoBehaviour
             for (int i = 0; i < 5; i++)
             {
                 float angle = 360f / 5;
-                float rayon = 3f;
-                Vector3 newEnnemyPos = new Vector3(transform.position.x + rayon, transform.position.y, transform.position.z + rayon);
+                float rayon = 1f;
+                Vector3 newEnnemyPos = new Vector3(transform.position.x + rayon, transform.position.y + rayon, transform.position.z);
                 Quaternion q = Quaternion.Euler(0,90,0);
                 GameObject nmi = Instantiate(ennemiesPrefab[0], newEnnemyPos, q);
                 Debug.Log(q);

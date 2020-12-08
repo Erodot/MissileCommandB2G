@@ -3234,8 +3234,8 @@ MonoBehaviour:
   bonusFixe: 0
   difficultySpawn: 0
   diffModifier: 1
-  enemyGainMax: 5
-  enemyGainMin: 2
+  enemyGainMax: 3
+  enemyGainMin: 1
   maxEnemy: 25
   enemyToSpawn: 0
   enemyMin: 2
@@ -3243,7 +3243,7 @@ MonoBehaviour:
   timeBetweenWaveStart: 10
   timeBetweenWaveReductionMax: 1.5
   timeBetweenWaveReductionMin: 0.25
-  minimumWaveTime: 5
+  minimumWaveTime: 7
   timeToSpawn: 2
   timeDiviser: 4
   minimumSpawnTime: 1.5

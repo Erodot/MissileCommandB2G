@@ -117,6 +117,7 @@ MonoBehaviour:
   speed: 1
   baseSpeed: 1
   type: armored
+  weight: 4
 --- !u!54 &3048141030897770999
 Rigidbody:
   m_ObjectHideFlags: 0
