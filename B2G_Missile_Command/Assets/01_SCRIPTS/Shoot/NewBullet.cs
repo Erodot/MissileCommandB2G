@@ -9,6 +9,7 @@ public class NewBullet : MonoBehaviour
     public int speed;
     public int lifeTime;
     public Vector3 direction;
+    public float explosionRadius;
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +37,8 @@ public class NewBullet : MonoBehaviour
 
     private void Explose()
     {
-        Instantiate(Explosion, transform.position, Quaternion.identity);
+        GameObject go = Instantiate(Explosion, transform.position, Quaternion.identity);
+        go.GetComponent<PlayerProjectile_Explosion>().radiusMultiplier = explosionRadius;
         Destroy(gameObject);
     }
 

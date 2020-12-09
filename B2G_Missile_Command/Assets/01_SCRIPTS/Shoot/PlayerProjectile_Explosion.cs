@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerProjectile_Explosion : MonoBehaviour
 {
     //This value define how many times the Explosion(Sphere) will be multiplied
-    public int radiusMultiplier;
+    public float radiusMultiplier;
     public float explosionTime;
 
     // Start is called before the first frame update
@@ -23,7 +23,7 @@ public class PlayerProjectile_Explosion : MonoBehaviour
             yield return new WaitForSeconds(wait);
 
             //When Explosion(Sphere) reaches its max scale, it self destruct
-            if (i == radiusMultiplier - 1)
+            if (i >= radiusMultiplier - 1)
             {
                 Destroy(gameObject);
             }

@@ -48,20 +48,19 @@ public class Laser : MonoBehaviour
                     if(timeHeld >= timeToHold)
                     {
                         Debug.Log("Laser");
-                        Vector3 spawnPos = Canon.transform.position;
-                        spawnPos.y += LaserBeam.transform.localScale.y/2;
-                        GameObject go = Instantiate(LaserBeam, spawnPos, gameObject.transform.rotation);
-                    StartCoroutine(DestroyLaser(go));
-                        //go.GetComponent<NewBullet>().direction = Canon.transform.position - transform.position;
-                }
+                        GameObject go = Instantiate(LaserBeam, Canon.transform.position, gameObject.transform.rotation);
+                        StartCoroutine(DestroyLaser(go));
+                    }
                     else
                     {
                         Debug.Log(" normal shoot");
                         GameObject go = Instantiate(Bullet, Canon.transform.position, gameObject.transform.rotation);
                         go.GetComponent<NewBullet>().direction = Canon.transform.position - transform.position;
                         go.GetComponent<NewBullet>().speed = bulletSpeed;
-                    }
-                    timeHeld = 0;
+                        go.GetComponent<NewBullet>().direction = Canon.transform.position - transform.position;
+
+                }
+                timeHeld = 0;
                     shoot = false;
                     canShoot = false;
                     StartCoroutine(Reload());
