@@ -43,7 +43,7 @@ public class Laser : MonoBehaviour
                     timeHeld += Time.deltaTime;
                     shoot = true;
                 }
-                if(Mathf.RoundToInt(controlSettings.Shoot.ReadValue<float>()) == 0 && shoot)
+                else if(Mathf.RoundToInt(controlSettings.Shoot.ReadValue<float>()) == 0 && shoot)
                 {
                     if(timeHeld >= timeToHold)
                     {
@@ -57,8 +57,6 @@ public class Laser : MonoBehaviour
                         GameObject go = Instantiate(Bullet, Canon.transform.position, gameObject.transform.rotation);
                         go.GetComponent<NewBullet>().direction = Canon.transform.position - transform.position;
                         go.GetComponent<NewBullet>().speed = bulletSpeed;
-                        go.GetComponent<NewBullet>().direction = Canon.transform.position - transform.position;
-
                 }
                 timeHeld = 0;
                     shoot = false;

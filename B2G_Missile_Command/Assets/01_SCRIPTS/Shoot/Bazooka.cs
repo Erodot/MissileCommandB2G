@@ -41,21 +41,18 @@ public class Bazooka : MonoBehaviour
                 timeHeld += Time.deltaTime;
                 shoot = true;
             }
-            if (Mathf.RoundToInt(controlSettings.Shoot.ReadValue<float>()) == 0 && shoot)
+            if (controlSettings.Shoot.ReadValue<float>() == 0 && shoot)
             {
                 Debug.Log("normal shoot");
                 GameObject go = Instantiate(Bullet, Canon.transform.position, gameObject.transform.rotation);
                 go.GetComponent<NewBullet>().direction = Canon.transform.position - transform.position;
                 go.GetComponent<NewBullet>().speed = bulletSpeed;
                 go.GetComponent<NewBullet>().explosionRadius += timeHeld * radiusMultiplication;
-                go.GetComponent<NewBullet>().direction = Canon.transform.position - transform.position;
-
 
                 timeHeld = 0;
                 shoot = false;
                 canShoot = false;
                 StartCoroutine(Reload());
-
             }
         }
 
