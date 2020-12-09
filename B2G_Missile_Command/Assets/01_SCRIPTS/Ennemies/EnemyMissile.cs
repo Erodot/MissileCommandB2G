@@ -32,6 +32,7 @@ public class EnemyMissile : MonoBehaviour
     public float baseSpeed;
     public string type;
     public float weight;
+    public float bomberSpawnTimer;  public float bomberRotateDistance;  //bomber
 
     // Start is called before the first frame update
     void Start()
@@ -65,7 +66,7 @@ public class EnemyMissile : MonoBehaviour
         if (type == "virgule")
         {
             StartCoroutine(DirectionVirgule());
-        } else
+        } else if (FindClosestTarget("Player") != null)
         {
             target = FindClosestTarget("Player").transform.position; //find closest target
             gameObject.transform.LookAt(target); //rotate towards his target
@@ -76,13 +77,45 @@ public class EnemyMissile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GoToTarget();
+        if (type == "bomber")
+            RotateAndBomb();
+        else
+            GoToTarget();
     }
 
     void GoToTarget()
     {
             transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime); //make the missile move towards the target
     }
+
+    //Coline
+    void RotateAndBomb()
+    {
+        Vector3 planetTransform = GameObject.FindGameObjectWithTag("Ground").transform.position;
+        float planetDistance = Vector3.Distance(planetTransform,transform.position);
+        float angle = 1f * baseSpeed;
+
+        //Debug.Log(planetDistance);
+
+        if(planetDistance < bomberRotateDistance)
+        {
+            transform.RotateAround(planetTransform, Vector3.forward, angle);
+            if(bombSpawn)
+            {
+                StartCoroutine("BombSpawn");
+            }
+        }
+        else
+        {
+            if (FindClosestTarget("Player") != null)
+            {
+                target = FindClosestTarget("Player").transform.position; //find closest target
+                gameObject.transform.LookAt(target); //rotate towards his target
+            }
+            GoToTarget();
+        }
+    }
+    //..Coline
 
     private void OnTriggerEnter(Collider other)
     {
@@ -199,7 +232,7 @@ public class EnemyMissile : MonoBehaviour
     }
 
 
-    [ContextMenu("DestroyHive")]
+    //[ContextMenu("DestroyHive")]
     public void DestroyThis()
     {
         if (type == "hive") //ruche
@@ -227,6 +260,15 @@ public class EnemyMissile : MonoBehaviour
         }
 
         Destroy(this.gameObject);
+    }
+
+    bool bombSpawn= true;
+    IEnumerator BombSpawn()
+    {
+        bombSpawn = false;
+        yield return new WaitForSeconds(bomberSpawnTimer);
+        GameObject nmi = Instantiate(ennemiesPrefab[0], transform.position, Quaternion.identity);
+        bombSpawn = true;
     }
     //..Coline Marchal
 
