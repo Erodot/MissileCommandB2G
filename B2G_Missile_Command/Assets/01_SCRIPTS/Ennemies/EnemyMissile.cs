@@ -14,6 +14,14 @@ public class EnemyMissile : MonoBehaviour
 
     //Nicolas Pupulin
     public int lifePoint;
+
+    public Vector3 randomDirection;
+
+    public EnemySpawnTest2 ennemySpawnTest2;
+
+    public int whereSpawn;
+
+    public float speedModifier;
     //..Nicolas Pupulin
 
     GameObject[] primaryTargets;
@@ -33,8 +41,36 @@ public class EnemyMissile : MonoBehaviour
         //target = finalTargets[Random.Range(0, finalTargets.Count)].position; //set this target as a vector 3
         speed = baseSpeed;
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        target = FindClosestTarget("Player").transform.position; //find closest target
         gameObject.transform.LookAt(target); //rotate towards his target
+
+        //Nicolas Pupulin
+        ennemySpawnTest2 = GameObject.Find("Spawner").GetComponent<EnemySpawnTest2>();
+
+        if (whereSpawn == 0)
+        {
+            randomDirection = new Vector3(Random.Range(-10, 10), 6.5f, transform.position.z);
+        } else if (whereSpawn == 1)
+        {
+            randomDirection = new Vector3(-1, Random.Range(-4, 14), transform.position.z);
+        }
+        else if (whereSpawn == 2)
+        {
+            randomDirection = new Vector3(Random.Range(-10, 10), 4, transform.position.z);
+        }
+        else if (whereSpawn == 3)
+        {
+            randomDirection = new Vector3(1, Random.Range(-4, 14), transform.position.z);
+        }
+
+        if (type == "virgule")
+        {
+            StartCoroutine(DirectionVirgule());
+        } else
+        {
+            target = FindClosestTarget("Player").transform.position; //find closest target
+            gameObject.transform.LookAt(target); //rotate towards his target
+        }
+        //..Nicolas Pupulin
     }
 
     // Update is called once per frame
@@ -45,7 +81,7 @@ public class EnemyMissile : MonoBehaviour
 
     void GoToTarget()
     {
-        transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime); //make the missile move towards the target
+            transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime); //make the missile move towards the target
     }
 
     private void OnTriggerEnter(Collider other)
@@ -162,62 +198,6 @@ public class EnemyMissile : MonoBehaviour
         return closest; //return the closest target
     }
 
-    /*void TestRaycast()
-    {
-        for (int i = 0; i < primaryTargets.Length; i++)
-        {
-            RaycastHit hit;
-            if (Physics.Linecast(transform.position, primaryTargets[i].transform.position, out hit))
-            {
-                if (hit.transform.tag != "Ground")
-                {
-                    finalTargets.Add(hit.transform);
-                }
-            }
-        }
-
-    }*/
-    //..MACHADO Julien
-
-    //Coline Marchal
-    /*public string OnMyLeftOrOnMyRight (Vector3 targetPos)
-    {
-        Vector3 forward = transform.forward;
-        Vector3 up = transform.up;
-        Vector3 targetDirection = targetPos - transform.position;
-
-        //-1 = left
-        //1 = right
-        Vector3 perp = Vector3.Cross(forward, targetDirection);
-        float dir = Vector3.Dot(perp, up);
-        string toReturn;
-
-        if (dir > 0.0f)
-        {
-            toReturn = "left";
-        }
-        else if (dir < 0.0f)
-        {
-            toReturn = "right";
-        }
-        else
-        {
-            toReturn = "fwd";
-        }
-        //Debug.Log(toReturn);
-        return toReturn;
-    }
-
-
-
-    public void HitSomething(GameObject building)
-    {
-        if (gameManager != null)
-        {
-            //gameManager.TurretList.Remove(building);
-            gameManager.CheckNeighbour(building);
-        }
-    }*/
 
     [ContextMenu("DestroyHive")]
     public void DestroyThis()
@@ -249,4 +229,17 @@ public class EnemyMissile : MonoBehaviour
         Destroy(this.gameObject);
     }
     //..Coline Marchal
+
+    //Nicolas Pupulin
+    IEnumerator DirectionVirgule()
+    {
+        target = randomDirection;
+        gameObject.transform.LookAt(target); //rotate towards his target
+        transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime); //make the missile move towards a random direction
+        yield return new WaitForSeconds(2);
+        speed = speed * speedModifier;
+        target = FindClosestTarget("Player").transform.position; //find closest target
+        gameObject.transform.LookAt(target); //rotate towards his target
+    }
+    //..Nicolas Pupulin
 }

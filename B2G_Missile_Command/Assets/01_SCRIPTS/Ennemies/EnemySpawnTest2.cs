@@ -76,6 +76,7 @@ public class EnemySpawnTest2 : MonoBehaviour
 
 
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -313,6 +314,9 @@ public class EnemySpawnTest2 : MonoBehaviour
         yield return new WaitForSeconds(afterAlertSpawnTime - alertDispawnTime);
 
         GameObject go = Instantiate(enemys[randomEnemy()], spawnPos, Quaternion.identity); //spawn a random enemy at this random place
+        //Nicolas Pupulin
+        go.GetComponent<EnemyMissile>().whereSpawn = whereSpawn;
+        //..Nicolas Pupulin
 
     }
 
