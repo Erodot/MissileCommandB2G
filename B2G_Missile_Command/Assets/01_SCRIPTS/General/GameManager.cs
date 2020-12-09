@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,6 +11,11 @@ public class GameManager : MonoBehaviour
     public GameOverAndCie ui;
     GameObject[] playerProperty;
     //..Coline Marchal
+
+    public ControlSettings controlSettings;
+
+    public bool controlKeyboard;
+    public bool isShieldActivated;
 
     //Corentin SABIAUX GCC2
     [Header("During Game Over and Victory scene")]
@@ -47,13 +53,17 @@ public class GameManager : MonoBehaviour
 
     //Coline Marchal
 
-    public List<ShootingZoneTest> ShootingZoneList = new List<ShootingZoneTest>(); //rename turretList to recupere a game object list
+    //public List<ShootingZoneTest> ShootingZoneList = new List<ShootingZoneTest>(); //rename turretList to recupere a game object list
     public List<GameObject> TurretList = new List<GameObject>();
+    public List<GameObject> TurretList2 = new List<GameObject>();
     public List<GameObject> CitiesList = new List<GameObject>();
     public List<GameObject> BuildingList = new List<GameObject>();
+
     bool gameOver;
     bool victory;
     bool terrainOK;
+
+    GameObject LastActivated;
 
     /*  singleton
     void Awake()
@@ -74,6 +84,11 @@ public class GameManager : MonoBehaviour
         }
     }*/
 
+    void Awake()
+    {
+        Time.timeScale = 1;
+    }
+
     public void Init()
     {
         playerProperty = GameObject.FindGameObjectsWithTag("Player");
@@ -84,7 +99,8 @@ public class GameManager : MonoBehaviour
             if (go.name.Contains("Turret"))
             {
                 TurretList.Add(go);
-                ShootingZoneList.Add(go.transform.Find("Zone").gameObject.GetComponent<ShootingZoneTest>());
+                TurretList2.Add(go);
+                //ShootingZoneList.Add(go.transform.Find("Zone").gameObject.GetComponent<ShootingZoneTest>());
             }
             else if (go.name.Contains("City"))
             {
@@ -114,6 +130,66 @@ public class GameManager : MonoBehaviour
         if (terrainOK)
         {
             CheckGame();
+        }
+
+        if (Mathf.RoundToInt(controlSettings.Turret1.ReadValue<float>()) == 1 && TurretList2[0] != null)
+        {
+            if (LastActivated != null)
+            {
+                LastActivated.GetComponent<NewShoot>().isActivated = false;
+            }
+            TurretList2[0].GetComponent<NewShoot>().isActivated = true;
+            LastActivated = TurretList2[0];
+        }
+        if (Mathf.RoundToInt(controlSettings.Turret2.ReadValue<float>()) == 1 && TurretList2[1] != null)
+        {
+            if (LastActivated != null)
+            {
+                LastActivated.GetComponent<NewShoot>().isActivated = false;
+            }
+            TurretList2[1].GetComponent<NewShoot>().isActivated = true;
+            LastActivated = TurretList2[1];
+        }
+        if (Mathf.RoundToInt(controlSettings.Turret3.ReadValue<float>()) == 1 && TurretList2[2] != null)
+        {
+            if (LastActivated != null)
+            {
+                LastActivated.GetComponent<NewShoot>().isActivated = false;
+            }
+            TurretList2[2].GetComponent<NewShoot>().isActivated = true;
+            LastActivated = TurretList2[2];
+        }
+
+        if (controlKeyboard)
+        {
+            if (Keyboard.current.qKey.isPressed && TurretList2[0] != null)
+            {
+                Debug.Log("turret");
+                if (LastActivated != null)
+                {
+                    LastActivated.GetComponent<NewShoot>().isActivated = false;
+                }
+                TurretList2[0].GetComponent<NewShoot>().isActivated = true;
+                LastActivated = TurretList2[0];
+            }
+            if (Keyboard.current.wKey.wasPressedThisFrame && TurretList2[1] != null)
+            {
+                if (LastActivated != null)
+                {
+                    LastActivated.GetComponent<NewShoot>().isActivated = false;
+                }
+                TurretList2[1].GetComponent<NewShoot>().isActivated = true;
+                LastActivated = TurretList2[1];
+            }
+            if (Keyboard.current.eKey.wasPressedThisFrame && TurretList2[2] != null)
+            {
+                if (LastActivated != null)
+                {
+                    LastActivated.GetComponent<NewShoot>().isActivated = false;
+                }
+                TurretList2[2].GetComponent<NewShoot>().isActivated = true;
+                LastActivated = TurretList2[2];
+            }
         }
     }
 
@@ -277,7 +353,8 @@ public class GameManager : MonoBehaviour
             {
                 if (go != null && go.name.Contains("Turret"))
                 {
-                    go.transform.Find("Zone").gameObject.GetComponent<ShootingZoneTest>();
+                    //go.transform.Find("Zone").gameObject.GetComponent<ShootingZoneTest>();
+                    go.GetComponent<NewShoot>().enabled = false;
                 }
             }
         }

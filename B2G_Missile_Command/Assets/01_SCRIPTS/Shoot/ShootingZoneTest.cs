@@ -18,10 +18,32 @@ public class ShootingZoneTest : MonoBehaviour
     public GameManager gameManager; //We need to stock the gameManager of the scene.
     public int indexTurret; //Indicate wich turret he is.
     
+    // Start is called before the first frame update
+    void Start()
+    {
+        mainCamera = Camera.main;
+        //..MACHADO Julien
+
+        //Corentin SABIAUX GCC2
+
+
+        //gameObject.GetComponent<PolygonCollider2D>().SetPath(0, gameManager.listOfTurrets.listTurretZone[indexTurret].pointsTurretZone); 
+        //We set the PolygonCollider points of the turret by the points included into the 3 lists nested on gameManager.
+        //..Corentin SABIAUX GCC2
+        /// >> I change manually the polygon on another prefab, so this was a problem to keep the new zoning (i didn't know how to change easily the points, so I thought changin the polygon directly was maybe a best way
+        /// >> Coline Marchal
+    }
+
+    void Awake()
+    {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();  //We stock the gameManager of the scene.
+    }
+
     private void OnMouseDown()
     {
-        Vector3 canonPosition = transform.parent.position; //where do you shoot from
-        if (gameManager.turretCanShoot == true) //If the turrets can shoot.
+
+        Vector3 canonPosition = transform.parent.GetChild(2).position; //where do you shoot from
+        if (mainCamera != null && gameManager.turretCanShoot) //If the turrets can shoot.
         {
             //..Corentin SABIAUX GCC2
 
@@ -44,6 +66,7 @@ public class ShootingZoneTest : MonoBehaviour
                 bullet = GameObject.Instantiate(Bullet, canonPosition, Quaternion.identity);
 
                 bullet.GetComponent<PlayerMissile>().direction = new Vector3(shootDirection.x * Time.deltaTime, shootDirection.y * Time.deltaTime, 0);
+                transform.parent.GetComponent<BuildingLifeDamage>().ManageSound("shoot");
                 tir = true;
             }
             else
@@ -54,26 +77,6 @@ public class ShootingZoneTest : MonoBehaviour
     }
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        mainCamera = Camera.main;
-        //..MACHADO Julien
-
-        //Corentin SABIAUX GCC2
-
-
-        //gameObject.GetComponent<PolygonCollider2D>().SetPath(0, gameManager.listOfTurrets.listTurretZone[indexTurret].pointsTurretZone); 
-        //We set the PolygonCollider points of the turret by the points included into the 3 lists nested on gameManager.
-        //..Corentin SABIAUX GCC2
-        /// >> I change manually the polygon on another prefab, so this was a problem to keep the new zoning (i didn't know how to change easily the points, so I thought changin the polygon directly was maybe a best way
-        /// >> Coline Marchal
-    }
-
-    void Awake()
-    {
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();  //We stock the gameManager of the scene.
-    }
 
     //MACHADO Julien
     public virtual void Rotation()

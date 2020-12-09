@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlanetControllerTest : MonoBehaviour 
 {
-    public KeybindScript keybindScript;
+    public GameManager gameManager;
+    public ControlSettings controlSettings;
 
     //Script by Corentin SABIAUX GCC2, don't hesitate to ask some questions.
 
@@ -22,6 +24,7 @@ public class PlanetControllerTest : MonoBehaviour
     [Tooltip("Check-it if you want to have a more accurate rotation of the planet.")]
     public bool isRotationAccurate;
 
+
     // Update is called once per frame
     void Update()
     {
@@ -34,25 +37,34 @@ public class PlanetControllerTest : MonoBehaviour
 
         if (isRotationAccurate == true)
         {
-            if (Input.GetKey(keybindScript.keys["Right"]))
+            if (gameManager.controlKeyboard)
             {
-                horizontalMove -= 1 * rotationSpeed * Time.deltaTime; //The planet is rotating accurately by horizontal positive and negative button.
+                if (Keyboard.current.rightArrowKey.isPressed)
+                {
+                    horizontalMove -= 1 * rotationSpeed * Time.deltaTime; //The planet is rotating accurately by horizontal positive and negative button.
+                }
+                else if (Keyboard.current.leftArrowKey.isPressed)
+                {
+                    horizontalMove -= -1 * rotationSpeed * Time.deltaTime; //The planet is rotating accurately by horizontal positive and negative button.
+                }
             }
-            else if (Input.GetKey(keybindScript.keys["Left"]))
-            {
-                horizontalMove -= -1 * rotationSpeed * Time.deltaTime; //The planet is rotating accurately by horizontal positive and negative button.
-            }
+            horizontalMove -= controlSettings.Rotate.ReadValue<float>() * rotationSpeed * Time.deltaTime; //The planet is rotating smoothly by horizontal positive and negative button.
+
         }
         else
         {
-            if (Input.GetKey(keybindScript.keys["Right"]))
+            if (gameManager.controlKeyboard)
             {
-                horizontalMove -= 1 * rotationSpeed * Time.deltaTime; //The planet is rotating smoothly by horizontal positive and negative button.
+                if (Keyboard.current.rightArrowKey.isPressed)
+                {
+                    horizontalMove -= 1 * rotationSpeed * Time.deltaTime; //The planet is rotating smoothly by horizontal positive and negative button.
+                }
+                else if (Keyboard.current.leftArrowKey.isPressed)
+                {
+                    horizontalMove -= -1 * rotationSpeed * Time.deltaTime; //The planet is rotating smoothly by horizontal positive and negative button.
+                }
             }
-            else if (Input.GetKey(keybindScript.keys["Left"]))
-            {
-                horizontalMove -= -1 * rotationSpeed * Time.deltaTime; //The planet is rotating smoothly by horizontal positive and negative button.
-            }
+            horizontalMove -= controlSettings.Rotate.ReadValue<float>() * rotationSpeed * Time.deltaTime; //The planet is rotating smoothly by horizontal positive and negative button.
         }
     }
     //..Corentin SABIAUX GCC2

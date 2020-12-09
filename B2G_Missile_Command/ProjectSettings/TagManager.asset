@@ -9,6 +9,7 @@ TagManager:
   - Explosion
   - Ennemy
   - Bonus
+  - audio
   layers:
   - Default
   - TransparentFX

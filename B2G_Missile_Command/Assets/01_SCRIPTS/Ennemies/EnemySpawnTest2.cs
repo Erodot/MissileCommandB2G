@@ -11,6 +11,14 @@ public class EnemySpawnTest2 : MonoBehaviour
 
     public GameObject[] enemys;
     public GameObject bonus;
+    public GameObject[] bonusEffect;
+
+    public GameObject Alert;
+    [Tooltip("Life time of the alert on the screen")]
+    public float alertDispawnTime;
+    [Tooltip("Spawn time of the enemy after the alert")]
+    public float afterAlertSpawnTime;
+
 
     public int waveNumber;
 
@@ -23,6 +31,9 @@ public class EnemySpawnTest2 : MonoBehaviour
     int difficultyAugmentation;
     public int difficultySpawn;
     public int diffModifier = 1;
+
+    float _totalSpawnWeight;
+
 
     [Header("Enemy augmentation")]
     [Range(0, 10), Tooltip("Maximum addition of enemy for a wave")]
@@ -43,12 +54,6 @@ public class EnemySpawnTest2 : MonoBehaviour
     [Header("Time between waves Manager")]
     [Range(0.0f, 10.0f), Tooltip("The time between wave at start")]
     public float timeBetweenWaveStart;
-    [Range(0.0f, 5.0f), Tooltip("Maximum reduction that can have the time between wave")]
-    public float timeBetweenWaveReductionMax;
-    [Range(0.0f, 5.0f), Tooltip("Minimum reduction that can have the time between wave")]
-    public float timeBetweenWaveReductionMin;
-    [Tooltip("Minimum time possible between wave")]
-    public float minimumWaveTime; 
     float actualTime2; //actual time of the clock
 
     [Header("Time between enemy spawn Manger")]
@@ -59,6 +64,10 @@ public class EnemySpawnTest2 : MonoBehaviour
     [Tooltip("Minimum time possible between wave")]
     public float minimumSpawnTime;
     float actualTime; //actual time of the clock
+
+    public int whereSpawn;
+
+    public EnemyAnnouncerTest announcerScript;
 
     public GameManager gameManager;
 
@@ -81,7 +90,7 @@ public class EnemySpawnTest2 : MonoBehaviour
         }
         else
         {
-            bonusTimeInterval = timeToSpawn / Random.Range(0, bonusRngMax);
+            bonusTimeInterval = (enemyToSpawn * timeToSpawn) / Random.Range(1, bonusRngMax + 1);
         }
         actualTime3 = bonusTimeInterval - Time.deltaTime;
     }
@@ -132,10 +141,6 @@ public class EnemySpawnTest2 : MonoBehaviour
             else 
             {
                 int citiesNumber = 0; //city count number
-                if(timeBetweenWaveStart > minimumWaveTime)
-                {
-                    timeBetweenWaveStart -= Random.Range(timeBetweenWaveReductionMin, timeBetweenWaveReductionMax); //decrease the time between wave
-                }
 
                 foreach (GameObject cities in gameManager.CitiesList) //check for all the building
                 {
@@ -172,7 +177,7 @@ public class EnemySpawnTest2 : MonoBehaviour
                 enemyToSpawnBank = enemyToSpawn; //reset the max enemy spawn
                 actualTime2 = timeBetweenWaveStart; //reset the actual time between wave
                 difficultySpawn += difficultyAugmentation; //add to the difficulty for the spawn
-                if (difficultySpawn >= 9) //if the difficulty for the spawn is higher or equal to 9
+                if (difficultySpawn >= 5) //if the difficulty for the spawn is higher or equal to 9
                 {
                     if (diffModifier < enemys.Length) //if the difficulty of enemy is lower than the number of enemy
                     {
@@ -187,12 +192,12 @@ public class EnemySpawnTest2 : MonoBehaviour
                 }
                 else
                 {
-                    bonusTimeInterval = (enemyToSpawn * timeToSpawn) / Random.Range(0, bonusRngMax);
+                    bonusTimeInterval = (enemyToSpawn * timeToSpawn) / Random.Range(1, bonusRngMax + 1);
                 }
                 actualTime3 = bonusTimeInterval - Time.deltaTime;
 
-                LevelsManager lvlManager = LevelsManager.instance; //get the level manager
-                lvlManager.currentLevel += 1; 
+                //LevelsManager lvlManager = LevelsManager.instance; //get the level manager
+                //lvlManager.currentLevel += 1; 
                 waveNumber += 1; // add one to the wave number
                 wave.text = "\r\n" + waveNumber; //set the text on screen
             }
@@ -202,44 +207,57 @@ public class EnemySpawnTest2 : MonoBehaviour
 
     void InstantiateEnemy()
     {
-        int whereSpawn;
         whereSpawn = Random.Range(0, 4); //choose between 4 place to spawn, top, bottom, left, right
         //int enemyType = Random.Range(0, enemys.Length); //Choose between all type of enemys
         if (whereSpawn == 0) //top
         {
             screenPos = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(0, Screen.width), Screen.height, 10)); //pick a random place on the top of the screen
 
-            GameObject go = Instantiate(enemys[randomEnemy()], screenPos, Quaternion.identity); //spawn a random enemy at this random place
+            //GameObject go = Instantiate(enemys[randomEnemy()], screenPos, Quaternion.identity); //spawn a random enemy at this random place
+            StartCoroutine(EnemySequencer(screenPos));
         }
         else if (whereSpawn == 1) //left
         {
             screenPos = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Random.Range(0, Screen.height), 10)); //pick a random place on the right of the screen
 
-            GameObject go = Instantiate(enemys[randomEnemy()], screenPos, Quaternion.identity); //spawn a random enemy at this random place
+            StartCoroutine(EnemySequencer(screenPos));
         }
         else if (whereSpawn == 2) //bottom
         {
             screenPos = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(0, Screen.width), -5.5f, 10)); //pick a random place on the bottom of the screen
 
-            GameObject go = Instantiate(enemys[randomEnemy()], screenPos, Quaternion.identity); //spawn a random enemy at this random place
+            StartCoroutine(EnemySequencer(screenPos));
         }
         else if (whereSpawn == 3) //right
         {
             screenPos = Camera.main.ScreenToWorldPoint(new Vector3(-9.5f, Random.Range(0, Screen.height), 10)); //pick a random place on the left of the screen
 
-            GameObject go = Instantiate(enemys[randomEnemy()], screenPos, Quaternion.identity); //spawn a random enemy at this random place
+            StartCoroutine(EnemySequencer(screenPos));
         }
         enemyToSpawn -= 1; //decrease the enemy spawn counter
     }
 
     int randomEnemy()
     {
-        int rngSpawn = Random.Range(0, diffModifier);
-        //int rngSpawn = Random.Range(1, 101); //pick a number between 1 and 100
-        //int diffCoeff = 100 / diffModifier; //get the diff coeff
+        _totalSpawnWeight = 0f;
+        for (int i = 0; i < diffModifier; i++)
+        {
+            _totalSpawnWeight += enemys[i].GetComponent<EnemyMissile>().weight;
+        }
 
-        //rngSpawn = Mathf.RoundToInt(rngSpawn / diffCoeff); //get the number between 1 and diffModifier and round it
-        return rngSpawn; //return this number
+        float pick = Random.value * _totalSpawnWeight;
+        int chosenIndex = 0;
+        float cumulativeWeight = enemys[0].GetComponent<EnemyMissile>().weight;
+
+        // Step through the list until we've accumulated more weight than this.
+        // The length check is for safety in case rounding errors accumulate.
+        while (pick > cumulativeWeight && chosenIndex < diffModifier - 1)
+        {
+            chosenIndex++;
+            cumulativeWeight += enemys[chosenIndex].GetComponent<EnemyMissile>().weight;
+        }
+
+        return chosenIndex;
     }
 
     void InstantiateBonus()
@@ -252,6 +270,7 @@ public class EnemySpawnTest2 : MonoBehaviour
 
             GameObject go = Instantiate(bonus, screenPos, Quaternion.identity); //spawn a bonus at this random place
             go.GetComponent<bonusdeplac>().direction = 3;
+            go.GetComponent<bonusdeplac>().bonusEffect = bonusEffect[Random.Range(0, bonusEffect.Length)];
         }
         else if (whereSpawn == 1) //left
         {
@@ -259,6 +278,8 @@ public class EnemySpawnTest2 : MonoBehaviour
 
             GameObject go = Instantiate(bonus, screenPos, Quaternion.identity); //spawn a bonus at this random place
             go.GetComponent<bonusdeplac>().direction = 1;
+            go.GetComponent<bonusdeplac>().bonusEffect = bonusEffect[Random.Range(0, bonusEffect.Length)];
+
         }
         else if (whereSpawn == 2) //bottom
         {
@@ -266,6 +287,8 @@ public class EnemySpawnTest2 : MonoBehaviour
 
             GameObject go = Instantiate(bonus, screenPos, Quaternion.identity); //spawn a bonus at this random place
             go.GetComponent<bonusdeplac>().direction = 2;
+            go.GetComponent<bonusdeplac>().bonusEffect = bonusEffect[Random.Range(0, bonusEffect.Length)];
+
         }
         else if (whereSpawn == 3) //right
         {
@@ -273,7 +296,24 @@ public class EnemySpawnTest2 : MonoBehaviour
 
             GameObject go = Instantiate(bonus, screenPos, Quaternion.identity); //spawn a bonus at this random place
             go.GetComponent<bonusdeplac>().direction = 0;
+            go.GetComponent<bonusdeplac>().bonusEffect = bonusEffect[Random.Range(0, bonusEffect.Length)];
+
         }
+    }
+
+    IEnumerator EnemySequencer(Vector3 spawnPos)
+    {
+        Vector3 alertPos = spawnPos + (GameObject.Find("Field").transform.position - spawnPos) * 0.2f;
+        GameObject alert = Instantiate(Alert, alertPos, Quaternion.identity);
+
+        yield return new WaitForSeconds(alertDispawnTime);
+
+        Destroy(alert);
+
+        yield return new WaitForSeconds(afterAlertSpawnTime - alertDispawnTime);
+
+        GameObject go = Instantiate(enemys[randomEnemy()], spawnPos, Quaternion.identity); //spawn a random enemy at this random place
+
     }
 
     //..MACHADO Julien
