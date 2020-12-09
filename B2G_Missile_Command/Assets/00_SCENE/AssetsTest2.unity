@@ -1997,7 +1997,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1721868a439b4464ea56b5714a584e1d, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.05
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3219,10 +3219,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screenPos: {x: 0, y: 0, z: 0}
   enemys:
+  - {fileID: 2087319397564193456, guid: e7b08f64c0d63f94290745e7c746f286, type: 3}
   - {fileID: 2087319397564193456, guid: 758d606f1a3cc494ead767d400b0239e, type: 3}
   - {fileID: 2087319397564193456, guid: a7da26291c258674f86daef17588a659, type: 3}
   - {fileID: 2087319397564193456, guid: 019b2f7c6c5e2f24592af67284b9e93e, type: 3}
-  - {fileID: 2087319397564193456, guid: 758d606f1a3cc494ead767d400b0239e, type: 3}
   bonus: {fileID: 8463603656933705450, guid: 03723a3137a3b3046b45737248bc94e3, type: 3}
   bonusEffect:
   - {fileID: 997198618776077637, guid: d0162a957f85c754bab659ea223647ab, type: 3}
