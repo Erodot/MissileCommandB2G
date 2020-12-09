@@ -5,7 +5,8 @@ using UnityEngine.InputSystem;
 
 public class ControlSettings : MonoBehaviour
 {
-    public InputAction Rotate;
+    public InputAction RotateX;
+    public InputAction RotateY;
     public InputAction Shoot;
     public InputAction Turret1;
     public InputAction Turret2;
@@ -14,7 +15,8 @@ public class ControlSettings : MonoBehaviour
 
     void OnEnable()
     {
-        Rotate.Enable();
+        RotateX.Enable();
+        RotateY.Enable();
         Shoot.Enable();
         Turret1.Enable();
         Turret2.Enable();
@@ -24,7 +26,8 @@ public class ControlSettings : MonoBehaviour
 
     void OnDisable()
     {
-        Rotate.Disable();
+        RotateX.Disable();
+        RotateY.Disable();
         Shoot.Disable();
         Turret1.Disable();
         Turret2.Disable();

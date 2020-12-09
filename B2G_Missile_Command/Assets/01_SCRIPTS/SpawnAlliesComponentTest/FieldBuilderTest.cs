@@ -44,12 +44,15 @@ public class FieldBuilderTest : MonoBehaviour
     IEnumerator CreateField()
     {
         //Let's create some turrets.
+        int turretIndex = 1;
 
         GameObject TurretCategorie = new GameObject("Turrets"); //We create a category into the Unity Scene for better management.
         TurretCategorie.transform.parent = transform; //We set this category as a child of the field.
         for (int i = 0; i < turretNumbers; i++) //How many turrets do you want ?
         {
             GameObject TurretCreated = Instantiate(Turret, positionTurretList[i], Quaternion.Euler(rotationTurretList[i])); //A new turret is born.
+            TurretCreated.GetComponent<NewShoot>().indexTurret = turretIndex;
+            turretIndex++;
             TurretCreated.transform.parent = TurretCategorie.transform; //Turret became children of spawner.
             TurretList.Add(TurretCreated);
             TurretCreated.name = "IGTurret " + (i + 1); //Set turret name.

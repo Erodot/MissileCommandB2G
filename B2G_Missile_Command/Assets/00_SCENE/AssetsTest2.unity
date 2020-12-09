@@ -2295,6 +2295,7 @@ MonoBehaviour:
   TurretList2: []
   CitiesList: []
   BuildingList: []
+  LastActivated: {fileID: 0}
 --- !u!4 &808077393
 Transform:
   m_ObjectHideFlags: 0
@@ -3925,37 +3926,69 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 967d2141889592546a2ab759a6e5d42c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rotate:
-    m_Name: Rotate
+  RotateX:
+    m_Name: Rotate X
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 6a440e58-77b6-4705-8f56-fec728eda7bc
+    m_Id: d23e7468-1a56-4e3b-96de-2683689e5454
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 1D Axis
-      m_Id: 69ccc12e-36fd-4e20-8f95-9d1913d07143
+      m_Id: 306d2501-5bac-48a7-9012-57870fd434f4
       m_Path: 1DAxis
       m_Interactions: 
       m_Processors: 
       m_Groups: 
-      m_Action: Rotate
+      m_Action: Rotate X
       m_Flags: 4
     - m_Name: negative
-      m_Id: 94c7bfb0-f56d-404d-b2d3-905d2d04e5b2
+      m_Id: a1572f26-06a2-4ed0-bd1c-7312df56c57d
       m_Path: <Gamepad>/leftStick/left
       m_Interactions: 
       m_Processors: 
       m_Groups: 
-      m_Action: Rotate
+      m_Action: Rotate X
       m_Flags: 8
     - m_Name: positive
-      m_Id: 2311b60f-012e-4046-8969-57222941e929
+      m_Id: 17b34ff2-ba54-4e4f-a3d9-60f19c41dd75
       m_Path: <Gamepad>/leftStick/right
       m_Interactions: 
       m_Processors: 
       m_Groups: 
-      m_Action: Rotate
+      m_Action: Rotate X
+      m_Flags: 8
+  RotateY:
+    m_Name: Rotate Y
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 1bfac38d-a3ac-40c5-b5d0-9f81a5810f0b
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 1D Axis
+      m_Id: 268948b5-8eaa-4120-a28a-3b55afd7a2e1
+      m_Path: 1DAxis
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Rotate Y
+      m_Flags: 4
+    - m_Name: negative
+      m_Id: 3f0857e4-297a-461d-b1e8-0487cce772bf
+      m_Path: <Gamepad>/leftStick/up
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Rotate Y
+      m_Flags: 8
+    - m_Name: positive
+      m_Id: 75321104-8caa-4b56-8e99-851c94ed2e33
+      m_Path: <Gamepad>/leftStick/down
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Rotate Y
       m_Flags: 8
   Shoot:
     m_Name: Shoot

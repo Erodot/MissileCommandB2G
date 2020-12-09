@@ -301,38 +301,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 967d2141889592546a2ab759a6e5d42c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rotate:
-    m_Name: Rotate
+  RotateX:
+    m_Name: 
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 6a440e58-77b6-4705-8f56-fec728eda7bc
+    m_Id: 
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 1D Axis
-      m_Id: 69ccc12e-36fd-4e20-8f95-9d1913d07143
-      m_Path: 1DAxis
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Rotate
-      m_Flags: 4
-    - m_Name: negative
-      m_Id: 94c7bfb0-f56d-404d-b2d3-905d2d04e5b2
-      m_Path: <Gamepad>/leftStick/left
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Rotate
-      m_Flags: 8
-    - m_Name: positive
-      m_Id: 2311b60f-012e-4046-8969-57222941e929
-      m_Path: <Gamepad>/leftStick/right
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Rotate
-      m_Flags: 8
+    m_SingletonActionBindings: []
+  RotateY:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
   Shoot:
     m_Name: Shoot
     m_Type: 0

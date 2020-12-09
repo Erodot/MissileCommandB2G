@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
     bool victory;
     bool terrainOK;
 
-    GameObject LastActivated;
+    public GameObject LastActivated;
 
     /*  singleton
     void Awake()
