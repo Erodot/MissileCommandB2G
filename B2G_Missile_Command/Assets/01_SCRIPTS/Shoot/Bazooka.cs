@@ -38,8 +38,11 @@ public class Bazooka : MonoBehaviour
         {
             if (Mathf.RoundToInt(controlSettings.Shoot.ReadValue<float>()) == 1 && canShoot)
             {
-                timeHeld += Time.deltaTime;
-                shoot = true;
+                if (timeHeld < timeToHold)
+                {
+                    timeHeld += Time.deltaTime;
+                    shoot = true;
+                }
             }
             if (controlSettings.Shoot.ReadValue<float>() == 0 && shoot)
             {

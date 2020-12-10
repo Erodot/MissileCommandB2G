@@ -65,6 +65,9 @@ public class GameManager : MonoBehaviour
 
     public GameObject LastActivated;
 
+    [Header("Silver Bullet Manager")]
+    [Tooltip("Number of enney to kill to activate the silver bullet.")]
+    public int silverBulletMax;
     public int silverBulletCount;
     public GameObject silverBullet;
     public GameObject silverBulletText;
@@ -131,7 +134,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(silverBulletCount == 5)
+        if(silverBulletCount == silverBulletMax)
         {
             Instantiate(silverBullet, transform);
             silverBulletText.SetActive(true);

@@ -73,7 +73,7 @@ public class EnemySpawnTest2 : MonoBehaviour
 
     public Text wave;
 
-
+    int doorIncrease;
 
 
 
@@ -197,6 +197,11 @@ public class EnemySpawnTest2 : MonoBehaviour
                 }
                 actualTime3 = bonusTimeInterval - Time.deltaTime;
 
+                if(doorIncrease < Screen.width)
+                {
+                    doorIncrease += Screen.width / 10;
+                }
+
                 //LevelsManager lvlManager = LevelsManager.instance; //get the level manager
                 //lvlManager.currentLevel += 1; 
                 waveNumber += 1; // add one to the wave number
@@ -212,26 +217,87 @@ public class EnemySpawnTest2 : MonoBehaviour
         //int enemyType = Random.Range(0, enemys.Length); //Choose between all type of enemys
         if (whereSpawn == 0) //top
         {
-            screenPos = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(0, Screen.width), Screen.height, 10)); //pick a random place on the top of the screen
+            if(doorIncrease < Screen.width / 2)
+            {
+                int door = Random.Range(0, 2);
+                if (door == 0)
+                {
+                    screenPos = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(0, 2 + doorIncrease), Screen.height, 10));
+                }
+                else
+                {
+                    screenPos = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(Screen.width - 2 - doorIncrease, Screen.width), Screen.height, 10));
+                }
+            }
+            else
+            {
+                screenPos = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(0, Screen.width), Screen.height, 10));
+            }
+
 
             //GameObject go = Instantiate(enemys[randomEnemy()], screenPos, Quaternion.identity); //spawn a random enemy at this random place
             StartCoroutine(EnemySequencer(screenPos));
         }
         else if (whereSpawn == 1) //left
         {
-            screenPos = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Random.Range(0, Screen.height), 10)); //pick a random place on the right of the screen
+            if(doorIncrease < Screen.height / 2)
+            {
+                int door = Random.Range(0, 2);
+                if (door == 0)
+                {
+                    screenPos = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Random.Range(0, 2 + doorIncrease), 10));
+                }
+                else
+                {
+                    screenPos = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Random.Range(Screen.height - 2 - doorIncrease, Screen.height), 10));
+                }
+            }
+            else
+            {
+                screenPos = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Random.Range(0, Screen.height), 10));
+            }
 
             StartCoroutine(EnemySequencer(screenPos));
         }
         else if (whereSpawn == 2) //bottom
         {
-            screenPos = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(0, Screen.width), -5.5f, 10)); //pick a random place on the bottom of the screen
+            if(doorIncrease < Screen.width / 2)
+            {
+                int door = Random.Range(0, 2);
+                if (door == 0)
+                {
+                    screenPos = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(0, 2 + doorIncrease), -5.5f, 10));
+                }
+                else
+                {
+                    screenPos = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(Screen.width - 2 - doorIncrease, Screen.width), -5.5f, 10));
+                }
+            }
+            else
+            {
+                screenPos = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(0, Screen.width), -5.5f, 10));
+            }
 
             StartCoroutine(EnemySequencer(screenPos));
         }
         else if (whereSpawn == 3) //right
         {
-            screenPos = Camera.main.ScreenToWorldPoint(new Vector3(-9.5f, Random.Range(0, Screen.height), 10)); //pick a random place on the left of the screen
+            if(doorIncrease < Screen.height / 2)
+            {
+                int door = Random.Range(0, 2);
+                if (door == 0)
+                {
+                    screenPos = Camera.main.ScreenToWorldPoint(new Vector3(-9.5f, Random.Range(0, 2 + doorIncrease), 10));
+                }
+                else
+                {
+                    screenPos = Camera.main.ScreenToWorldPoint(new Vector3(-9.5f, Random.Range(Screen.height - 2 - doorIncrease, Screen.height), 10));
+                }
+            }
+            else
+            {
+                screenPos = Camera.main.ScreenToWorldPoint(new Vector3(-9.5f, Random.Range(0, Screen.height), 10));
+            }
 
             StartCoroutine(EnemySequencer(screenPos));
         }

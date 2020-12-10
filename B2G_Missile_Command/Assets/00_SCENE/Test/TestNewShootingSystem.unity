@@ -183,7 +183,7 @@ MonoBehaviour:
   isDestroy: 0
   indexTurret: 0
   Canon: {fileID: 22803412}
-  isActivated: 0
+  isActivated: 1
   reloadTime: 0.5
   controlSettings: {fileID: 1491725050}
   gameManager: {fileID: 0}
@@ -426,6 +426,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Pause
       m_Flags: 0
+  SilverBullet:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
 --- !u!4 &1491725051
 Transform:
   m_ObjectHideFlags: 0

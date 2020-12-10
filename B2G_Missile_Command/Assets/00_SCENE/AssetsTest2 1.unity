@@ -2586,6 +2586,7 @@ MonoBehaviour:
   CitiesList: []
   BuildingList: []
   LastActivated: {fileID: 0}
+  silverBulletMax: 25
   silverBulletCount: 0
   silverBullet: {fileID: 2291136316714757043, guid: 9062b43eac190fe438ca05d00dcf0aff, type: 3}
   silverBulletText: {fileID: 1162804286}

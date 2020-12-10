@@ -15,6 +15,7 @@ public class bonusdeplac : MonoBehaviour
     void Start()
     {
         moveSpeed = baseMoveSpeed;
+        StartCoroutine(LifeTime());
     }
 
     // Update is called once per frame
@@ -49,5 +50,11 @@ public class bonusdeplac : MonoBehaviour
             Destroy(other.gameObject);
             Destroy(gameObject);
         } 
+    }
+
+    IEnumerator LifeTime()
+    {
+        yield return new WaitForSeconds(20);
+        Destroy(gameObject);
     }
 }
