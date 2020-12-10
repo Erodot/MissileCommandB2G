@@ -126,7 +126,7 @@ MonoBehaviour:
   bomberSpawnTimer: 0
   bomberRotateDistance: 0
   enemyIcon: {fileID: 0}
-  explosionRadius: 50
+  explosionRadius: 40
 --- !u!54 &3048141030897770999
 Rigidbody:
   m_ObjectHideFlags: 0

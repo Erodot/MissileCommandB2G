@@ -129,6 +129,9 @@ public class GameManager : MonoBehaviour
         #endregion
 
         terrainOK = true;
+
+        LastActivated = TurretList[2];
+        LastActivated.GetComponent<Shoot>().isActivated = true;
     }
 
     // Update is called once per frame
@@ -368,7 +371,7 @@ public class GameManager : MonoBehaviour
                 if (go != null && go.name.Contains("Turret"))
                 {
                     //go.transform.Find("Zone").gameObject.GetComponent<ShootingZoneTest>();
-                    go.GetComponent<NewShoot>().enabled = false;
+                    go.GetComponent<Shoot>().enabled = false;
                 }
             }
         }

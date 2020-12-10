@@ -76,7 +76,7 @@ MonoBehaviour:
   weight: 10
   bomberSpawnTimer: 0
   bomberRotateDistance: 0
-  enemyIcon: {fileID: 0}
+  enemyIcon: {fileID: 21300000, guid: ffd1bcbff589f44458536fee148e35d9, type: 3}
   explosionRadius: 30
 --- !u!54 &3048141030897770999
 Rigidbody:

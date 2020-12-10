@@ -255,11 +255,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 487642d918ea6084ca4bbd6e897fc356, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isActivated: 0
+  indexTurret: 0
+  isDestroy: 0
   Bullet: {fileID: 58021480688727742, guid: ab7c430cd6291f54e8495797cca42910, type: 3}
   bulletSpeed: 5
   tir: 0
-  isDestroy: 0
-  indexTurret: 0
   Canon: {fileID: 4500256060581646316}
   dispersions:
   - {fileID: 8774605994804757160}
@@ -268,7 +269,6 @@ MonoBehaviour:
   - {fileID: 7867611973534251981}
   - {fileID: 8379211507121932333}
   - {fileID: 8704772011442137322}
-  isActivated: 0
   reloadTime: 0
   controlSettings: {fileID: 0}
   gameManager: {fileID: 0}
@@ -387,7 +387,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2915580641370402573
 Transform:
   m_ObjectHideFlags: 0

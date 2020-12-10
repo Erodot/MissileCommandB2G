@@ -12,6 +12,10 @@ public class EnemySpawnTest2 : MonoBehaviour
     public GameObject[] enemys;
     public GameObject bonus;
     public GameObject[] bonusEffect;
+    public GameObject[] enemyIcons;
+    public GameObject waveAnounce;
+    public Text waveAff;
+    bool showAnouncer = true;
 
     public GameObject Alert;
     [Tooltip("Life time of the alert on the screen")]
@@ -75,7 +79,8 @@ public class EnemySpawnTest2 : MonoBehaviour
 
     int doorIncrease;
 
-
+    public bool pacingStart;
+    bool start = true;
 
     // Start is called before the first frame update
     void Start()
@@ -94,120 +99,130 @@ public class EnemySpawnTest2 : MonoBehaviour
             bonusTimeInterval = (enemyToSpawn * timeToSpawn) / Random.Range(1, bonusRngMax + 1);
         }
         actualTime3 = bonusTimeInterval - Time.deltaTime;
+        StartCoroutine(WaveAnouncer());
     }
 
     // Update is called once per frame
     void Update()
     {
-        //clock for the enemy spawning
-        if (enemyToSpawn > 0) //while there's still enemy to spawn in the wave
+        if (!start)
         {
-            if (actualTime == timeToSpawn) //if the actual time is the time to spawn enemy
+            //clock for the enemy spawning
+            if (enemyToSpawn > 0) //while there's still enemy to spawn in the wave
             {
-                InstantiateEnemy(); //spawn an enemy
-            }
-
-            if (actualTime > 0) //if the time between enemy spawn has'nt reached 0
-            {
-                actualTime -= Time.deltaTime; //make it decrease
-            }
-            else
-            {
-                actualTime = timeToSpawn; //reset the clock
-            }
-
-
-            if (actualTime3 == bonusTimeInterval) //if the actual time is the time to spawn bonus
-            {
-                InstantiateBonus(); //spawn bonus
-            }
-
-            if (actualTime3 > 0) //if the time between bonus spawn has'nt reached 0
-            {
-                actualTime3 -= Time.deltaTime; //make it decrease
-            }
-            else
-            {
-                actualTime3 = bonusTimeInterval; //reset the clock
-            }
-
-        }
-        else //if the wave has ended
-        {
-
-            if (actualTime2 > 0) //if the time between wave has'nt reached 0
-            {
-                actualTime2 -= Time.deltaTime; //make it decrease
-            }
-            else 
-            {
-                int citiesNumber = 0; //city count number
-
-                foreach (GameObject cities in gameManager.CitiesList) //check for all the building
+                if (actualTime == timeToSpawn) //if the actual time is the time to spawn enemy
                 {
-                    if (cities != null && cities.GetComponent<MeshRenderer>()) //if he is still alive
-                    {
-                        citiesNumber += 1; //add it to the city count
-                    }
-                }
-                if (citiesNumber <= 6 && citiesNumber > 4) //if there is between 4 and 6 cities left
-                {
-                    difficultyAugmentation = 3; //set difficulty increment to 3
-                }
-                else if (citiesNumber <= 4 && citiesNumber > 2)  //if there is between 2 and 4 cities left
-                {
-                    difficultyAugmentation = 2; //set difficulty increment to 2
-                }
-                else if (citiesNumber <= 2)  //if there is less than 2 cities left
-                {
-                    difficultyAugmentation = 1; //set difficulty increment to 1
+                    InstantiateEnemy(); //spawn an enemy
                 }
 
-                if(timeToSpawn > minimumSpawnTime)
+                if (actualTime > 0) //if the time between enemy spawn has'nt reached 0
                 {
-                    timeToSpawn -= ((waveNumber + 1) * difficultyAugmentation) / (10 * timeDiviser); //lower the time between enemy spawn 
-                }
-
-                actualTime = timeToSpawn; //set the actual time between enemy spawn
-
-                if(enemyToSpawnBank < maxEnemy)
-                {
-                    enemyToSpawn = enemyToSpawnBank + Random.Range(enemyGainMin, enemyGainMax) + difficultyAugmentation; //choose the number of ennemy to spawn for the next wave
-                }
-
-                enemyToSpawnBank = enemyToSpawn; //reset the max enemy spawn
-                actualTime2 = timeBetweenWaveStart; //reset the actual time between wave
-                difficultySpawn += difficultyAugmentation; //add to the difficulty for the spawn
-                if (difficultySpawn >= 5) //if the difficulty for the spawn is higher or equal to 9
-                {
-                    if (diffModifier < enemys.Length) //if the difficulty of enemy is lower than the number of enemy
-                    {
-                        diffModifier++; 
-                    }
-                    difficultySpawn = 0; //reset the difficulty for the spawn
-                }
-
-                if (bonusFixe > 0)
-                {
-                    bonusTimeInterval = (enemyToSpawn * timeToSpawn) / (bonusFixe + 1);
+                    actualTime -= Time.deltaTime; //make it decrease
                 }
                 else
                 {
-                    bonusTimeInterval = (enemyToSpawn * timeToSpawn) / Random.Range(1, bonusRngMax + 1);
+                    actualTime = timeToSpawn; //reset the clock
                 }
-                actualTime3 = bonusTimeInterval - Time.deltaTime;
 
-                if(doorIncrease < Screen.width)
+
+                if (actualTime3 == bonusTimeInterval) //if the actual time is the time to spawn bonus
                 {
-                    doorIncrease += Screen.width / 10;
+                    InstantiateBonus(); //spawn bonus
                 }
 
-                //LevelsManager lvlManager = LevelsManager.instance; //get the level manager
-                //lvlManager.currentLevel += 1; 
-                waveNumber += 1; // add one to the wave number
-                wave.text = "\r\n" + waveNumber; //set the text on screen
+                if (actualTime3 > 0) //if the time between bonus spawn has'nt reached 0
+                {
+                    actualTime3 -= Time.deltaTime; //make it decrease
+                }
+                else
+                {
+                    actualTime3 = bonusTimeInterval; //reset the clock
+                }
+
             }
-            //StartCoroutine(Wave());
+            else if (enemyToSpawn <= 0 && pacingStart)//if the wave has ended
+            {
+                if (showAnouncer)
+                {
+                    int citiesNumber = 0; //city count number
+
+                    foreach (GameObject cities in gameManager.CitiesList) //check for all the building
+                    {
+                        if (cities != null && cities.GetComponent<MeshRenderer>()) //if he is still alive
+                        {
+                            citiesNumber += 1; //add it to the city count
+                        }
+                    }
+                    if (citiesNumber <= 6 && citiesNumber > 4) //if there is between 4 and 6 cities left
+                    {
+                        difficultyAugmentation = 3; //set difficulty increment to 3
+                    }
+                    else if (citiesNumber <= 4 && citiesNumber > 2)  //if there is between 2 and 4 cities left
+                    {
+                        difficultyAugmentation = 2; //set difficulty increment to 2
+                    }
+                    else if (citiesNumber <= 2)  //if there is less than 2 cities left
+                    {
+                        difficultyAugmentation = 1; //set difficulty increment to 1
+                    }
+
+                    difficultySpawn += difficultyAugmentation; //add to the difficulty for the spawn
+
+                    if (difficultySpawn >= 5) //if the difficulty for the spawn is higher or equal to 9
+                    {
+                        if (diffModifier < enemys.Length) //if the difficulty of enemy is lower than the number of enemy
+                        {
+                            diffModifier++;
+                        }
+                        difficultySpawn = 0; //reset the difficulty for the spawn
+                    }
+                    waveNumber += 1; // add one to the wave number
+                    StartCoroutine(WaveAnouncer());
+                    showAnouncer = false;
+                }
+                if (actualTime2 > 0) //if the time between wave has'nt reached 0
+                {
+                    actualTime2 -= Time.deltaTime; //make it decrease
+                }
+                else
+                {
+                    if (timeToSpawn > minimumSpawnTime)
+                    {
+                        timeToSpawn -= ((waveNumber + 1) * difficultyAugmentation) / (10 * timeDiviser); //lower the time between enemy spawn 
+                    }
+
+                    actualTime = timeToSpawn; //set the actual time between enemy spawn
+
+                    if (enemyToSpawnBank < maxEnemy)
+                    {
+                        enemyToSpawn = enemyToSpawnBank + Random.Range(enemyGainMin, enemyGainMax) + difficultyAugmentation; //choose the number of ennemy to spawn for the next wave
+                    }
+
+                    enemyToSpawnBank = enemyToSpawn; //reset the max enemy spawn
+                    actualTime2 = timeBetweenWaveStart; //reset the actual time between wave
+
+                    if (bonusFixe > 0)
+                    {
+                        bonusTimeInterval = (enemyToSpawn * timeToSpawn) / (bonusFixe + 1);
+                    }
+                    else
+                    {
+                        bonusTimeInterval = (enemyToSpawn * timeToSpawn) / Random.Range(1, bonusRngMax + 1);
+                    }
+                    actualTime3 = bonusTimeInterval - Time.deltaTime;
+
+                    if (doorIncrease < Screen.width)
+                    {
+                        doorIncrease += Screen.width / 10;
+                    }
+
+                    pacingStart = false;
+                    showAnouncer = true;
+
+                    wave.text = "\r\n" + waveNumber; //set the text on screen
+                }
+
+            }
         }
     }
 
@@ -383,7 +398,57 @@ public class EnemySpawnTest2 : MonoBehaviour
         //Nicolas Pupulin
         go.GetComponent<EnemyMissile>().whereSpawn = whereSpawn;
         //..Nicolas Pupulin
+        if (enemyToSpawn == 0)
+        {
+            go.GetComponent<EnemyMissile>().lastOfWave = true;
+        }
 
+    }
+
+    IEnumerator WaveAnouncer()
+    {
+        if (!start)
+        {
+            yield return new WaitForSeconds(2);
+        }
+
+        waveAnounce.SetActive(true);
+        for (int i = 0; i < diffModifier - 1; i++)
+        {
+            enemyIcons[i].SetActive(true);
+            enemyIcons[i].GetComponent<Image>().sprite = enemys[i + 1].GetComponent<EnemyMissile>().enemyIcon;
+        }
+        waveAff.text = "Wave " + int2roman(waveNumber + 1);
+
+        yield return new WaitForSeconds(2);
+
+        waveAff.text = "";
+        for (int i = 0; i < diffModifier - 1; i++)
+        {
+            enemyIcons[i].GetComponent<Image>().sprite = null;
+            enemyIcons[i].SetActive(false);
+        }
+        waveAnounce.SetActive(false);
+        if (start)
+        {
+            start = false;
+        }
+    }
+
+    string int2roman(int number)
+    {
+        int[] arabic = { 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 };
+        string[] roman = { "M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I" };
+        string result = "";
+        for (int i = 0; i < 13; i++)
+        {
+            while (number >= arabic[i])
+            {
+                result = result + roman[i].ToString();
+                number = number - arabic[i];
+            }
+        }
+        return result;
     }
 
     //..MACHADO Julien

@@ -35,6 +35,7 @@ public class EnemyMissile : MonoBehaviour
     public float bomberSpawnTimer;  public float bomberRotateDistance;  //bomber
     public Sprite enemyIcon;
     public int explosionRadius;
+    public bool lastOfWave;
 
     // Start is called before the first frame update
     void Start()
@@ -96,7 +97,7 @@ public class EnemyMissile : MonoBehaviour
     {
         Vector3 planetTransform = GameObject.FindGameObjectWithTag("Ground").transform.position;
         float planetDistance = Vector3.Distance(planetTransform,transform.position);
-        float angle = 1f * baseSpeed;
+        float angle = 0.25f * baseSpeed;
 
         //Debug.Log(planetDistance);
 
@@ -276,7 +277,10 @@ public class EnemyMissile : MonoBehaviour
             go.GetComponent<PlayerProjectile_Explosion>().radiusMultiplier = explosionRadius;
         }
 
-
+        if (lastOfWave)
+        {
+            GameObject.Find("Spawner").GetComponent<EnemySpawnTest2>().pacingStart = true;
+        }
         Destroy(this.gameObject);
     }
 

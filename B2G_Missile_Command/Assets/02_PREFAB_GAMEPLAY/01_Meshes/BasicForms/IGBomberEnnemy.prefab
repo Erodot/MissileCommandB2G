@@ -119,14 +119,14 @@ MonoBehaviour:
   ennemySpawnTest2: {fileID: 0}
   whereSpawn: 0
   speedModifier: 0
-  speed: 0.7
-  baseSpeed: 0.2
+  speed: 1
+  baseSpeed: 1
   type: bomber
-  weight: 2
+  weight: 1
   bomberSpawnTimer: 1
   bomberRotateDistance: 6
   enemyIcon: {fileID: 0}
-  explosionRadius: 80
+  explosionRadius: 60
 --- !u!54 &3048141030897770999
 Rigidbody:
   m_ObjectHideFlags: 0

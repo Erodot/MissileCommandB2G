@@ -224,14 +224,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 591fee8a7fefa0944a5fb67316396059, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isActivated: 0
+  indexTurret: 0
+  isDestroy: 0
   Bullet: {fileID: 58021480688727742, guid: ab7c430cd6291f54e8495797cca42910, type: 3}
   bulletSpeed: 5
   radiusMultiplication: 20
   tir: 0
-  isDestroy: 0
-  indexTurret: 0
   Canon: {fileID: 4500256060581646316}
-  isActivated: 0
   reloadTime: 0.5
   controlSettings: {fileID: 0}
   gameManager: {fileID: 0}
@@ -284,7 +284,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2915580641370402573
 Transform:
   m_ObjectHideFlags: 0
