@@ -1612,7 +1612,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turretNumbers: 3
-  Turret: {fileID: 1918626375815017537, guid: b024f4e2b2bbd4042ad1b012816700ad, type: 3}
+  Turrets:
+  - {fileID: 1918626375815017537, guid: a4618ba0ab652844b881bb569d090513, type: 3}
+  - {fileID: 1918626375815017537, guid: 36decf4bd04832647b30d0b2d67bc64d, type: 3}
+  - {fileID: 1918626375815017537, guid: bc6fa33b971495740ac27cc7c428600a, type: 3}
   positionTurretList:
   - {x: -1.945, y: 4, z: 0}
   - {x: 0, y: 7.56, z: 0}

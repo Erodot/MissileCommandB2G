@@ -33,6 +33,8 @@ public class EnemyMissile : MonoBehaviour
     public string type;
     public float weight;
     public float bomberSpawnTimer;  public float bomberRotateDistance;  //bomber
+    public Sprite enemyIcon;
+    public int explosionRadius;
 
     // Start is called before the first frame update
     void Start()
@@ -129,11 +131,11 @@ public class EnemyMissile : MonoBehaviour
                     other.gameObject.GetComponent<BuildingLifeDamage>().Damaged(2);
 
                     ShootingZoneTest turret;
-                    if (other.GetComponent<NewShoot>() != null) //if the building is a turret
+                    if (other.GetComponent<Shoot>() != null) //if the building is a turret
                     {
-                        other.GetComponent<NewShoot>().enabled = false;
+                        other.GetComponent<Shoot>().enabled = false;
                     }
-                    DestroyThis("Player"); //destroy the missile
+                    DestroyThis(other.gameObject); //destroy the missile
                 }
                 else
                 {
@@ -143,7 +145,7 @@ public class EnemyMissile : MonoBehaviour
             else
             {
                 gameManager.isShieldActivated = false;
-                DestroyThis("Player"); //destroy the missile
+                DestroyThis(other.gameObject); //destroy the missile
             }
         }
 
@@ -194,17 +196,17 @@ public class EnemyMissile : MonoBehaviour
                 gameManager.isShieldActivated = false;
             }
 
-            DestroyThis("Ground"); //destroy the missile
+            DestroyThis(other.gameObject); //destroy the missile
         }
 
-        if (other.gameObject.CompareTag("Explosion")) //if the missile hit a player bullet
+        if (other.gameObject.CompareTag("Bullet") || other.gameObject.CompareTag("Explosion")) //if the missile hit a player bullet
         {
             //Nicolas Pupulin
             lifePoint--;
             if (lifePoint == 0)
             {
                 //Instantiate(explosion, transform.position, Quaternion.identity);
-                DestroyThis("Explosion"); //destroy the missile
+                DestroyThis(other.gameObject); //destroy the missile
             }
             //..Nicolas Pupulin
         }
@@ -234,11 +236,11 @@ public class EnemyMissile : MonoBehaviour
 
 
     //[ContextMenu("DestroyHive")]
-    public void DestroyThis(string tag)
+    public void DestroyThis(GameObject tag)
     {
         if (type == "hive") //ruche
         {
-            if(tag == "Explosion")
+            if (tag.CompareTag("Bullet") || tag.CompareTag("Explosion"))
             {
                 //instanciate 5 simple ennemies
                 for (int i = 0; i < 5; i++)
@@ -263,6 +265,17 @@ public class EnemyMissile : MonoBehaviour
             }
         }
         gameManager.silverBulletCount++;
+        if (tag.CompareTag("Bullet"))
+        {
+            GameObject go = Instantiate(explosion, tag.transform.position, Quaternion.identity);
+            go.GetComponent<PlayerProjectile_Explosion>().radiusMultiplier = explosionRadius;
+        }
+        if (tag.CompareTag("Explosion"))
+        {
+            GameObject go = Instantiate(explosion, gameObject.transform.position, Quaternion.identity);
+            go.GetComponent<PlayerProjectile_Explosion>().radiusMultiplier = explosionRadius;
+        }
+
 
         Destroy(this.gameObject);
     }

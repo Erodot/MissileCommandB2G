@@ -2,16 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bazooka : MonoBehaviour
+public class Bazooka : Shoot
 {
     public GameObject Bullet;
     public int bulletSpeed;
     public int radiusMultiplication;
     public bool tir = false;
-    public bool isDestroy;
-    public int indexTurret; //Indicate wich turret he is.
     public GameObject Canon;
-    public bool isActivated;
 
     public float reloadTime;
     bool canShoot = true;
@@ -26,14 +23,14 @@ public class Bazooka : MonoBehaviour
     void Awake()
     {
         controlSettings = GameObject.Find("ControlManager").GetComponent<ControlSettings>();
-        //gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (gameManager.turretCanShoot)
-        //{
+        if (gameManager.turretCanShoot)
+        {
         if (isActivated && canShoot)
         {
             if (Mathf.RoundToInt(controlSettings.Shoot.ReadValue<float>()) == 1 && canShoot)
@@ -51,6 +48,7 @@ public class Bazooka : MonoBehaviour
                 go.GetComponent<NewBullet>().direction = Canon.transform.position - transform.position;
                 go.GetComponent<NewBullet>().speed = bulletSpeed;
                 go.GetComponent<NewBullet>().explosionRadius += timeHeld * radiusMultiplication;
+                    go.GetComponent<NewBullet>().canExplode = true;
 
                 timeHeld = 0;
                 shoot = false;
@@ -70,7 +68,7 @@ public class Bazooka : MonoBehaviour
                 StartCoroutine(Reload());
             }
         }*/
-        //}
+        }
     }
 
     IEnumerator Reload()

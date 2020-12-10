@@ -150,27 +150,27 @@ public class GameManager : MonoBehaviour
         {
             if (LastActivated != null)
             {
-                LastActivated.GetComponent<NewShoot>().isActivated = false;
+                LastActivated.GetComponent<Shoot>().isActivated = false;
             }
-            TurretList2[0].GetComponent<NewShoot>().isActivated = true;
+            TurretList2[0].GetComponent<Shoot>().isActivated = true;
             LastActivated = TurretList2[0];
         }
         if (Mathf.RoundToInt(controlSettings.Turret2.ReadValue<float>()) == 1 && TurretList2[1] != null)
         {
             if (LastActivated != null)
             {
-                LastActivated.GetComponent<NewShoot>().isActivated = false;
+                LastActivated.GetComponent<Shoot>().isActivated = false;
             }
-            TurretList2[1].GetComponent<NewShoot>().isActivated = true;
+            TurretList2[1].GetComponent<Shoot>().isActivated = true;
             LastActivated = TurretList2[1];
         }
         if (Mathf.RoundToInt(controlSettings.Turret3.ReadValue<float>()) == 1 && TurretList2[2] != null)
         {
             if (LastActivated != null)
             {
-                LastActivated.GetComponent<NewShoot>().isActivated = false;
+                LastActivated.GetComponent<Shoot>().isActivated = false;
             }
-            TurretList2[2].GetComponent<NewShoot>().isActivated = true;
+            TurretList2[2].GetComponent<Shoot>().isActivated = true;
             LastActivated = TurretList2[2];
         }
 

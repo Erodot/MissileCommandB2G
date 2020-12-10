@@ -11,7 +11,7 @@ public class FieldBuilderTest : MonoBehaviour
     [Tooltip("We need 3 turrets to fit the original game.")]
     public int turretNumbers;
     [Tooltip("Prefab of the turret.")]
-    public GameObject Turret;
+    public GameObject[] Turrets;
     [Tooltip("You need to set the position of every turret on this list | Size = turretNumbers.")]
     public List<Vector3> positionTurretList = new List<Vector3>();
     [Tooltip("You need to set the angle of every turret on this list | Size = turretNumbers.")]
@@ -50,8 +50,8 @@ public class FieldBuilderTest : MonoBehaviour
         TurretCategorie.transform.parent = transform; //We set this category as a child of the field.
         for (int i = 0; i < turretNumbers; i++) //How many turrets do you want ?
         {
-            GameObject TurretCreated = Instantiate(Turret, positionTurretList[i], Quaternion.Euler(rotationTurretList[i])); //A new turret is born.
-            TurretCreated.GetComponent<NewShoot>().indexTurret = turretIndex;
+            GameObject TurretCreated = Instantiate(Turrets[i], positionTurretList[i], Quaternion.Euler(rotationTurretList[i])); //A new turret is born.
+            TurretCreated.GetComponent<Shoot>().indexTurret = turretIndex;
             turretIndex++;
             TurretCreated.transform.parent = TurretCategorie.transform; //Turret became children of spawner.
             TurretList.Add(TurretCreated);

@@ -2,15 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShotGun : MonoBehaviour
+public class ShotGun : Shoot
 {
     public GameObject Bullet;
     public int bulletSpeed;
     public bool tir = false;
-    public bool isDestroy;
-    public int indexTurret; //Indicate wich turret he is.
     public GameObject Canon;
-    public bool isActivated;
+    public GameObject[] dispersions;
 
     public float reloadTime;
     bool canShoot = true;
@@ -25,14 +23,14 @@ public class ShotGun : MonoBehaviour
     void Awake()
     {
         controlSettings = GameObject.Find("ControlManager").GetComponent<ControlSettings>();
-        //gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (gameManager.turretCanShoot)
-        //{
+        if (gameManager.turretCanShoot)
+        {
         if (isActivated && canShoot)
         {
             if (Mathf.RoundToInt(controlSettings.Shoot.ReadValue<float>()) == 1 && canShoot)
@@ -50,23 +48,23 @@ public class ShotGun : MonoBehaviour
                 else if(timeHeld < 2*(timeToHold / 4))
                 {
                     Debug.Log("normal shoot2");
-                    SpawnBullet(Canon.transform.position, (transform.localPosition + new Vector3(0.15f, 0, 0)));
-                    SpawnBullet(Canon.transform.position, (transform.localPosition + new Vector3(-0.15f, 0, 0)));
+                    SpawnBullet(Canon.transform.position, dispersions[0].transform.position);
+                    SpawnBullet(Canon.transform.position, dispersions[1].transform.position);
                 }
                 else if (timeHeld < 3 * (timeToHold / 4))
                 {
                     Debug.Log("normal shoot2");
                     SpawnBullet(Canon.transform.position, transform.position);
-                    SpawnBullet(Canon.transform.position, (transform.localPosition + new Vector3(0.25f, 0, 0)));
-                    SpawnBullet(Canon.transform.position, (transform.localPosition + new Vector3(-0.25f, 0, 0)));
+                    SpawnBullet(Canon.transform.position, dispersions[2].transform.position);
+                    SpawnBullet(Canon.transform.position, dispersions[3].transform.position);
                 }
-                else if (timeHeld < timeToHold)
+                else
                 {
                     Debug.Log("normal shoot2");
-                    SpawnBullet(Canon.transform.position, (transform.localPosition + new Vector3(0.15f, 0, 0)));
-                    SpawnBullet(Canon.transform.position, (transform.localPosition + new Vector3(-0.15f, 0, 0)));
-                    SpawnBullet(Canon.transform.position, (transform.localPosition + new Vector3(0.55f, 0, 0)));
-                    SpawnBullet(Canon.transform.position, (transform.localPosition + new Vector3(-0.55f, 0, 0)));
+                    SpawnBullet(Canon.transform.position, dispersions[0].transform.position);
+                    SpawnBullet(Canon.transform.position, dispersions[1].transform.position);
+                    SpawnBullet(Canon.transform.position, dispersions[4].transform.position);
+                    SpawnBullet(Canon.transform.position, dispersions[5].transform.position);
                 }
 
 
@@ -97,7 +95,7 @@ public class ShotGun : MonoBehaviour
                 StartCoroutine(Reload());
             }
         }*/
-        //}
+        }
     }
 
     IEnumerator Reload()

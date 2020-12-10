@@ -167,7 +167,7 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   explosion: {fileID: 4988724062270726289, guid: f1f65eee0c8933f418bf0ff1be26801c, type: 3}
   ennemiesPrefab: []
-  lifePoint: 3
+  lifePoint: 2
   randomDirection: {x: 0, y: 0, z: 0}
   ennemySpawnTest2: {fileID: 0}
   whereSpawn: 0
@@ -178,6 +178,8 @@ MonoBehaviour:
   weight: 4
   bomberSpawnTimer: 0
   bomberRotateDistance: 0
+  enemyIcon: {fileID: 0}
+  explosionRadius: 60
 --- !u!54 &3048141030897770999
 Rigidbody:
   m_ObjectHideFlags: 0
