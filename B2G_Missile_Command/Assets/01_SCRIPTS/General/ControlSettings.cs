@@ -12,6 +12,7 @@ public class ControlSettings : MonoBehaviour
     public InputAction Turret2;
     public InputAction Turret3;
     public InputAction Pause;
+    public InputAction SilverBullet;
 
     void OnEnable()
     {
@@ -22,6 +23,7 @@ public class ControlSettings : MonoBehaviour
         Turret2.Enable();
         Turret3.Enable();
         Pause.Enable();
+        SilverBullet.Enable();
     }
 
     void OnDisable()
@@ -33,6 +35,7 @@ public class ControlSettings : MonoBehaviour
         Turret2.Disable();
         Turret3.Disable();
         Pause.Disable();
+        SilverBullet.Disable();
     }
 
     // Start is called before the first frame update

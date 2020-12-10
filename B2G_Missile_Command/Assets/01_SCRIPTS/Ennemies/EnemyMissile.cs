@@ -133,7 +133,7 @@ public class EnemyMissile : MonoBehaviour
                     {
                         other.GetComponent<NewShoot>().enabled = false;
                     }
-                    DestroyThis(); //destroy the missile
+                    DestroyThis("Player"); //destroy the missile
                 }
                 else
                 {
@@ -143,7 +143,7 @@ public class EnemyMissile : MonoBehaviour
             else
             {
                 gameManager.isShieldActivated = false;
-                DestroyThis(); //destroy the missile
+                DestroyThis("Player"); //destroy the missile
             }
         }
 
@@ -194,7 +194,7 @@ public class EnemyMissile : MonoBehaviour
                 gameManager.isShieldActivated = false;
             }
 
-            DestroyThis(); //destroy the missile
+            DestroyThis("Ground"); //destroy the missile
         }
 
         if (other.gameObject.CompareTag("Explosion")) //if the missile hit a player bullet
@@ -204,7 +204,7 @@ public class EnemyMissile : MonoBehaviour
             if (lifePoint == 0)
             {
                 //Instantiate(explosion, transform.position, Quaternion.identity);
-                DestroyThis(); //destroy the missile
+                DestroyThis("Explosion"); //destroy the missile
             }
             //..Nicolas Pupulin
         }
@@ -234,31 +234,35 @@ public class EnemyMissile : MonoBehaviour
 
 
     //[ContextMenu("DestroyHive")]
-    public void DestroyThis()
+    public void DestroyThis(string tag)
     {
         if (type == "hive") //ruche
         {
-            //instanciate 5 simple ennemies
-            for (int i = 0; i < 5; i++)
+            if(tag == "Explosion")
             {
-                float angle = 360f / 5;
-                float rayon = 1f;
-                Vector3 newEnnemyPos = new Vector3(transform.position.x + rayon, transform.position.y + rayon, transform.position.z);
-                Quaternion q = Quaternion.Euler(0,90,0);
-                GameObject nmi = Instantiate(ennemiesPrefab[0], newEnnemyPos, q);
-                Debug.Log(q);
+                //instanciate 5 simple ennemies
+                for (int i = 0; i < 5; i++)
+                {
+                    float angle = 360f / 5;
+                    float rayon = 1f;
+                    Vector3 newEnnemyPos = new Vector3(transform.position.x + rayon, transform.position.y + rayon, transform.position.z);
+                    Quaternion q = Quaternion.Euler(0, 90, 0);
+                    GameObject nmi = Instantiate(ennemiesPrefab[0], newEnnemyPos, q);
+                    Debug.Log(q);
 
-                //rotation
-                transform.RotateAround(transform.position, Vector3.back, angle);
+                    //rotation
+                    transform.RotateAround(transform.position, Vector3.back, angle);
 
 
-                nmi.transform.parent = transform;
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                transform.GetChild(0).transform.parent = null;
+                    nmi.transform.parent = transform;
+                }
+                for (int i = 0; i < 5; i++)
+                {
+                    transform.GetChild(0).transform.parent = null;
+                }
             }
         }
+        gameManager.silverBulletCount++;
 
         Destroy(this.gameObject);
     }

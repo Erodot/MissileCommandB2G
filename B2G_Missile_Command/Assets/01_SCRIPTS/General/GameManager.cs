@@ -65,6 +65,10 @@ public class GameManager : MonoBehaviour
 
     public GameObject LastActivated;
 
+    public int silverBulletCount;
+    public GameObject silverBullet;
+    public GameObject silverBulletText;
+
     /*  singleton
     void Awake()
     {
@@ -127,6 +131,13 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(silverBulletCount == 5)
+        {
+            Instantiate(silverBullet, transform);
+            silverBulletText.SetActive(true);
+            silverBulletCount++;
+        }
+
         if (terrainOK)
         {
             CheckGame();
