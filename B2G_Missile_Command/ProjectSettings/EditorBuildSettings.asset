@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/00_SCENE/Archiver/MergePrototypeV5Test.unity
     guid: d7cfff88392af0347ac7abe99abc07d4
   - enabled: 1
-    path: Assets/00_SCENE/AssetsTest2.unity
+    path: Assets/00_SCENE/Test/FxTest.unity
     guid: 8dc1e0a3ec64843459f70e2f4975159c
   m_configObjects: {}
