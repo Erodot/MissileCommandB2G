@@ -44,6 +44,7 @@ public class EnemyMissile : MonoBehaviour
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         gameObject.transform.LookAt(target); //rotate towards his target
 
+
         //Nicolas Pupulin
         ennemySpawnTest2 = GameObject.Find("Spawner").GetComponent<EnemySpawnTest2>();
 
