@@ -130,7 +130,7 @@ public class GameManager : MonoBehaviour
 
         terrainOK = true;
 
-        LastActivated = TurretList[2];
+        LastActivated = TurretList[1];
         LastActivated.GetComponent<Shoot>().isActivated = true;
     }
 
@@ -147,6 +147,34 @@ public class GameManager : MonoBehaviour
         if (terrainOK)
         {
             CheckGame();
+        }
+
+        if (Mathf.RoundToInt(controlSettings.Turret1.ReadValue<float>()) == 1 && TurretList2[0] != null)         
+        {             
+            if (LastActivated != null)             
+            {                 
+                LastActivated.GetComponent<Shoot>().isActivated = false;             
+            }             
+            TurretList2[0].GetComponent<Shoot>().isActivated = true;             
+            LastActivated = TurretList2[0];         
+        }         
+        if (Mathf.RoundToInt(controlSettings.Turret2.ReadValue<float>()) == 1 && TurretList2[1] != null)         
+        {             
+            if (LastActivated != null)            
+            {                 
+                LastActivated.GetComponent<Shoot>().isActivated = false;             
+            }             
+            TurretList2[1].GetComponent<Shoot>().isActivated = true;             
+            LastActivated = TurretList2[1];         
+        }
+        if (Mathf.RoundToInt(controlSettings.Turret3.ReadValue<float>()) == 1 && TurretList2[2] != null)
+        {
+            if (LastActivated != null)
+            {
+                LastActivated.GetComponent<Shoot>().isActivated = false;
+            }
+            TurretList2[2].GetComponent<Shoot>().isActivated = true;
+            LastActivated = TurretList2[2];
         }
     }
 

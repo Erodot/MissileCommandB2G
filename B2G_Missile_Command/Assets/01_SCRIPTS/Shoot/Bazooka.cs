@@ -16,8 +16,10 @@ public class Bazooka : Shoot
     public ControlSettings controlSettings;
     public GameManager gameManager;
 
-    public float timeToHold;
-    public float timeHeld;
+    public float timer;
+    float currentTimer;
+
+    public 
 
     // Start is called before the first frame update
     void Awake()
@@ -29,31 +31,40 @@ public class Bazooka : Shoot
     // Update is called once per frame
     void Update()
     {
-        if (gameManager.turretCanShoot)
+        if (gameManager.turretCanShoot && isActivated)
         {
-        if (canShoot)
-        {
-            if (Mathf.RoundToInt(controlSettings.Turret3.ReadValue<float>()) == 1 && canShoot)
+            if (canShoot)
             {
-                if (timeHeld < timeToHold)
+                if (Mathf.RoundToInt(controlSettings.Shoot.ReadValue<float>()) == 1)
                 {
-                    timeHeld += Time.deltaTime;
+                    GameObject go = Instantiate(Bullet, Canon.transform.position, gameObject.transform.rotation);
+                    go.GetComponent<NewBullet>().direction = Canon.transform.position - transform.position;
+                    go.GetComponent<NewBullet>().speed = bulletSpeed;
+                    go.GetComponent<NewBullet>().explosionRadius = radiusMultiplication;
+                    go.GetComponent<NewBullet>().canExplode = true;
                     shoot = true;
+                    canShoot = false;
                 }
             }
-            if (controlSettings.Turret3.ReadValue<float>() == 0 && shoot)
+            if (Mathf.RoundToInt(controlSettings.Shoot.ReadValue<float>()) == 0 && shoot)
             {
-                Debug.Log("normal shoot");
+                shoot = false;
+                StartCoroutine(Reload());
+            }
+        }
+        else if(gameManager.turretCanShoot && !isActivated)
+        {
+            if(currentTimer > 0)
+            {
+                currentTimer -= Time.deltaTime;
+            }
+            else if(currentTimer <= 0)
+            {
                 GameObject go = Instantiate(Bullet, Canon.transform.position, gameObject.transform.rotation);
                 go.GetComponent<NewBullet>().direction = Canon.transform.position - transform.position;
                 go.GetComponent<NewBullet>().speed = bulletSpeed;
-                go.GetComponent<NewBullet>().explosionRadius += timeHeld * radiusMultiplication;
-                    go.GetComponent<NewBullet>().canExplode = true;
 
-                timeHeld = 0;
-                shoot = false;
-                canShoot = false;
-                StartCoroutine(Reload());
+                currentTimer = timer;
             }
         }
 
@@ -68,12 +79,12 @@ public class Bazooka : Shoot
                 StartCoroutine(Reload());
             }
         }*/
-        }
-    }
 
+    }
     IEnumerator Reload()
     {
         yield return new WaitForSeconds(reloadTime);
         canShoot = true;
     }
 }
+

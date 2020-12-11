@@ -237,6 +237,7 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   timeToHold: 2
   timeHeld: 0
+  timer: 2
 --- !u!1 &4500256060581646316
 GameObject:
   m_ObjectHideFlags: 0

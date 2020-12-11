@@ -16,8 +16,8 @@ public class ShotGun : Shoot
     public ControlSettings controlSettings;
     public GameManager gameManager;
 
-    public float timeToHold;
-    public float timeHeld;
+    public float timer;
+    float currentTimer;
 
     // Start is called before the first frame update
     void Awake()
@@ -29,59 +29,42 @@ public class ShotGun : Shoot
     // Update is called once per frame
     void Update()
     {
-        if (gameManager.turretCanShoot)
+        if (gameManager.turretCanShoot && isActivated)
         {
-        if (canShoot)
-        {
-            if (Mathf.RoundToInt(controlSettings.Turret1.ReadValue<float>()) == 1 && canShoot)
+            if (canShoot)
             {
-                timeHeld += Time.deltaTime;
-                shoot = true;
-            }
-            else if (Mathf.RoundToInt(controlSettings.Turret1.ReadValue<float>()) == 0 && shoot)
-            {
-                if(timeHeld < timeToHold / 4)
-                {
-                    Debug.Log("normal shoot");
-                    SpawnBullet(Canon.transform.position, transform.position);
-                }
-                else if(timeHeld < 2*(timeToHold / 4))
-                {
-                    Debug.Log("normal shoot2");
-                    SpawnBullet(Canon.transform.position, dispersions[0].transform.position);
-                    SpawnBullet(Canon.transform.position, dispersions[1].transform.position);
-                }
-                else if (timeHeld < 3 * (timeToHold / 4))
-                {
-                    Debug.Log("normal shoot2");
-                    SpawnBullet(Canon.transform.position, transform.position);
-                    SpawnBullet(Canon.transform.position, dispersions[2].transform.position);
-                    SpawnBullet(Canon.transform.position, dispersions[3].transform.position);
-                }
-                else
+                if (Mathf.RoundToInt(controlSettings.Shoot.ReadValue<float>()) == 1)
                 {
                     Debug.Log("normal shoot2");
                     SpawnBullet(Canon.transform.position, dispersions[0].transform.position);
                     SpawnBullet(Canon.transform.position, dispersions[1].transform.position);
                     SpawnBullet(Canon.transform.position, dispersions[4].transform.position);
                     SpawnBullet(Canon.transform.position, dispersions[5].transform.position);
+                    canShoot = false;
+                    shoot = true;
                 }
-
-
-
-                timeHeld = 0;
+            }
+            else if (Mathf.RoundToInt(controlSettings.Shoot.ReadValue<float>()) == 0 && shoot)
+            {
                 shoot = false;
-                canShoot = false;
                 StartCoroutine(Reload());
-
             }
         }
 
-        void SpawnBullet(Vector3 vector1, Vector3 vector2)
+        else if (gameManager.turretCanShoot && !isActivated)
         {
-            GameObject go = Instantiate(Bullet, Canon.transform.position, gameObject.transform.rotation);
-            go.GetComponent<NewBullet>().direction = vector1 - vector2;
-            go.GetComponent<NewBullet>().speed = bulletSpeed;
+            if (currentTimer > 0)
+            {
+                currentTimer -= Time.deltaTime;
+            }
+            else if (currentTimer <= 0)
+            {
+                GameObject go = Instantiate(Bullet, Canon.transform.position, gameObject.transform.rotation);
+                go.GetComponent<NewBullet>().direction = Canon.transform.position - transform.position;
+                go.GetComponent<NewBullet>().speed = bulletSpeed;
+
+                currentTimer = timer;
+            }
         }
 
         /*if (gameManager.controlKeyboard)
@@ -95,7 +78,14 @@ public class ShotGun : Shoot
                 StartCoroutine(Reload());
             }
         }*/
-        }
+        
+    }
+
+    void SpawnBullet(Vector3 vector1, Vector3 vector2)
+    {
+        GameObject go = Instantiate(Bullet, Canon.transform.position, gameObject.transform.rotation);
+        go.GetComponent<NewBullet>().direction = vector1 - vector2;
+        go.GetComponent<NewBullet>().speed = bulletSpeed;
     }
 
     IEnumerator Reload()

@@ -18,8 +18,8 @@ public class Laser : Shoot
     public ControlSettings controlSettings;
     public GameManager gameManager;
 
-    public float timeToHold;
-    public float timeHeld;
+    public float timer;
+    float currentTimer;
 
     // Start is called before the first frame update
     void Awake()
@@ -31,36 +31,24 @@ public class Laser : Shoot
     // Update is called once per frame
     void Update()
     {
-        if (gameManager.turretCanShoot)
+        if (gameManager.turretCanShoot && isActivated)
         {
             if (canShoot)
             {
-                if(Mathf.RoundToInt(controlSettings.Turret2.ReadValue<float>()) == 1 && canShoot)
+                if(Mathf.RoundToInt(controlSettings.Shoot.ReadValue<float>()) == 1)
                 {
-                    timeHeld += Time.deltaTime;
-                    shoot = true;
-                }
-                else if(Mathf.RoundToInt(controlSettings.Turret2.ReadValue<float>()) == 0 && shoot)
-                {
-                    if(timeHeld >= timeToHold)
-                    {
-                        Debug.Log("Laser");
-                        GameObject go = Instantiate(LaserBeam, Canon.transform.position, gameObject.transform.rotation);
-                        StartCoroutine(DestroyLaser(go));
-                    }
-                    else
-                    {
-                        Debug.Log(" normal shoot");
-                        GameObject go = Instantiate(Bullet, Canon.transform.position, gameObject.transform.rotation);
-                        go.GetComponent<NewBullet>().direction = Canon.transform.position - transform.position;
-                        go.GetComponent<NewBullet>().speed = bulletSpeed;
-                }
-                timeHeld = 0;
-                    shoot = false;
-                    canShoot = false;
+                    GameObject go = Instantiate(LaserBeam, Canon.transform.position, gameObject.transform.rotation);
+                    go.transform.parent = gameObject.transform;
+                    StartCoroutine(DestroyLaser(go));
                     StartCoroutine(Reload());
-
+                    shoot = true;
+                    canShoot = false;
                 }
+            }
+            if (Mathf.RoundToInt(controlSettings.Shoot.ReadValue<float>()) == 0 && shoot)
+            {
+                shoot = false;
+                StartCoroutine(Reload());
             }
 
             /*if (gameManager.controlKeyboard)
@@ -74,6 +62,21 @@ public class Laser : Shoot
                     StartCoroutine(Reload());
                 }
             }*/
+        }
+        else if (gameManager.turretCanShoot && !isActivated)
+        {
+            if (currentTimer > 0)
+            {
+                currentTimer -= Time.deltaTime;
+            }
+            else if (currentTimer <= 0)
+            {
+                GameObject go = Instantiate(Bullet, Canon.transform.position, gameObject.transform.rotation);
+                go.GetComponent<NewBullet>().direction = Canon.transform.position - transform.position;
+                go.GetComponent<NewBullet>().speed = bulletSpeed;
+
+                currentTimer = timer;
+            }
         }
     }
 

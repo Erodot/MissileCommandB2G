@@ -269,11 +269,10 @@ MonoBehaviour:
   - {fileID: 7867611973534251981}
   - {fileID: 8379211507121932333}
   - {fileID: 8704772011442137322}
-  reloadTime: 0
+  reloadTime: 0.5
   controlSettings: {fileID: 0}
   gameManager: {fileID: 0}
-  timeToHold: 2
-  timeHeld: 0
+  timer: 2
 --- !u!1 &2811909473650855040
 GameObject:
   m_ObjectHideFlags: 0
