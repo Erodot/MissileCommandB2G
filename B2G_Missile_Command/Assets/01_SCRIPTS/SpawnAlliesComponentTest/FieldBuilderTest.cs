@@ -44,7 +44,7 @@ public class FieldBuilderTest : MonoBehaviour
     IEnumerator CreateField()
     {
         //Let's create some turrets.
-        int turretIndex = 1;
+        int turretIndex = 0;
 
         GameObject TurretCategorie = new GameObject("Turrets"); //We create a category into the Unity Scene for better management.
         TurretCategorie.transform.parent = transform; //We set this category as a child of the field.

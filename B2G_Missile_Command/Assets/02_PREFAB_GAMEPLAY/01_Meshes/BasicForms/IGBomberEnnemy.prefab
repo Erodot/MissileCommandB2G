@@ -113,7 +113,7 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   explosion: {fileID: 4988724062270726289, guid: f1f65eee0c8933f418bf0ff1be26801c, type: 3}
   ennemiesPrefab:
-  - {fileID: 2087319397564193456, guid: e7b08f64c0d63f94290745e7c746f286, type: 3}
+  - {fileID: 2087319397564193456, guid: 7e8b82ed35c0c1b4eb770c60293dc0b3, type: 3}
   lifePoint: 1
   randomDirection: {x: 0, y: 0, z: 0}
   ennemySpawnTest2: {fileID: 0}

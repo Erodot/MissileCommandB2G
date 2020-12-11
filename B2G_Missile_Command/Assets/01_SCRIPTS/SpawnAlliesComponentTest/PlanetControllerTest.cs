@@ -53,15 +53,15 @@ public class PlanetControllerTest : MonoBehaviour
             {
                 float a = controlSettings.RotateX.ReadValue<float>() + controlSettings.RotateY.ReadValue<float>();
                 float b = controlSettings.RotateX.ReadValue<float>() - controlSettings.RotateY.ReadValue<float>();
-                if (gameManager.LastActivated.GetComponent<Shoot>().indexTurret == 1)
+                if (gameManager.LastActivated.GetComponent<Shoot>().indexTurret == 0)
                 {
                     gameObject.transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2(-controlSettings.RotateX.ReadValue<float>(), -controlSettings.RotateY.ReadValue<float>()) * 180 / Mathf.PI) + new Vector3(0, 0, -135);
                 }
-                else if (gameManager.LastActivated.GetComponent<Shoot>().indexTurret == 2)
+                else if (gameManager.LastActivated.GetComponent<Shoot>().indexTurret == 1)
                 {
                     gameObject.transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2(-controlSettings.RotateX.ReadValue<float>(), -controlSettings.RotateY.ReadValue<float>()) * 180 / Mathf.PI);
                 }
-                else if (gameManager.LastActivated.GetComponent<Shoot>().indexTurret == 3)
+                else if (gameManager.LastActivated.GetComponent<Shoot>().indexTurret == 2)
                 {
                     gameObject.transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2(-controlSettings.RotateX.ReadValue<float>(), -controlSettings.RotateY.ReadValue<float>()) * 180 / Mathf.PI) + new Vector3(0, 0, 135);
                 }
@@ -88,15 +88,15 @@ public class PlanetControllerTest : MonoBehaviour
             {
                 float a = controlSettings.RotateX.ReadValue<float>() + controlSettings.RotateY.ReadValue<float>();
                 float b = controlSettings.RotateX.ReadValue<float>() - controlSettings.RotateY.ReadValue<float>();
-                if (gameManager.LastActivated.GetComponent<Shoot>().indexTurret == 1)
+                if (gameManager.LastActivated.GetComponent<Shoot>().indexTurret == 0)
                 {
                     gameObject.transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2(-controlSettings.RotateX.ReadValue<float>(), -controlSettings.RotateY.ReadValue<float>()) * 180 / Mathf.PI) + new Vector3(0, 0, -135);
                 }
-                else if (gameManager.LastActivated.GetComponent<Shoot>().indexTurret == 2)
+                else if (gameManager.LastActivated.GetComponent<Shoot>().indexTurret == 1)
                 {
                     gameObject.transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2(-controlSettings.RotateX.ReadValue<float>(), -controlSettings.RotateY.ReadValue<float>()) * 180 / Mathf.PI);
                 }
-                else if (gameManager.LastActivated.GetComponent<Shoot>().indexTurret == 3)
+                else if (gameManager.LastActivated.GetComponent<Shoot>().indexTurret == 2)
                 {
                     gameObject.transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2(-controlSettings.RotateX.ReadValue<float>(), -controlSettings.RotateY.ReadValue<float>()) * 180 / Mathf.PI) + new Vector3(0, 0, 135);
                 }

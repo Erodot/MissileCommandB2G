@@ -54,9 +54,8 @@ public class Pause : MonoBehaviour
         }
 
         Buttons[0].GetComponentInChildren<Text>().text = settingManager.Shoot.GetBindingDisplayString(0);
-        Buttons[1].GetComponentInChildren<Text>().text = settingManager.Turret1.GetBindingDisplayString(0);
-        Buttons[2].GetComponentInChildren<Text>().text = settingManager.Turret2.GetBindingDisplayString(0);
-        Buttons[3].GetComponentInChildren<Text>().text = settingManager.Turret3.GetBindingDisplayString(0);
+        Buttons[1].GetComponentInChildren<Text>().text = settingManager.SwitchRight.GetBindingDisplayString(0);
+        Buttons[2].GetComponentInChildren<Text>().text = settingManager.SwitchLeft.GetBindingDisplayString(0);
         Buttons[4].GetComponentInChildren<Text>().text = settingManager.Pause.GetBindingDisplayString(0);
 
     }
@@ -73,40 +72,28 @@ public class Pause : MonoBehaviour
         settingManager.Shoot.Enable();
     }
 
-    public void RemapTurret1()
+    public void RemapSwitchRight()
     {
-        settingManager.Turret1.Disable();
+        settingManager.SwitchRight.Disable();
 
-        var rebindOperation = settingManager.Turret1.PerformInteractiveRebinding()
+        var rebindOperation = settingManager.SwitchRight.PerformInteractiveRebinding()
                     // To avoid accidental input from mouse motion
                     .WithControlsExcluding("Mouse")
                     .OnMatchWaitForAnother(0.1f)
                     .Start();
-        settingManager.Turret1.Enable();
+        settingManager.SwitchRight.Enable();
     }
 
-    public void RemapTurret2()
+    public void RemapSwitchLeft()
     {
-        settingManager.Turret2.Disable();
+        settingManager.SwitchLeft.Disable();
 
-        var rebindOperation = settingManager.Turret2.PerformInteractiveRebinding()
+        var rebindOperation = settingManager.SwitchLeft.PerformInteractiveRebinding()
                     // To avoid accidental input from mouse motion
                     .WithControlsExcluding("Mouse")
                     .OnMatchWaitForAnother(0.1f)
                     .Start();
-        settingManager.Turret2.Enable();
-    }
-
-    public void RemapTurret3()
-    {
-        settingManager.Turret3.Disable();
-
-        var rebindOperation = settingManager.Turret3.PerformInteractiveRebinding()
-                    // To avoid accidental input from mouse motion
-                    .WithControlsExcluding("Mouse")
-                    .OnMatchWaitForAnother(0.1f)
-                    .Start();
-        settingManager.Turret3.Enable();
+        settingManager.SwitchLeft.Enable();
     }
 
     public void RemapPause()

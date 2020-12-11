@@ -3912,10 +3912,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screenPos: {x: 0, y: 0, z: 0}
   enemys:
-  - {fileID: 2087319397564193456, guid: 019b2f7c6c5e2f24592af67284b9e93e, type: 3}
+  - {fileID: 2087319397564193456, guid: a7da26291c258674f86daef17588a659, type: 3}
   - {fileID: 2087319397564193456, guid: a7da26291c258674f86daef17588a659, type: 3}
   - {fileID: 2087319397564193456, guid: 758d606f1a3cc494ead767d400b0239e, type: 3}
   - {fileID: 2087319397564193456, guid: 019b2f7c6c5e2f24592af67284b9e93e, type: 3}
+  - {fileID: 2087319397564193456, guid: d496c0146bac6d34286de85b63a172a4, type: 3}
   - {fileID: 2087319397564193456, guid: d496c0146bac6d34286de85b63a172a4, type: 3}
   bonus: {fileID: 8463603656933705450, guid: 03723a3137a3b3046b45737248bc94e3, type: 3}
   bonusEffect:
@@ -4884,59 +4885,43 @@ MonoBehaviour:
     m_SingletonActionBindings:
     - m_Name: 
       m_Id: d1d337ee-85df-4d82-8b48-0f1b54a9fa3c
-      m_Path: <Gamepad>/rightTrigger
+      m_Path: <Gamepad>/buttonSouth
       m_Interactions: 
       m_Processors: 
       m_Groups: 
       m_Action: Shoot
       m_Flags: 0
-  Turret1:
-    m_Name: Turret 1
+  SwitchRight:
+    m_Name: Switch Right
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: f4b81505-9de2-4d1f-aca0-56090f86509d
+    m_Id: 6f4ca77b-f033-48d5-ac42-3b2a273a56d3
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 
-      m_Id: aa66d079-c418-46cc-8f70-ae8e7e19f913
-      m_Path: <Gamepad>/buttonWest
+      m_Id: 064f4e51-e23d-4acb-a136-e32b33d3ab18
+      m_Path: <Gamepad>/rightTrigger
       m_Interactions: 
       m_Processors: 
       m_Groups: 
-      m_Action: Turret 1
+      m_Action: Switch Right
       m_Flags: 0
-  Turret2:
-    m_Name: Turret 2
+  SwitchLeft:
+    m_Name: Switch Left
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: d66c4b48-dd15-457a-b334-38599bbd110e
+    m_Id: ef86cd8a-6f19-4919-a95c-283cebf04882
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 
-      m_Id: 95dcc72f-7c44-4ba7-b59c-54dadc445167
-      m_Path: <Gamepad>/buttonNorth
+      m_Id: 2b663418-1280-4966-a279-9da35f5c748d
+      m_Path: <Gamepad>/leftTrigger
       m_Interactions: 
       m_Processors: 
       m_Groups: 
-      m_Action: Turret 2
-      m_Flags: 0
-  Turret3:
-    m_Name: Turret 3
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: f0bc3ab0-793d-434b-86c3-b46393dca9fc
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 52f62dad-3e25-48a4-b09d-15ffec6cd0b2
-      m_Path: <Gamepad>/buttonEast
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Turret 3
+      m_Action: Switch Left
       m_Flags: 0
   Pause:
     m_Name: Pause
@@ -4964,7 +4949,7 @@ MonoBehaviour:
     m_SingletonActionBindings:
     - m_Name: 
       m_Id: 5242b229-c03e-406b-81d3-19994832ca01
-      m_Path: <Gamepad>/buttonSouth
+      m_Path: <Gamepad>/buttonNorth
       m_Interactions: 
       m_Processors: 
       m_Groups: 

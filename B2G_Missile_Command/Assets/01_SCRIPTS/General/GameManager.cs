@@ -74,6 +74,9 @@ public class GameManager : MonoBehaviour
 
     public bool startGame;
 
+    bool switchRightPressed;
+    bool switchLeftPressed;
+
     /*  singleton
     void Awake()
     {
@@ -153,7 +156,7 @@ public class GameManager : MonoBehaviour
             CheckGame();
         }
 
-        if (Mathf.RoundToInt(controlSettings.Turret1.ReadValue<float>()) == 1 && TurretList2[0] != null)         
+        /*if (Mathf.RoundToInt(controlSettings.Turret1.ReadValue<float>()) == 1 && TurretList2[0] != null)         
         {             
             if (LastActivated != null)             
             {                 
@@ -179,6 +182,50 @@ public class GameManager : MonoBehaviour
             }
             TurretList2[2].GetComponent<Shoot>().isActivated = true;
             LastActivated = TurretList2[2];
+        }*/
+
+        if (Mathf.RoundToInt(controlSettings.SwitchRight.ReadValue<float>()) == 1 && !switchRightPressed)
+        {
+            int index = (LastActivated.GetComponent<Shoot>().indexTurret + 1) % TurretList.Count;
+            switchRightPressed = true;
+            if (LastActivated != null)
+            {
+                LastActivated.GetComponent<Shoot>().isActivated = false;
+            }
+            LastActivated = TurretList[index];
+            LastActivated.GetComponent<Shoot>().isActivated = true;
+        }
+        if(Mathf.RoundToInt(controlSettings.SwitchRight.ReadValue<float>()) == 0 && switchRightPressed)
+        {
+            switchRightPressed = false;
+        }
+
+        if (Mathf.RoundToInt(controlSettings.SwitchLeft.ReadValue<float>()) == 1 && !switchLeftPressed)
+        {
+            int index = 0;
+            if (LastActivated.GetComponent<Shoot>().indexTurret > 0)
+            {
+                index = LastActivated.GetComponent<Shoot>().indexTurret - 1;
+                while (index > TurretList.Count - 1)
+                {
+                    index = LastActivated.GetComponent<Shoot>().indexTurret - 1;
+                }
+            }
+            else
+            {
+                index = TurretList.Count - 1;
+            }
+            switchLeftPressed = true;
+            if (LastActivated != null)
+            {
+                LastActivated.GetComponent<Shoot>().isActivated = false;
+            }
+            LastActivated = TurretList[index];
+            LastActivated.GetComponent<Shoot>().isActivated = true;
+        }
+        if (Mathf.RoundToInt(controlSettings.SwitchLeft.ReadValue<float>()) == 0 && switchLeftPressed)
+        {
+            switchLeftPressed = false;
         }
     }
 

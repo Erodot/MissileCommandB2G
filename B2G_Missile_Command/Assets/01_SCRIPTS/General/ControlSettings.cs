@@ -8,9 +8,8 @@ public class ControlSettings : MonoBehaviour
     public InputAction RotateX;
     public InputAction RotateY;
     public InputAction Shoot;
-    public InputAction Turret1;
-    public InputAction Turret2;
-    public InputAction Turret3;
+    public InputAction SwitchRight;
+    public InputAction SwitchLeft;
     public InputAction Pause;
     public InputAction SilverBullet;
 
@@ -19,9 +18,8 @@ public class ControlSettings : MonoBehaviour
         RotateX.Enable();
         RotateY.Enable();
         Shoot.Enable();
-        Turret1.Enable();
-        Turret2.Enable();
-        Turret3.Enable();
+        SwitchRight.Enable();
+        SwitchLeft.Enable();
         Pause.Enable();
         SilverBullet.Enable();
     }
@@ -31,9 +29,8 @@ public class ControlSettings : MonoBehaviour
         RotateX.Disable();
         RotateY.Disable();
         Shoot.Disable();
-        Turret1.Disable();
-        Turret2.Disable();
-        Turret3.Disable();
+        SwitchRight.Disable();
+        SwitchLeft.Disable();
         Pause.Disable();
         SilverBullet.Disable();
     }
