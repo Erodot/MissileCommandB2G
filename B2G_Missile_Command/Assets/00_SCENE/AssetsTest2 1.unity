@@ -1791,7 +1791,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.14057037, y: 0.47700003}
   m_AnchorMax: {x: 0.39442965, y: 0.61513275}
-  m_AnchoredPosition: {x: -1.2766228, y: 11.269371}
+  m_AnchoredPosition: {x: -1.276619, y: 11.269371}
   m_SizeDelta: {x: 13.973391, y: 19.996763}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &529838965
@@ -2733,7 +2733,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.14057037, y: 0.47700003}
   m_AnchorMax: {x: 0.39442965, y: 0.61513275}
-  m_AnchoredPosition: {x: -1.2769127, y: -16.360626}
+  m_AnchoredPosition: {x: -1.2769089, y: -16.360626}
   m_SizeDelta: {x: 13.973391, y: 19.996763}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &816665271
@@ -3912,7 +3912,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screenPos: {x: 0, y: 0, z: 0}
   enemys:
-  - {fileID: 2087319397564193456, guid: e7b08f64c0d63f94290745e7c746f286, type: 3}
+  - {fileID: 2087319397564193456, guid: 019b2f7c6c5e2f24592af67284b9e93e, type: 3}
   - {fileID: 2087319397564193456, guid: a7da26291c258674f86daef17588a659, type: 3}
   - {fileID: 2087319397564193456, guid: 758d606f1a3cc494ead767d400b0239e, type: 3}
   - {fileID: 2087319397564193456, guid: 019b2f7c6c5e2f24592af67284b9e93e, type: 3}

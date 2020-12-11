@@ -42,7 +42,8 @@ public class NewBullet : MonoBehaviour
         {
             GameObject go = Instantiate(Explosion, transform.position, Quaternion.identity);
             go.GetComponent<PlayerProjectile_Explosion>().radiusMultiplier = explosionRadius;
-        }
+            go.GetComponent<PlayerProjectile_Explosion>().explosionTime = 50;
+        } 
         Destroy(gameObject);
     }
 

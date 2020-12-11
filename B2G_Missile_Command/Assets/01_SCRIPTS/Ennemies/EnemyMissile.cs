@@ -204,11 +204,11 @@ public class EnemyMissile : MonoBehaviour
             DestroyThis(other.gameObject); //destroy the missile
         }
 
-        if (other.gameObject.CompareTag("Bullet") || other.gameObject.CompareTag("Explosion")) //if the missile hit a player bullet
+        if (other.gameObject.CompareTag("Bullet") || other.gameObject.CompareTag("Explosion") || other.gameObject.CompareTag("Laser") && lifePoint == 1) //if the missile hit a player bullet
         {
             //Nicolas Pupulin
             lifePoint--;
-            if (lifePoint == 0)
+            if (lifePoint <= 0)
             {
                 //Instantiate(explosion, transform.position, Quaternion.identity);
 
@@ -221,8 +221,12 @@ public class EnemyMissile : MonoBehaviour
 
                 DestroyThis(other.gameObject); //destroy the missile
             }
-            //..Nicolas Pupulin
+        } else if (other.gameObject.CompareTag("Laser") && lifePoint > 1)
+        {
+            lifePoint = lifePoint - (lifePoint - 1);
         }
+
+        //..Nicolas Pupulin
     }
 
     GameObject FindClosestTarget(string trgt)
@@ -253,8 +257,9 @@ public class EnemyMissile : MonoBehaviour
     {
         if (type == "hive") //ruche
         {
-            if (tag.CompareTag("Bullet") || tag.CompareTag("Explosion"))
+            if (tag.CompareTag("Bullet") || tag.CompareTag("Explosion") || tag.CompareTag("Laser"))
             {
+                
                 //instanciate 5 simple ennemies
                 for (int i = 0; i < 5; i++)
                 {
@@ -283,7 +288,12 @@ public class EnemyMissile : MonoBehaviour
             GameObject go = Instantiate(explosion, tag.transform.position, Quaternion.identity);
             go.GetComponent<PlayerProjectile_Explosion>().radiusMultiplier = explosionRadius;
         }
-        if (tag.CompareTag("Explosion"))
+        else if (tag.CompareTag("Explosion"))
+        {
+            GameObject go = Instantiate(explosion, gameObject.transform.position, Quaternion.identity);
+            go.GetComponent<PlayerProjectile_Explosion>().radiusMultiplier = explosionRadius;
+        }
+        else if (tag.CompareTag("Laser"))
         {
             GameObject go = Instantiate(explosion, gameObject.transform.position, Quaternion.identity);
             go.GetComponent<PlayerProjectile_Explosion>().radiusMultiplier = explosionRadius;
