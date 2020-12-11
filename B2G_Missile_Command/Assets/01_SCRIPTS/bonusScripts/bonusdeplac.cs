@@ -15,6 +15,7 @@ public class bonusdeplac : MonoBehaviour
     void Start()
     {
         moveSpeed = baseMoveSpeed;
+        StartCoroutine(LifeTime());
     }
 
     // Update is called once per frame
@@ -42,12 +43,18 @@ public class bonusdeplac : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("hit");
-        if (other.gameObject.CompareTag("Bullet")) //if the bonus hit a player bullet
+        if (other.gameObject.CompareTag("Bullet") || other.gameObject.CompareTag("Explosion")) //if the bonus hit a player bullet
         {
             GameObject go = Instantiate(bonusEffect, Vector3.zero, Quaternion.identity);
             go.transform.parent = null;
             Destroy(other.gameObject);
             Destroy(gameObject);
         } 
+    }
+
+    IEnumerator LifeTime()
+    {
+        yield return new WaitForSeconds(20);
+        Destroy(gameObject);
     }
 }

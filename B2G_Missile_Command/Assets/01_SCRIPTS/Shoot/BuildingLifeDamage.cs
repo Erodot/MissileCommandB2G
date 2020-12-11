@@ -111,7 +111,7 @@ public class BuildingLifeDamage : MonoBehaviour
             else if (gameManager.TurretList.Contains(go))//turret
             {
                 gameManager.TurretList.Remove(go);
-                go.GetComponent<NewShoot>().isDestroy = true;
+                go.GetComponent<Shoot>().isDestroy = true;
             }
         }
 

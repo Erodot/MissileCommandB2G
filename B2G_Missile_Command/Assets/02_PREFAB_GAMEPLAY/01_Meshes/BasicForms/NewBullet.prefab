@@ -113,6 +113,7 @@ MonoBehaviour:
   speed: 5
   lifeTime: 3
   direction: {x: 0, y: 0, z: 0}
+  explosionRadius: 30
 --- !u!54 &-6855864673165719626
 Rigidbody:
   m_ObjectHideFlags: 0

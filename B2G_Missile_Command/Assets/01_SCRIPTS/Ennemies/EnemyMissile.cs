@@ -14,6 +14,14 @@ public class EnemyMissile : MonoBehaviour
 
     //Nicolas Pupulin
     public int lifePoint;
+
+    public Vector3 randomDirection;
+
+    public EnemySpawnTest2 ennemySpawnTest2;
+
+    public int whereSpawn;
+
+    public float speedModifier;
     //..Nicolas Pupulin
 
     GameObject[] primaryTargets;
@@ -24,6 +32,10 @@ public class EnemyMissile : MonoBehaviour
     public float baseSpeed;
     public string type;
     public float weight;
+    public float bomberSpawnTimer;  public float bomberRotateDistance;  //bomber
+    public Sprite enemyIcon;
+    public int explosionRadius;
+    public bool lastOfWave;
 
     // Start is called before the first frame update
     void Start()
@@ -33,20 +45,81 @@ public class EnemyMissile : MonoBehaviour
         //target = finalTargets[Random.Range(0, finalTargets.Count)].position; //set this target as a vector 3
         speed = baseSpeed;
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        target = FindClosestTarget("Player").transform.position; //find closest target
         gameObject.transform.LookAt(target); //rotate towards his target
+
+
+        //Nicolas Pupulin
+        ennemySpawnTest2 = GameObject.Find("Spawner").GetComponent<EnemySpawnTest2>();
+
+        if (whereSpawn == 0)
+        {
+            randomDirection = new Vector3(Random.Range(-10, 10), 6.5f, transform.position.z);
+        } else if (whereSpawn == 1)
+        {
+            randomDirection = new Vector3(-1, Random.Range(-4, 14), transform.position.z);
+        }
+        else if (whereSpawn == 2)
+        {
+            randomDirection = new Vector3(Random.Range(-10, 10), 4, transform.position.z);
+        }
+        else if (whereSpawn == 3)
+        {
+            randomDirection = new Vector3(1, Random.Range(-4, 14), transform.position.z);
+        }
+
+        if (type == "virgule")
+        {
+            StartCoroutine(DirectionVirgule());
+        } else if (FindClosestTarget("Player") != null)
+        {
+            target = FindClosestTarget("Player").transform.position; //find closest target
+            gameObject.transform.LookAt(target); //rotate towards his target
+        }
+        //..Nicolas Pupulin
     }
 
     // Update is called once per frame
     void Update()
     {
-        GoToTarget();
+        if (type == "bomber")
+            RotateAndBomb();
+        else
+            GoToTarget();
     }
 
     void GoToTarget()
     {
-        transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime); //make the missile move towards the target
+            transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime); //make the missile move towards the target
     }
+
+    //Coline
+    void RotateAndBomb()
+    {
+        Vector3 planetTransform = GameObject.FindGameObjectWithTag("Ground").transform.position;
+        float planetDistance = Vector3.Distance(planetTransform,transform.position);
+        float angle = 0.25f * baseSpeed;
+
+        //Debug.Log(planetDistance);
+
+        if(planetDistance < bomberRotateDistance)
+        {
+            transform.RotateAround(planetTransform, Vector3.forward, angle);
+            if(bombSpawn)
+            {
+                StartCoroutine("BombSpawn");
+            }
+        }
+        else
+        {
+            if (FindClosestTarget("Player") != null)
+            {
+                target = FindClosestTarget("Player").transform.position; //find closest target
+                gameObject.transform.LookAt(target); //rotate towards his target
+            }
+            GoToTarget();
+        }
+    }
+    //..Coline
 
     private void OnTriggerEnter(Collider other)
     {
@@ -59,11 +132,11 @@ public class EnemyMissile : MonoBehaviour
                     other.gameObject.GetComponent<BuildingLifeDamage>().Damaged(2);
 
                     ShootingZoneTest turret;
-                    if (other.GetComponent<NewShoot>() != null) //if the building is a turret
+                    if (other.GetComponent<Shoot>() != null) //if the building is a turret
                     {
-                        other.GetComponent<NewShoot>().enabled = false;
+                        other.GetComponent<Shoot>().enabled = false;
                     }
-                    DestroyThis(); //destroy the missile
+                    DestroyThis(other.gameObject); //destroy the missile
                 }
                 else
                 {
@@ -73,7 +146,7 @@ public class EnemyMissile : MonoBehaviour
             else
             {
                 gameManager.isShieldActivated = false;
-                DestroyThis(); //destroy the missile
+                DestroyThis(other.gameObject); //destroy the missile
             }
         }
 
@@ -124,17 +197,17 @@ public class EnemyMissile : MonoBehaviour
                 gameManager.isShieldActivated = false;
             }
 
-            DestroyThis(); //destroy the missile
+            DestroyThis(other.gameObject); //destroy the missile
         }
 
-        if (other.gameObject.CompareTag("Explosion")) //if the missile hit a player bullet
+        if (other.gameObject.CompareTag("Bullet") || other.gameObject.CompareTag("Explosion")) //if the missile hit a player bullet
         {
             //Nicolas Pupulin
             lifePoint--;
             if (lifePoint == 0)
             {
                 //Instantiate(explosion, transform.position, Quaternion.identity);
-                DestroyThis(); //destroy the missile
+                DestroyThis(other.gameObject); //destroy the missile
             }
             //..Nicolas Pupulin
         }
@@ -162,91 +235,75 @@ public class EnemyMissile : MonoBehaviour
         return closest; //return the closest target
     }
 
-    /*void TestRaycast()
-    {
-        for (int i = 0; i < primaryTargets.Length; i++)
-        {
-            RaycastHit hit;
-            if (Physics.Linecast(transform.position, primaryTargets[i].transform.position, out hit))
-            {
-                if (hit.transform.tag != "Ground")
-                {
-                    finalTargets.Add(hit.transform);
-                }
-            }
-        }
 
-    }*/
-    //..MACHADO Julien
-
-    //Coline Marchal
-    /*public string OnMyLeftOrOnMyRight (Vector3 targetPos)
-    {
-        Vector3 forward = transform.forward;
-        Vector3 up = transform.up;
-        Vector3 targetDirection = targetPos - transform.position;
-
-        //-1 = left
-        //1 = right
-        Vector3 perp = Vector3.Cross(forward, targetDirection);
-        float dir = Vector3.Dot(perp, up);
-        string toReturn;
-
-        if (dir > 0.0f)
-        {
-            toReturn = "left";
-        }
-        else if (dir < 0.0f)
-        {
-            toReturn = "right";
-        }
-        else
-        {
-            toReturn = "fwd";
-        }
-        //Debug.Log(toReturn);
-        return toReturn;
-    }
-
-
-
-    public void HitSomething(GameObject building)
-    {
-        if (gameManager != null)
-        {
-            //gameManager.TurretList.Remove(building);
-            gameManager.CheckNeighbour(building);
-        }
-    }*/
-
-    [ContextMenu("DestroyHive")]
-    public void DestroyThis()
+    //[ContextMenu("DestroyHive")]
+    public void DestroyThis(GameObject tag)
     {
         if (type == "hive") //ruche
         {
-            //instanciate 5 simple ennemies
-            for (int i = 0; i < 5; i++)
+            if (tag.CompareTag("Bullet") || tag.CompareTag("Explosion"))
             {
-                float angle = 360f / 5;
-                float rayon = 1f;
-                Vector3 newEnnemyPos = new Vector3(transform.position.x + rayon, transform.position.y + rayon, transform.position.z);
-                Quaternion q = Quaternion.Euler(0,90,0);
-                GameObject nmi = Instantiate(ennemiesPrefab[0], newEnnemyPos, q);
-                Debug.Log(q);
+                //instanciate 5 simple ennemies
+                for (int i = 0; i < 5; i++)
+                {
+                    float angle = 360f / 5;
+                    float rayon = 1f;
+                    Vector3 newEnnemyPos = new Vector3(transform.position.x + rayon, transform.position.y + rayon, transform.position.z);
+                    Quaternion q = Quaternion.Euler(0, 90, 0);
+                    GameObject nmi = Instantiate(ennemiesPrefab[0], newEnnemyPos, q);
+                    Debug.Log(q);
 
-                //rotation
-                transform.RotateAround(transform.position, Vector3.back, angle);
+                    //rotation
+                    transform.RotateAround(transform.position, Vector3.back, angle);
 
 
-                nmi.transform.parent = transform;
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                transform.GetChild(0).transform.parent = null;
+                    nmi.transform.parent = transform;
+                }
+                for (int i = 0; i < 5; i++)
+                {
+                    transform.GetChild(0).transform.parent = null;
+                }
             }
         }
+        gameManager.silverBulletCount++;
+        if (tag.CompareTag("Bullet"))
+        {
+            GameObject go = Instantiate(explosion, tag.transform.position, Quaternion.identity);
+            go.GetComponent<PlayerProjectile_Explosion>().radiusMultiplier = explosionRadius;
+        }
+        if (tag.CompareTag("Explosion"))
+        {
+            GameObject go = Instantiate(explosion, gameObject.transform.position, Quaternion.identity);
+            go.GetComponent<PlayerProjectile_Explosion>().radiusMultiplier = explosionRadius;
+        }
 
+        if (lastOfWave)
+        {
+            GameObject.Find("Spawner").GetComponent<EnemySpawnTest2>().pacingStart = true;
+        }
         Destroy(this.gameObject);
     }
+
+    bool bombSpawn= true;
+    IEnumerator BombSpawn()
+    {
+        bombSpawn = false;
+        yield return new WaitForSeconds(bomberSpawnTimer);
+        GameObject nmi = Instantiate(ennemiesPrefab[0], transform.position, Quaternion.identity);
+        bombSpawn = true;
+    }
     //..Coline Marchal
+
+    //Nicolas Pupulin
+    IEnumerator DirectionVirgule()
+    {
+        target = randomDirection;
+        gameObject.transform.LookAt(target); //rotate towards his target
+        transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime); //make the missile move towards a random direction
+        yield return new WaitForSeconds(2);
+        speed = speed * speedModifier;
+        target = FindClosestTarget("Player").transform.position; //find closest target
+        gameObject.transform.LookAt(target); //rotate towards his target
+    }
+    //..Nicolas Pupulin
 }

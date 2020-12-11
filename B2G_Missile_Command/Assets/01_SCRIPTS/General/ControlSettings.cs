@@ -5,31 +5,37 @@ using UnityEngine.InputSystem;
 
 public class ControlSettings : MonoBehaviour
 {
-    public InputAction Rotate;
+    public InputAction RotateX;
+    public InputAction RotateY;
     public InputAction Shoot;
     public InputAction Turret1;
     public InputAction Turret2;
     public InputAction Turret3;
     public InputAction Pause;
+    public InputAction SilverBullet;
 
     void OnEnable()
     {
-        Rotate.Enable();
+        RotateX.Enable();
+        RotateY.Enable();
         Shoot.Enable();
         Turret1.Enable();
         Turret2.Enable();
         Turret3.Enable();
         Pause.Enable();
+        SilverBullet.Enable();
     }
 
     void OnDisable()
     {
-        Rotate.Disable();
+        RotateX.Disable();
+        RotateY.Disable();
         Shoot.Disable();
         Turret1.Disable();
         Turret2.Disable();
         Turret3.Disable();
         Pause.Disable();
+        SilverBullet.Disable();
     }
 
     // Start is called before the first frame update

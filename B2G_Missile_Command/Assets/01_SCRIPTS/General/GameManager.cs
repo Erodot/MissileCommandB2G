@@ -63,7 +63,14 @@ public class GameManager : MonoBehaviour
     bool victory;
     bool terrainOK;
 
-    GameObject LastActivated;
+    public GameObject LastActivated;
+
+    [Header("Silver Bullet Manager")]
+    [Tooltip("Number of enney to kill to activate the silver bullet.")]
+    public int silverBulletMax;
+    public int silverBulletCount;
+    public GameObject silverBullet;
+    public GameObject silverBulletText;
 
     /*  singleton
     void Awake()
@@ -122,11 +129,21 @@ public class GameManager : MonoBehaviour
         #endregion
 
         terrainOK = true;
+
+        LastActivated = TurretList[2];
+        LastActivated.GetComponent<Shoot>().isActivated = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(silverBulletCount == silverBulletMax)
+        {
+            Instantiate(silverBullet, transform);
+            silverBulletText.SetActive(true);
+            silverBulletCount++;
+        }
+
         if (terrainOK)
         {
             CheckGame();
@@ -136,27 +153,27 @@ public class GameManager : MonoBehaviour
         {
             if (LastActivated != null)
             {
-                LastActivated.GetComponent<NewShoot>().isActivated = false;
+                LastActivated.GetComponent<Shoot>().isActivated = false;
             }
-            TurretList2[0].GetComponent<NewShoot>().isActivated = true;
+            TurretList2[0].GetComponent<Shoot>().isActivated = true;
             LastActivated = TurretList2[0];
         }
         if (Mathf.RoundToInt(controlSettings.Turret2.ReadValue<float>()) == 1 && TurretList2[1] != null)
         {
             if (LastActivated != null)
             {
-                LastActivated.GetComponent<NewShoot>().isActivated = false;
+                LastActivated.GetComponent<Shoot>().isActivated = false;
             }
-            TurretList2[1].GetComponent<NewShoot>().isActivated = true;
+            TurretList2[1].GetComponent<Shoot>().isActivated = true;
             LastActivated = TurretList2[1];
         }
         if (Mathf.RoundToInt(controlSettings.Turret3.ReadValue<float>()) == 1 && TurretList2[2] != null)
         {
             if (LastActivated != null)
             {
-                LastActivated.GetComponent<NewShoot>().isActivated = false;
+                LastActivated.GetComponent<Shoot>().isActivated = false;
             }
-            TurretList2[2].GetComponent<NewShoot>().isActivated = true;
+            TurretList2[2].GetComponent<Shoot>().isActivated = true;
             LastActivated = TurretList2[2];
         }
 
@@ -354,7 +371,7 @@ public class GameManager : MonoBehaviour
                 if (go != null && go.name.Contains("Turret"))
                 {
                     //go.transform.Find("Zone").gameObject.GetComponent<ShootingZoneTest>();
-                    go.GetComponent<NewShoot>().enabled = false;
+                    go.GetComponent<Shoot>().enabled = false;
                 }
             }
         }
