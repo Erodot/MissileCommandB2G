@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
+
 
 public class SettingsMenu : MonoBehaviour
 {
@@ -14,10 +17,15 @@ public class SettingsMenu : MonoBehaviour
 
     public Dropdown resolutionDropdown;
 
+    public GameObject lePlayButton, leSettingsButton, leReturnButton;
+
     Resolution[] resolutions;
 
     private void Start()
     {
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(lePlayButton);
+
         resolutions = Screen.resolutions;
 
         resolutionDropdown.ClearOptions();
@@ -60,13 +68,18 @@ public class SettingsMenu : MonoBehaviour
     //General Menu Command
     public void PlayButton()
     {
-        //SceneManager.LoadScene("Name Your Scene here", LoadSceneMode.Single);
+
+        SceneManager.LoadScene(1, LoadSceneMode.Single);
     }
 
     public void SettingsButton()
     {
         GeneralPanel.gameObject.SetActive(false);
         SettingsPanel.gameObject.SetActive(true);
+
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(leReturnButton);
+
     }
 
     public void QuitButton()
@@ -87,5 +100,8 @@ public class SettingsMenu : MonoBehaviour
     {
         SettingsPanel.gameObject.SetActive(false);
         GeneralPanel.gameObject.SetActive(true);
+
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(leSettingsButton);
     }
 }
