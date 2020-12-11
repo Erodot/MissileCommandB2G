@@ -24,6 +24,10 @@ public class EnemyMissile : MonoBehaviour
     public float speedModifier;
     //..Nicolas Pupulin
 
+    //Corentin SABIAUX GCC2
+    public int scoreValue;
+    //..Corentin SABIAUX GCC2
+
     GameObject[] primaryTargets;
     List<Transform> finalTargets = new List<Transform>();
     Vector3 target;
@@ -207,6 +211,14 @@ public class EnemyMissile : MonoBehaviour
             if (lifePoint == 0)
             {
                 //Instantiate(explosion, transform.position, Quaternion.identity);
+
+                //Corentin SABIAUX GCC2
+
+                //Activate it only if you are at ScoreTest scene.
+                //LevelScoreTest.instance.AddScore(scoreValue); //Called the function addScore with scoreValue to add from LevelScoreTest.
+
+                //..Corentin SABIAUX GCC2
+
                 DestroyThis(other.gameObject); //destroy the missile
             }
             //..Nicolas Pupulin
