@@ -31,14 +31,14 @@ public class ShotGun : Shoot
     {
         if (gameManager.turretCanShoot)
         {
-        if (isActivated && canShoot)
+        if (canShoot)
         {
-            if (Mathf.RoundToInt(controlSettings.Shoot.ReadValue<float>()) == 1 && canShoot)
+            if (Mathf.RoundToInt(controlSettings.Turret1.ReadValue<float>()) == 1 && canShoot)
             {
                 timeHeld += Time.deltaTime;
                 shoot = true;
             }
-            else if (Mathf.RoundToInt(controlSettings.Shoot.ReadValue<float>()) == 0 && shoot)
+            else if (Mathf.RoundToInt(controlSettings.Turret1.ReadValue<float>()) == 0 && shoot)
             {
                 if(timeHeld < timeToHold / 4)
                 {

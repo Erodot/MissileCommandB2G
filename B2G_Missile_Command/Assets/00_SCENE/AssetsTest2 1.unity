@@ -1791,7 +1791,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.14057037, y: 0.47700003}
   m_AnchorMax: {x: 0.39442965, y: 0.61513275}
-  m_AnchoredPosition: {x: -1.2766266, y: 11.269371}
+  m_AnchoredPosition: {x: -1.2766228, y: 11.269371}
   m_SizeDelta: {x: 13.973391, y: 19.996763}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &529838965
@@ -2732,7 +2732,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.14057037, y: 0.47700003}
   m_AnchorMax: {x: 0.39442965, y: 0.61513275}
-  m_AnchoredPosition: {x: -1.2769165, y: -16.360626}
+  m_AnchoredPosition: {x: -1.2769127, y: -16.360626}
   m_SizeDelta: {x: 13.973391, y: 19.996763}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &816665271
@@ -4059,7 +4059,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -4104,7 +4104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paused: 0
   pauseMenu: {fileID: 349642702}
-  pauseFirstButton: {fileID: 144942508}
+  pauseFirstButton: {fileID: 0}
   Buttons:
   - {fileID: 144942508}
   - {fileID: 130887261}
@@ -4877,12 +4877,12 @@ MonoBehaviour:
     m_Name: Shoot
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 545847bb-91dd-42bf-a91a-60742dafa863
+    m_Id: 4c8bbd59-a298-46b9-8de6-be1bcd90f44d
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 
-      m_Id: 6f3b5879-7d12-4b94-a967-4df503c7b8d6
+      m_Id: d1d337ee-85df-4d82-8b48-0f1b54a9fa3c
       m_Path: <Gamepad>/rightTrigger
       m_Interactions: 
       m_Processors: 

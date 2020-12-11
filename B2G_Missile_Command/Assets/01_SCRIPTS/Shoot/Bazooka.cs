@@ -31,9 +31,9 @@ public class Bazooka : Shoot
     {
         if (gameManager.turretCanShoot)
         {
-        if (isActivated && canShoot)
+        if (canShoot)
         {
-            if (Mathf.RoundToInt(controlSettings.Shoot.ReadValue<float>()) == 1 && canShoot)
+            if (Mathf.RoundToInt(controlSettings.Turret3.ReadValue<float>()) == 1 && canShoot)
             {
                 if (timeHeld < timeToHold)
                 {
@@ -41,7 +41,7 @@ public class Bazooka : Shoot
                     shoot = true;
                 }
             }
-            if (controlSettings.Shoot.ReadValue<float>() == 0 && shoot)
+            if (controlSettings.Turret3.ReadValue<float>() == 0 && shoot)
             {
                 Debug.Log("normal shoot");
                 GameObject go = Instantiate(Bullet, Canon.transform.position, gameObject.transform.rotation);

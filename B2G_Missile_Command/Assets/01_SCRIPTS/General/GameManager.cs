@@ -148,66 +148,6 @@ public class GameManager : MonoBehaviour
         {
             CheckGame();
         }
-
-        if (Mathf.RoundToInt(controlSettings.Turret1.ReadValue<float>()) == 1 && TurretList2[0] != null)
-        {
-            if (LastActivated != null)
-            {
-                LastActivated.GetComponent<Shoot>().isActivated = false;
-            }
-            TurretList2[0].GetComponent<Shoot>().isActivated = true;
-            LastActivated = TurretList2[0];
-        }
-        if (Mathf.RoundToInt(controlSettings.Turret2.ReadValue<float>()) == 1 && TurretList2[1] != null)
-        {
-            if (LastActivated != null)
-            {
-                LastActivated.GetComponent<Shoot>().isActivated = false;
-            }
-            TurretList2[1].GetComponent<Shoot>().isActivated = true;
-            LastActivated = TurretList2[1];
-        }
-        if (Mathf.RoundToInt(controlSettings.Turret3.ReadValue<float>()) == 1 && TurretList2[2] != null)
-        {
-            if (LastActivated != null)
-            {
-                LastActivated.GetComponent<Shoot>().isActivated = false;
-            }
-            TurretList2[2].GetComponent<Shoot>().isActivated = true;
-            LastActivated = TurretList2[2];
-        }
-
-        if (controlKeyboard)
-        {
-            if (Keyboard.current.qKey.isPressed && TurretList2[0] != null)
-            {
-                Debug.Log("turret");
-                if (LastActivated != null)
-                {
-                    LastActivated.GetComponent<NewShoot>().isActivated = false;
-                }
-                TurretList2[0].GetComponent<NewShoot>().isActivated = true;
-                LastActivated = TurretList2[0];
-            }
-            if (Keyboard.current.wKey.wasPressedThisFrame && TurretList2[1] != null)
-            {
-                if (LastActivated != null)
-                {
-                    LastActivated.GetComponent<NewShoot>().isActivated = false;
-                }
-                TurretList2[1].GetComponent<NewShoot>().isActivated = true;
-                LastActivated = TurretList2[1];
-            }
-            if (Keyboard.current.eKey.wasPressedThisFrame && TurretList2[2] != null)
-            {
-                if (LastActivated != null)
-                {
-                    LastActivated.GetComponent<NewShoot>().isActivated = false;
-                }
-                TurretList2[2].GetComponent<NewShoot>().isActivated = true;
-                LastActivated = TurretList2[2];
-            }
-        }
     }
 
     void CheckGame()
