@@ -31,7 +31,7 @@ public class Bazooka : Shoot
     // Update is called once per frame
     void Update()
     {
-        if (gameManager.turretCanShoot && isActivated)
+        if (gameManager.turretCanShoot && isActivated && gameManager.startGame)
         {
             if (canShoot)
             {
@@ -52,7 +52,7 @@ public class Bazooka : Shoot
                 StartCoroutine(Reload());
             }
         }
-        else if(gameManager.turretCanShoot && !isActivated)
+        if(gameManager.turretCanShoot && !isActivated && gameManager.startGame)
         {
             if(currentTimer > 0)
             {

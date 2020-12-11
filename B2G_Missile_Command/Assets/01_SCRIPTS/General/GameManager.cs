@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
     [Tooltip("Set the amount of time you want between shoots.")]
     public float shootingCoolDown;
     [HideInInspector]
-    public bool turretCanShoot = true; //ShootingZone used this bool for knowing if the turret can shoot or not.
+    public bool turretCanShoot; //ShootingZone used this bool for knowing if the turret can shoot or not.
 
     //The idea here is to used 3 lists nested for having an adjustable shooting zone for every turrets.
     [Tooltip("Adjustable shooting zone for each turrets")]
@@ -71,6 +71,8 @@ public class GameManager : MonoBehaviour
     public int silverBulletCount;
     public GameObject silverBullet;
     public GameObject silverBulletText;
+
+    public bool startGame;
 
     /*  singleton
     void Awake()
@@ -132,6 +134,8 @@ public class GameManager : MonoBehaviour
 
         LastActivated = TurretList[1];
         LastActivated.GetComponent<Shoot>().isActivated = true;
+
+        startGame = true;
     }
 
     // Update is called once per frame

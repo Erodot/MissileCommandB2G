@@ -31,7 +31,7 @@ public class Laser : Shoot
     // Update is called once per frame
     void Update()
     {
-        if (gameManager.turretCanShoot && isActivated)
+        if (gameManager.turretCanShoot && isActivated && gameManager.startGame)
         {
             if (canShoot)
             {
@@ -40,7 +40,6 @@ public class Laser : Shoot
                     GameObject go = Instantiate(LaserBeam, Canon.transform.position, gameObject.transform.rotation);
                     go.transform.parent = gameObject.transform;
                     StartCoroutine(DestroyLaser(go));
-                    StartCoroutine(Reload());
                     shoot = true;
                     canShoot = false;
                 }
@@ -63,7 +62,7 @@ public class Laser : Shoot
                 }
             }*/
         }
-        else if (gameManager.turretCanShoot && !isActivated)
+        if (gameManager.turretCanShoot && !isActivated && gameManager.startGame)
         {
             if (currentTimer > 0)
             {

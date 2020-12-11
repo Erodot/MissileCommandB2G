@@ -29,17 +29,18 @@ public class ShotGun : Shoot
     // Update is called once per frame
     void Update()
     {
-        if (gameManager.turretCanShoot && isActivated)
+        if (gameManager.turretCanShoot && isActivated && gameManager.startGame)
         {
             if (canShoot)
             {
                 if (Mathf.RoundToInt(controlSettings.Shoot.ReadValue<float>()) == 1)
                 {
                     Debug.Log("normal shoot2");
-                    SpawnBullet(Canon.transform.position, dispersions[0].transform.position);
-                    SpawnBullet(Canon.transform.position, dispersions[1].transform.position);
-                    SpawnBullet(Canon.transform.position, dispersions[4].transform.position);
-                    SpawnBullet(Canon.transform.position, dispersions[5].transform.position);
+                    SpawnBullet(Canon.transform.position, transform.position);
+                    for (int i = 0; i < dispersions.Length; i++)
+                    {
+                        SpawnBullet(Canon.transform.position, dispersions[i].transform.position);
+                    }
                     canShoot = false;
                     shoot = true;
                 }
@@ -51,7 +52,7 @@ public class ShotGun : Shoot
             }
         }
 
-        else if (gameManager.turretCanShoot && !isActivated)
+        if (gameManager.turretCanShoot && !isActivated && gameManager.startGame)
         {
             if (currentTimer > 0)
             {

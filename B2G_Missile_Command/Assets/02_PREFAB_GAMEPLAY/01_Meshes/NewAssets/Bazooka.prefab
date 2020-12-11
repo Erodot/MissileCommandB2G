@@ -229,14 +229,12 @@ MonoBehaviour:
   isDestroy: 0
   Bullet: {fileID: 58021480688727742, guid: ab7c430cd6291f54e8495797cca42910, type: 3}
   bulletSpeed: 5
-  radiusMultiplication: 20
+  radiusMultiplication: 60
   tir: 0
   Canon: {fileID: 4500256060581646316}
   reloadTime: 0.5
   controlSettings: {fileID: 0}
   gameManager: {fileID: 0}
-  timeToHold: 2
-  timeHeld: 0
   timer: 2
 --- !u!1 &4500256060581646316
 GameObject:
