@@ -2503,7 +2503,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c5cc48e42cd230469d6c0446ef9e6d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 721147767}
+  musicSource: {fileID: 0}
+  noiseSource: {fileID: 0}
   place: IG
   sounds:
   - type: MenuMusics
@@ -3163,6 +3164,7 @@ MonoBehaviour:
   gameScore: 0
   timeToShowAddedScore: 1.5
   timeToShowMultiplierScore: 0
+  respawnPallier: 5000
 --- !u!4 &1071144538
 Transform:
   m_ObjectHideFlags: 0
@@ -4307,9 +4309,9 @@ MonoBehaviour:
   screenPos: {x: 0, y: 0, z: 0}
   enemys:
   - {fileID: 2087319397564193456, guid: 7e8b82ed35c0c1b4eb770c60293dc0b3, type: 3}
-  - {fileID: 2087319397564193456, guid: bc063bec848eef345b70b50775660313, type: 3}
+  - {fileID: 2087319397564193456, guid: a7da26291c258674f86daef17588a659, type: 3}
   - {fileID: 2087319397564193456, guid: 758d606f1a3cc494ead767d400b0239e, type: 3}
-  - {fileID: 2087319397564193456, guid: 69e01c924484ab945b9d615899e72d14, type: 3}
+  - {fileID: 2087319397564193456, guid: 019b2f7c6c5e2f24592af67284b9e93e, type: 3}
   - {fileID: 2087319397564193456, guid: 6281d00e94a19c04c8ba83bf5403ee59, type: 3}
   bonus: {fileID: 8463603656933705450, guid: 03723a3137a3b3046b45737248bc94e3, type: 3}
   bonusEffect:

@@ -9,7 +9,7 @@ public class BuildingLifeDamage : MonoBehaviour
     public int lifes;
     public bool destroyed;
     public string type;
-    bool isDestroy;
+    public bool isDestroy;
 
     // Start is called before the first frame update
     void Start()

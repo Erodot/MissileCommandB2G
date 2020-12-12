@@ -194,13 +194,22 @@ public class GameManager : MonoBehaviour
 
         if (Mathf.RoundToInt(controlSettings.SwitchRight.ReadValue<float>()) == 1 && !switchRightPressed)
         {
-            int index = (LastActivated.GetComponent<Shoot>().indexTurret + 1) % TurretList.Count;
+            int index = (LastActivated.GetComponent<Shoot>().indexTurret + 1) % TurretList2.Count;
+            if(TurretList.Count > 0)
+            {
+                while (TurretList2[index].GetComponent<Shoot>().isDestroy)
+                {
+                    index = (index + 1) % TurretList2.Count;
+                    Debug.Log(TurretList2[index].GetComponent<Shoot>().isDestroy);
+                }
+            }
+
             switchRightPressed = true;
             if (LastActivated != null)
             {
                 LastActivated.GetComponent<Shoot>().isActivated = false;
             }
-            LastActivated = TurretList[index];
+            LastActivated = TurretList2[index];
             LastActivated.GetComponent<Shoot>().isActivated = true;
         }
         if(Mathf.RoundToInt(controlSettings.SwitchRight.ReadValue<float>()) == 0 && switchRightPressed)
@@ -214,21 +223,33 @@ public class GameManager : MonoBehaviour
             if (LastActivated.GetComponent<Shoot>().indexTurret > 0)
             {
                 index = LastActivated.GetComponent<Shoot>().indexTurret - 1;
-                while (index > TurretList.Count - 1)
-                {
-                    index = LastActivated.GetComponent<Shoot>().indexTurret - 1;
-                }
             }
             else
             {
-                index = TurretList.Count - 1;
+                index = TurretList2.Count - 1;
             }
+
+            if(TurretList.Count > 0)
+            {
+                while (TurretList2[index].GetComponent<Shoot>().isDestroy)
+                {
+                    if (TurretList2[index].GetComponent<Shoot>().indexTurret > 0)
+                    {
+                        index = index- 1;
+                    }
+                    else
+                    {
+                        index = TurretList2.Count - 1;
+                    }
+                }
+            }
+
             switchLeftPressed = true;
             if (LastActivated != null)
             {
                 LastActivated.GetComponent<Shoot>().isActivated = false;
             }
-            LastActivated = TurretList[index];
+            LastActivated = TurretList2[index];
             LastActivated.GetComponent<Shoot>().isActivated = true;
         }
         if (Mathf.RoundToInt(controlSettings.SwitchLeft.ReadValue<float>()) == 0 && switchLeftPressed)
@@ -410,4 +431,31 @@ public class GameManager : MonoBehaviour
         turretCanShoot = true;
     }
     //..Corentin SABIAUX GCC2
+
+    //Julien MACHADO GCC2
+
+    public void ReviveTurret()
+    {
+        foreach(GameObject turret in TurretList2)
+        {
+            if (turret.GetComponent<Shoot>().isDestroy && turret.GetComponent<BuildingLifeDamage>().destroyed)
+            {
+                turret.GetComponent<Shoot>().enabled = true;
+                turret.GetComponent<Shoot>().isDestroy = false;
+                turret.GetComponent<BuildingLifeDamage>().destroyed = false;
+                turret.GetComponent<BuildingLifeDamage>().isDestroy = false;
+                turret.GetComponent<BuildingLifeDamage>().lifes = 2;
+
+                turret.transform.GetChild(0).transform.GetChild(0).gameObject.SetActive(true);
+                turret.transform.GetChild(0).transform.GetChild(1).gameObject.SetActive(false);
+                turret.transform.GetChild(0).transform.GetChild(2).gameObject.SetActive(false);
+
+                TurretList.Add(turret);
+
+                break;
+            }
+        }
+    }
+
+    //..Julien MACHADO GCC2
 }

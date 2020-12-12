@@ -20,6 +20,8 @@ public class LevelScoreTest : MonoBehaviour
     public int gameScore;
     public float timeToShowAddedScore;
     public float timeToShowMultiplierScore;
+    public int respawnPallier;
+    int pallier;
     #endregion
 
     void Update()
@@ -29,6 +31,7 @@ public class LevelScoreTest : MonoBehaviour
 
     public void AddScore(int score)
     {
+        CheckScore(gameScore, gameScore + score);
         gameScore += score; //Add enemy score previously killed.
         addScore.text = "+ " + score; //Show the value added on screen.
         StartCoroutine(showScoreToAdd());
@@ -48,4 +51,15 @@ public class LevelScoreTest : MonoBehaviour
         addScore.enabled = false; //When it's over, the text disappears.
     }
     //..Corentin SABIAUX GCC2
+
+    //Julien MACHADO GCC2
+    void CheckScore(int score, int scoreToBe)
+    {
+        if(score < respawnPallier * (pallier + 1) && scoreToBe >= respawnPallier * (pallier + 1))
+        {
+            GameObject.Find("GameManager").GetComponent<GameManager>().ReviveTurret();
+            pallier++;
+        }
+    }
+    //..Julien MACHADO GCC2
 }
