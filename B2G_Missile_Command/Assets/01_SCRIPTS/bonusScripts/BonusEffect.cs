@@ -33,6 +33,7 @@ public class BonusEffect : MonoBehaviour
     {
         startTimer = true;
         Debug.Log("activate bonus !!");
+        GameObject.FindGameObjectWithTag("audio").GetComponent<SoundManager>().Play("bonus");
     }
 
     public virtual void AfterTimerEffect()

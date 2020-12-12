@@ -26,7 +26,13 @@ public class BuildingLifeDamage : MonoBehaviour
         }
     }
 
-    public void ManageSound(string what)
+    [ContextMenu ("TestSound")]
+    public void TestSound()
+    {
+        GetComponent<AudioSource>().Play();
+    }
+
+   public void ManageSound(string what)
     {
         AudioSource audioSource = GetComponent<AudioSource>();
         AudioClip sound = null;
@@ -44,7 +50,7 @@ public class BuildingLifeDamage : MonoBehaviour
             }
             else if (what == "destroy")
             {
-                Debug.Log("brolhomom");
+                //Debug.Log("brolhomom");
                 sound = sm.sounds[5].list[1];
             }
         }
@@ -56,7 +62,7 @@ public class BuildingLifeDamage : MonoBehaviour
             }
             else if (what == "destroy")
             {
-                Debug.Log("brolhomom");
+                //Debug.Log("brolhomom");
                 sound = sm.sounds[5].list[2];
             }
         }
@@ -115,8 +121,12 @@ public class BuildingLifeDamage : MonoBehaviour
             {
                 gameManager.TurretList.Remove(go);
                 go.GetComponent<Shoot>().isDestroy = true;
-                gameManager.LastActivated = gameManager.TurretList[0];
-                gameManager.LastActivated.GetComponent<Shoot>().isActivated = true;
+
+                if (gameManager.TurretList.Count > 0)
+                {
+                    gameManager.LastActivated = gameManager.TurretList[0];
+                    gameManager.LastActivated.GetComponent<Shoot>().isActivated = true;
+                }
             }
         }
 

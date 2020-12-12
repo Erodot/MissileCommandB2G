@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.InputSystem;
 using UnityEngine;
 
 public class Bazooka : Shoot
@@ -44,6 +45,7 @@ public class Bazooka : Shoot
                     go.GetComponent<NewBullet>().canExplode = true;
                     shoot = true;
                     canShoot = false;
+                    GetComponent<BuildingLifeDamage>().ManageSound("shoot");
                 }
             }
             if (Mathf.RoundToInt(controlSettings.Shoot.ReadValue<float>()) == 0 && shoot)
@@ -68,17 +70,25 @@ public class Bazooka : Shoot
             }
         }
 
-        /*if (gameManager.controlKeyboard)
+        if (gameManager.controlKeyboard)
         {
-            if (Keyboard.current.spaceKey.wasPressedThisFrame && isActivated && canShoot)
+            if (Keyboard.current.spaceKey.isPressed && isActivated && canShoot)
             {
                 GameObject go = Instantiate(Bullet, Canon.transform.position, gameObject.transform.rotation);
                 go.GetComponent<NewBullet>().direction = Canon.transform.position - transform.position;
-
+                go.GetComponent<NewBullet>().speed = bulletSpeed;
+                go.GetComponent<NewBullet>().explosionRadius = radiusMultiplication;
+                go.GetComponent<NewBullet>().canExplode = true;
+                shoot = true;
                 canShoot = false;
+                GetComponent<BuildingLifeDamage>().ManageSound("shoot");
+            }
+            if (Keyboard.current.spaceKey.wasReleasedThisFrame && shoot)
+            {
+                shoot = false;
                 StartCoroutine(Reload());
             }
-        }*/
+        }
 
     }
     IEnumerator Reload()

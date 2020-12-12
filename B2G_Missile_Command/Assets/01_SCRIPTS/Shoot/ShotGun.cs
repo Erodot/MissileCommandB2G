@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.InputSystem;
 using UnityEngine;
 
 public class ShotGun : Shoot
@@ -43,6 +44,7 @@ public class ShotGun : Shoot
                     }
                     canShoot = false;
                     shoot = true;
+                    GetComponent<BuildingLifeDamage>().ManageSound("shoot");
                 }
             }
             else if (Mathf.RoundToInt(controlSettings.Shoot.ReadValue<float>()) == 0 && shoot)
@@ -68,17 +70,26 @@ public class ShotGun : Shoot
             }
         }
 
-        /*if (gameManager.controlKeyboard)
+        if (gameManager.controlKeyboard)
         {
-            if (Keyboard.current.spaceKey.wasPressedThisFrame && isActivated && canShoot)
+            if (Keyboard.current.spaceKey.isPressed && isActivated && canShoot)
             {
-                GameObject go = Instantiate(Bullet, Canon.transform.position, gameObject.transform.rotation);
-                go.GetComponent<NewBullet>().direction = Canon.transform.position - transform.position;
-
+                Debug.Log("normal shoot2");
+                SpawnBullet(Canon.transform.position, transform.position);
+                for (int i = 0; i < dispersions.Length; i++)
+                {
+                    SpawnBullet(Canon.transform.position, dispersions[i].transform.position);
+                }
                 canShoot = false;
+                shoot = true;
+                GetComponent<BuildingLifeDamage>().ManageSound("shoot");
+            }
+            else if (Keyboard.current.spaceKey.wasReleasedThisFrame && shoot)
+            {
+                shoot = false;
                 StartCoroutine(Reload());
             }
-        }*/
+        }
         
     }
 
