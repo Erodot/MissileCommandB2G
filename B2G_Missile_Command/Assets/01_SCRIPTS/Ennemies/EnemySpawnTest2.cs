@@ -15,6 +15,7 @@ public class EnemySpawnTest2 : MonoBehaviour
     public GameObject[] enemyIcons;
     public GameObject waveAnounce;
     public Text waveAff;
+    public Text waveTimer;
     bool showAnouncer = true;
 
     public GameObject Alert;
@@ -176,6 +177,9 @@ public class EnemySpawnTest2 : MonoBehaviour
                     StartCoroutine(WaveAnouncer());
                     showAnouncer = false;
                 }
+
+                waveTimer.text = (Mathf.CeilToInt(actualTime2)).ToString();
+
                 if (actualTime2 > 0) //if the time between wave has'nt reached 0
                 {
                     actualTime2 -= Time.deltaTime; //make it decrease
@@ -403,20 +407,22 @@ public class EnemySpawnTest2 : MonoBehaviour
 
     IEnumerator WaveAnouncer()
     {
-        if (!start)
-        {
-            yield return new WaitForSeconds(2);
-        }
-
         waveAnounce.SetActive(true);
-        for (int i = 0; i < diffModifier - 1; i++)
+        for (int i = 0; i < diffModifier; i++)
         {
             enemyIcons[i].SetActive(true);
-            enemyIcons[i].GetComponent<Image>().sprite = enemys[i + 1].GetComponent<EnemyMissile>().enemyIcon;
+            enemyIcons[i].GetComponent<Image>().sprite = enemys[i].GetComponent<EnemyMissile>().enemyIcon;
         }
         waveAff.text = "Wave " + int2roman(waveNumber + 1);
 
-        yield return new WaitForSeconds(2);
+        if (start)
+        {
+            yield return new WaitForSeconds(2);
+        }
+        else
+        {
+            yield return new WaitForSeconds(timeBetweenWaveStart);
+        }
 
         waveAff.text = "";
         for (int i = 0; i < diffModifier - 1; i++)
