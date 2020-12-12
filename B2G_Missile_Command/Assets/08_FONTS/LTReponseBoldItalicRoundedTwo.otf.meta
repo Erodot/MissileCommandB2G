@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 4d15ea736814caf48969cc3b5c790c35
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - LT Reponse Rounded Two
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 4be5824435de38b4da24ff9ac2232a25, type: 3}
+  - {fileID: 12800000, guid: 915108580ee183e4e98ac7044cfdef6e, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

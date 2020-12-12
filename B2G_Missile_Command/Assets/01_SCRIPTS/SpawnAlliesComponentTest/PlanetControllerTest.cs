@@ -24,11 +24,13 @@ public class PlanetControllerTest : MonoBehaviour
     [Tooltip("Check-it if you want to have a more accurate rotation of the planet.")]
     public bool isRotationAccurate;
 
-
     // Update is called once per frame
     void Update()
     {
-        Move();
+        if(Time.timeScale == 1)
+        {
+            Move();
+        }
     }
 
     private void Move()
@@ -53,17 +55,20 @@ public class PlanetControllerTest : MonoBehaviour
             {
                 float a = controlSettings.RotateX.ReadValue<float>() + controlSettings.RotateY.ReadValue<float>();
                 float b = controlSettings.RotateX.ReadValue<float>() - controlSettings.RotateY.ReadValue<float>();
-                if (gameManager.LastActivated.GetComponent<Shoot>().indexTurret == 0)
+                if (a >= 1 || b <= -1 || b >= 1 || a <= -1)
                 {
-                    gameObject.transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2(-controlSettings.RotateX.ReadValue<float>(), -controlSettings.RotateY.ReadValue<float>()) * 180 / Mathf.PI) + new Vector3(0, 0, -135);
-                }
-                else if (gameManager.LastActivated.GetComponent<Shoot>().indexTurret == 1)
-                {
-                    gameObject.transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2(-controlSettings.RotateX.ReadValue<float>(), -controlSettings.RotateY.ReadValue<float>()) * 180 / Mathf.PI);
-                }
-                else if (gameManager.LastActivated.GetComponent<Shoot>().indexTurret == 2)
-                {
-                    gameObject.transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2(-controlSettings.RotateX.ReadValue<float>(), -controlSettings.RotateY.ReadValue<float>()) * 180 / Mathf.PI) + new Vector3(0, 0, 135);
+                    if (gameManager.LastActivated.GetComponent<Shoot>().indexTurret == 0)
+                    {
+                        gameObject.transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2(-controlSettings.RotateX.ReadValue<float>(), -controlSettings.RotateY.ReadValue<float>()) * 180 / Mathf.PI) + new Vector3(0, 0, -135);
+                    }
+                    else if (gameManager.LastActivated.GetComponent<Shoot>().indexTurret == 1)
+                    {
+                        gameObject.transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2(-controlSettings.RotateX.ReadValue<float>(), -controlSettings.RotateY.ReadValue<float>()) * 180 / Mathf.PI);
+                    }
+                    else if (gameManager.LastActivated.GetComponent<Shoot>().indexTurret == 2)
+                    {
+                        gameObject.transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2(-controlSettings.RotateX.ReadValue<float>(), -controlSettings.RotateY.ReadValue<float>()) * 180 / Mathf.PI) + new Vector3(0, 0, 135);
+                    }
                 }
             }
             //horizontalMove -= controlSettings.RotateX.ReadValue<float>() * rotationSpeed * Time.deltaTime; //The planet is rotating smoothly by horizontal positive and negative button.
@@ -88,18 +93,22 @@ public class PlanetControllerTest : MonoBehaviour
             {
                 float a = controlSettings.RotateX.ReadValue<float>() + controlSettings.RotateY.ReadValue<float>();
                 float b = controlSettings.RotateX.ReadValue<float>() - controlSettings.RotateY.ReadValue<float>();
-                if (gameManager.LastActivated.GetComponent<Shoot>().indexTurret == 0)
+                if(a >= 1 || b <= -1 || b >= 1 || a <= -1)
                 {
-                    gameObject.transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2(-controlSettings.RotateX.ReadValue<float>(), -controlSettings.RotateY.ReadValue<float>()) * 180 / Mathf.PI) + new Vector3(0, 0, -135);
+                    if (gameManager.LastActivated.GetComponent<Shoot>().indexTurret == 0)
+                    {
+                        gameObject.transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2(-controlSettings.RotateX.ReadValue<float>(), -controlSettings.RotateY.ReadValue<float>()) * 180 / Mathf.PI) + new Vector3(0, 0, -135);
+                    }
+                    else if (gameManager.LastActivated.GetComponent<Shoot>().indexTurret == 1)
+                    {
+                        gameObject.transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2(-controlSettings.RotateX.ReadValue<float>(), -controlSettings.RotateY.ReadValue<float>()) * 180 / Mathf.PI);
+                    }
+                    else if (gameManager.LastActivated.GetComponent<Shoot>().indexTurret == 2)
+                    {
+                        gameObject.transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2(-controlSettings.RotateX.ReadValue<float>(), -controlSettings.RotateY.ReadValue<float>()) * 180 / Mathf.PI) + new Vector3(0, 0, 135);
+                    }
                 }
-                else if (gameManager.LastActivated.GetComponent<Shoot>().indexTurret == 1)
-                {
-                    gameObject.transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2(-controlSettings.RotateX.ReadValue<float>(), -controlSettings.RotateY.ReadValue<float>()) * 180 / Mathf.PI);
-                }
-                else if (gameManager.LastActivated.GetComponent<Shoot>().indexTurret == 2)
-                {
-                    gameObject.transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2(-controlSettings.RotateX.ReadValue<float>(), -controlSettings.RotateY.ReadValue<float>()) * 180 / Mathf.PI) + new Vector3(0, 0, 135);
-                }
+
             }
             //horizontalMove -= controlSettings.RotateX.ReadValue<float>() * rotationSpeed * Time.deltaTime; //The planet is rotating smoothly by horizontal positive and negative button.
         }

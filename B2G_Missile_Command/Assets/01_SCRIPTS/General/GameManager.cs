@@ -17,6 +17,9 @@ public class GameManager : MonoBehaviour
     public bool controlKeyboard;
     public bool isShieldActivated;
 
+    public GameObject Field;
+    public float lerpTime;
+
     //Corentin SABIAUX GCC2
     [Header("During Game Over and Victory scene")]
     [Tooltip("Check-it if you want to stop ennemySpawn during the gameover scene.")]
