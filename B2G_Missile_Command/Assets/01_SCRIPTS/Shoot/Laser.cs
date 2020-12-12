@@ -42,6 +42,7 @@ public class Laser : Shoot
                     StartCoroutine(DestroyLaser(go));
                     shoot = true;
                     canShoot = false;
+                    GetComponent<BuildingLifeDamage>().ManageSound("shoot");
                 }
             }
             if (Mathf.RoundToInt(controlSettings.Shoot.ReadValue<float>()) == 0 && shoot)
@@ -50,17 +51,23 @@ public class Laser : Shoot
                 StartCoroutine(Reload());
             }
 
-            /*if (gameManager.controlKeyboard)
+            if (gameManager.controlKeyboard)
             {
-                if (Keyboard.current.spaceKey.wasPressedThisFrame && isActivated && canShoot)
+                if (Keyboard.current.spaceKey.isPressed && isActivated && canShoot)
                 {
-                    GameObject go = Instantiate(Bullet, Canon.transform.position, gameObject.transform.rotation);
-                    go.GetComponent<NewBullet>().direction = Canon.transform.position - transform.position;
-
+                    GameObject go = Instantiate(LaserBeam, Canon.transform.position, gameObject.transform.rotation);
+                    go.transform.parent = gameObject.transform;
+                    StartCoroutine(DestroyLaser(go));
+                    shoot = true;
                     canShoot = false;
+                    GetComponent<BuildingLifeDamage>().ManageSound("shoot");
+                }
+                if (Keyboard.current.spaceKey.wasReleasedThisFrame && shoot)
+                {
+                    shoot = false;
                     StartCoroutine(Reload());
                 }
-            }*/
+            }
         }
         if (gameManager.turretCanShoot && !isActivated && gameManager.startGame && !isDestroy)
         {

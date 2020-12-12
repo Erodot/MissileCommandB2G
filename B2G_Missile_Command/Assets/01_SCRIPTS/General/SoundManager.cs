@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public AudioSource audioSource;
+    public AudioSource musicSource;
+    public AudioSource noiseSource;
     public string place; //in game or menu
 
     [Serializable]
@@ -36,7 +37,21 @@ public class SoundManager : MonoBehaviour
 
     void PlayMusic(AudioClip music)
     {
-        audioSource.clip = music;
-        audioSource.Play();
+        musicSource.clip = music;
+        musicSource.Play();
+    }
+
+    public void Play(string sound)
+    {
+        if(sound == "bonus")
+        {
+            AudioClip s = sounds[4].list[1];
+            Play(s);
+        }
+    }
+    public void Play(AudioClip sound)
+    {
+        noiseSource.clip = sound;
+        noiseSource.Play();
     }
 }
