@@ -49,7 +49,13 @@ public class bonusdeplac : MonoBehaviour
             go.transform.parent = null;
             Destroy(other.gameObject);
             Destroy(gameObject);
-        } 
+        }
+        if (other.gameObject.CompareTag("Laser")) //if the bonus hit a player bullet
+        {
+            GameObject go = Instantiate(bonusEffect, Vector3.zero, Quaternion.identity);
+            go.transform.parent = null;
+            Destroy(gameObject);
+        }
     }
 
     IEnumerator LifeTime()

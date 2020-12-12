@@ -271,7 +271,7 @@ public class EnemyMissile : MonoBehaviour
                     float rayon = 1f;
                     Vector3 newEnnemyPos = new Vector3(transform.position.x + rayon, transform.position.y + rayon, transform.position.z);
                     Quaternion q = Quaternion.Euler(0, 90, 0);
-                    GameObject nmi = Instantiate(ennemiesPrefab[0], newEnnemyPos, q);
+                    GameObject nmi = Instantiate(ennemiesPrefab[i], newEnnemyPos, q);
                     Debug.Log(q);
 
                     //rotation
@@ -282,7 +282,7 @@ public class EnemyMissile : MonoBehaviour
                 }
                 for (int i = 0; i < 5; i++)
                 {
-                    transform.GetChild(0).transform.parent = null;
+                    transform.GetChild(1).transform.parent = null;
                 }
             }
         }

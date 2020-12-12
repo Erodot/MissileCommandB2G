@@ -40,10 +40,6 @@ public class EnemySpawnTest2 : MonoBehaviour
 
 
     [Header("Enemy augmentation")]
-    [Range(0, 10), Tooltip("Maximum addition of enemy for a wave")]
-    public int enemyGainMax;
-    [Range(0, 10), Tooltip("Minimum addition of enemy for a wave")]
-    public int enemyGainMin;
     [Tooltip("Maximum number of enemy during a wave")]
     public int maxEnemy;
 
@@ -168,7 +164,7 @@ public class EnemySpawnTest2 : MonoBehaviour
 
                     difficultySpawn += difficultyAugmentation; //add to the difficulty for the spawn
 
-                    if (difficultySpawn >= 5) //if the difficulty for the spawn is higher or equal to 9
+                    if (difficultySpawn >= 8) //if the difficulty for the spawn is higher or equal to 9
                     {
                         if (diffModifier < enemys.Length) //if the difficulty of enemy is lower than the number of enemy
                         {
@@ -195,7 +191,7 @@ public class EnemySpawnTest2 : MonoBehaviour
 
                     if (enemyToSpawnBank < maxEnemy)
                     {
-                        enemyToSpawn = enemyToSpawnBank + Random.Range(enemyGainMin, enemyGainMax) + difficultyAugmentation; //choose the number of ennemy to spawn for the next wave
+                        enemyToSpawn = enemyToSpawnBank + difficultyAugmentation * 2; //choose the number of ennemy to spawn for the next wave
                     }
 
                     enemyToSpawnBank = enemyToSpawn; //reset the max enemy spawn
