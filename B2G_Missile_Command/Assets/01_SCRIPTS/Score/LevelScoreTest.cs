@@ -5,60 +5,47 @@ using UnityEngine.UI;
 
 public class LevelScoreTest : MonoBehaviour
 {
-    #region Singleton
-    public static LevelScoreTest instance;
+    //Script by Corentin SABIAUX GCC2, don't hesitate to ask some questions.
+ 
 
-    void Awake()
-    {
-
-        if (instance == null)
-        {
-
-            instance = this;
-            DontDestroyOnLoad(this.gameObject);
-
-            //Rest of your Awake code
-
-        }
-        else
-        {
-            Destroy(this);
-        }
-    }
-    #endregion
-
+    #region Text Storage
+    [Header("Text Storage")]
     public Text levelScore;
     public Text addScore;
     public Text multiplierScore;
+    #endregion
 
-    public int previousLevelScore;
-    public int stockLevelScore;
+    #region Score Manager
+    [Header("Score Manager")]
+    public int gameScore;
+    public float timeToShowAddedScore;
+    public float timeToShowMultiplierScore;
+    #endregion
 
-    public float timeAddScore;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        previousLevelScore = 0;
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        levelScore.text = stockLevelScore + "";
+        levelScore.text = gameScore.ToString("000 000") + "";  //Show gameScore value on screen.
     }
 
     public void AddScore(int score)
     {
-        stockLevelScore += score;
-        addScore.text = "+ " + score;
-        StartCoroutine(scoreToAdd());
+        gameScore += score; //Add enemy score previously killed.
+        addScore.text = "+ " + score; //Show the value added on screen.
+        StartCoroutine(showScoreToAdd());
     }
 
-    public IEnumerator scoreToAdd()
+    public void MultiplierScore(int score, int multiplier)
     {
-        addScore.enabled = true;
-        yield return new WaitForSeconds(timeAddScore);
-        addScore.enabled = false;
+        gameScore += score * multiplier;
+        addScore.text = "+ " + score * multiplier;
+        StartCoroutine(showScoreToAdd());
     }
+
+    public IEnumerator showScoreToAdd()
+    {
+        addScore.enabled = true; //The text AddScore is show at screen ...
+        yield return new WaitForSeconds(timeToShowAddedScore); //.. during the amount of time set at timeToShowAddedScore.
+        addScore.enabled = false; //When it's over, the text disappears.
+    }
+    //..Corentin SABIAUX GCC2
 }

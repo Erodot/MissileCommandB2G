@@ -26,6 +26,8 @@ public class EnemyMissile : MonoBehaviour
 
     //Corentin SABIAUX GCC2
     public int scoreValue;
+
+    public LevelScoreTest levelScoreTest;
     //..Corentin SABIAUX GCC2
 
     GameObject[] primaryTargets;
@@ -49,6 +51,11 @@ public class EnemyMissile : MonoBehaviour
         //target = finalTargets[Random.Range(0, finalTargets.Count)].position; //set this target as a vector 3
         speed = baseSpeed;
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+
+        //Corentin SABIAUX GCC2
+        levelScoreTest = GameObject.Find("LevelScore").GetComponent<LevelScoreTest>();
+        //..Corentin SABIAUX GCC2
+
         gameObject.transform.LookAt(target); //rotate towards his target
 
 
@@ -213,10 +220,7 @@ public class EnemyMissile : MonoBehaviour
                 //Instantiate(explosion, transform.position, Quaternion.identity);
 
                 //Corentin SABIAUX GCC2
-
-                //Activate it only if you are at ScoreTest scene.
-                //LevelScoreTest.instance.AddScore(scoreValue); //Called the function addScore with scoreValue to add from LevelScoreTest.
-
+                levelScoreTest.AddScore(scoreValue); //Called the function addScore with scoreValue to add from LevelScoreTest.
                 //..Corentin SABIAUX GCC2
 
                 DestroyThis(other.gameObject); //destroy the missile
