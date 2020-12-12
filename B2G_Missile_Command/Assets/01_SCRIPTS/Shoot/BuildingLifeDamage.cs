@@ -9,6 +9,8 @@ public class BuildingLifeDamage : MonoBehaviour
     public int lifes;
     public bool destroyed;
     public string type;
+    bool isDestroy;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +20,7 @@ public class BuildingLifeDamage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(lifes <= 0)
+        if(lifes <= 0 && !isDestroy)
         {
             DestroyThis();
         }
@@ -91,6 +93,7 @@ public class BuildingLifeDamage : MonoBehaviour
 
     public void DestroyThis()
     {
+        isDestroy = true;
         //Debug.Log("destroy " + name);
         GameObject go = this.gameObject;
         //go.GetComponent<MeshRenderer>().enabled = false;
