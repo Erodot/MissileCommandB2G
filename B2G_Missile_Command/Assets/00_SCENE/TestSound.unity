@@ -232,14 +232,14 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 0.8667671, g: 0.63318795, b: 0.8773585, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -272,7 +272,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -1080,7 +1080,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: c22203e093e8d894b9f642da57100fd5, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -2348,9 +2348,11 @@ MonoBehaviour:
     - {fileID: 8300000, guid: c902643a7c4bd0c4cb49433422dc4256, type: 3}
   - type: GameMusics
     list:
-    - {fileID: 8300000, guid: 8ca615f6f0f58c5408e7e23b98fa32ff, type: 3}
+    - {fileID: 8300000, guid: 90debae6f9b794b479ed5ac13ce1c39b, type: 3}
     - {fileID: 8300000, guid: e6afb4a21b1afc348891205cc704c5bf, type: 3}
-    - {fileID: 8300000, guid: 0ef8467f6de2cda47a9bf4bfbf66a3ac, type: 3}
+    - {fileID: 8300000, guid: bf7575178c5fbc84eaad7e116369a87c, type: 3}
+    - {fileID: 8300000, guid: 280be362754895a47a4e676de9b0eec3, type: 3}
+    - {fileID: 8300000, guid: 514d92690e7d6a046bf1b4f22bdf7c81, type: 3}
   - type: Shoot
     list:
     - {fileID: 8300000, guid: 9808bf10cbe1a594da5e8d8afdf13b05, type: 3}
@@ -2380,7 +2382,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1721868a439b4464ea56b5714a584e1d, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.2
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3251,7 +3253,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000091552734, y: -0.000015258789}
+  m_AnchoredPosition: {x: 0.000061035156, y: 0}
   m_SizeDelta: {x: 0.000061035156, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1034540423
@@ -3762,7 +3764,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7254902, g: 0.12941177, b: 0.8117648, a: 1}
+  m_Color: {r: 0.6392157, g: 0.31764707, b: 0.69411767, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3770,10 +3772,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 2a6336c746e142c48ad85b06843a9388, type: 3}
+    m_Font: {fileID: 12800000, guid: 2331f7c4029399840bc565a1b2e78b22, type: 3}
     m_FontSize: 24
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 48
     m_Alignment: 0
@@ -3944,7 +3946,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7254902, g: 0.12941177, b: 0.8117648, a: 1}
+  m_Color: {r: 0.638, g: 0.31764707, b: 0.69411767, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4838,8 +4840,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 5.8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -5012,7 +5014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7254902, g: 0.12941177, b: 0.8117648, a: 1}
+  m_Color: {r: 0.6392157, g: 0.31764707, b: 0.69411767, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5986,6 +5988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b810d7f4b28aab9439acb5e80b8142e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
 --- !u!114 &1901029247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6014,7 +6017,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.019607844, g: 0.31764707, b: 0.69411767, a: 1}
+  m_Color: {r: 0.6392157, g: 0.31764707, b: 0.69411767, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
