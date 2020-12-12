@@ -29,7 +29,7 @@ public class ShotGun : Shoot
     // Update is called once per frame
     void Update()
     {
-        if (gameManager.turretCanShoot && isActivated && gameManager.startGame)
+        if (gameManager.turretCanShoot && isActivated && gameManager.startGame && !isDestroy)
         {
             if (canShoot)
             {
@@ -52,7 +52,7 @@ public class ShotGun : Shoot
             }
         }
 
-        if (gameManager.turretCanShoot && !isActivated && gameManager.startGame)
+        if (gameManager.turretCanShoot && !isActivated && gameManager.startGame && !isDestroy)
         {
             if (currentTimer > 0)
             {
