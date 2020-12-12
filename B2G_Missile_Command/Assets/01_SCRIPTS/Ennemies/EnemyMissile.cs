@@ -307,6 +307,8 @@ public class EnemyMissile : MonoBehaviour
         {
             GameObject.Find("Spawner").GetComponent<EnemySpawnTest2>().pacingStart = true;
         }
+
+        gameManager.enemyKill[type] += 1;
         Destroy(this.gameObject);
     }
 

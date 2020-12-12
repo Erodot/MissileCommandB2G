@@ -77,6 +77,8 @@ public class GameManager : MonoBehaviour
     bool switchRightPressed;
     bool switchLeftPressed;
 
+    public Dictionary<string, int> enemyKill = new Dictionary<string, int>();
+
     /*  singleton
     void Awake()
     {
@@ -99,6 +101,12 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         Time.timeScale = 1;
+
+        enemyKill.Add("simple", 0);
+        enemyKill.Add("armored", 0);
+        enemyKill.Add("virgule", 0);
+        enemyKill.Add("hive", 0);
+        enemyKill.Add("bomber", 0);
     }
 
     public void Init()

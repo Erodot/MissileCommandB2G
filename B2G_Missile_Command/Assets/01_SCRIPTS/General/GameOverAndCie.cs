@@ -8,6 +8,7 @@ using UnityEngine.EventSystems;
 
 public class GameOverAndCie : MonoBehaviour //Coline Marchal
 {
+    public GameObject preGameOver;
     public GameObject gameOverObject;
     public GameObject victoryObject;
     public GameManager gameManager;
@@ -18,6 +19,7 @@ public class GameOverAndCie : MonoBehaviour //Coline Marchal
     int myWave;
 
     public GameObject firstButton;
+    public float timeBetweenGameOverScreen;
 
     // Start is called before the first frame update
     void Start()
@@ -64,10 +66,9 @@ public class GameOverAndCie : MonoBehaviour //Coline Marchal
             Destroy(go);
         }
         gameManager.turretCanShoot = false;
-        gameOverObject.SetActive(true);
+        StartCoroutine(LoadGameOver());
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(firstButton);
-        Time.timeScale = 0;
     }
     public void Victory()
     {
@@ -90,5 +91,16 @@ public class GameOverAndCie : MonoBehaviour //Coline Marchal
         }
 
         //SceneManager.LoadScene(scene);
+    }
+
+    IEnumerator LoadGameOver()
+    {
+        preGameOver.SetActive(true);
+
+        yield return new WaitForSeconds(timeBetweenGameOverScreen);
+
+        preGameOver.SetActive(false);
+        gameOverObject.SetActive(true);
+        Time.timeScale = 0;
     }
 }

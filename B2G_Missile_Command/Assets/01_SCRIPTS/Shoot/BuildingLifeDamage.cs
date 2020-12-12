@@ -112,6 +112,8 @@ public class BuildingLifeDamage : MonoBehaviour
             {
                 gameManager.TurretList.Remove(go);
                 go.GetComponent<Shoot>().isDestroy = true;
+                gameManager.LastActivated = gameManager.TurretList[0];
+                gameManager.LastActivated.GetComponent<Shoot>().isActivated = true;
             }
         }
 
