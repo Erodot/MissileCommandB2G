@@ -143,7 +143,7 @@ public class GameManager : MonoBehaviour
         BuildingList.Add(allBuildings[7]);
         BuildingList.Add(allBuildings[8]);
         #endregion
-
+        TurretList[0].transform.rotation = Quaternion.Euler(-60, -90, 180);
         terrainOK = true;
 
         LastActivated = TurretList[1];

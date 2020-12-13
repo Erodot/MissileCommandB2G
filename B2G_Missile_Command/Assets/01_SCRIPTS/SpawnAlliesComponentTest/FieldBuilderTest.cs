@@ -50,6 +50,7 @@ public class FieldBuilderTest : MonoBehaviour
         TurretCategorie.transform.parent = transform; //We set this category as a child of the field.
         for (int i = 0; i < turretNumbers; i++) //How many turrets do you want ?
         {
+            //Debug.Log(Turrets[i].name);
             GameObject TurretCreated = Instantiate(Turrets[i], positionTurretList[i], Quaternion.Euler(rotationTurretList[i])); //A new turret is born.
             TurretCreated.GetComponent<Shoot>().indexTurret = turretIndex;
             turretIndex++;
