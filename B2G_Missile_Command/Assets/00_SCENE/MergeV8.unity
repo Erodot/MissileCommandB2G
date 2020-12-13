@@ -1739,25 +1739,25 @@ MonoBehaviour:
   - {x: 0, y: 7.56, z: 0}
   - {x: 1.698, y: 4.143, z: 0}
   rotationTurretList:
-  - {x: 0, y: 0, z: 120}
-  - {x: 0, y: 0, z: 0}
+  - {x: 60, y: 90, z: 180}
+  - {x: 0, y: -90, z: 0}
   - {x: 0, y: 0, z: -120}
   cityNumbers: 6
   City: {fileID: 4577687224139731559, guid: e74596b9727c36d468019f2128da1f87, type: 3}
   positionCityList:
   - {x: -1.07, y: 7.05, z: 0}
-  - {x: -2.07, y: 5.53, z: 0}
+  - {x: -2.013, y: 5.277, z: 0}
   - {x: -0.77, y: 3.33, z: 0}
   - {x: 0.77, y: 3.33, z: 0}
-  - {x: 2.07, y: 5.34, z: 0}
-  - {x: 1.22, y: 6.95, z: 0}
+  - {x: 2.08, y: 5.19, z: 0}
+  - {x: 1.23, y: 6.78, z: 0}
   rotationCityList:
   - {x: 35, y: 270, z: 0}
-  - {x: 85, y: 270, z: 0}
+  - {x: 0, y: 180, z: -85}
   - {x: -200, y: 270, z: 0}
-  - {x: -160, y: 270, z: 0}
+  - {x: 0, y: 180, z: 160}
   - {x: -85, y: 270, z: 0}
-  - {x: -35, y: 270, z: 0}
+  - {x: 0, y: 180, z: 35}
   builderWaiting: 0.2
   builderIsOver: 1
 --- !u!143 &445061305
@@ -6205,7 +6205,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1790250615
 RectTransform:
   m_ObjectHideFlags: 0
