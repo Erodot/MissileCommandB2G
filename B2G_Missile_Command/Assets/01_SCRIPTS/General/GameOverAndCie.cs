@@ -12,6 +12,12 @@ public class GameOverAndCie : MonoBehaviour //Coline Marchal
     public GameObject gameOverObject;
     public GameObject victoryObject;
     public GameManager gameManager;
+
+    //SABIAUX Corentin GCC2
+    public LevelScoreTest levelScoreTest;
+    public HighscoreTableTest highscoreTableTest;
+    //..SABIAUX Corentin GCC2
+
     public Text score;
     public Text combo;
     public Text wave;
@@ -24,7 +30,11 @@ public class GameOverAndCie : MonoBehaviour //Coline Marchal
     // Start is called before the first frame update
     void Start()
     {
-        //SetWave();
+        //SABIAUX Corentin GCC2
+        levelScoreTest = GameObject.Find("LevelScore").GetComponent<LevelScoreTest>();
+        highscoreTableTest = GameObject.Find("HighscoreTable").GetComponent<HighscoreTableTest>();
+        highscoreTableTest.gameObject.SetActive(false);
+        //..SABIAUX Corentin GCC2
     }
 
     // Update is called once per frame
@@ -32,26 +42,6 @@ public class GameOverAndCie : MonoBehaviour //Coline Marchal
     {
         
     }
-
-    public void SetScore(int nbScore)
-    {
-        myScore += nbScore;
-        score.text = "\r\n" + myScore;
-    }
-    /*public void SetWave()//int nbScore)
-    {
-        //myWave += nbScore;
-
-        if (LevelsManager.instance != null)
-        {
-            LevelsManager lvlManager = LevelsManager.instance;
-            lvlManager.currentLevel += 1;
-            myWave = lvlManager.currentLevel;
-        }
-            
-
-        wave.text = "\r\n~" + myWave;
-    }*/
 
     public void GameOver()
     {
@@ -66,6 +56,12 @@ public class GameOverAndCie : MonoBehaviour //Coline Marchal
             Destroy(go);
         }
         gameManager.turretCanShoot = false;
+
+        //SABIAUX Corentin GCC2
+        highscoreTableTest.gameObject.SetActive(true);
+        highscoreTableTest.AddHighscoreEntry(levelScoreTest.gameScore, "Player"); //Add high score entry at AddHigh array | "Player" need to be modified by the name choosen by the player.
+        //..SABIAUX Corentin GCC2
+
         StartCoroutine(LoadGameOver());
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(firstButton);
