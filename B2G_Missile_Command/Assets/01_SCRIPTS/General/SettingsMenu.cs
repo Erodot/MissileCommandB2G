@@ -72,6 +72,7 @@ public class SettingsMenu : MonoBehaviour
     {
         //Load Scene number 1 in the build
         SceneManager.LoadScene(1, LoadSceneMode.Single);
+
     }
 
     public void SettingsButton()
@@ -106,4 +107,6 @@ public class SettingsMenu : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(leSettingsButton);
     }
+
+    
 }
