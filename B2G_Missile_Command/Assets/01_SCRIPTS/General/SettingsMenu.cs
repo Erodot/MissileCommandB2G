@@ -52,6 +52,8 @@ public class SettingsMenu : MonoBehaviour
         resolutionDropdown.RefreshShownValue();
     }
 
+
+
     //Update the current resolution
     public void SetResolution(int resolutionIndex)
     {
@@ -68,7 +70,7 @@ public class SettingsMenu : MonoBehaviour
     //General Menu Command
     public void PlayButton()
     {
-
+        //Load Scene number 1 in the build
         SceneManager.LoadScene(1, LoadSceneMode.Single);
     }
 
