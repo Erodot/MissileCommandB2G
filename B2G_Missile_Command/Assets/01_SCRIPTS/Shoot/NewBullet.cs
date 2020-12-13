@@ -26,7 +26,7 @@ public class NewBullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Explosion") || other.gameObject.CompareTag("Bullet"))
+        if (other.gameObject.CompareTag("Explosion") || other.gameObject.CompareTag("Bullet") || other.gameObject.CompareTag("Laser"))
         {
 
         }

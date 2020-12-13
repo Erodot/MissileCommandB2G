@@ -229,7 +229,8 @@ MonoBehaviour:
   isActivated: 0
   indexTurret: 0
   isDestroy: 0
-  Bullet: {fileID: 58021480688727742, guid: ab7c430cd6291f54e8495797cca42910, type: 3}
+  Bullet: {fileID: 58021480688727742, guid: 760e482b27b54584ebcfbb561dddb1d6, type: 3}
+  autoBullet: {fileID: 58021480688727742, guid: ab7c430cd6291f54e8495797cca42910, type: 3}
   bulletSpeed: 5
   tir: 0
   Canon: {fileID: 4500256060581646316}
@@ -242,6 +243,8 @@ MonoBehaviour:
   controlSettings: {fileID: 0}
   gameManager: {fileID: 0}
   timer: 2
+  fxShoot: {fileID: 2194775702273697571, guid: abe50f3e617698647b6572adf2fcc283, type: 3}
+  fxBullet: {fileID: 0}
 --- !u!1 &2811909473650855040
 GameObject:
   m_ObjectHideFlags: 0

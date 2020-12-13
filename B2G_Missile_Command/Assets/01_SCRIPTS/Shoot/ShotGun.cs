@@ -6,6 +6,7 @@ using UnityEngine;
 public class ShotGun : Shoot
 {
     public GameObject Bullet;
+    public GameObject autoBullet;
     public int bulletSpeed;
     public bool tir = false;
     public GameObject Canon;
@@ -19,6 +20,9 @@ public class ShotGun : Shoot
 
     public float timer;
     float currentTimer;
+
+    public GameObject fxShoot;
+    public GameObject fxBullet;
 
     // Start is called before the first frame update
     void Awake()
@@ -37,6 +41,7 @@ public class ShotGun : Shoot
                 if (Mathf.RoundToInt(controlSettings.Shoot.ReadValue<float>()) == 1)
                 {
                     Debug.Log("normal shoot2");
+                    StartCoroutine(ShootFx());
                     SpawnBullet(Canon.transform.position, transform.position);
                     for (int i = 0; i < dispersions.Length; i++)
                     {
@@ -62,7 +67,7 @@ public class ShotGun : Shoot
             }
             else if (currentTimer <= 0)
             {
-                GameObject go = Instantiate(Bullet, Canon.transform.position, gameObject.transform.rotation);
+                GameObject go = Instantiate(autoBullet, Canon.transform.position, gameObject.transform.rotation);
                 go.GetComponent<NewBullet>().direction = Canon.transform.position - transform.position;
                 go.GetComponent<NewBullet>().speed = bulletSpeed;
 
@@ -104,5 +109,13 @@ public class ShotGun : Shoot
     {
         yield return new WaitForSeconds(reloadTime);
         canShoot = true;
+    }
+
+    IEnumerator ShootFx()
+    {
+        GameObject fx = Instantiate(fxShoot, Canon.transform.position, Quaternion.identity);
+        fx.transform.parent = gameObject.transform;
+        yield return new WaitForSeconds(0.5f);
+        Destroy(fx);
     }
 }

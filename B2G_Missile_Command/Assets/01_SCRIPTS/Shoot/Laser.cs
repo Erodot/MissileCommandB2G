@@ -21,6 +21,8 @@ public class Laser : Shoot
     public float timer;
     float currentTimer;
 
+    public GameObject fxShoot;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -37,12 +39,8 @@ public class Laser : Shoot
             {
                 if(Mathf.RoundToInt(controlSettings.Shoot.ReadValue<float>()) == 1)
                 {
-                    GameObject go = Instantiate(LaserBeam, Canon.transform.position, gameObject.transform.rotation);
-                    go.transform.parent = gameObject.transform;
-                    StartCoroutine(DestroyLaser(go));
-                    shoot = true;
-                    canShoot = false;
-                    GetComponent<BuildingLifeDamage>().ManageSound("shoot");
+                    StartCoroutine(ShootFx());
+                    
                 }
             }
             if (Mathf.RoundToInt(controlSettings.Shoot.ReadValue<float>()) == 0 && shoot)
@@ -55,6 +53,7 @@ public class Laser : Shoot
             {
                 if (Keyboard.current.spaceKey.isPressed && isActivated && canShoot)
                 {
+                    
                     GameObject go = Instantiate(LaserBeam, Canon.transform.position, gameObject.transform.rotation);
                     go.transform.parent = gameObject.transform;
                     StartCoroutine(DestroyLaser(go));
@@ -96,5 +95,19 @@ public class Laser : Shoot
     {
         yield return new WaitForSeconds(laserBeamLifeTime);
         Destroy(toDestroy);
+    }
+
+    IEnumerator ShootFx()
+    {
+        GameObject fx = Instantiate(fxShoot, Canon.transform.position, Quaternion.identity);
+        fx.transform.parent = gameObject.transform;
+        yield return new WaitForSeconds(0.3f);
+        Destroy(fx);
+        GameObject go = Instantiate(LaserBeam, Canon.transform.position, gameObject.transform.rotation);
+        go.transform.parent = gameObject.transform;
+        StartCoroutine(DestroyLaser(go));
+        shoot = true;
+        canShoot = false;
+        GetComponent<BuildingLifeDamage>().ManageSound("shoot");
     }
 }

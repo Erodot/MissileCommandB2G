@@ -108,7 +108,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1521532598201161041, guid: 3903debd0c4725346b8548210e3fd603, type: 3}
       propertyPath: looping
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1521532598201161041, guid: 3903debd0c4725346b8548210e3fd603, type: 3}
       propertyPath: InitialModule.startSpeed.scalar
@@ -184,7 +184,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1521532598201161041, guid: 3903debd0c4725346b8548210e3fd603, type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1521532598201161041, guid: 3903debd0c4725346b8548210e3fd603, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.atime0
@@ -266,7 +266,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1521532598201161041, guid: 3903debd0c4725346b8548210e3fd603, type: 3}
       propertyPath: looping
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1521532598201161041, guid: 3903debd0c4725346b8548210e3fd603, type: 3}
       propertyPath: InitialModule.startSpeed.scalar
@@ -342,15 +342,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1521532598201161041, guid: 3903debd0c4725346b8548210e3fd603, type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 1.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 1521532598201161041, guid: 3903debd0c4725346b8548210e3fd603, type: 3}
-      propertyPath: CollisionModule.enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1521532598201161041, guid: 3903debd0c4725346b8548210e3fd603, type: 3}
-      propertyPath: CollisionModule.type
-      value: 1
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3903debd0c4725346b8548210e3fd603, type: 3}
@@ -432,7 +424,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1521532598201161041, guid: 3903debd0c4725346b8548210e3fd603, type: 3}
       propertyPath: looping
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1521532598201161041, guid: 3903debd0c4725346b8548210e3fd603, type: 3}
       propertyPath: InitialModule.startSpeed.scalar
@@ -508,7 +500,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1521532598201161041, guid: 3903debd0c4725346b8548210e3fd603, type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 1.45
+      value: 2.9
       objectReference: {fileID: 0}
     - target: {fileID: 1521532598201161041, guid: 3903debd0c4725346b8548210e3fd603, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.m_Mode
@@ -598,7 +590,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1521532598201161041, guid: 3903debd0c4725346b8548210e3fd603, type: 3}
       propertyPath: looping
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1521532598201161041, guid: 3903debd0c4725346b8548210e3fd603, type: 3}
       propertyPath: InitialModule.startSpeed.scalar
@@ -674,7 +666,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1521532598201161041, guid: 3903debd0c4725346b8548210e3fd603, type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3903debd0c4725346b8548210e3fd603, type: 3}
@@ -744,7 +736,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4555383499263417175, guid: ddbfe058bcdb33742bb14e403eb2bb75, type: 3}
       propertyPath: looping
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4555383499263417175, guid: ddbfe058bcdb33742bb14e403eb2bb75, type: 3}
       propertyPath: ShapeModule.radius.value
@@ -760,7 +752,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4555383499263417175, guid: ddbfe058bcdb33742bb14e403eb2bb75, type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddbfe058bcdb33742bb14e403eb2bb75, type: 3}

@@ -238,6 +238,7 @@ MonoBehaviour:
   controlSettings: {fileID: 0}
   gameManager: {fileID: 0}
   timer: 2
+  fxShoot: {fileID: 477139985035517933, guid: c89723ce9f86c044a9f5baa8fdf0c643, type: 3}
 --- !u!1 &4500256060581646316
 GameObject:
   m_ObjectHideFlags: 0
