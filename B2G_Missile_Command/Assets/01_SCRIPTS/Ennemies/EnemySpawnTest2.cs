@@ -413,7 +413,7 @@ public class EnemySpawnTest2 : MonoBehaviour
             enemyIcons[i].SetActive(true);
             enemyIcons[i].GetComponent<Image>().sprite = enemys[i].GetComponent<EnemyMissile>().enemyIcon;
         }
-        waveAff.text = (waveNumber+1).ToString(); //"Wave " + int2roman(waveNumber + 1);
+        waveAff.text = int2roman(waveNumber + 1); //"Wave " + int2roman(waveNumber + 1);
 
         if (start)
         {
