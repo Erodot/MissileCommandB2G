@@ -86,7 +86,7 @@ public class EnemySpawnTest2 : MonoBehaviour
         enemyToSpawnBank = enemyToSpawn;
         actualTime = timeToSpawn; //set the actual time to to the time chosen for the clock
         actualTime2 = timeBetweenWaveStart;
-        wave.text = "\r\n" + waveNumber;
+        wave.text = waveNumber.ToString(); // "\r\n" + 
         if (bonusFixe > 0)
         {
             bonusTimeInterval = (enemyToSpawn * timeToSpawn) / (bonusFixe + 1);
@@ -219,7 +219,7 @@ public class EnemySpawnTest2 : MonoBehaviour
                     pacingStart = false;
                     showAnouncer = true;
 
-                    wave.text = "\r\n" + waveNumber; //set the text on screen
+                    wave.text = waveNumber.ToString(); // "\r\n" + // set the text on screen
                 }
 
             }
@@ -413,7 +413,7 @@ public class EnemySpawnTest2 : MonoBehaviour
             enemyIcons[i].SetActive(true);
             enemyIcons[i].GetComponent<Image>().sprite = enemys[i].GetComponent<EnemyMissile>().enemyIcon;
         }
-        waveAff.text = "Wave " + int2roman(waveNumber + 1);
+        waveAff.text = (waveNumber+1).ToString(); //"Wave " + int2roman(waveNumber + 1);
 
         if (start)
         {
