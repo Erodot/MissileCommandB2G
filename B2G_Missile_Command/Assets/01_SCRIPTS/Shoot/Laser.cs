@@ -99,6 +99,8 @@ public class Laser : Shoot
 
     IEnumerator ShootFx()
     {
+        shoot = true;
+        canShoot = false;
         GameObject fx = Instantiate(fxShoot, Canon.transform.position, Quaternion.identity);
         fx.transform.parent = gameObject.transform;
         yield return new WaitForSeconds(0.3f);
@@ -106,8 +108,6 @@ public class Laser : Shoot
         GameObject go = Instantiate(LaserBeam, Canon.transform.position, gameObject.transform.rotation);
         go.transform.parent = gameObject.transform;
         StartCoroutine(DestroyLaser(go));
-        shoot = true;
-        canShoot = false;
         GetComponent<BuildingLifeDamage>().ManageSound("shoot");
     }
 }

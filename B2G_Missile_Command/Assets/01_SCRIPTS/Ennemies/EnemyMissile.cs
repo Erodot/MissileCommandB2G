@@ -36,12 +36,16 @@ public class EnemyMissile : MonoBehaviour
     public float speed; //speed of the missile
     [Range(0.0f, 10.0f)]
     public float baseSpeed;
+    [HideInInspector]
+    public float baseVirguleSpeed;
     public string type;
     public float weight;
     public float bomberSpawnTimer;  public float bomberRotateDistance;  //bomber
     public Sprite enemyIcon;
     public int explosionRadius;
     public bool lastOfWave;
+    [HideInInspector]
+    public bool virguleActivated;
 
     // Start is called before the first frame update
     void Start()
@@ -50,6 +54,7 @@ public class EnemyMissile : MonoBehaviour
         //TestRaycast();
         //target = finalTargets[Random.Range(0, finalTargets.Count)].position; //set this target as a vector 3
         speed = baseSpeed;
+        baseVirguleSpeed = baseSpeed * speedModifier;
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
 
         //Corentin SABIAUX GCC2
@@ -211,10 +216,24 @@ public class EnemyMissile : MonoBehaviour
             DestroyThis(other.gameObject); //destroy the missile
         }
 
-        if (other.gameObject.CompareTag("Bullet") || other.gameObject.CompareTag("Explosion") || other.gameObject.CompareTag("Laser") && lifePoint == 1) //if the missile hit a player bullet
+        if (other.gameObject.CompareTag("Bullet") || other.gameObject.CompareTag("Explosion") || other.gameObject.CompareTag("Laser")) //if the missile hit a player bullet
         {
+            if (other.gameObject.CompareTag("Laser"))
+            {
+                if(lifePoint > 1)
+                {
+                    lifePoint -= (lifePoint - 1);
+                }
+                else
+                {
+                    lifePoint--;
+                }
+            }
+            else
+            {
+                lifePoint--;
+            }
             //Nicolas Pupulin
-            lifePoint--;
             if (lifePoint <= 0)
             {
                 //Instantiate(explosion, transform.position, Quaternion.identity);
@@ -225,9 +244,6 @@ public class EnemyMissile : MonoBehaviour
 
                 DestroyThis(other.gameObject); //destroy the missile
             }
-        } else if (other.gameObject.CompareTag("Laser") && lifePoint > 1)
-        {
-            lifePoint = lifePoint - (lifePoint - 1);
         }
 
         //..Nicolas Pupulin
@@ -329,6 +345,7 @@ public class EnemyMissile : MonoBehaviour
         gameObject.transform.LookAt(target); //rotate towards his target
         transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime); //make the missile move towards a random direction
         yield return new WaitForSeconds(2);
+        virguleActivated = true;
         speed = speed * speedModifier;
         target = FindClosestTarget("Player").transform.position; //find closest target
         gameObject.transform.LookAt(target); //rotate towards his target

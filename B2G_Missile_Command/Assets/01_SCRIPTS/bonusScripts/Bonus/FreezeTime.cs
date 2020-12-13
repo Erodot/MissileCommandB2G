@@ -55,7 +55,14 @@ public class FreezeTime : BonusEffect
 
         foreach (GameObject enemy in enemysArray)
         {
-            enemy.GetComponent<EnemyMissile>().speed = enemy.GetComponent<EnemyMissile>().baseSpeed;
+            if (enemy.GetComponent<EnemyMissile>().virguleActivated)
+            {
+                enemy.GetComponent<EnemyMissile>().speed = enemy.GetComponent<EnemyMissile>().baseVirguleSpeed;
+            }
+            else
+            {
+                enemy.GetComponent<EnemyMissile>().speed = enemy.GetComponent<EnemyMissile>().baseSpeed;
+            }
         }
         foreach (GameObject bonus in bonusArray)
         {
