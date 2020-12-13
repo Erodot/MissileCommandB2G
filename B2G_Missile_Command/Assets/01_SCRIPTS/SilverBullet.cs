@@ -8,7 +8,7 @@ public class SilverBullet : MonoBehaviour
 {
     public ControlSettings controlSettings;
     public GameManager gameManager;
-
+    public GameObject Arcana;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +23,7 @@ public class SilverBullet : MonoBehaviour
     {
         if(Mathf.RoundToInt(controlSettings.SilverBullet.ReadValue<float>()) == 1)
         {
+            GameObject go = Instantiate(Arcana, new Vector3(0, 5.25f, 0), Quaternion.identity);
             GameObject[] enemys = GameObject.FindGameObjectsWithTag("Ennemy");
             for (int i = 0; i < enemys.Length; i++)
             {

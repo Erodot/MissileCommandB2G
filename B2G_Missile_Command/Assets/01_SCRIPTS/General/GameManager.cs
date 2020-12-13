@@ -214,6 +214,7 @@ public class GameManager : MonoBehaviour
             }
             LastActivated = TurretList2[index];
             LastActivated.GetComponent<Shoot>().isActivated = true;
+            LastActivated.transform.Find("TurretSelected").GetComponent<ParticleSystem>().Play();
         }
         if(Mathf.RoundToInt(controlSettings.SwitchRight.ReadValue<float>()) == 0 && switchRightPressed)
         {
@@ -254,6 +255,7 @@ public class GameManager : MonoBehaviour
             }
             LastActivated = TurretList2[index];
             LastActivated.GetComponent<Shoot>().isActivated = true;
+            LastActivated.transform.Find("TurretSelected").GetComponent<ParticleSystem>().Play();
         }
         if (Mathf.RoundToInt(controlSettings.SwitchLeft.ReadValue<float>()) == 0 && switchLeftPressed)
         {
