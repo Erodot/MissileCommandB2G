@@ -913,7 +913,7 @@ Transform:
   m_GameObject: {fileID: 4577687224139731559}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
   - {fileID: 3566559885636361355}
   m_Father: {fileID: 0}
@@ -996,6 +996,7 @@ MonoBehaviour:
   lifes: 2
   destroyed: 0
   type: city
+  isDestroy: 0
 --- !u!82 &6973310135081984331
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1360,7 +1361,7 @@ Transform:
   m_GameObject: {fileID: 5619961419998025568}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.02, y: -0.59, z: -0.57}
-  m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
+  m_LocalScale: {x: 0.0257, y: 0.01155, z: 0.028}
   m_Children:
   - {fileID: 199846135386705111}
   - {fileID: 7062076647111327914}
