@@ -11,8 +11,15 @@ public class HighscoreTableTest : MonoBehaviour
 
     public float templateHeight;
 
+    void Start()
+    {
+        PlayerPrefs.DeleteAll();
+    }
+
     private void Awake()
     {
+        PlayerPrefs.DeleteAll();
+
         entryContainer = transform.Find("HighScoreEntryContainer");
         entryTemplate = entryContainer.transform.Find("HighscoreEntryTemplate");
 
@@ -24,11 +31,6 @@ public class HighscoreTableTest : MonoBehaviour
         if (highscores == null)
         {
             AddHighscoreEntry(0, "Mélodie");
-            AddHighscoreEntry(700, "Florent");
-            AddHighscoreEntry(1300, "Tiffany");
-            AddHighscoreEntry(500, "Guy");
-            AddHighscoreEntry(3500, "Bernard");
-            AddHighscoreEntry(4000, "Emma");
             // Reload
             jsonString = PlayerPrefs.GetString("highscoreTable");
             highscores = JsonUtility.FromJson<Highscores>(jsonString);
@@ -59,6 +61,11 @@ public class HighscoreTableTest : MonoBehaviour
         {
             highscores.highscoreEntryList.RemoveAt(9);
         }
+    }
+
+    void RefreshList()
+    {
+        
     }
 
     private void CreateHighscoreEntryTransform(HighscoreEntry highscoreEntry, Transform container, List<Transform> transformList)
@@ -109,6 +116,7 @@ public class HighscoreTableTest : MonoBehaviour
 
         //Add new entry to Highscores
         highscores.highscoreEntryList.Add(highscoreEntry);
+        RefreshList();
 
         //Save updated Highscores
         string json = JsonUtility.ToJson(highscores);

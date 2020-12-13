@@ -16,6 +16,8 @@ public class GameOverAndCie : MonoBehaviour //Coline Marchal
     //SABIAUX Corentin GCC2
     public LevelScoreTest levelScoreTest;
     public HighscoreTableTest highscoreTableTest;
+
+    public bool scoreAdd;
     //..SABIAUX Corentin GCC2
 
     public Text score;
@@ -58,8 +60,12 @@ public class GameOverAndCie : MonoBehaviour //Coline Marchal
         gameManager.turretCanShoot = false;
 
         //SABIAUX Corentin GCC2
-        highscoreTableTest.gameObject.SetActive(true);
-        highscoreTableTest.AddHighscoreEntry(levelScoreTest.gameScore, "Player"); //Add high score entry at AddHigh array | "Player" need to be modified by the name choosen by the player.
+        if (scoreAdd == false)
+        {
+            highscoreTableTest.gameObject.SetActive(true);
+            highscoreTableTest.AddHighscoreEntry(levelScoreTest.gameScore, "Player"); //Add high score entry at AddHigh array | "Player" need to be modified by the name choosen by the player.
+            scoreAdd = true;
+        }
         //..SABIAUX Corentin GCC2
 
         StartCoroutine(LoadGameOver());
