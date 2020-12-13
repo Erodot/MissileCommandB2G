@@ -18,8 +18,6 @@ public class HighscoreTableTest : MonoBehaviour
 
         entryTemplate.gameObject.SetActive(false);
 
-        AddHighscoreEntry(99999, "Max");
-
         string jsonString = PlayerPrefs.GetString("highscoreTable");
         Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
 
@@ -42,6 +40,11 @@ public class HighscoreTableTest : MonoBehaviour
         foreach (HighscoreEntry highscoreEntry in highscores.highscoreEntryList)
         {
             CreateHighscoreEntryTransform(highscoreEntry, entryContainer, highscoreentryTransformList);
+        }
+
+        if (highscores.highscoreEntryList.Count > 10)
+        {
+            highscores.highscoreEntryList.RemoveAt(9);
         }
     }
 
@@ -84,14 +87,6 @@ public class HighscoreTableTest : MonoBehaviour
 
         //Add new entry to Highscores
         highscores.highscoreEntryList.Add(highscoreEntry);
-
-        if (highscores.highscoreEntryList.Count > 10)
-        {
-            for (int i = 9; i < highscores.highscoreEntryList.Count; i++)
-            {
-                highscores.highscoreEntryList.RemoveAt(i);
-            }
-        }
 
         //Save updated Highscores
         string json = JsonUtility.ToJson(highscores);
