@@ -4927,7 +4927,7 @@ MonoBehaviour:
   enemyToSpawn: 0
   enemyMin: 2
   enemyMax: 5
-  timeBetweenWaveStart: 10
+  timeBetweenWaveStart: 5
   timeToSpawn: 2
   timeDiviser: 4
   minimumSpawnTime: 1.5

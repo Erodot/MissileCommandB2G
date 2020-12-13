@@ -103,6 +103,7 @@ public class ShotGun : Shoot
         GameObject go = Instantiate(Bullet, Canon.transform.position, gameObject.transform.rotation);
         go.GetComponent<NewBullet>().direction = vector1 - vector2;
         go.GetComponent<NewBullet>().speed = bulletSpeed;
+        Debug.Log(go);
     }
 
     IEnumerator Reload()
