@@ -155,11 +155,11 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(silverBulletCount == silverBulletMax)
+        if(silverBulletCount >= silverBulletMax)
         {
             Instantiate(silverBullet, transform);
             silverBulletText.SetActive(true);
-            silverBulletCount++;
+            silverBulletCount = 0;
         }
 
         if (terrainOK)
