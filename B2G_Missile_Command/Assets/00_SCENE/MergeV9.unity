@@ -3935,6 +3935,7 @@ MonoBehaviour:
   addScore: {fileID: 69387227}
   multiplierScore: {fileID: 1660376540}
   gameScore: 0
+  multiplierState: 0
   timeToShowAddedScore: 1.5
   timeToShowMultiplierScore: 0
   respawnPallier: 5000
@@ -5016,6 +5017,7 @@ MonoBehaviour:
   bonusEffect:
   - {fileID: 997198618776077637, guid: d0162a957f85c754bab659ea223647ab, type: 3}
   - {fileID: 997198618776077637, guid: 879da62a8f1562a41b3f4b50e86bdfcd, type: 3}
+  - {fileID: 997198618776077637, guid: 2ccdc3a6c65ae5547afbb723653a5023, type: 3}
   enemyIcons:
   - {fileID: 1002820290}
   - {fileID: 1128685626}
@@ -5206,8 +5208,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paused: 0
-  pauseMenu: {fileID: 349642702}
-  pauseFirstButton: {fileID: 0}
+  PausePanel: {fileID: 0}
+  PauseMenu: {fileID: 0}
+  Options: {fileID: 0}
+  Back: {fileID: 0}
+  Sound: {fileID: 0}
+  Control: {fileID: 0}
+  PauseMenuButton: {fileID: 0}
+  OptionsButton: {fileID: 0}
+  BackButton: {fileID: 0}
+  SoundButtton: {fileID: 0}
+  ControlButton: {fileID: 0}
+  CurrentPanel: {fileID: 0}
   Buttons:
   - {fileID: 144942508}
   - {fileID: 130887261}

@@ -28,6 +28,7 @@ public class EnemyMissile : MonoBehaviour
     public int scoreValue;
 
     public LevelScoreTest levelScoreTest;
+    public bool multiplierIsOnEnemyMissile;
     //..Corentin SABIAUX GCC2
 
     GameObject[] primaryTargets;
@@ -258,7 +259,13 @@ public class EnemyMissile : MonoBehaviour
                 //Instantiate(explosion, transform.position, Quaternion.identity);
 
                 //Corentin SABIAUX GCC2
-                levelScoreTest.AddScore(scoreValue); //Called the function addScore with scoreValue to add from LevelScoreTest.
+                if (multiplierIsOnEnemyMissile == true)
+                {
+                    levelScoreTest.MultiplierScore(scoreValue, levelScoreTest.multiplierState);
+                } else
+                {
+                    levelScoreTest.AddScore(scoreValue); //Called the function addScore with scoreValue to add from LevelScoreTest.
+                }
                 //..Corentin SABIAUX GCC2
 
                 DestroyThis(other.gameObject); //destroy the missile

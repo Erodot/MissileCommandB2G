@@ -86,7 +86,7 @@ public class EnemySpawnTest2 : MonoBehaviour
         enemyToSpawnBank = enemyToSpawn;
         actualTime = timeToSpawn; //set the actual time to to the time chosen for the clock
         actualTime2 = timeBetweenWaveStart;
-        wave.text = waveNumber.ToString(); // "\r\n" + 
+        //wave.text = waveNumber.ToString(); // "\r\n" + 
         if (bonusFixe > 0)
         {
             bonusTimeInterval = (enemyToSpawn * timeToSpawn) / (bonusFixe + 1);
