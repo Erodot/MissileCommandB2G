@@ -47,6 +47,9 @@ public class EnemyMissile : MonoBehaviour
     [HideInInspector]
     public bool virguleActivated;
 
+    public Animator animator;
+    bool canAnimate = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -233,6 +236,7 @@ public class EnemyMissile : MonoBehaviour
                 if(lifePoint > 1)
                 {
                     lifePoint -= (lifePoint - 1);
+                    SwitchAnim();
                 }
                 else
                 {
@@ -242,6 +246,10 @@ public class EnemyMissile : MonoBehaviour
             else
             {
                 lifePoint--;
+                if(lifePoint <= 1)
+                {
+                    SwitchAnim();
+                }
             }
             //Nicolas Pupulin
             if (lifePoint <= 0)
@@ -362,4 +370,15 @@ public class EnemyMissile : MonoBehaviour
         gameObject.transform.LookAt(target); //rotate towards his target
     }
     //..Nicolas Pupulin
+
+    //Julien MACHADO
+    void SwitchAnim()
+    {
+        if(animator != null && canAnimate)
+        {
+            animator.SetBool("hasArmor", false);
+            canAnimate = false;
+        }
+    }
+    //..Julien MACHADO
 }

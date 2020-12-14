@@ -176,6 +176,7 @@ MonoBehaviour:
   levelScoreTest: {fileID: 0}
   speed: 1
   baseSpeed: 1
+  baseVirguleSpeed: 0
   type: armored
   weight: 4
   bomberSpawnTimer: 0
@@ -183,6 +184,8 @@ MonoBehaviour:
   enemyIcon: {fileID: 21300000, guid: fd1ce70effddd54418351e6dd1a51719, type: 3}
   explosionRadius: 50
   lastOfWave: 0
+  virguleActivated: 0
+  animator: {fileID: 8677581930451369135}
 --- !u!54 &3048141030897770999
 Rigidbody:
   m_ObjectHideFlags: 0
