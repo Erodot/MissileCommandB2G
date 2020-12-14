@@ -2027,7 +2027,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.14057037, y: 0.47700003}
   m_AnchorMax: {x: 0.39442965, y: 0.61513275}
-  m_AnchoredPosition: {x: -1.2766037, y: 11.269371}
+  m_AnchoredPosition: {x: -1.2766018, y: 11.269371}
   m_SizeDelta: {x: 13.973391, y: 19.996763}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &529838965
@@ -2701,19 +2701,17 @@ MonoBehaviour:
     - {fileID: 8300000, guid: c902643a7c4bd0c4cb49433422dc4256, type: 3}
   - type: GameMusics
     list:
-    - {fileID: 8300000, guid: 276000e009780564ba9cbf5bd96bc1f1, type: 3}
     - {fileID: 8300000, guid: 90debae6f9b794b479ed5ac13ce1c39b, type: 3}
+    - {fileID: 8300000, guid: e6afb4a21b1afc348891205cc704c5bf, type: 3}
     - {fileID: 8300000, guid: bf7575178c5fbc84eaad7e116369a87c, type: 3}
     - {fileID: 8300000, guid: 280be362754895a47a4e676de9b0eec3, type: 3}
     - {fileID: 8300000, guid: 514d92690e7d6a046bf1b4f22bdf7c81, type: 3}
-    - {fileID: 8300000, guid: 90debae6f9b794b479ed5ac13ce1c39b, type: 3}
   - type: Shoot
     list:
     - {fileID: 8300000, guid: 9808bf10cbe1a594da5e8d8afdf13b05, type: 3}
     - {fileID: 8300000, guid: bf699a218ff32464986b43bab09f841d, type: 3}
     - {fileID: 8300000, guid: 14313a0a5a18cd7478c18952d5f62678, type: 3}
     - {fileID: 8300000, guid: c3279b32cdbaabf40ae67eba8e92c918, type: 3}
-    - {fileID: 8300000, guid: 7800dcd155adbfd40b02a695074a3c0c, type: 3}
   - type: Bonus
     list:
     - {fileID: 8300000, guid: 6509ea5f7b119dd46993bdfaa9e9d93d, type: 3}
@@ -2722,15 +2720,9 @@ MonoBehaviour:
     list:
     - {fileID: 8300000, guid: 143573718ea6f8e46ab3cd0f58b8e881, type: 3}
     - {fileID: 8300000, guid: 2c1b801259bc6de468e9e148d1e2e158, type: 3}
-    - {fileID: 8300000, guid: 499b09b9b3fbc42488a35d63521bc3c1, type: 3}
+    - {fileID: 8300000, guid: 95225d18c7dfa67409337b85a56c986c, type: 3}
     - {fileID: 8300000, guid: 9c915971cb741e34f93c1a300bec76a3, type: 3}
     - {fileID: 8300000, guid: 7d0a6284cb780744693b30134a1607a8, type: 3}
-    - {fileID: 8300000, guid: 5662a9b81962c5f418e883987f11548b, type: 3}
-    - {fileID: 8300000, guid: 72e91a63e4bff0f42b6757a3d31b9b75, type: 3}
-    - {fileID: 8300000, guid: 279e10360ce3abd4eaf6fa92846f0247, type: 3}
-    - {fileID: 8300000, guid: 483077eb4350eb847b2357ae156ffe76, type: 3}
-    - {fileID: 8300000, guid: da36f98378a701c42b51fed2eaf723cb, type: 3}
-    - {fileID: 8300000, guid: d44e8031313f1004daf4610fd692e982, type: 3}
 --- !u!82 &721147767
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3191,7 +3183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ui: {fileID: 1419993777}
   controlSettings: {fileID: 1792446248}
-  controlKeyboard: 0
+  controlKeyboard: 1
   isShieldActivated: 0
   Field: {fileID: 0}
   lerpTime: 0
@@ -3276,7 +3268,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.14057037, y: 0.47700003}
   m_AnchorMax: {x: 0.39442965, y: 0.61513275}
-  m_AnchoredPosition: {x: -1.2768936, y: -16.360626}
+  m_AnchoredPosition: {x: -1.2768917, y: -16.360626}
   m_SizeDelta: {x: 13.973391, y: 19.996763}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &816665271
