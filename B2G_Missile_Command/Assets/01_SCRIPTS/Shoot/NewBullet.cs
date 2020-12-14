@@ -43,6 +43,7 @@ public class NewBullet : MonoBehaviour
         {
             GameObject fx = Instantiate(BazookaExplosionFX, transform.position, Quaternion.identity);
             GameObject go = Instantiate(Explosion, transform.position, Quaternion.identity);
+            fx.transform.parent = go.transform;
             go.GetComponent<Renderer>().enabled = false;
             go.GetComponent<PlayerProjectile_Explosion>().radiusMultiplier = explosionRadius;
             go.GetComponent<PlayerProjectile_Explosion>().explosionTime = 50;

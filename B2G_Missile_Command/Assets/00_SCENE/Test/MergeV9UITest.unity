@@ -5126,6 +5126,7 @@ MonoBehaviour:
   addScore: {fileID: 69387227}
   multiplierScore: {fileID: 1660376540}
   gameScore: 0
+  multiplierState: 0
   timeToShowAddedScore: 1.5
   timeToShowMultiplierScore: 0
   respawnPallier: 5000

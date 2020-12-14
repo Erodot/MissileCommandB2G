@@ -14,6 +14,14 @@ public class PlayerProjectile_Explosion : MonoBehaviour
         StartCoroutine(Explosion());
     }
 
+    void Update()
+    {
+        if(transform.GetChild(0) != null)
+        {
+            transform.GetChild(0).transform.position = transform.position;
+        }
+    }
+
     public IEnumerator Explosion()
     {
         float wait = radiusMultiplier / (explosionTime * 200);

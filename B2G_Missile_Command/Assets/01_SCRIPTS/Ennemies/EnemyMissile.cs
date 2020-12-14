@@ -51,6 +51,9 @@ public class EnemyMissile : MonoBehaviour
     public Animator animator;
     bool canAnimate = true;
 
+    public GameObject ExplosionFx;
+    public float fxLifeTime;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -331,17 +334,23 @@ public class EnemyMissile : MonoBehaviour
         gameManager.silverBulletCount++;
         if (tag.CompareTag("Bullet"))
         {
+            GameObject fx = Instantiate(ExplosionFx, tag.transform.position, Quaternion.identity);
             GameObject go = Instantiate(explosion, tag.transform.position, Quaternion.identity);
+            fx.transform.parent = go.transform; 
             go.GetComponent<PlayerProjectile_Explosion>().radiusMultiplier = explosionRadius;
         }
         else if (tag.CompareTag("Explosion"))
         {
+            GameObject fx = Instantiate(ExplosionFx, tag.transform.position, Quaternion.identity);
             GameObject go = Instantiate(explosion, gameObject.transform.position, Quaternion.identity);
+            fx.transform.parent = go.transform;
             go.GetComponent<PlayerProjectile_Explosion>().radiusMultiplier = explosionRadius;
         }
         else if (tag.CompareTag("Laser"))
         {
+            GameObject fx = Instantiate(ExplosionFx, gameObject.transform.position, Quaternion.identity);
             GameObject go = Instantiate(explosion, gameObject.transform.position, Quaternion.identity);
+            fx.transform.parent = go.transform;
             go.GetComponent<PlayerProjectile_Explosion>().radiusMultiplier = explosionRadius;
         }
 

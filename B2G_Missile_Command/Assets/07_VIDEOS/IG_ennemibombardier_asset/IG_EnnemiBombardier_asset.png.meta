@@ -1,0 +1,313 @@
+fileFormatVersion: 2
+guid: e607b5a9a83952847bb1f004390bc897
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 556477561987104650
+    second: IG_EnnemiBombardier_asset_0
+  - first:
+      213: 1619647312921600163
+    second: IG_EnnemiBombardier_asset_1
+  - first:
+      213: -8338676697524981649
+    second: IG_EnnemiBombardier_asset_2
+  - first:
+      213: 4109775122289363620
+    second: IG_EnnemiBombardier_asset_3
+  - first:
+      213: 2649150721489221652
+    second: IG_EnnemiBombardier_asset_4
+  - first:
+      213: -2125561387754794793
+    second: IG_EnnemiBombardier_asset_5
+  - first:
+      213: 4298428124391374132
+    second: IG_EnnemiBombardier_asset_6
+  - first:
+      213: -4166423975087089532
+    second: IG_EnnemiBombardier_asset_7
+  - first:
+      213: -5829680952959568922
+    second: IG_EnnemiBombardier_asset_8
+  - first:
+      213: -445350306597524954
+    second: IG_EnnemiBombardier_asset_9
+  - first:
+      213: -8385238444407559332
+    second: IG_EnnemiBombardier_asset_10
+  - first:
+      213: -2582337201781556209
+    second: IG_EnnemiBombardier_asset_11
+  - first:
+      213: -1762687080922834219
+    second: IG_EnnemiBombardier_asset_12
+  - first:
+      213: 6126017928458923556
+    second: IG_EnnemiBombardier_asset_13
+  - first:
+      213: -1874120408702552469
+    second: IG_EnnemiBombardier_asset_14
+  - first:
+      213: 808424997900861197
+    second: IG_EnnemiBombardier_asset_15
+  - first:
+      213: -9080467571278587286
+    second: IG_EnnemiBombardier_asset_16
+  - first:
+      213: 2040257707009774915
+    second: IG_EnnemiBombardier_asset_17
+  - first:
+      213: -5112611096324135286
+    second: IG_EnnemiBombardier_asset_18
+  - first:
+      213: -7624878129869737676
+    second: IG_EnnemiBombardier_asset_19
+  - first:
+      213: -2171211316303210217
+    second: IG_EnnemiBombardier_asset_20
+  - first:
+      213: 1901965796457651630
+    second: IG_EnnemiBombardier_asset_21
+  - first:
+      213: 2806842144237940024
+    second: IG_EnnemiBombardier_asset_22
+  - first:
+      213: 7063720786523049948
+    second: IG_EnnemiBombardier_asset_23
+  - first:
+      213: 1223618338713872708
+    second: IG_EnnemiBombardier_asset_24
+  - first:
+      213: 897357768743834219
+    second: IG_EnnemiBombardier_asset_25
+  - first:
+      213: -6894088089521655040
+    second: IG_EnnemiBombardier_asset_26
+  - first:
+      213: 8367237434081040947
+    second: IG_EnnemiBombardier_asset_27
+  - first:
+      213: -7584524376123099197
+    second: IG_EnnemiBombardier_asset_28
+  - first:
+      213: 8747022618866247032
+    second: IG_EnnemiBombardier_asset_29
+  - first:
+      213: -2027421378158177140
+    second: IG_EnnemiBombardier_asset_30
+  - first:
+      213: -5087796697126949964
+    second: IG_EnnemiBombardier_asset_31
+  - first:
+      213: 8181399304469905967
+    second: IG_EnnemiBombardier_asset_32
+  - first:
+      213: 1462027649181996497
+    second: IG_EnnemiBombardier_asset_33
+  - first:
+      213: 6353463087503114765
+    second: IG_EnnemiBombardier_asset_34
+  - first:
+      213: -8310478723247892001
+    second: IG_EnnemiBombardier_asset_35
+  - first:
+      213: 823898419929387404
+    second: IG_EnnemiBombardier_asset_36
+  - first:
+      213: -6665441635497967275
+    second: IG_EnnemiBombardier_asset_37
+  - first:
+      213: -4315205648403380344
+    second: IG_EnnemiBombardier_asset_38
+  - first:
+      213: -5818199701513298802
+    second: IG_EnnemiBombardier_asset_39
+  - first:
+      213: -3076175633976460215
+    second: IG_EnnemiBombardier_asset_40
+  - first:
+      213: 8149943213808744015
+    second: IG_EnnemiBombardier_asset_41
+  - first:
+      213: 3189959165124874591
+    second: IG_EnnemiBombardier_asset_42
+  - first:
+      213: -5632966794187381710
+    second: IG_EnnemiBombardier_asset_43
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: IG_EnnemiBombardier_asset_0
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 406
+        width: 93
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8f77bfe46109b700800000000000000
+      internalID: 556477561987104650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_EnnemiBombardier_asset_1
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 410
+        width: 93
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a0ab1c56a42a7610800000000000000
+      internalID: 1619647312921600163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_EnnemiBombardier_asset_2
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 407
+        width: 91
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f60323b49b1174c80800000000000000
+      internalID: -8338676697524981649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5a2526c0790d52f4180419e5db329274
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

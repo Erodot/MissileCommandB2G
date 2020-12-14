@@ -221,7 +221,7 @@ public class EnemySpawnTest2 : MonoBehaviour
                     pacingStart = false;
                     showAnouncer = true;
 
-                    wave.text = waveNumber.ToString(); // "\r\n" + // set the text on screen
+                    //wave.text = waveNumber.ToString(); // "\r\n" + // set the text on screen
                 }
 
             }
