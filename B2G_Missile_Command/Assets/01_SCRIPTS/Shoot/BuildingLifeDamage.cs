@@ -41,17 +41,24 @@ public class BuildingLifeDamage : MonoBehaviour
         {
             if (what == "shoot")
             {
-                int r = Random.Range(0, sm.sounds[3].list.Count - 1);
+                sound = sm.sounds[3].list[4];
+            }
+            else if (what == "laser")
+            {
+                int r = Random.Range(0, 3);
                 sound = sm.sounds[3].list[r];
             }
             else if (what == "damage")
             {
-                
+                sound = sm.sounds[5].list[10];
             }
             else if (what == "destroy")
             {
                 //Debug.Log("brolhomom");
-                sound = sm.sounds[5].list[1];
+                int r = Random.Range(8, 9); //cristal
+                sound = sm.sounds[5].list[r];
+                sm.Play(sound);
+                sound = sm.sounds[5].list[1];//break down
             }
         }
         else //city

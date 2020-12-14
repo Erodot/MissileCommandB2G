@@ -178,6 +178,7 @@ public class EnemyMissile : MonoBehaviour
         {
             if (!gameManager.isShieldActivated)
             {
+                GameObject.FindGameObjectWithTag("audio").GetComponent<SoundManager>().Play("planetCollision");
                 for (int i = damageIndex; i < gameManager.BuildingList.Count;)
                 {
                     if(gameManager.BuildingList[i].GetComponent<BuildingLifeDamage>().destroyed == false)
@@ -343,7 +344,9 @@ public class EnemyMissile : MonoBehaviour
         }
 
         gameManager.enemyKill[type] += 1;
-        Debug.Log(gameObject.name);
+        //Debug.Log(gameObject.name);
+
+        GameObject.FindGameObjectWithTag("audio").GetComponent<SoundManager>().Play("deathEnnemy");
         Destroy(this.gameObject);
     }
 

@@ -24,7 +24,8 @@ public class SoundManager : MonoBehaviour
     {
         if (place == "IG")
         {
-            int random = UnityEngine.Random.Range(0, sounds[2].list.Count - 1);
+            int random = 0;
+            //random = UnityEngine.Random.Range(0, sounds[2].list.Count - 1);
             PlayMusic(sounds[2].list[random]);
         }
     }
@@ -43,11 +44,27 @@ public class SoundManager : MonoBehaviour
 
     public void Play(string sound)
     {
-        if(sound == "bonus")
+        AudioClip s = null;
+        if (sound == "bonus")
         {
-            AudioClip s = sounds[4].list[1];
-            Play(s);
+            s = sounds[4].list[1];
         }
+        else if (sound == "wave")
+        {
+            s = sounds[5].list[4];
+        }
+        else if (sound == "deathEnnemy")
+        {
+            s = sounds[5].list[5];
+        }
+        else if (sound == "planetCollision")
+        {
+            s = sounds[5].list[6];
+        }
+
+
+        if(s != null)
+            Play(s);
     }
     public void Play(AudioClip sound)
     {

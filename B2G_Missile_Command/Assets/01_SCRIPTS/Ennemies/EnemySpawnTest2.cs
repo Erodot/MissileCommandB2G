@@ -175,6 +175,7 @@ public class EnemySpawnTest2 : MonoBehaviour
                         difficultySpawn = 0; //reset the difficulty for the spawn
                     }
                     waveNumber += 1; // add one to the wave number
+                    GameObject.FindGameObjectWithTag("audio").GetComponent<SoundManager>().Play("wave");
                     StartCoroutine(WaveAnouncer());
                     showAnouncer = false;
                 }

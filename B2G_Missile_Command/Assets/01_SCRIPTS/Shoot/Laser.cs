@@ -59,7 +59,7 @@ public class Laser : Shoot
                     StartCoroutine(DestroyLaser(go));
                     shoot = true;
                     canShoot = false;
-                    GetComponent<BuildingLifeDamage>().ManageSound("shoot");
+                    GetComponent<BuildingLifeDamage>().ManageSound("laser");
                 }
                 if (Keyboard.current.spaceKey.wasReleasedThisFrame && shoot)
                 {
