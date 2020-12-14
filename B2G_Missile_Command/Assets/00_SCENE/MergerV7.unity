@@ -5165,7 +5165,7 @@ MonoBehaviour:
   victoryObject: {fileID: 1416901655}
   gameManager: {fileID: 808077392}
   levelScoreTest: {fileID: 0}
-  highscoreTableTest: {fileID: 0}
+  highscoreTableTest: {fileID: 1701414949}
   scoreAdd: 0
   score: {fileID: 376446900}
   combo: {fileID: 106684433}

@@ -34,7 +34,8 @@ public class GameOverAndCie : MonoBehaviour //Coline Marchal
     {
         //SABIAUX Corentin GCC2
         levelScoreTest = GameObject.Find("LevelScore").GetComponent<LevelScoreTest>();
-        highscoreTableTest = GameObject.Find("HighscoreTable").GetComponent<HighscoreTableTest>();
+        //GameObject.Find("HighscoreTable").SetActive(true);
+        //highscoreTableTest = GameObject.Find("HighscoreTable").GetComponent<HighscoreTableTest>();
         highscoreTableTest.gameObject.SetActive(false);
         //..SABIAUX Corentin GCC2
     }
