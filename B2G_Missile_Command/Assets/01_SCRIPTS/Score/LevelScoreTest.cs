@@ -18,11 +18,17 @@ public class LevelScoreTest : MonoBehaviour
     #region Score Manager
     [Header("Score Manager")]
     public int gameScore;
+    public int multiplierState;
     public float timeToShowAddedScore;
     public float timeToShowMultiplierScore;
     public int respawnPallier;
     int pallier;
     #endregion
+
+    void Awake()
+    {
+        multiplierState = 2;
+    }
 
     void Update()
     {
