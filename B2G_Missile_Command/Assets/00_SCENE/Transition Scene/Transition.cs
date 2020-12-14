@@ -11,6 +11,7 @@ public class Transition : MonoBehaviour
     public Animator transitionRightCloud;
     public Animator transitionLeftCloud;
     public Animator transitionUI;
+    public Animator tranistionPlanet;
 
     public float transitionTime = 1f;
     //..Nicolas Pupulin
@@ -44,6 +45,7 @@ public class Transition : MonoBehaviour
         transitionRightCloud.SetTrigger("GameStart");
         transitionLeftCloud.SetTrigger("GameStart");
         transitionUI.SetTrigger("GameStart");
+        tranistionPlanet.SetTrigger("GameStart");
         yield return new WaitForSeconds(transitionTime);
 
         SceneManager.LoadScene(levelIndex);
