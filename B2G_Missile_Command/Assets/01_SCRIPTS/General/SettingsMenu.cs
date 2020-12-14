@@ -12,7 +12,8 @@ public class SettingsMenu : MonoBehaviour
 {
     public GameObject GeneralPanel;
     public GameObject SettingsPanel;
-    public GameObject PausePanel;
+
+    public SpriteRenderer Sound;
 
     public AudioMixer audioMixer;
 
@@ -112,10 +113,16 @@ public class SettingsMenu : MonoBehaviour
     {
         GeneralPanel.gameObject.SetActive(true);
         SettingsPanel.gameObject.SetActive(false);
-        PausePanel.gameObject.SetActive(false);
 
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(leReturnButton);
+
+    }
+
+    public void SoundOnOff()
+    {
+        bool active = true;
+
 
     }
 }
