@@ -24,9 +24,12 @@ public class SoundManager : MonoBehaviour
     {
         if (place == "IG")
         {
-            int random = 0;
-            //random = UnityEngine.Random.Range(0, sounds[2].list.Count - 1);
+            int random = UnityEngine.Random.Range(0, sounds[2].list.Count - 1);
             PlayMusic(sounds[2].list[random]);
+        }
+        else if (place == "Menu")
+        {
+            PlayMusic(sounds[0].list[0]);
         }
     }
 

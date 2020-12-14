@@ -2693,7 +2693,7 @@ MonoBehaviour:
   sounds:
   - type: MenuMusics
     list:
-    - {fileID: 8300000, guid: 1721868a439b4464ea56b5714a584e1d, type: 3}
+    - {fileID: 8300000, guid: 2955db6818b57e844ac7d78f67bce5ee, type: 3}
   - type: MenuSounds
     list:
     - {fileID: 8300000, guid: 863d8adaa78a42f439b8895c3b4ce708, type: 3}
@@ -2701,12 +2701,10 @@ MonoBehaviour:
     - {fileID: 8300000, guid: c902643a7c4bd0c4cb49433422dc4256, type: 3}
   - type: GameMusics
     list:
-    - {fileID: 8300000, guid: 276000e009780564ba9cbf5bd96bc1f1, type: 3}
     - {fileID: 8300000, guid: 90debae6f9b794b479ed5ac13ce1c39b, type: 3}
     - {fileID: 8300000, guid: bf7575178c5fbc84eaad7e116369a87c, type: 3}
     - {fileID: 8300000, guid: 280be362754895a47a4e676de9b0eec3, type: 3}
     - {fileID: 8300000, guid: 514d92690e7d6a046bf1b4f22bdf7c81, type: 3}
-    - {fileID: 8300000, guid: 90debae6f9b794b479ed5ac13ce1c39b, type: 3}
   - type: Shoot
     list:
     - {fileID: 8300000, guid: 9808bf10cbe1a594da5e8d8afdf13b05, type: 3}
@@ -2726,7 +2724,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 9c915971cb741e34f93c1a300bec76a3, type: 3}
     - {fileID: 8300000, guid: 7d0a6284cb780744693b30134a1607a8, type: 3}
     - {fileID: 8300000, guid: 5662a9b81962c5f418e883987f11548b, type: 3}
-    - {fileID: 8300000, guid: 72e91a63e4bff0f42b6757a3d31b9b75, type: 3}
+    - {fileID: 8300000, guid: 3a2b3698a7f9bfa4aa70cac6538fd1fb, type: 3}
     - {fileID: 8300000, guid: 279e10360ce3abd4eaf6fa92846f0247, type: 3}
     - {fileID: 8300000, guid: 483077eb4350eb847b2357ae156ffe76, type: 3}
     - {fileID: 8300000, guid: da36f98378a701c42b51fed2eaf723cb, type: 3}
