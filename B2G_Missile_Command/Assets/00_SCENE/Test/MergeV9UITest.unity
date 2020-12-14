@@ -2027,7 +2027,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.14057037, y: 0.47700003}
   m_AnchorMax: {x: 0.39442965, y: 0.61513275}
-  m_AnchoredPosition: {x: -1.2766037, y: 11.269371}
+  m_AnchoredPosition: {x: -1.2766018, y: 11.269371}
   m_SizeDelta: {x: 13.973391, y: 19.996763}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &529838965
@@ -3183,7 +3183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ui: {fileID: 1419993777}
   controlSettings: {fileID: 1792446248}
-  controlKeyboard: 0
+  controlKeyboard: 1
   isShieldActivated: 0
   Field: {fileID: 0}
   lerpTime: 0
@@ -3268,7 +3268,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.14057037, y: 0.47700003}
   m_AnchorMax: {x: 0.39442965, y: 0.61513275}
-  m_AnchoredPosition: {x: -1.2768936, y: -16.360626}
+  m_AnchoredPosition: {x: -1.2768917, y: -16.360626}
   m_SizeDelta: {x: 13.973391, y: 19.996763}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &816665271
