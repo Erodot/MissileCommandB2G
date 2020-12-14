@@ -142,4 +142,5 @@ public class HighscoreTableTest : MonoBehaviour
         public int score;
         public string name;
     }
+    //..Corentin SABIAUX GCC2
 }

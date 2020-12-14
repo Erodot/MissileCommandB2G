@@ -10,10 +10,15 @@ public class SilverBullet : MonoBehaviour
     public GameManager gameManager;
     public EnemySpawnTest2 enemySpawn;
     public LevelScoreTest levelScore;
+
     public GameObject Arcana;
 
     bool destroyEnemys;
     bool isActivate;
+
+    //Corentin SABIAUX GCC2
+    public bool multiplierIsOnSilverBullet;
+    //..Corentin SABIAUX GCC2
 
     // Start is called before the first frame update
     void Start()
@@ -43,7 +48,17 @@ public class SilverBullet : MonoBehaviour
                 {
                     enemySpawn.pacingStart = true;
                 }
-                levelScore.AddScore(enemys[i].GetComponent<EnemyMissile>().scoreValue);
+
+                //Corentin SABIAUX GCC2
+                if (multiplierIsOnSilverBullet == true)
+                {
+                    levelScore.MultiplierScore(enemys[i].GetComponent<EnemyMissile>().scoreValue, levelScore.multiplierState);
+                } else
+                {
+                    levelScore.AddScore(enemys[i].GetComponent<EnemyMissile>().scoreValue);
+                }
+                //..Corentin SABIAUX GCC2
+
                 Destroy(enemys[i]);
             }
         }
