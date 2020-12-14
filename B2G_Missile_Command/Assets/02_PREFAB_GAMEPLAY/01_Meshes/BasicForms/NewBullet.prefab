@@ -116,6 +116,7 @@ MonoBehaviour:
   direction: {x: 0, y: 0, z: 0}
   explosionRadius: 30
   canExplode: 0
+  BazookaExplosionFX: {fileID: 3221964583680761021, guid: fcb76f14d01916f44b8e68fe755cf854, type: 3}
 --- !u!54 &-6855864673165719626
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -162,6 +162,11 @@ public class EnemyMissile : MonoBehaviour
             else
             {
                 gameManager.isShieldActivated = false;
+                GameObject[] shield = GameObject.FindGameObjectsWithTag("Shield");
+                for (int i = 0; i < shield.Length; i++)
+                {
+                    Destroy(shield[i]);
+                }
                 DestroyThis(other.gameObject); //destroy the missile
             }
         }
@@ -211,6 +216,11 @@ public class EnemyMissile : MonoBehaviour
             else
             {
                 gameManager.isShieldActivated = false;
+                GameObject[] shield = GameObject.FindGameObjectsWithTag("Shield");
+                for (int i = 0; i < shield.Length; i++)
+                {
+                    Destroy(shield[i]);
+                }
             }
 
             DestroyThis(other.gameObject); //destroy the missile

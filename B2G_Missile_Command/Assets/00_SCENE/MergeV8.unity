@@ -4919,7 +4919,7 @@ MonoBehaviour:
   alertDispawnTime: 0.7
   afterAlertSpawnTime: 1
   waveNumber: 0
-  bonusRngMax: 2
+  bonusRngMax: 3
   bonusFixe: 0
   difficultySpawn: 0
   diffModifier: 1

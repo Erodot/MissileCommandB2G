@@ -5,6 +5,7 @@ using UnityEngine;
 public class Shield : BonusEffect
 {
     GameManager gameManager;
+    public GameObject shieldFX;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,7 @@ public class Shield : BonusEffect
 
     public override void Effect()
     {
+        GameObject fx = Instantiate(shieldFX, GameObject.Find("Field").transform.position, Quaternion.identity);
         gameManager.isShieldActivated = true;
         base.Effect();
     }

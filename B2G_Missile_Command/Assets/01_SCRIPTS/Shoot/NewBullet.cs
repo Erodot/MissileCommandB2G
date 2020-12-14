@@ -11,6 +11,7 @@ public class NewBullet : MonoBehaviour
     public Vector3 direction;
     public float explosionRadius;
     public bool canExplode;
+    public GameObject BazookaExplosionFX;
 
     // Start is called before the first frame update
     void Start()
@@ -40,7 +41,9 @@ public class NewBullet : MonoBehaviour
     {
         if (canExplode)
         {
+            GameObject fx = Instantiate(BazookaExplosionFX, transform.position, Quaternion.identity);
             GameObject go = Instantiate(Explosion, transform.position, Quaternion.identity);
+            go.GetComponent<Renderer>().enabled = false;
             go.GetComponent<PlayerProjectile_Explosion>().radiusMultiplier = explosionRadius;
             go.GetComponent<PlayerProjectile_Explosion>().explosionTime = 50;
         } 

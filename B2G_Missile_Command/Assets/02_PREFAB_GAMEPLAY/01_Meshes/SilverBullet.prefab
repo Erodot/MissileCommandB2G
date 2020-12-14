@@ -45,4 +45,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controlSettings: {fileID: 0}
   gameManager: {fileID: 0}
-  Arcana: {fileID: 8543026262871541117, guid: 85bb6b5fcc82d7d4194d4e929d0a5ce8, type: 3}
+  enemySpawn: {fileID: 0}
+  Arcana: {fileID: 8543026262871541117, guid: e23be5b3155a34d46b2456b9649c1ad4, type: 3}

@@ -44,3 +44,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeEffect: 0
+  shieldFX: {fileID: 8452103515286253043, guid: 61cc5cb70913595409b4672d1d1b7c7e, type: 3}
