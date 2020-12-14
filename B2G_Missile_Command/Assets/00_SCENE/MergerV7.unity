@@ -369,7 +369,7 @@ SpriteRenderer:
   m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &67447397
@@ -1242,7 +1242,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c22203e093e8d894b9f642da57100fd5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c7f30dda23657274a84d34b921b42264, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -5166,6 +5166,7 @@ MonoBehaviour:
   gameManager: {fileID: 808077392}
   levelScoreTest: {fileID: 0}
   highscoreTableTest: {fileID: 0}
+  scoreAdd: 0
   score: {fileID: 376446900}
   combo: {fileID: 106684433}
   wave: {fileID: 536212853}
@@ -6047,6 +6048,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   templateHeight: 35
+  erasePlayerPref: 0
 --- !u!1 &1733915857
 GameObject:
   m_ObjectHideFlags: 0
