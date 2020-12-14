@@ -45,3 +45,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeEffect: 5
   speedDivider: 2
+  FreezeFx: {fileID: 1634143940844031751, guid: 11ff73f3459188b40ab968a053a9f55d, type: 3}

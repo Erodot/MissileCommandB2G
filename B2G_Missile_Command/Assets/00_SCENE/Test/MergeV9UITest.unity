@@ -6167,6 +6167,7 @@ MonoBehaviour:
   bonusEffect:
   - {fileID: 997198618776077637, guid: d0162a957f85c754bab659ea223647ab, type: 3}
   - {fileID: 997198618776077637, guid: 879da62a8f1562a41b3f4b50e86bdfcd, type: 3}
+  - {fileID: 997198618776077637, guid: 2ccdc3a6c65ae5547afbb723653a5023, type: 3}
   enemyIcons:
   - {fileID: 1002820290}
   - {fileID: 1128685626}
@@ -7173,7 +7174,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: x1
+  m_Text: 
 --- !u!222 &1660376541
 CanvasRenderer:
   m_ObjectHideFlags: 0

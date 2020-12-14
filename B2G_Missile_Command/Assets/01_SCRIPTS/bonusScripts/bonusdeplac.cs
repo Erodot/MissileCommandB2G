@@ -10,6 +10,8 @@ public class bonusdeplac : MonoBehaviour
     public int direction;
 
     public GameObject bonusEffect;
+    public GameObject FreezeBonus;
+    public GameObject FreezeFx;
 
     // Start is called before the first frame update
     void Start()
@@ -42,9 +44,14 @@ public class bonusdeplac : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+
         //Debug.Log("hit");
         if (other.gameObject.CompareTag("Bullet") || other.gameObject.CompareTag("Explosion")) //if the bonus hit a player bullet
         {
+            if (bonusEffect == FreezeBonus)
+            {
+                GameObject fx = Instantiate(FreezeFx, transform.position, Quaternion.identity);
+            }
             GameObject go = Instantiate(bonusEffect, Vector3.zero, Quaternion.identity);
             go.transform.parent = null;
 
@@ -53,6 +60,10 @@ public class bonusdeplac : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Laser")) //if the bonus hit a player bullet
         {
+            if (bonusEffect == FreezeBonus)
+            {
+                GameObject fx = Instantiate(FreezeFx, transform.position, Quaternion.identity);
+            }
             GameObject go = Instantiate(bonusEffect, Vector3.zero, Quaternion.identity);
             go.transform.parent = null;
             Destroy(gameObject);

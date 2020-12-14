@@ -13,7 +13,10 @@ public class MultiScore : BonusEffect
     // Start is called before the first frame update
     void Start()
     {
-        silverBullet = GameObject.Find("SilverBullet").GetComponent<SilverBullet>();
+        if(GameObject.Find("SilverBullet") != null)
+        {
+            silverBullet = GameObject.Find("SilverBullet").GetComponent<SilverBullet>();
+        }
         levelScore = GameObject.Find("LevelScore").GetComponent<LevelScoreTest>();
         Effect();
     }
@@ -21,7 +24,14 @@ public class MultiScore : BonusEffect
     // Update is called once per frame
     public override void Update()
     {
-        startEffect = true;
+        if(startEffect)
+        {
+            GameObject[] enemys = GameObject.FindGameObjectsWithTag("Ennemy");
+            for (int i = 0; i < enemys.Length; i++)
+            {
+                enemys[i].GetComponent<EnemyMissile>().multiplierIsOnEnemyMissile = true;
+            }
+        }
 
         base.Update();
     }
@@ -30,34 +40,27 @@ public class MultiScore : BonusEffect
     {
         base.Effect();
 
-        if (startEffect == true)
+        startEffect = true;
+        levelScore.multiplierScore.text = "x" + levelScore.multiplierState;
+        if(silverBullet != null)
         {
-            GameObject[] enemys = GameObject.FindGameObjectsWithTag("Ennemy");
-            for (int i = 0; i < enemys.Length; i++)
-            {
-                if (enemys[i].GetComponent<EnemyMissile>().lastOfWave)
-                {
-                    enemys[i].GetComponent<EnemyMissile>().multiplierIsOnEnemyMissile = true;
-                }
-            }
             silverBullet.multiplierIsOnSilverBullet = true;
-        } else
-        {
-            GameObject[] enemys = GameObject.FindGameObjectsWithTag("Ennemy");
-            for (int i = 0; i < enemys.Length; i++)
-            {
-                if (enemys[i].GetComponent<EnemyMissile>().lastOfWave)
-                {
-                    enemys[i].GetComponent<EnemyMissile>().multiplierIsOnEnemyMissile = false;
-                }
-            }
-            silverBullet.multiplierIsOnSilverBullet = false;
         }
     }
 
     public override void AfterTimerEffect()
     {
+        GameObject[] enemys = GameObject.FindGameObjectsWithTag("Ennemy");
+        for (int i = 0; i < enemys.Length; i++)
+        {
+            enemys[i].GetComponent<EnemyMissile>().multiplierIsOnEnemyMissile = false;
+        }
+        if(silverBullet != null)
+        {
+            silverBullet.multiplierIsOnSilverBullet = false;
+        }
         startEffect = false;
+        levelScore.multiplierScore.text = "";
         levelScore.multiplierState++;
 
         base.AfterTimerEffect();
