@@ -1,0 +1,556 @@
+fileFormatVersion: 2
+guid: d80d738a61122c643aaa98f54552245c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3518512094554266679
+    second: IG_TirAutomatique_asset_0
+  - first:
+      213: -2173147448330492449
+    second: IG_TirAutomatique_asset_1
+  - first:
+      213: 8757046428980309975
+    second: IG_TirAutomatique_asset_2
+  - first:
+      213: -6495735287342064158
+    second: IG_TirAutomatique_asset_3
+  - first:
+      213: -249859599568041008
+    second: IG_TirAutomatique_asset_4
+  - first:
+      213: 6819746172369336766
+    second: IG_TirAutomatique_asset_5
+  - first:
+      213: 3594078288443360252
+    second: IG_TirAutomatique_asset_6
+  - first:
+      213: -755190861383834720
+    second: IG_TirAutomatique_asset_7
+  - first:
+      213: 8994513614882366887
+    second: IG_TirAutomatique_asset_8
+  - first:
+      213: 3539443094971397239
+    second: IG_TirAutomatique_asset_9
+  - first:
+      213: 1326145395671246351
+    second: IG_TirAutomatique_asset_10
+  - first:
+      213: 1282324538255744388
+    second: IG_TirAutomatique_asset_11
+  - first:
+      213: 8484453945033935689
+    second: IG_TirAutomatique_asset_12
+  - first:
+      213: 4852045376552230763
+    second: IG_TirAutomatique_asset_13
+  - first:
+      213: 1353776611747486469
+    second: IG_TirAutomatique_asset_14
+  - first:
+      213: -2804792089310405341
+    second: IG_TirAutomatique_asset_15
+  - first:
+      213: -3499337285166219785
+    second: IG_TirAutomatique_asset_16
+  - first:
+      213: 1086038997967471526
+    second: IG_TirAutomatique_asset_17
+  - first:
+      213: 5158776347775582797
+    second: IG_TirAutomatique_asset_18
+  - first:
+      213: 1353549661296294702
+    second: IG_TirAutomatique_asset_19
+  - first:
+      213: 1622361932980595714
+    second: IG_TirAutomatique_asset_20
+  - first:
+      213: 8893333217088709771
+    second: IG_TirAutomatique_asset_21
+  - first:
+      213: 3735624507525137500
+    second: IG_TirAutomatique_asset_22
+  - first:
+      213: -4224204500488831623
+    second: IG_TirAutomatique_asset_23
+  - first:
+      213: -1114102487569949267
+    second: IG_TirAutomatique_asset_24
+  - first:
+      213: -387322387716090403
+    second: IG_TirAutomatique_asset_25
+  - first:
+      213: 749885452549409634
+    second: IG_TirAutomatique_asset_26
+  - first:
+      213: 1791517934387019563
+    second: IG_TirAutomatique_asset_27
+  - first:
+      213: -688856145092289500
+    second: IG_TirAutomatique_asset_28
+  - first:
+      213: 5120354604214529842
+    second: IG_TirAutomatique_asset_29
+  - first:
+      213: -4666224515483426210
+    second: IG_TirAutomatique_asset_30
+  - first:
+      213: 4522867068323054751
+    second: IG_TirAutomatique_asset_31
+  - first:
+      213: 4661803090726682394
+    second: IG_TirAutomatique_asset_32
+  - first:
+      213: -4899405038992585776
+    second: IG_TirAutomatique_asset_33
+  - first:
+      213: -4760963949820217907
+    second: IG_TirAutomatique_asset_34
+  - first:
+      213: -6208737154113526804
+    second: IG_TirAutomatique_asset_35
+  - first:
+      213: -2583782606231188501
+    second: IG_TirAutomatique_asset_36
+  - first:
+      213: 4720656897243006725
+    second: IG_TirAutomatique_asset_37
+  - first:
+      213: -2921605481356616052
+    second: IG_TirAutomatique_asset_38
+  - first:
+      213: -141935344268750599
+    second: IG_TirAutomatique_asset_39
+  - first:
+      213: -4169043481905141370
+    second: IG_TirAutomatique_asset_40
+  - first:
+      213: 5483837314513607129
+    second: IG_TirAutomatique_asset_41
+  - first:
+      213: -4521764052198420157
+    second: IG_TirAutomatique_asset_0
+  - first:
+      213: -2178304892106694624
+    second: IG_TirAutomatique_asset_1
+  - first:
+      213: -1352897542233742511
+    second: IG_TirAutomatique_asset_2
+  - first:
+      213: -8511068929767179140
+    second: IG_TirAutomatique_asset_3
+  - first:
+      213: -4527459990681060491
+    second: IG_TirAutomatique_asset_4
+  - first:
+      213: 3747078449829388177
+    second: IG_TirAutomatique_asset_5
+  - first:
+      213: 2311995765052364384
+    second: IG_TirAutomatique_asset_6
+  - first:
+      213: 1182857209991841638
+    second: IG_TirAutomatique_asset_7
+  - first:
+      213: 8019884458871872365
+    second: IG_TirAutomatique_asset_8
+  - first:
+      213: -6232807736900894228
+    second: IG_TirAutomatique_asset_9
+  - first:
+      213: -4129096588170090718
+    second: IG_TirAutomatique_asset_10
+  - first:
+      213: 3162803833413942786
+    second: IG_TirAutomatique_asset_11
+  - first:
+      213: 3701381231016076082
+    second: IG_TirAutomatique_asset_12
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: IG_TirAutomatique_asset_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 13
+        width: 79
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73c92ddab1444d030800000000000000
+      internalID: 3518512094554266679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_TirAutomatique_asset_1
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 8
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd5e6b9d8ed67d1e0800000000000000
+      internalID: -2173147448330492449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_TirAutomatique_asset_2
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 3
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7df69f09457478970800000000000000
+      internalID: 8757046428980309975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_TirAutomatique_asset_3
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 0
+        width: 101
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ed910b0c238ad5a0800000000000000
+      internalID: -6495735287342064158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_TirAutomatique_asset_4
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 0
+        width: 102
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0db860c9402588cf0800000000000000
+      internalID: -249859599568041008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_TirAutomatique_asset_5
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 0
+        width: 99
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb9776ed20b94ae50800000000000000
+      internalID: 6819746172369336766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_TirAutomatique_asset_6
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 0
+        width: 101
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf34c9d392bb0e130800000000000000
+      internalID: 3594078288443360252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_TirAutomatique_asset_7
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 0
+        width: 101
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a36899a9e50585f0800000000000000
+      internalID: -755190861383834720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_TirAutomatique_asset_8
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 0
+        width: 102
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a56a7e4a7ee2dc70800000000000000
+      internalID: 8994513614882366887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_TirAutomatique_asset_9
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 0
+        width: 99
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 774ba7afdb0ae1130800000000000000
+      internalID: 3539443094971397239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_TirAutomatique_asset_10
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 0
+        width: 102
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f06218d063a676210800000000000000
+      internalID: 1326145395671246351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_TirAutomatique_asset_11
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 0
+        width: 101
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48d108d9f5bbbc110800000000000000
+      internalID: 1282324538255744388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_TirAutomatique_asset_12
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 0
+        width: 102
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94bc8e219e5deb570800000000000000
+      internalID: 8484453945033935689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
