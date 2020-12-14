@@ -9,6 +9,7 @@ public class SilverBullet : MonoBehaviour
     public ControlSettings controlSettings;
     public GameManager gameManager;
     public EnemySpawnTest2 enemySpawn;
+    public LevelScoreTest levelScore;
     public GameObject Arcana;
 
     bool destroyEnemys;
@@ -20,6 +21,7 @@ public class SilverBullet : MonoBehaviour
         controlSettings = GameObject.Find("ControlManager").GetComponent<ControlSettings>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         enemySpawn = GameObject.Find("Spawner").GetComponent<EnemySpawnTest2>();
+        levelScore = GameObject.Find("LevelScore").GetComponent<LevelScoreTest>();
     }
 
     // Update is called once per frame
@@ -29,7 +31,7 @@ public class SilverBullet : MonoBehaviour
         {
             GameObject go = Instantiate(Arcana, new Vector3(0, 5.25f, 0), Quaternion.identity);
             destroyEnemys = true;
-            StartCoroutine(DestroyArcana());
+            StartCoroutine(DestroyArcana(go));
             isActivate = true;
         }
         if (destroyEnemys)
@@ -41,16 +43,18 @@ public class SilverBullet : MonoBehaviour
                 {
                     enemySpawn.pacingStart = true;
                 }
+                levelScore.AddScore(enemys[i].GetComponent<EnemyMissile>().scoreValue);
                 Destroy(enemys[i]);
             }
         }
     }
 
-    IEnumerator DestroyArcana()
+    IEnumerator DestroyArcana(GameObject arcana)
     {
         gameManager.silverBulletText.SetActive(false);
         gameManager.silverBulletCount = 0;
         yield return new WaitForSeconds(2);
+        Destroy(arcana);
         Destroy(gameObject);
 
     }

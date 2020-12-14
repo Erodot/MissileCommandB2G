@@ -165,11 +165,12 @@ public class EnemySpawnTest2 : MonoBehaviour
 
                     difficultySpawn += difficultyAugmentation; //add to the difficulty for the spawn
 
-                    if (difficultySpawn >= 8) //if the difficulty for the spawn is higher or equal to 9
+                    if (difficultySpawn >= 7) //if the difficulty for the spawn is higher or equal to 9
                     {
                         if (diffModifier < enemys.Length) //if the difficulty of enemy is lower than the number of enemy
                         {
                             diffModifier++;
+                            enemyToSpawnBank -= 5;
                         }
                         difficultySpawn = 0; //reset the difficulty for the spawn
                     }
@@ -195,7 +196,7 @@ public class EnemySpawnTest2 : MonoBehaviour
 
                     if (enemyToSpawnBank < maxEnemy)
                     {
-                        enemyToSpawn = enemyToSpawnBank + difficultyAugmentation * 2; //choose the number of ennemy to spawn for the next wave
+                        enemyToSpawn = enemyToSpawnBank + 5; //choose the number of ennemy to spawn for the next wave
                     }
 
                     enemyToSpawnBank = enemyToSpawn; //reset the max enemy spawn

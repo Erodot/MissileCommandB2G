@@ -304,7 +304,7 @@ public class EnemyMissile : MonoBehaviour
                     transform.RotateAround(transform.position, Vector3.back, angle);
 
 
-                    nmi.transform.parent = transform;
+                    nmi.transform.parent = gameObject.transform;
                 }
                 for (int i = 0; i < 5; i++)
                 {
@@ -335,6 +335,7 @@ public class EnemyMissile : MonoBehaviour
         }
 
         gameManager.enemyKill[type] += 1;
+        Debug.Log(gameObject.name);
         Destroy(this.gameObject);
     }
 
