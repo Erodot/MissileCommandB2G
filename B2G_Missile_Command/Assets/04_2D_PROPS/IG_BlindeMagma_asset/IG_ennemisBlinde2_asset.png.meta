@@ -1,0 +1,1213 @@
+fileFormatVersion: 2
+guid: 00afa437ab5993146b85e2d2ab538056
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7095545943220586588
+    second: IG_ennemisBlinde2_asset_0
+  - first:
+      213: 6198269436376219947
+    second: IG_ennemisBlinde2_asset_1
+  - first:
+      213: 5058207680697889581
+    second: IG_ennemisBlinde2_asset_2
+  - first:
+      213: -1140467191493526427
+    second: IG_ennemisBlinde2_asset_3
+  - first:
+      213: 4263167334480332245
+    second: IG_ennemisBlinde2_asset_4
+  - first:
+      213: -3709159987836031433
+    second: IG_ennemisBlinde2_asset_5
+  - first:
+      213: 1516841390783190635
+    second: IG_ennemisBlinde2_asset_6
+  - first:
+      213: 577592583048772659
+    second: IG_ennemisBlinde2_asset_7
+  - first:
+      213: -9092101266350905531
+    second: IG_ennemisBlinde2_asset_8
+  - first:
+      213: -7168760974173524611
+    second: IG_ennemisBlinde2_asset_9
+  - first:
+      213: 3948422307914197955
+    second: IG_ennemisBlinde2_asset_10
+  - first:
+      213: 2393998940188998567
+    second: IG_ennemisBlinde2_asset_11
+  - first:
+      213: -3841557605892767346
+    second: IG_ennemisBlinde2_asset_12
+  - first:
+      213: 7121747823539736282
+    second: IG_ennemisBlinde2_asset_13
+  - first:
+      213: -5948749980676394362
+    second: IG_ennemisBlinde2_asset_14
+  - first:
+      213: -3813549034506273860
+    second: IG_ennemisBlinde2_asset_15
+  - first:
+      213: 7862765248790222850
+    second: IG_ennemisBlinde2_asset_16
+  - first:
+      213: 1094488459032356886
+    second: IG_ennemisBlinde2_asset_17
+  - first:
+      213: -794723312173111329
+    second: IG_ennemisBlinde2_asset_18
+  - first:
+      213: -7675703996163003809
+    second: IG_ennemisBlinde2_asset_19
+  - first:
+      213: 8642113709302247925
+    second: IG_ennemisBlinde2_asset_20
+  - first:
+      213: 6698076135102727237
+    second: IG_ennemisBlinde2_asset_21
+  - first:
+      213: -6203534118593971427
+    second: IG_ennemisBlinde2_asset_22
+  - first:
+      213: -2960050358020049865
+    second: IG_ennemisBlinde2_asset_23
+  - first:
+      213: -4608400367396373622
+    second: IG_ennemisBlinde2_asset_24
+  - first:
+      213: -5761163006889500575
+    second: IG_ennemisBlinde2_asset_25
+  - first:
+      213: -1807060105445753736
+    second: IG_ennemisBlinde2_asset_26
+  - first:
+      213: 4363463160677387722
+    second: IG_ennemisBlinde2_asset_27
+  - first:
+      213: 684002933886356338
+    second: IG_ennemisBlinde2_asset_28
+  - first:
+      213: -6127062982565532307
+    second: IG_ennemisBlinde2_asset_29
+  - first:
+      213: -8318412603111481724
+    second: IG_ennemisBlinde2_asset_30
+  - first:
+      213: -1289147984580316077
+    second: IG_ennemisBlinde2_asset_31
+  - first:
+      213: 1951662575838745453
+    second: IG_ennemisBlinde2_asset_32
+  - first:
+      213: -8604467655592167724
+    second: IG_ennemisBlinde2_asset_0
+  - first:
+      213: 4729467400236596812
+    second: IG_ennemisBlinde2_asset_1
+  - first:
+      213: 297180815067245102
+    second: IG_ennemisBlinde2_asset_2
+  - first:
+      213: -1159437787383119666
+    second: IG_ennemisBlinde2_asset_3
+  - first:
+      213: -4667601558496775454
+    second: IG_ennemisBlinde2_asset_4
+  - first:
+      213: -7262278207285729231
+    second: IG_ennemisBlinde2_asset_5
+  - first:
+      213: -8612552179680986678
+    second: IG_ennemisBlinde2_asset_6
+  - first:
+      213: 8338815496205559437
+    second: IG_ennemisBlinde2_asset_7
+  - first:
+      213: -4294351040794397958
+    second: IG_ennemisBlinde2_asset_8
+  - first:
+      213: -2552212789504134654
+    second: IG_ennemisBlinde2_asset_9
+  - first:
+      213: -7378190464416985902
+    second: IG_ennemisBlinde2_asset_10
+  - first:
+      213: 5448707777062456749
+    second: IG_ennemisBlinde2_asset_11
+  - first:
+      213: -1345448816214932651
+    second: IG_ennemisBlinde2_asset_12
+  - first:
+      213: 2049525369405458399
+    second: IG_ennemisBlinde2_asset_13
+  - first:
+      213: -5746526708443649666
+    second: IG_ennemisBlinde2_asset_14
+  - first:
+      213: -4549200251598167993
+    second: IG_ennemisBlinde2_asset_15
+  - first:
+      213: 2977417474842563302
+    second: IG_ennemisBlinde2_asset_16
+  - first:
+      213: -6417940715982185383
+    second: IG_ennemisBlinde2_asset_17
+  - first:
+      213: 7806450224457951257
+    second: IG_ennemisBlinde2_asset_18
+  - first:
+      213: 1064983305720062536
+    second: IG_ennemisBlinde2_asset_19
+  - first:
+      213: -880743669622904131
+    second: IG_ennemisBlinde2_asset_20
+  - first:
+      213: -6614442340988620144
+    second: IG_ennemisBlinde2_asset_21
+  - first:
+      213: -46647924523035372
+    second: IG_ennemisBlinde2_asset_22
+  - first:
+      213: -6899754364448163842
+    second: IG_ennemisBlinde2_asset_23
+  - first:
+      213: 6751050507232062389
+    second: IG_ennemisBlinde2_asset_24
+  - first:
+      213: -668312041267086122
+    second: IG_ennemisBlinde2_asset_25
+  - first:
+      213: -2591151417737988130
+    second: IG_ennemisBlinde2_asset_26
+  - first:
+      213: 3643915587966589371
+    second: IG_ennemisBlinde2_asset_27
+  - first:
+      213: -4721300530666601668
+    second: IG_ennemisBlinde2_asset_28
+  - first:
+      213: 7814594783704342082
+    second: IG_ennemisBlinde2_asset_29
+  - first:
+      213: -590494096659316495
+    second: IG_ennemisBlinde2_asset_30
+  - first:
+      213: 960799274083268154
+    second: IG_ennemisBlinde2_asset_31
+  - first:
+      213: -5384381708482496769
+    second: IG_ennemisBlinde2_asset_32
+  - first:
+      213: -7092053667173709254
+    second: IG_ennemisBlinde2_asset_33
+  - first:
+      213: -2631380122780855039
+    second: IG_ennemisBlinde2_asset_34
+  - first:
+      213: 7120192031526179246
+    second: IG_ennemisBlinde2_asset_35
+  - first:
+      213: -5616713325767286903
+    second: IG_ennemisBlinde2_asset_36
+  - first:
+      213: -8722970457241266122
+    second: IG_ennemisBlinde2_asset_37
+  - first:
+      213: -9162780478929019451
+    second: IG_ennemisBlinde2_asset_38
+  - first:
+      213: 129191388296220089
+    second: IG_ennemisBlinde2_asset_39
+  - first:
+      213: -8282197557013766576
+    second: IG_ennemisBlinde2_asset_40
+  - first:
+      213: 7767819162946142330
+    second: IG_ennemisBlinde2_asset_41
+  - first:
+      213: -8309517070125784128
+    second: IG_ennemisBlinde2_asset_42
+  - first:
+      213: -7297842527938060016
+    second: IG_ennemisBlinde2_asset_43
+  - first:
+      213: -2292977241725683921
+    second: IG_ennemisBlinde2_asset_44
+  - first:
+      213: -7411850133302721167
+    second: IG_ennemisBlinde2_asset_45
+  - first:
+      213: -3860097730218007873
+    second: IG_ennemisBlinde2_asset_46
+  - first:
+      213: -7918677405124537249
+    second: IG_ennemisBlinde2_asset_47
+  - first:
+      213: 6339773393504460618
+    second: IG_ennemisBlinde2_asset_48
+  - first:
+      213: -2300043524207560990
+    second: IG_ennemisBlinde2_asset_49
+  - first:
+      213: 914528084127578532
+    second: IG_ennemisBlinde2_asset_50
+  - first:
+      213: 8247048498804231941
+    second: IG_ennemisBlinde2_asset_51
+  - first:
+      213: 2451209220443590190
+    second: IG_ennemisBlinde2_asset_52
+  - first:
+      213: 5217546401139663822
+    second: IG_ennemisBlinde2_asset_53
+  - first:
+      213: -5136221883862779681
+    second: IG_ennemisBlinde2_asset_54
+  - first:
+      213: 9201176748925904352
+    second: IG_ennemisBlinde2_asset_55
+  - first:
+      213: 4809412874080708123
+    second: IG_ennemisBlinde2_asset_56
+  - first:
+      213: 1185991236459605902
+    second: IG_ennemisBlinde2_asset_57
+  - first:
+      213: -5991093742817508517
+    second: IG_ennemisBlinde2_asset_58
+  - first:
+      213: 1525121768561836908
+    second: IG_ennemisBlinde2_asset_59
+  - first:
+      213: 4309197132477540507
+    second: IG_ennemisBlinde2_asset_60
+  - first:
+      213: -3531719615943767691
+    second: IG_ennemisBlinde2_asset_61
+  - first:
+      213: -4996525155609247434
+    second: IG_ennemisBlinde2_asset_62
+  - first:
+      213: 6756625317829071456
+    second: IG_ennemisBlinde2_asset_63
+  - first:
+      213: 8813272776772164026
+    second: IG_ennemisBlinde2_asset_64
+  - first:
+      213: 2297749140292590398
+    second: IG_ennemisBlinde2_asset_65
+  - first:
+      213: 4962256763437318951
+    second: IG_ennemisBlinde2_asset_66
+  - first:
+      213: -2119029180966797151
+    second: IG_ennemisBlinde2_asset_67
+  - first:
+      213: -2261326459229364606
+    second: IG_ennemisBlinde2_asset_68
+  - first:
+      213: 7969135509793935216
+    second: IG_ennemisBlinde2_asset_69
+  - first:
+      213: 6629003759137133239
+    second: IG_ennemisBlinde2_asset_70
+  - first:
+      213: 5016206945736917541
+    second: IG_ennemisBlinde2_asset_71
+  - first:
+      213: -147461335371304731
+    second: IG_ennemisBlinde2_asset_72
+  - first:
+      213: 1060242544922641721
+    second: IG_ennemisBlinde2_asset_73
+  - first:
+      213: -1272825865965671357
+    second: IG_ennemisBlinde2_asset_74
+  - first:
+      213: -2859163266204586784
+    second: IG_ennemisBlinde2_asset_75
+  - first:
+      213: 8341928160270833074
+    second: IG_ennemisBlinde2_asset_76
+  - first:
+      213: -7743013640054915696
+    second: IG_ennemisBlinde2_asset_77
+  - first:
+      213: -3702838071070771313
+    second: IG_ennemisBlinde2_asset_78
+  - first:
+      213: 9065382606232350083
+    second: IG_ennemisBlinde2_asset_79
+  - first:
+      213: 4656239836582852077
+    second: IG_ennemisBlinde2_asset_80
+  - first:
+      213: -585222904210769356
+    second: IG_ennemisBlinde2_asset_81
+  - first:
+      213: 3475269267869238508
+    second: IG_ennemisBlinde2_asset_82
+  - first:
+      213: -8264805203787153727
+    second: IG_ennemisBlinde2_asset_83
+  - first:
+      213: -2740007267349992878
+    second: IG_ennemisBlinde2_asset_84
+  - first:
+      213: 8811221512175503223
+    second: IG_ennemisBlinde2_asset_85
+  - first:
+      213: 2570640514530670534
+    second: IG_ennemisBlinde2_asset_86
+  - first:
+      213: -9020815594173784167
+    second: IG_ennemisBlinde2_asset_87
+  - first:
+      213: 2860096429851488570
+    second: IG_ennemisBlinde2_asset_88
+  - first:
+      213: -7514107140731557713
+    second: IG_ennemisBlinde2_asset_89
+  - first:
+      213: -4147506235837719969
+    second: IG_ennemisBlinde2_asset_90
+  - first:
+      213: -1661996715535509991
+    second: IG_ennemisBlinde2_asset_91
+  - first:
+      213: -1757767332144938728
+    second: IG_ennemisBlinde2_asset_92
+  - first:
+      213: 9117710385996490881
+    second: IG_ennemisBlinde2_asset_93
+  - first:
+      213: -5506819303198349788
+    second: IG_ennemisBlinde2_asset_94
+  - first:
+      213: -4764951756682538036
+    second: IG_ennemisBlinde2_asset_95
+  - first:
+      213: -5572396492627557391
+    second: IG_ennemisBlinde2_asset_96
+  - first:
+      213: 6504573568070843482
+    second: IG_ennemisBlinde2_asset_97
+  - first:
+      213: 259013852255879640
+    second: IG_ennemisBlinde2_asset_98
+  - first:
+      213: -1202348653770032921
+    second: IG_ennemisBlinde2_asset_99
+  - first:
+      213: 3369595569345893125
+    second: IG_ennemisBlinde2_asset_100
+  - first:
+      213: 9110704505269500897
+    second: IG_ennemisBlinde2_asset_101
+  - first:
+      213: -2983724687136923030
+    second: IG_ennemisBlinde2_asset_102
+  - first:
+      213: -1050191516251635640
+    second: IG_ennemisBlinde2_asset_103
+  - first:
+      213: 8794192941031096658
+    second: IG_ennemisBlinde2_asset_104
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: IG_ennemisBlinde2_asset_0
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 480
+        width: 78
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d63713714ac69880800000000000000
+      internalID: -8604467655592167724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemisBlinde2_asset_1
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 479
+        width: 77
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4e74efea8172a140800000000000000
+      internalID: 4729467400236596812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemisBlinde2_asset_2
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 479
+        width: 78
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2ae424706ccf1400800000000000000
+      internalID: 297180815067245102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemisBlinde2_asset_3
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 476
+        width: 76
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec04ddfa979d8efe0800000000000000
+      internalID: -1159437787383119666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemisBlinde2_asset_4
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 477
+        width: 74
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e27db0dc19593fb0800000000000000
+      internalID: -4667601558496775454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemisBlinde2_asset_5
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 477
+        width: 74
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1386caa9274373b90800000000000000
+      internalID: -7262278207285729231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemisBlinde2_asset_6
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 475
+        width: 75
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac939908c611a7880800000000000000
+      internalID: -8612552179680986678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemisBlinde2_asset_7
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 479
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d86eada438c69b370800000000000000
+      internalID: 8338815496205559437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemisBlinde2_asset_8
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 357
+        width: 73
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af2fe981b766764c0800000000000000
+      internalID: -4294351040794397958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemisBlinde2_asset_9
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 360
+        width: 73
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 202b56a7df7b49cd0800000000000000
+      internalID: -2552212789504134654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemisBlinde2_asset_10
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 361
+        width: 76
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dc404b2dd66b9990800000000000000
+      internalID: -7378190464416985902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemisBlinde2_asset_11
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 359
+        width: 77
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dad47b0dad2bd9b40800000000000000
+      internalID: 5448707777062456749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemisBlinde2_asset_12
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 357
+        width: 76
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5530a0e1e61045de0800000000000000
+      internalID: -1345448816214932651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemisBlinde2_asset_13
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 360
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd74091f670617c10800000000000000
+      internalID: 2049525369405458399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemisBlinde2_asset_14
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 358
+        width: 72
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e79ebe2b76c3040b0800000000000000
+      internalID: -5746526708443649666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemisBlinde2_asset_15
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 361
+        width: 79
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 740af5f497efdd0c0800000000000000
+      internalID: -4549200251598167993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemisBlinde2_asset_16
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 248
+        width: 77
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e218081b69e15920800000000000000
+      internalID: 2977417474842563302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemisBlinde2_asset_17
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 248
+        width: 77
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95c9d5a2ce4eee6a0800000000000000
+      internalID: -6417940715982185383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemisBlinde2_asset_18
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 246
+        width: 77
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 918a5996e15165c60800000000000000
+      internalID: 7806450224457951257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemisBlinde2_asset_19
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 246
+        width: 78
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8426a2d8ca497ce00800000000000000
+      internalID: 1064983305720062536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemisBlinde2_asset_20
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 249
+        width: 77
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbae3f18c48f6c3f0800000000000000
+      internalID: -880743669622904131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemisBlinde2_asset_21
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 245
+        width: 74
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 092f1165cb7c434a0800000000000000
+      internalID: -6614442340988620144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemisBlinde2_asset_22
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 244
+        width: 74
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4159b45b5f54a5ff0800000000000000
+      internalID: -46647924523035372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemisBlinde2_asset_23
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 251
+        width: 74
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef7bd9546f52f30a0800000000000000
+      internalID: -6899754364448163842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemisBlinde2_asset_24
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 136
+        width: 74
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bba940faac80bd50800000000000000
+      internalID: 6751050507232062389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemisBlinde2_asset_25
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 129
+        width: 71
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dcb8254dbda9b6f0800000000000000
+      internalID: -668312041267086122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemisBlinde2_asset_26
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 132
+        width: 73
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed73a7a93816a0cd0800000000000000
+      internalID: -2591151417737988130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemisBlinde2_asset_27
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 130
+        width: 78
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb9d144cbe9c19230800000000000000
+      internalID: 3643915587966589371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemisBlinde2_asset_28
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 132
+        width: 77
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3301cf8e229a7eb0800000000000000
+      internalID: -4721300530666601668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemisBlinde2_asset_29
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 123
+        width: 76
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24e51526d84037c60800000000000000
+      internalID: 7814594783704342082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemisBlinde2_asset_30
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 126
+        width: 74
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f008a66fb42ec7f0800000000000000
+      internalID: -590494096659316495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemisBlinde2_asset_31
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 130
+        width: 75
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a36bf2869d1755d00800000000000000
+      internalID: 960799274083268154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemisBlinde2_asset_32
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 21
+        width: 74
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff63ac22d55d645b0800000000000000
+      internalID: -5384381708482496769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 0cdad25cb6f85464aa5380cf449b6fc4
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
