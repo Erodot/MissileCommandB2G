@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class Pause : MonoBehaviour
 {
@@ -31,6 +32,9 @@ public class Pause : MonoBehaviour
     public GameObject[] Buttons;
 
     public GameManager gameManager;
+
+    public GameObject SliderSound, SliderMusic;
+    public AudioMixer SoundMixer, MusicMixer;
 
     void Start()
     {
@@ -111,18 +115,6 @@ public class Pause : MonoBehaviour
         settingManager.SwitchLeft.Enable();
     }
 
-    public void RemapPause()
-    {
-        settingManager.Pause.Disable();
-
-        var rebindOperation = settingManager.Pause.PerformInteractiveRebinding()
-                    // To avoid accidental input from mouse motion
-                    .WithControlsExcluding("Mouse")
-                    .OnMatchWaitForAnother(0.1f)
-                    .Start();
-        settingManager.Pause.Enable();
-    }
-
     public void Resume()
     {
         if (paused)
@@ -164,6 +156,8 @@ public class Pause : MonoBehaviour
         Sound.SetActive(true);
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(SoundButtton);
+        SliderSound.GetComponent<Slider>().value = GetMixerValue(SoundMixer);
+        SliderMusic.GetComponent<Slider>().value = GetMixerValue(MusicMixer);
         CurrentPanel = Sound;
     }
 
@@ -183,5 +177,31 @@ public class Pause : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(PauseMenuButton);
         CurrentPanel = PauseMenu;
+    }
+
+    public void SetVolumeSound(float volume)
+    {
+        //Caution don't touch VolumeSlider Min and Max Value//
+        SoundMixer.SetFloat("volume", volume);
+    }
+
+    public void SetVolumeMusic(float volume)
+    {
+        //Caution don't touch VolumeSlider Min and Max Value//
+        MusicMixer.SetFloat("volume", volume);
+    }
+
+    float GetMixerValue(AudioMixer mixer)
+    {
+        float value;
+        bool result = mixer.GetFloat("volume", out value);
+        if (result)
+        {
+            return value;
+        }
+        else
+        {
+            return 0;
+        }
     }
 }

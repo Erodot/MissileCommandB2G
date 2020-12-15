@@ -14,12 +14,13 @@ public class Transition : MonoBehaviour
     //public Animator tranistionPlanet;
 
     public float transitionTime = 1f;
+    public GameObject DontDestroy;
     //..Nicolas Pupulin
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        DontDestroy = GameObject.Find("DontDestroy");
     }
 
     // Update is called once per frame
@@ -48,6 +49,7 @@ public class Transition : MonoBehaviour
         //tranistionPlanet.SetTrigger("GameStart");
         yield return new WaitForSeconds(transitionTime);
 
+        DontDestroyOnLoad(DontDestroy);
         SceneManager.LoadScene(levelIndex);
     }
     //..Nicolas Pupulin

@@ -41,6 +41,10 @@ public class Menu : MonoBehaviour
     {
         settings.SettingsButton();
     }
+    public void Control()
+    {
+        settings.ControlButton();
+    }
     public void Quit()
     {
         audio.Play(audio.sounds[1].list[2]);
@@ -56,10 +60,15 @@ public class Menu : MonoBehaviour
         Click();
         settings.SetFullscreen(b);
     }
-    public void SetVolume(float v)
+    public void SetVolumeSound(float v)
     {
         Click();
-        settings.SetVolume(v);
+        settings.SetVolumeSound(v);
+    }
+    public void SetVolumeMusic(float v)
+    {
+        Click();
+        settings.SetVolumeMusic(v);
     }
     public void Back()
     {
