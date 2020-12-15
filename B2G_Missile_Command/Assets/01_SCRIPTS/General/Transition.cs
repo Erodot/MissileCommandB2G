@@ -15,6 +15,8 @@ public class Transition : MonoBehaviour
     //public Animator tranistionPlanet;
 
     public float transitionTime = 1f;
+    public float localTime;
+
     public GameObject DontDestroy;
     //..Nicolas Pupulin
 
@@ -36,23 +38,47 @@ public class Transition : MonoBehaviour
         LoadGame();
     }
 
+    public void MenuButton()
+    {
+        LoadMenu();
+    }
+
     //Nicolas Pupulin
 
     public void LoadGame()
     {
         StartCoroutine(LoadLevel(1));
     }
+
+    public void LoadMenu()
+    {
+        Time.timeScale = 1;
+        StartCoroutine(LoadLevel(0));
+    }
+
     IEnumerator LoadLevel(int levelIndex)
     {
-        transitionRightCloud.SetTrigger("GameStart");
-        transitionLeftCloud.SetTrigger("GameStart");
-        transitionUI.SetTrigger("GameStart");
-        transitionPlanet.SetTrigger("GameStart");
-        //tranistionPlanet.SetTrigger("GameStart");
-        yield return new WaitForSeconds(transitionTime);
+        if (levelIndex == 1)
+        {
+            transitionRightCloud.SetTrigger("GameStart");
+            transitionLeftCloud.SetTrigger("GameStart");
+            transitionUI.SetTrigger("GameStart");
+            transitionPlanet.SetTrigger("GameStart");
+            //tranistionPlanet.SetTrigger("GameStart");
+            yield return new WaitForSeconds(transitionTime);
 
-        DontDestroyOnLoad(DontDestroy);
-        SceneManager.LoadScene(levelIndex);
+            DontDestroyOnLoad(DontDestroy);
+            SceneManager.LoadScene(levelIndex);
+        } else if (levelIndex == 0)
+        {
+            GameObject.Find("Pause").SetActive(false);
+            transitionRightCloud.SetTrigger("GameEnd");
+            transitionLeftCloud.SetTrigger("GameEnd");
+            yield return new WaitForSeconds(transitionTime);
+
+            //DontDestroyOnLoad(DontDestroy);
+            SceneManager.LoadScene(levelIndex);
+        }
     }
     //..Nicolas Pupulin
 }
