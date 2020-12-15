@@ -183,6 +183,7 @@ MonoBehaviour:
   destroyed: 0
   type: turret
   isDestroy: 0
+  cameraShake: {fileID: 0}
 --- !u!82 &2201299917560190474
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1587,15 +1588,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4137368083586162413, guid: d46bb7933b1333d458136fc93324b509, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.057
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4137368083586162413, guid: d46bb7933b1333d458136fc93324b509, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.102
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4137368083586162413, guid: d46bb7933b1333d458136fc93324b509, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.049
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4137368083586162413, guid: d46bb7933b1333d458136fc93324b509, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1632,6 +1633,22 @@ PrefabInstance:
     - target: {fileID: 5954836006781596870, guid: d46bb7933b1333d458136fc93324b509, type: 3}
       propertyPath: m_Name
       value: TurretSelected
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991557431915653348, guid: d46bb7933b1333d458136fc93324b509, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088127474588649982, guid: d46bb7933b1333d458136fc93324b509, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088127474588649982, guid: d46bb7933b1333d458136fc93324b509, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088127474588649982, guid: d46bb7933b1333d458136fc93324b509, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d46bb7933b1333d458136fc93324b509, type: 3}
