@@ -13,7 +13,7 @@ public class SettingsMenu : MonoBehaviour
     public GameObject GeneralPanel;
     public GameObject SettingsPanel;
     public GameObject ControlPanel;
-
+    public GameObject ScorePanel;
 
     public SpriteRenderer Sound;
 
@@ -21,7 +21,7 @@ public class SettingsMenu : MonoBehaviour
 
     public Dropdown resolutionDropdown;
 
-    public GameObject lePlayButton, leSettingsButton, leReturnButton, leReturnButton2;
+    public GameObject lePlayButton, leSettingsButton, leReturnButton, leReturnButton2 ,scoreButton;
     public GameObject SliderSound, SliderMusic;
 
     Resolution[] resolutions;
@@ -152,6 +152,7 @@ public class SettingsMenu : MonoBehaviour
     {
         SettingsPanel.gameObject.SetActive(false);
         ControlPanel.gameObject.SetActive(false);
+        ScorePanel.gameObject.SetActive(false);
         GeneralPanel.gameObject.SetActive(true);
 
         EventSystem.current.SetSelectedGameObject(null);
@@ -222,5 +223,14 @@ public class SettingsMenu : MonoBehaviour
                     .OnMatchWaitForAnother(0.1f)
                     .Start();
         settingManager.SwitchLeft.Enable();
+    }
+
+    public void ActivateScorePanel()
+    {
+        GeneralPanel.gameObject.SetActive(false);
+        //SettingsPanel.gameObject.SetActive(false);
+
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(scoreButton);
     }
 }

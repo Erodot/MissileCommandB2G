@@ -66,7 +66,8 @@ public class SilverBullet : MonoBehaviour
 
     IEnumerator DestroyArcana(GameObject arcana)
     {
-        gameManager.silverBulletText.SetActive(false);
+        //gameManager.silverBulletText.SetActive(false);
+        Destroy(GameObject.Find("ArcanaChargedV1(Clone)"));
         gameManager.silverBulletCount = 0;
         yield return new WaitForSeconds(3);
         Destroy(arcana);

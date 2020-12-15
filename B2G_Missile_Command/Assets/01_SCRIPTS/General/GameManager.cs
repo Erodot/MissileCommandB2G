@@ -82,6 +82,8 @@ public class GameManager : MonoBehaviour
 
     public Dictionary<string, int> enemyKill = new Dictionary<string, int>();
 
+    public GameObject arcaneFx;
+
     /*  singleton
     void Awake()
     {
@@ -158,8 +160,9 @@ public class GameManager : MonoBehaviour
         Debug.Log(Time.deltaTime);
         if(silverBulletCount >= silverBulletMax)
         {
+            Instantiate(arcaneFx, new Vector3(0, 5.25f, -2), Quaternion.identity);
             Instantiate(silverBullet, transform);
-            silverBulletText.SetActive(true);
+            //silverBulletText.SetActive(true);
             silverBulletCount = 0;
         }
 
@@ -266,7 +269,7 @@ public class GameManager : MonoBehaviour
 
     void CheckGame()
     {
-        if (!CheckCitiesLeft() || !CheckTurretsLeft())//there is no hope
+        if ((!CheckCitiesLeft() || !CheckTurretsLeft()) && !gameOver)//there is no hope
         {
             ui.GameOver();
             gameOver = true;
@@ -451,6 +454,8 @@ public class GameManager : MonoBehaviour
                 turret.GetComponent<BuildingLifeDamage>().destroyed = false;
                 turret.GetComponent<BuildingLifeDamage>().isDestroy = false;
                 turret.GetComponent<BuildingLifeDamage>().lifes = 2;
+                turret.transform.Find("Invoc tourelle").GetChild(0).GetComponent<ParticleSystem>().Play();
+                turret.transform.Find("Invoc tourelle").GetChild(1).GetComponent<ParticleSystem>().Play();
 
                 turret.transform.GetChild(0).transform.GetChild(0).gameObject.SetActive(true);
                 turret.transform.GetChild(0).transform.GetChild(1).gameObject.SetActive(false);

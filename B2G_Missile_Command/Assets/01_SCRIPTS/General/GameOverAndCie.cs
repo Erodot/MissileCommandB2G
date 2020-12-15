@@ -28,6 +28,7 @@ public class GameOverAndCie : MonoBehaviour //Coline Marchal
 
     public GameObject firstButton;
     public float timeBetweenGameOverScreen;
+    public GameObject waveAnouncer;
 
     // Start is called before the first frame update
     void Start()
@@ -59,6 +60,7 @@ public class GameOverAndCie : MonoBehaviour //Coline Marchal
             Destroy(go);
         }
         gameManager.turretCanShoot = false;
+        waveAnouncer.SetActive(false);
 
         //SABIAUX Corentin GCC2
         if (scoreAdd == false)
