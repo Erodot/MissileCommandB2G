@@ -66,6 +66,23 @@ public class SettingsMenu : MonoBehaviour
         Buttons[0].GetComponentInChildren<Text>().text = settingManager.Shoot.GetBindingDisplayString(0);
         Buttons[1].GetComponentInChildren<Text>().text = settingManager.SwitchRight.GetBindingDisplayString(0);
         Buttons[2].GetComponentInChildren<Text>().text = settingManager.SwitchLeft.GetBindingDisplayString(0);
+
+        if(Gamepad.current.rightShoulder.wasPressedThisFrame && SettingsPanel.activeSelf)
+        {
+            SettingsPanel.gameObject.SetActive(false);
+            ControlPanel.gameObject.SetActive(true);
+
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(leReturnButton2);
+        }
+        if(Gamepad.current.leftShoulder.wasPressedThisFrame && ControlPanel.activeSelf)
+        {
+            SettingsPanel.gameObject.SetActive(true);
+            ControlPanel.gameObject.SetActive(false);
+
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(leReturnButton);
+        }
     }
 
 

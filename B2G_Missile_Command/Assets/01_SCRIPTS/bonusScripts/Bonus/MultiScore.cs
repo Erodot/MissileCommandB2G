@@ -52,7 +52,8 @@ public class MultiScore : BonusEffect
 
         startEffect = true;
         levelScore.multiplierScore.text = "x" + levelScore.multiplierState;
-        if(silverBullet != null)
+        levelScore.multiplierState++;
+        if (silverBullet != null)
         {
             silverBullet.multiplierIsOnSilverBullet = true;
         }
@@ -61,17 +62,21 @@ public class MultiScore : BonusEffect
     public override void AfterTimerEffect()
     {
         GameObject[] enemys = GameObject.FindGameObjectsWithTag("Ennemy");
-        for (int i = 0; i < enemys.Length; i++)
+        if(enemys.Length < 2)
         {
-            enemys[i].GetComponent<EnemyMissile>().multiplierIsOnEnemyMissile = false;
+            for (int i = 0; i < enemys.Length; i++)
+            {
+                enemys[i].GetComponent<EnemyMissile>().multiplierIsOnEnemyMissile = false;
+            }
+            if (silverBullet != null)
+            {
+                silverBullet.multiplierIsOnSilverBullet = false;
+            }
+            levelScore.multiplierScore.text = "";
+
         }
-        if(silverBullet != null)
-        {
-            silverBullet.multiplierIsOnSilverBullet = false;
-        }
+
         startEffect = false;
-        levelScore.multiplierScore.text = "";
-        levelScore.multiplierState++;
 
         Destroy(fxCurrent);
         base.AfterTimerEffect();

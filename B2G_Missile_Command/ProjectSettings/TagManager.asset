@@ -12,6 +12,7 @@ TagManager:
   - audio
   - Laser
   - Shield
+  - Freeze
   layers:
   - Default
   - TransparentFX

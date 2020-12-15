@@ -68,7 +68,7 @@ public class SilverBullet : MonoBehaviour
     {
         gameManager.silverBulletText.SetActive(false);
         gameManager.silverBulletCount = 0;
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3);
         Destroy(arcana);
         Destroy(gameObject);
 

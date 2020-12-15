@@ -11,9 +11,13 @@ public class FreezeTime : BonusEffect
 
     bool startEffect;
 
+    public GameObject fxFreeze;
+
     // Start is called before the first frame update
     void Start()
     {
+        GameObject fx = Instantiate(fxFreeze, effectPos, Quaternion.identity);
+        fx.transform.parent = transform;
         Effect();
     }
 
