@@ -6189,7 +6189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screenPos: {x: 0, y: 0, z: 0}
   enemys:
-  - {fileID: 2087319397564193456, guid: 7e8b82ed35c0c1b4eb770c60293dc0b3, type: 3}
+  - {fileID: 2087319397564193456, guid: 758d606f1a3cc494ead767d400b0239e, type: 3}
   - {fileID: 2087319397564193456, guid: a7da26291c258674f86daef17588a659, type: 3}
   - {fileID: 2087319397564193456, guid: 758d606f1a3cc494ead767d400b0239e, type: 3}
   - {fileID: 2087319397564193456, guid: 019b2f7c6c5e2f24592af67284b9e93e, type: 3}
