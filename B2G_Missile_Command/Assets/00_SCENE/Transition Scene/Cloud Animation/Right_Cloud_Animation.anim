@@ -39,8 +39,13 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
+<<<<<<< HEAD
+        time: 1.0166667
+        value: 323.54
+=======
         time: 1
         value: 813
+>>>>>>> c085a96132f6ea7e09ee371ec3e0a1fe925d226a
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -113,8 +118,13 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
+<<<<<<< HEAD
+        time: 1.0166667
+        value: 323.54
+=======
         time: 1
         value: 813
+>>>>>>> c085a96132f6ea7e09ee371ec3e0a1fe925d226a
         inSlope: 0
         outSlope: 0
         tangentMode: 136
