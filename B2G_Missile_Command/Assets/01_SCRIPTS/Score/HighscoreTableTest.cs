@@ -113,6 +113,11 @@ public class HighscoreTableTest : MonoBehaviour
         }
     }
 
+    public void changeBoolProperties()
+    {
+        showHighscoreTableTest = false;
+    }
+
     private void CreateHighscoreEntryTransform(HighscoreEntry highscoreEntry, Transform container, List<Transform> transformList)
     {
         Transform entryTransform = Instantiate(entryTemplate, container); //Set entryTransform based on entryTemplate transform and set into entryContainer.
