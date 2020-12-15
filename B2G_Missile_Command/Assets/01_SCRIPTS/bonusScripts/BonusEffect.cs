@@ -6,6 +6,7 @@ public class BonusEffect : MonoBehaviour
 {
     public float timeEffect;
     bool startTimer;
+    public Vector3 effectPos;
 
     // Start is called before the first frame update
     void Start()

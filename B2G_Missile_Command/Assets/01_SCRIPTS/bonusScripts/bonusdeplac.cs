@@ -53,6 +53,7 @@ public class bonusdeplac : MonoBehaviour
                 GameObject fx = Instantiate(FreezeFx, transform.position, Quaternion.identity);
             }
             GameObject go = Instantiate(bonusEffect, Vector3.zero, Quaternion.identity);
+            go.GetComponent<BonusEffect>().effectPos = transform.position;
             go.transform.parent = null;
 
             Destroy(other.gameObject);
@@ -65,6 +66,7 @@ public class bonusdeplac : MonoBehaviour
                 GameObject fx = Instantiate(FreezeFx, transform.position, Quaternion.identity);
             }
             GameObject go = Instantiate(bonusEffect, Vector3.zero, Quaternion.identity);
+            go.GetComponent<BonusEffect>().effectPos = transform.position;
             go.transform.parent = null;
             Destroy(gameObject);
         }

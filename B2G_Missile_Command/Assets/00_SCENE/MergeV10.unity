@@ -4627,6 +4627,7 @@ Transform:
   - {fileID: 445061300}
   - {fileID: 190967207}
   - {fileID: 14652562}
+  - {fileID: 1052450290}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4935,6 +4936,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1045973472}
   m_CullTransparentMesh: 0
+--- !u!1 &1052450289
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1052450290}
+  m_Layer: 0
+  m_Name: MultiScoreScene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1052450290
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052450289}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.5, y: 10, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 990872348}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1055441793
 GameObject:
   m_ObjectHideFlags: 0
@@ -6189,15 +6220,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screenPos: {x: 0, y: 0, z: 0}
   enemys:
-  - {fileID: 2087319397564193456, guid: 758d606f1a3cc494ead767d400b0239e, type: 3}
+  - {fileID: 2087319397564193456, guid: 7e8b82ed35c0c1b4eb770c60293dc0b3, type: 3}
   - {fileID: 2087319397564193456, guid: a7da26291c258674f86daef17588a659, type: 3}
   - {fileID: 2087319397564193456, guid: 758d606f1a3cc494ead767d400b0239e, type: 3}
   - {fileID: 2087319397564193456, guid: 019b2f7c6c5e2f24592af67284b9e93e, type: 3}
   - {fileID: 2087319397564193456, guid: 6281d00e94a19c04c8ba83bf5403ee59, type: 3}
   bonus: {fileID: 8463603656933705450, guid: 03723a3137a3b3046b45737248bc94e3, type: 3}
   bonusEffect:
-  - {fileID: 997198618776077637, guid: d0162a957f85c754bab659ea223647ab, type: 3}
   - {fileID: 997198618776077637, guid: 879da62a8f1562a41b3f4b50e86bdfcd, type: 3}
+  - {fileID: 997198618776077637, guid: d0162a957f85c754bab659ea223647ab, type: 3}
   - {fileID: 997198618776077637, guid: 2ccdc3a6c65ae5547afbb723653a5023, type: 3}
   enemyIcons:
   - {fileID: 1002820290}

@@ -10,6 +10,11 @@ public class MultiScore : BonusEffect
     SilverBullet silverBullet;
     LevelScoreTest levelScore;
 
+    public GameObject fxMulti;
+    GameObject fxCurrent;
+    public GameObject multiScore;
+    public float speed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +23,9 @@ public class MultiScore : BonusEffect
             silverBullet = GameObject.Find("SilverBullet").GetComponent<SilverBullet>();
         }
         levelScore = GameObject.Find("LevelScore").GetComponent<LevelScoreTest>();
+        fxCurrent = Instantiate(fxMulti, effectPos, Quaternion.identity);
+
+        multiScore = GameObject.Find("MultiScoreScene");
         Effect();
     }
 
@@ -32,6 +40,8 @@ public class MultiScore : BonusEffect
                 enemys[i].GetComponent<EnemyMissile>().multiplierIsOnEnemyMissile = true;
             }
         }
+
+        fxCurrent.transform.position = Vector3.MoveTowards(fxCurrent.transform.position, multiScore.transform.position, speed * Time.deltaTime);
 
         base.Update();
     }
@@ -63,6 +73,7 @@ public class MultiScore : BonusEffect
         levelScore.multiplierScore.text = "";
         levelScore.multiplierState++;
 
+        Destroy(fxCurrent);
         base.AfterTimerEffect();
     }
     //..Corentin SABIAUX GCC2

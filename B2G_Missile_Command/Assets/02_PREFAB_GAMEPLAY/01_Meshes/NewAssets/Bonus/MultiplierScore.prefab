@@ -44,3 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeEffect: 5
+  effectPos: {x: 0, y: 0, z: 0}
+  fxMulti: {fileID: 3172303288894723107, guid: 36398bdeda342c147ba9c3afb9dfa27d, type: 3}
+  multiScore: {fileID: 0}
+  speed: 20
