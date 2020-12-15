@@ -77,6 +77,25 @@ public class Pause : MonoBehaviour
         Buttons[1].GetComponentInChildren<Text>().text = settingManager.SwitchRight.GetBindingDisplayString(0);
         Buttons[2].GetComponentInChildren<Text>().text = settingManager.SwitchLeft.GetBindingDisplayString(0);
 
+
+        if (Gamepad.current.rightShoulder.wasPressedThisFrame && Sound.activeSelf)
+        {
+            Sound.gameObject.SetActive(false);
+            Control.gameObject.SetActive(true);
+            CurrentPanel = Control;
+
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(ControlButton);
+        }
+        if (Gamepad.current.leftShoulder.wasPressedThisFrame && Control.activeSelf)
+        {
+            Sound.gameObject.SetActive(true);
+            Control.gameObject.SetActive(false);
+            CurrentPanel = Sound;
+
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(SoundButtton);
+        }
     }
 
     public void RemapShoot()
