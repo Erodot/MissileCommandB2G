@@ -22,6 +22,7 @@ public class EnemyMissile : MonoBehaviour
     public int whereSpawn;
 
     public float speedModifier;
+
     //..Nicolas Pupulin
 
     //Corentin SABIAUX GCC2
@@ -98,6 +99,7 @@ public class EnemyMissile : MonoBehaviour
             target = FindClosestTarget("Player").transform.position; //find closest target
             gameObject.transform.LookAt(target); //rotate towards his target
         }
+
         //..Nicolas Pupulin
     }
 
@@ -232,6 +234,7 @@ public class EnemyMissile : MonoBehaviour
             }
 
             DestroyThis(other.gameObject); //destroy the missile
+
         }
 
         if (other.gameObject.CompareTag("Bullet") || other.gameObject.CompareTag("Explosion") || other.gameObject.CompareTag("Laser")) //if the missile hit a player bullet

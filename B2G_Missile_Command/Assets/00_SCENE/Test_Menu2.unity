@@ -4329,7 +4329,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GeneralPanel: {fileID: 541748980}
   SettingsPanel: {fileID: 1432895112}
-  PausePanel: {fileID: 0}
+  Sound: {fileID: 0}
   audioMixer: {fileID: 24100000, guid: 89d1361082086cc4eac36a156f51ca9b, type: 2}
   resolutionDropdown: {fileID: 1997854482}
   lePlayButton: {fileID: 1110804622}

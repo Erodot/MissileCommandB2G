@@ -11,10 +11,22 @@ public class BuildingLifeDamage : MonoBehaviour
     public string type;
     public bool isDestroy;
 
+    //Nicolas Pupulin
+
+    public CameraShake cameraShake;
+
+    //..Nicolas Pupulin
+
     // Start is called before the first frame update
     void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        
+        //Nicolas Pupulin
+
+        cameraShake = GameObject.Find("Main Camera").GetComponent<CameraShake>();
+
+        //..Nicolas Pupulin
     }
 
     // Update is called once per frame
@@ -23,6 +35,7 @@ public class BuildingLifeDamage : MonoBehaviour
         if(lifes <= 0 && !isDestroy)
         {
             DestroyThis();
+            StartCoroutine(cameraShake.Shake(0.15f, 0.2f));
         }
     }
 
