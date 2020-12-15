@@ -155,7 +155,7 @@ public class SettingsMenu : MonoBehaviour
         GeneralPanel.gameObject.SetActive(true);
 
         EventSystem.current.SetSelectedGameObject(null);
-        EventSystem.current.SetSelectedGameObject(leSettingsButton);
+        EventSystem.current.SetSelectedGameObject(lePlayButton);
     }
     public void MenuButton()
     {
