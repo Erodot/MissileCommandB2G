@@ -413,9 +413,8 @@ public class EnemySpawnTest2 : MonoBehaviour
         for (int i = 0; i < diffModifier; i++)
         {
             enemyIcons[i].SetActive(true);
-            enemyIcons[i].GetComponent<Image>().sprite = enemys[i].GetComponent<EnemyMissile>().enemyIcon;
         }
-        waveAff.text = int2roman(waveNumber + 1); //"Wave " + int2roman(waveNumber + 1);
+        waveAff.text = "vague " + int2roman(waveNumber + 1);
 
         if (start)
         {
@@ -429,7 +428,6 @@ public class EnemySpawnTest2 : MonoBehaviour
         waveAff.text = "";
         for (int i = 0; i < diffModifier - 1; i++)
         {
-            enemyIcons[i].GetComponent<Image>().sprite = null;
             enemyIcons[i].SetActive(false);
         }
         waveAnounce.SetActive(false);
