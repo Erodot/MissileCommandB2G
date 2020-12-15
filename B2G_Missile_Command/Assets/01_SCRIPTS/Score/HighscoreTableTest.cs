@@ -19,6 +19,7 @@ public class HighscoreTableTest : MonoBehaviour
     public float templateHeight;
     [Tooltip("Delete all PlayerPrefs, activate it into Unity inspector and run the scene.")]
     public bool erasePlayerPref;
+    bool showHighscoreTableTest;
     #endregion
 
     private void Awake()
@@ -100,6 +101,15 @@ public class HighscoreTableTest : MonoBehaviour
                     Destroy(highscoreentryTransformList[i].gameObject); //Destroy the extra entries.
                 }
             }
+        }
+    }
+
+    public void showHighscoreTableTestInMenu()
+    {
+        if (!showHighscoreTableTest)
+        {
+            RefreshList();
+            showHighscoreTableTest = true;
         }
     }
 
