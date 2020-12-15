@@ -1450,6 +1450,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   usernameToShow: 
   usernameToGet: {fileID: 88065823}
+  usernameInput: {fileID: 1557257444}
 --- !u!4 &474055230
 Transform:
   m_ObjectHideFlags: 0

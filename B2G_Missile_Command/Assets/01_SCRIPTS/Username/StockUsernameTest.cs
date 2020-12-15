@@ -21,11 +21,14 @@ public class StockUsernameTest : MonoBehaviour
         {
             Destroy(this);
         }
+
+        usernameInput.characterLimit = 7;
     }
     #endregion
 
     public string usernameToShow;
     public Text usernameToGet;
+    public InputField usernameInput;
 
     public void UsernameToStock()
     {
