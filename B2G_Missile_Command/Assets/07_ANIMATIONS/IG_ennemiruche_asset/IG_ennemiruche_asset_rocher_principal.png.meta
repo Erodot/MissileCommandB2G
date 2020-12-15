@@ -1,0 +1,1384 @@
+fileFormatVersion: 2
+guid: f66e1912c0de6da4fb1c4eca22700c0a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4359191809946573892
+    second: IG_ennemiruche_asset_rocher_principal_0
+  - first:
+      213: -8852792962892864279
+    second: IG_ennemiruche_asset_rocher_principal_1
+  - first:
+      213: -48952033714396608
+    second: IG_ennemiruche_asset_rocher_principal_2
+  - first:
+      213: -1365222927523199573
+    second: IG_ennemiruche_asset_rocher_principal_3
+  - first:
+      213: 6364431764922092508
+    second: IG_ennemiruche_asset_rocher_principal_4
+  - first:
+      213: -4333447537612635341
+    second: IG_ennemiruche_asset_rocher_principal_5
+  - first:
+      213: 43515510109023228
+    second: IG_ennemiruche_asset_rocher_principal_6
+  - first:
+      213: -1274587611297155060
+    second: IG_ennemiruche_asset_rocher_principal_7
+  - first:
+      213: -5773246195230436898
+    second: IG_ennemiruche_asset_rocher_principal_8
+  - first:
+      213: 1783439624179427605
+    second: IG_ennemiruche_asset_rocher_principal_9
+  - first:
+      213: 8910163976585646705
+    second: IG_ennemiruche_asset_rocher_principal_10
+  - first:
+      213: 8958956852060868675
+    second: IG_ennemiruche_asset_rocher_principal_11
+  - first:
+      213: 6251814803097117791
+    second: IG_ennemiruche_asset_rocher_principal_12
+  - first:
+      213: -4041903957207692289
+    second: IG_ennemiruche_asset_rocher_principal_13
+  - first:
+      213: -6822578906090450482
+    second: IG_ennemiruche_asset_rocher_principal_14
+  - first:
+      213: 8785600863445911320
+    second: IG_ennemiruche_asset_rocher_principal_15
+  - first:
+      213: 4155708280438638219
+    second: IG_ennemiruche_asset_rocher_principal_16
+  - first:
+      213: -5006702845903799095
+    second: IG_ennemiruche_asset_rocher_principal_17
+  - first:
+      213: -4474729976387500232
+    second: IG_ennemiruche_asset_rocher_principal_18
+  - first:
+      213: 7865678297129450579
+    second: IG_ennemiruche_asset_rocher_principal_19
+  - first:
+      213: -6720744529575799309
+    second: IG_ennemiruche_asset_rocher_principal_20
+  - first:
+      213: -7077974090224242322
+    second: IG_ennemiruche_asset_rocher_principal_21
+  - first:
+      213: -8339620417115330038
+    second: IG_ennemiruche_asset_rocher_principal_22
+  - first:
+      213: -828432513668825292
+    second: IG_ennemiruche_asset_rocher_principal_23
+  - first:
+      213: 3467426478280447397
+    second: IG_ennemiruche_asset_rocher_principal_24
+  - first:
+      213: 4318004742863563396
+    second: IG_ennemiruche_asset_rocher_principal_25
+  - first:
+      213: -6083654344257149634
+    second: IG_ennemiruche_asset_rocher_principal_26
+  - first:
+      213: -2947616793475182186
+    second: IG_ennemiruche_asset_rocher_principal_27
+  - first:
+      213: 5186750775065858123
+    second: IG_ennemiruche_asset_rocher_principal_28
+  - first:
+      213: -1040527709579929511
+    second: IG_ennemiruche_asset_rocher_principal_29
+  - first:
+      213: -5566269168363340219
+    second: IG_ennemiruche_asset_rocher_principal_30
+  - first:
+      213: 1450663902432236778
+    second: IG_ennemiruche_asset_rocher_principal_31
+  - first:
+      213: -8189400553397773409
+    second: IG_ennemiruche_asset_rocher_principal_32
+  - first:
+      213: 4864058723334601999
+    second: IG_ennemiruche_asset_rocher_principal_33
+  - first:
+      213: -1678564512830714592
+    second: IG_ennemiruche_asset_rocher_principal_34
+  - first:
+      213: 5685981864042171499
+    second: IG_ennemiruche_asset_rocher_principal_35
+  - first:
+      213: -2383028377856846177
+    second: IG_ennemiruche_asset_rocher_principal_0
+  - first:
+      213: 8163588485532601851
+    second: IG_ennemiruche_asset_rocher_principal_1
+  - first:
+      213: 9115675900985276478
+    second: IG_ennemiruche_asset_rocher_principal_2
+  - first:
+      213: -2137668362868819096
+    second: IG_ennemiruche_asset_rocher_principal_3
+  - first:
+      213: 7837960736645134428
+    second: IG_ennemiruche_asset_rocher_principal_4
+  - first:
+      213: 6552620602750222044
+    second: IG_ennemiruche_asset_rocher_principal_5
+  - first:
+      213: 8181285313823465512
+    second: IG_ennemiruche_asset_rocher_principal_6
+  - first:
+      213: 3935387428231119910
+    second: IG_ennemiruche_asset_rocher_principal_7
+  - first:
+      213: -497579227301700774
+    second: IG_ennemiruche_asset_rocher_principal_8
+  - first:
+      213: -2534908930241651991
+    second: IG_ennemiruche_asset_rocher_principal_9
+  - first:
+      213: 6174211292973663340
+    second: IG_ennemiruche_asset_rocher_principal_10
+  - first:
+      213: -4904883765138721212
+    second: IG_ennemiruche_asset_rocher_principal_11
+  - first:
+      213: 9221073475700861707
+    second: IG_ennemiruche_asset_rocher_principal_12
+  - first:
+      213: -6481159098059848898
+    second: IG_ennemiruche_asset_rocher_principal_13
+  - first:
+      213: -3800989206813631791
+    second: IG_ennemiruche_asset_rocher_principal_14
+  - first:
+      213: -3445531236833019139
+    second: IG_ennemiruche_asset_rocher_principal_15
+  - first:
+      213: -9052891165822998762
+    second: IG_ennemiruche_asset_rocher_principal_16
+  - first:
+      213: 5872912821942965886
+    second: IG_ennemiruche_asset_rocher_principal_17
+  - first:
+      213: 5904432674150574920
+    second: IG_ennemiruche_asset_rocher_principal_18
+  - first:
+      213: -4324028361020858860
+    second: IG_ennemiruche_asset_rocher_principal_19
+  - first:
+      213: -1255455714436954603
+    second: IG_ennemiruche_asset_rocher_principal_20
+  - first:
+      213: 4028977437895094235
+    second: IG_ennemiruche_asset_rocher_principal_21
+  - first:
+      213: 2625952711484107218
+    second: IG_ennemiruche_asset_rocher_principal_22
+  - first:
+      213: 1045692110493214358
+    second: IG_ennemiruche_asset_rocher_principal_23
+  - first:
+      213: -3331462529539842776
+    second: IG_ennemiruche_asset_rocher_principal_24
+  - first:
+      213: 1674819546809131548
+    second: IG_ennemiruche_asset_rocher_principal_25
+  - first:
+      213: -8070565350406738594
+    second: IG_ennemiruche_asset_rocher_principal_26
+  - first:
+      213: -4574368104171795983
+    second: IG_ennemiruche_asset_rocher_principal_27
+  - first:
+      213: -7958749228735577556
+    second: IG_ennemiruche_asset_rocher_principal_28
+  - first:
+      213: 834640617556899825
+    second: IG_ennemiruche_asset_rocher_principal_29
+  - first:
+      213: -9075734067890435223
+    second: IG_ennemiruche_asset_rocher_principal_30
+  - first:
+      213: -2774777042180638355
+    second: IG_ennemiruche_asset_rocher_principal_31
+  - first:
+      213: -1383945703391686252
+    second: IG_ennemiruche_asset_rocher_principal_32
+  - first:
+      213: -7267335372568942015
+    second: IG_ennemiruche_asset_rocher_principal_33
+  - first:
+      213: -6629901774131735987
+    second: IG_ennemiruche_asset_rocher_principal_34
+  - first:
+      213: -6756943909224476980
+    second: IG_ennemiruche_asset_rocher_principal_35
+  - first:
+      213: 7079022031647870302
+    second: IG_ennemiruche_asset_rocher_principal_36
+  - first:
+      213: 9214851206682095880
+    second: IG_ennemiruche_asset_rocher_principal_37
+  - first:
+      213: 5334645624087989874
+    second: IG_ennemiruche_asset_rocher_principal_38
+  - first:
+      213: -3887794060299676036
+    second: IG_ennemiruche_asset_rocher_principal_39
+  - first:
+      213: 3128811448593549530
+    second: IG_ennemiruche_asset_rocher_principal_40
+  - first:
+      213: 412164465761162438
+    second: IG_ennemiruche_asset_rocher_principal_41
+  - first:
+      213: -3805857378819779537
+    second: IG_ennemiruche_asset_rocher_principal_42
+  - first:
+      213: 3652395438592722825
+    second: IG_ennemiruche_asset_rocher_principal_43
+  - first:
+      213: -5988736384120766525
+    second: IG_ennemiruche_asset_rocher_principal_44
+  - first:
+      213: -6162752881879862009
+    second: IG_ennemiruche_asset_rocher_principal_45
+  - first:
+      213: 1733698776805969397
+    second: IG_ennemiruche_asset_rocher_principal_46
+  - first:
+      213: -8358841773879440681
+    second: IG_ennemiruche_asset_rocher_principal_47
+  - first:
+      213: 7717371841245745315
+    second: IG_ennemiruche_asset_rocher_principal_48
+  - first:
+      213: -9148959571800440172
+    second: IG_ennemiruche_asset_rocher_principal_49
+  - first:
+      213: 7368190791829860412
+    second: IG_ennemiruche_asset_rocher_principal_50
+  - first:
+      213: -8673194111575258834
+    second: IG_ennemiruche_asset_rocher_principal_51
+  - first:
+      213: 1088190286672688350
+    second: IG_ennemiruche_asset_rocher_principal_52
+  - first:
+      213: 4916817606716343406
+    second: IG_ennemiruche_asset_rocher_principal_53
+  - first:
+      213: -7521440535264044732
+    second: IG_ennemiruche_asset_rocher_principal_54
+  - first:
+      213: 4855970022421995676
+    second: IG_ennemiruche_asset_rocher_principal_55
+  - first:
+      213: -6182072769882430479
+    second: IG_ennemiruche_asset_rocher_principal_56
+  - first:
+      213: -5261280718943481662
+    second: IG_ennemiruche_asset_rocher_principal_57
+  - first:
+      213: 1762025727917269760
+    second: IG_ennemiruche_asset_rocher_principal_58
+  - first:
+      213: 1515645612260931004
+    second: IG_ennemiruche_asset_rocher_principal_59
+  - first:
+      213: -4244385195066045259
+    second: IG_ennemiruche_asset_rocher_principal_60
+  - first:
+      213: 5615094008465405339
+    second: IG_ennemiruche_asset_rocher_principal_61
+  - first:
+      213: 6107788009221266200
+    second: IG_ennemiruche_asset_rocher_principal_62
+  - first:
+      213: -5655194093387470592
+    second: IG_ennemiruche_asset_rocher_principal_63
+  - first:
+      213: -7008737813516634196
+    second: IG_ennemiruche_asset_rocher_principal_64
+  - first:
+      213: -652969997599157972
+    second: IG_ennemiruche_asset_rocher_principal_65
+  - first:
+      213: -5260141830105247871
+    second: IG_ennemiruche_asset_rocher_principal_66
+  - first:
+      213: 789829383428291210
+    second: IG_ennemiruche_asset_rocher_principal_67
+  - first:
+      213: 1458068416211650776
+    second: IG_ennemiruche_asset_rocher_principal_68
+  - first:
+      213: -2610180818462539791
+    second: IG_ennemiruche_asset_rocher_principal_69
+  - first:
+      213: 1097446202077149638
+    second: IG_ennemiruche_asset_rocher_principal_70
+  - first:
+      213: 9078587778500369889
+    second: IG_ennemiruche_asset_rocher_principal_71
+  - first:
+      213: 4622332731382832394
+    second: IG_ennemiruche_asset_rocher_principal_72
+  - first:
+      213: -1851213410541747724
+    second: IG_ennemiruche_asset_rocher_principal_73
+  - first:
+      213: 7999482934174996158
+    second: IG_ennemiruche_asset_rocher_principal_74
+  - first:
+      213: 791679233122897231
+    second: IG_ennemiruche_asset_rocher_principal_75
+  - first:
+      213: 8254096497178238375
+    second: IG_ennemiruche_asset_rocher_principal_76
+  - first:
+      213: 4759026466290244783
+    second: IG_ennemiruche_asset_rocher_principal_77
+  - first:
+      213: -4367270236447465856
+    second: IG_ennemiruche_asset_rocher_principal_78
+  - first:
+      213: -5780777959511250146
+    second: IG_ennemiruche_asset_rocher_principal_79
+  - first:
+      213: 6618231608230937929
+    second: IG_ennemiruche_asset_rocher_principal_80
+  - first:
+      213: -6295143791908895976
+    second: IG_ennemiruche_asset_rocher_principal_81
+  - first:
+      213: 3808657768206459253
+    second: IG_ennemiruche_asset_rocher_principal_82
+  - first:
+      213: 4437373386158383281
+    second: IG_ennemiruche_asset_rocher_principal_83
+  - first:
+      213: -7757997135858001854
+    second: IG_ennemiruche_asset_rocher_principal_84
+  - first:
+      213: 2054703212915006707
+    second: IG_ennemiruche_asset_rocher_principal_85
+  - first:
+      213: 5116109676828523431
+    second: IG_ennemiruche_asset_rocher_principal_86
+  - first:
+      213: -6199132902483085600
+    second: IG_ennemiruche_asset_rocher_principal_87
+  - first:
+      213: -1521481389349616729
+    second: IG_ennemiruche_asset_rocher_principal_88
+  - first:
+      213: 5519441662297071727
+    second: IG_ennemiruche_asset_rocher_principal_89
+  - first:
+      213: 8065722211343844166
+    second: IG_ennemiruche_asset_rocher_principal_90
+  - first:
+      213: -3659849442900197520
+    second: IG_ennemiruche_asset_rocher_principal_91
+  - first:
+      213: 4160194697989698383
+    second: IG_ennemiruche_asset_rocher_principal_92
+  - first:
+      213: -246306286090966559
+    second: IG_ennemiruche_asset_rocher_principal_93
+  - first:
+      213: 6027354358983432172
+    second: IG_ennemiruche_asset_rocher_principal_94
+  - first:
+      213: -4175861050064402783
+    second: IG_ennemiruche_asset_rocher_principal_95
+  - first:
+      213: -5656419171905006560
+    second: IG_ennemiruche_asset_rocher_principal_96
+  - first:
+      213: 4743808814237178416
+    second: IG_ennemiruche_asset_rocher_principal_97
+  - first:
+      213: 2673530475492649060
+    second: IG_ennemiruche_asset_rocher_principal_98
+  - first:
+      213: -2936130705473037797
+    second: IG_ennemiruche_asset_rocher_principal_99
+  - first:
+      213: -5901847082601797764
+    second: IG_ennemiruche_asset_rocher_principal_100
+  - first:
+      213: 6445087005610690561
+    second: IG_ennemiruche_asset_rocher_principal_101
+  - first:
+      213: 9064996632371821448
+    second: IG_ennemiruche_asset_rocher_principal_102
+  - first:
+      213: -2863121776525601218
+    second: IG_ennemiruche_asset_rocher_principal_103
+  - first:
+      213: 385845867225704153
+    second: IG_ennemiruche_asset_rocher_principal_104
+  - first:
+      213: -6273460273095230844
+    second: IG_ennemiruche_asset_rocher_principal_105
+  - first:
+      213: -3426946761850857527
+    second: IG_ennemiruche_asset_rocher_principal_106
+  - first:
+      213: -3581291417433542383
+    second: IG_ennemiruche_asset_rocher_principal_107
+  - first:
+      213: 1890704792275252569
+    second: IG_ennemiruche_asset_rocher_principal_108
+  - first:
+      213: 5684323953299088090
+    second: IG_ennemiruche_asset_rocher_principal_109
+  - first:
+      213: 9195302445264825250
+    second: IG_ennemiruche_asset_rocher_principal_110
+  - first:
+      213: -3805865613706415825
+    second: IG_ennemiruche_asset_rocher_principal_111
+  - first:
+      213: 983300445797960900
+    second: IG_ennemiruche_asset_rocher_principal_112
+  - first:
+      213: -1619589385903065341
+    second: IG_ennemiruche_asset_rocher_principal_113
+  - first:
+      213: 4335831494630025413
+    second: IG_ennemiruche_asset_rocher_principal_114
+  - first:
+      213: 4795486187674330963
+    second: IG_ennemiruche_asset_rocher_principal_115
+  - first:
+      213: -5874199118333184839
+    second: IG_ennemiruche_asset_rocher_principal_116
+  - first:
+      213: 8801520006451939752
+    second: IG_ennemiruche_asset_rocher_principal_117
+  - first:
+      213: 1676753060666054264
+    second: IG_ennemiruche_asset_rocher_principal_118
+  - first:
+      213: -2335582425962858082
+    second: IG_ennemiruche_asset_rocher_principal_119
+  - first:
+      213: -5219052755487330133
+    second: IG_ennemiruche_asset_rocher_principal_120
+  - first:
+      213: 5892092353742565863
+    second: IG_ennemiruche_asset_rocher_principal_121
+  - first:
+      213: 2366227208800573705
+    second: IG_ennemiruche_asset_rocher_principal_122
+  - first:
+      213: -9090958796884638190
+    second: IG_ennemiruche_asset_rocher_principal_123
+  - first:
+      213: -3893835823910419575
+    second: IG_ennemiruche_asset_rocher_principal_124
+  - first:
+      213: 2156259913192860035
+    second: IG_ennemiruche_asset_rocher_principal_125
+  - first:
+      213: -2761978850511830873
+    second: IG_ennemiruche_asset_rocher_principal_126
+  - first:
+      213: -228612262537503263
+    second: IG_ennemiruche_asset_rocher_principal_127
+  - first:
+      213: 886664034772061525
+    second: IG_ennemiruche_asset_rocher_principal_128
+  - first:
+      213: 2879228988893965871
+    second: IG_ennemiruche_asset_rocher_principal_129
+  - first:
+      213: 4396336536316020038
+    second: IG_ennemiruche_asset_rocher_principal_130
+  - first:
+      213: 4247626218795124505
+    second: IG_ennemiruche_asset_rocher_principal_131
+  - first:
+      213: 8585993346834882507
+    second: IG_ennemiruche_asset_rocher_principal_132
+  - first:
+      213: 9107472908074935159
+    second: IG_ennemiruche_asset_rocher_principal_133
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_principal_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 794
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f96da20f058cdeed0800000000000000
+      internalID: -2383028377856846177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_principal_1
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 794
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfdc3ac9974ea4170800000000000000
+      internalID: 8163588485532601851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_principal_2
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 794
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e38f0dd5fe2618e70800000000000000
+      internalID: 9115675900985276478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_principal_3
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 794
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86bfc9723f97552e0800000000000000
+      internalID: -2137668362868819096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_principal_4
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 794
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c58313f33c706cc60800000000000000
+      internalID: 7837960736645134428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_principal_5
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 794
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cde35de88b59fea50800000000000000
+      internalID: 6552620602750222044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_principal_6
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 794
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 820619885a3c98170800000000000000
+      internalID: 8181285313823465512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_principal_7
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 794
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6240141f30e4d9630800000000000000
+      internalID: 3935387428231119910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_principal_8
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 794
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5b911d345e3819f0800000000000000
+      internalID: -497579227301700774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_principal_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 594
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ea1bfa22c132dcd0800000000000000
+      internalID: -2534908930241651991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_principal_10
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 594
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6486e565743fa550800000000000000
+      internalID: 6174211292973663340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_principal_11
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 594
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 446735ae33a5eebb0800000000000000
+      internalID: -4904883765138721212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_principal_12
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 594
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0b2de68875d7ff70800000000000000
+      internalID: 9221073475700861707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_principal_13
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 594
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e330a53932c4e06a0800000000000000
+      internalID: -6481159098059848898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_principal_14
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 594
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1da97c4747c204bc0800000000000000
+      internalID: -3800989206813631791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_principal_15
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 594
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfa3e0668930f20d0800000000000000
+      internalID: -3445531236833019139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_principal_16
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 594
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61729dee27bad5280800000000000000
+      internalID: -9052891165822998762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_principal_17
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 594
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e765fb47817c08150800000000000000
+      internalID: 5872912821942965886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_principal_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 394
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84b64feeb32c0f150800000000000000
+      internalID: 5904432674150574920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_principal_19
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 394
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41e13a68d17fdf3c0800000000000000
+      internalID: -4324028361020858860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_principal_20
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 394
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51640cdeda9b39ee0800000000000000
+      internalID: -1255455714436954603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_principal_21
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 394
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdfecc122adc9e730800000000000000
+      internalID: 4028977437895094235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_principal_22
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 394
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d9ebf40412417420800000000000000
+      internalID: 2625952711484107218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_principal_23
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 394
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69660662f6b038e00800000000000000
+      internalID: 1045692110493214358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_principal_24
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 394
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82dd040fa7444c1d0800000000000000
+      internalID: -3331462529539842776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_principal_25
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 394
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c12607611872e3710800000000000000
+      internalID: 1674819546809131548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_principal_26
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 394
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5d2e60d2979fff80800000000000000
+      internalID: -8070565350406738594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_principal_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 194
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f986fef1749480c0800000000000000
+      internalID: -4574368104171795983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_principal_28
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 194
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c224dc46eb7dc8190800000000000000
+      internalID: -7958749228735577556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_principal_29
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 194
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f77794383d359b00800000000000000
+      internalID: 834640617556899825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_principal_30
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 194
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96bca7753f38c0280800000000000000
+      internalID: -9075734067890435223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_principal_31
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 194
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d69f9e54bf20e79d0800000000000000
+      internalID: -2774777042180638355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_principal_32
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 194
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49119e817bc3bcce0800000000000000
+      internalID: -1383945703391686252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_principal_33
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 194
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14aa56e8bfc352b90800000000000000
+      internalID: -7267335372568942015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_principal_34
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 194
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d425521967bddf3a0800000000000000
+      internalID: -6629901774131735987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_principal_35
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 194
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cce8f6b70538a32a0800000000000000
+      internalID: -6756943909224476980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: fe9e7c82464aff14eb44f4ba89ec8c3e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

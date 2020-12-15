@@ -527,7 +527,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6929286707840344443, guid: edca2288518988c4cb359cb03ac48e38, type: 3}
+  - {fileID: 2100000, guid: 04ba8318c869e97479e321ff809da302, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -967,7 +967,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6929286707840344443, guid: edca2288518988c4cb359cb03ac48e38, type: 3}
+  - {fileID: 2100000, guid: bcebbeac9814499448d3debd2ddc3e25, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1108,7 +1108,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6929286707840344443, guid: edca2288518988c4cb359cb03ac48e38, type: 3}
+  - {fileID: 2100000, guid: a4fe6673c953d4640b08cf9b5b6f5f50, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1414,6 +1414,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2762020247415359854}
     m_Modifications:
+    - target: {fileID: 1242971105473669308, guid: 43b51baced04e844c8e692e1fefd7f23, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b37d369aec5b3744a87e31cc0d3ca312, type: 2}
     - target: {fileID: 4497099894057366662, guid: 43b51baced04e844c8e692e1fefd7f23, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1478,6 +1482,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6839170616233117180, guid: 43b51baced04e844c8e692e1fefd7f23, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b37d369aec5b3744a87e31cc0d3ca312, type: 2}
     - target: {fileID: 6866609433660600345, guid: 43b51baced04e844c8e692e1fefd7f23, type: 3}
       propertyPath: m_Name
       value: MultiCristal
@@ -1486,6 +1494,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7168416185245566421, guid: 43b51baced04e844c8e692e1fefd7f23, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b37d369aec5b3744a87e31cc0d3ca312, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43b51baced04e844c8e692e1fefd7f23, type: 3}
 --- !u!4 &5558307048290618614 stripped
@@ -1504,6 +1516,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5988877363469594100, guid: 43b51baced04e844c8e692e1fefd7f23, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b37d369aec5b3744a87e31cc0d3ca312, type: 2}
     - target: {fileID: 6053058122327517859, guid: 43b51baced04e844c8e692e1fefd7f23, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.013999971
@@ -1564,10 +1580,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6630360654176399779, guid: 43b51baced04e844c8e692e1fefd7f23, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b37d369aec5b3744a87e31cc0d3ca312, type: 2}
     - target: {fileID: 6866609433660600345, guid: 43b51baced04e844c8e692e1fefd7f23, type: 3}
       propertyPath: m_Name
       value: MultiCristal (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6992713909379553297, guid: 43b51baced04e844c8e692e1fefd7f23, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b37d369aec5b3744a87e31cc0d3ca312, type: 2}
     - target: {fileID: 7282193428391690520, guid: 43b51baced04e844c8e692e1fefd7f23, type: 3}
       propertyPath: m_IsActive
       value: 0

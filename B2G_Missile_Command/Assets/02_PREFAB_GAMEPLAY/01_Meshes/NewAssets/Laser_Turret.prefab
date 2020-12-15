@@ -122,7 +122,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6929286707840344443, guid: edca2288518988c4cb359cb03ac48e38, type: 3}
+  - {fileID: 2100000, guid: e3710ceda24b28c47b55c27c50e4f4f8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -505,7 +505,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6929286707840344443, guid: edca2288518988c4cb359cb03ac48e38, type: 3}
+  - {fileID: 2100000, guid: 04ba8318c869e97479e321ff809da302, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -700,7 +700,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6929286707840344443, guid: edca2288518988c4cb359cb03ac48e38, type: 3}
+  - {fileID: 2100000, guid: a1f19dfaba27ce54bad476c4312d5773, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -830,6 +830,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8680230585464105156, guid: 3254a906d22c04849af149bb45f4a6db, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: da065c6ee19d2b749b4a518e9aacb557, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3254a906d22c04849af149bb45f4a6db, type: 3}
 --- !u!4 &8598352203732682161 stripped
@@ -994,6 +998,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Laser_Cristal
       objectReference: {fileID: 0}
+    - target: {fileID: 8145282335007182152, guid: 3254a906d22c04849af149bb45f4a6db, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: da065c6ee19d2b749b4a518e9aacb557, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3254a906d22c04849af149bb45f4a6db, type: 3}
 --- !u!4 &6990501420013065396 stripped

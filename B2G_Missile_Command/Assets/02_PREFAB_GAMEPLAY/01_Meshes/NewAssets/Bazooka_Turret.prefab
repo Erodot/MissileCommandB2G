@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6929286707840344443, guid: edca2288518988c4cb359cb03ac48e38, type: 3}
+  - {fileID: 2100000, guid: cc669c6cb61ffe14aa03e436389e7bca, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -510,7 +510,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6929286707840344443, guid: edca2288518988c4cb359cb03ac48e38, type: 3}
+  - {fileID: 2100000, guid: 6f1bb1adb1830314cbf14f532064d901, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -764,6 +764,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5514516076105033253, guid: 4bdb03c5bcc953741a96646d74150089, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ddfa801df6aa5544940830189de84c7, type: 2}
     - target: {fileID: 6053058122327517859, guid: 4bdb03c5bcc953741a96646d74150089, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.008000314
@@ -902,6 +906,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bazooka_Cristal
       objectReference: {fileID: 0}
+    - target: {fileID: 7623101873718536521, guid: 4bdb03c5bcc953741a96646d74150089, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ddfa801df6aa5544940830189de84c7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4bdb03c5bcc953741a96646d74150089, type: 3}
 --- !u!4 &4281129685515103984 stripped
@@ -980,6 +988,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6991557431915653348, guid: d46bb7933b1333d458136fc93324b509, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cc669c6cb61ffe14aa03e436389e7bca, type: 2}
     - target: {fileID: 8088127474588649982, guid: d46bb7933b1333d458136fc93324b509, type: 3}
       propertyPath: ShapeModule.m_Rotation.z
       value: 0

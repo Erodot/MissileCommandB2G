@@ -1,0 +1,958 @@
+fileFormatVersion: 2
+guid: 9a100084da4361c4d9ba7c6f4bd49493
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7370347699377166871
+    second: ennemi_1_spritesheet_0
+  - first:
+      213: 3969032590719845898
+    second: ennemi_1_spritesheet_1
+  - first:
+      213: -5223298823240057342
+    second: ennemi_1_spritesheet_2
+  - first:
+      213: -8386109917079179971
+    second: ennemi_1_spritesheet_3
+  - first:
+      213: 5716449289008803662
+    second: ennemi_1_spritesheet_4
+  - first:
+      213: -8083852626632340669
+    second: ennemi_1_spritesheet_5
+  - first:
+      213: 5196440032301585075
+    second: ennemi_1_spritesheet_6
+  - first:
+      213: 933180361863570648
+    second: ennemi_1_spritesheet_7
+  - first:
+      213: -8257180436391286986
+    second: ennemi_1_spritesheet_8
+  - first:
+      213: 555299706448764999
+    second: ennemi_1_spritesheet_9
+  - first:
+      213: -6863156577133440160
+    second: ennemi_1_spritesheet_10
+  - first:
+      213: 2674898655002381364
+    second: ennemi_1_spritesheet_11
+  - first:
+      213: 1749960170095547419
+    second: ennemi_1_spritesheet_12
+  - first:
+      213: 5789399343315562232
+    second: ennemi_1_spritesheet_13
+  - first:
+      213: -2450247336811171196
+    second: ennemi_1_spritesheet_14
+  - first:
+      213: -7273114378086451129
+    second: ennemi_1_spritesheet_15
+  - first:
+      213: -4941961834288707450
+    second: ennemi_1_spritesheet_16
+  - first:
+      213: -439811172168556289
+    second: ennemi_1_spritesheet_17
+  - first:
+      213: 3580949441050233604
+    second: ennemi_1_spritesheet_18
+  - first:
+      213: -1547037400473588039
+    second: ennemi_1_spritesheet_19
+  - first:
+      213: -6449674313669027656
+    second: ennemi_1_spritesheet_20
+  - first:
+      213: -3410011409086993329
+    second: ennemi_1_spritesheet_21
+  - first:
+      213: -2384274995754714523
+    second: ennemi_1_spritesheet_22
+  - first:
+      213: 2514541936563410057
+    second: ennemi_1_spritesheet_23
+  - first:
+      213: -2980844347459943267
+    second: ennemi_1_spritesheet_24
+  - first:
+      213: -4460481168415050549
+    second: ennemi_1_spritesheet_25
+  - first:
+      213: 4926944453541072873
+    second: ennemi_1_spritesheet_26
+  - first:
+      213: 636257930535824928
+    second: ennemi_1_spritesheet_27
+  - first:
+      213: 505339993316478939
+    second: ennemi_1_spritesheet_28
+  - first:
+      213: -8517017647259002108
+    second: ennemi_1_spritesheet_29
+  - first:
+      213: -2290892355355841380
+    second: ennemi_1_spritesheet_30
+  - first:
+      213: 3200313221720212124
+    second: ennemi_1_spritesheet_31
+  - first:
+      213: 7069476034331049213
+    second: ennemi_1_spritesheet_32
+  - first:
+      213: 1088399442397666369
+    second: ennemi_1_spritesheet_33
+  - first:
+      213: 362768648093219645
+    second: ennemi_1_spritesheet_34
+  - first:
+      213: -8753812815979130302
+    second: ennemi_1_spritesheet_35
+  - first:
+      213: 4276377269240400888
+    second: ennemi_1_spritesheet_36
+  - first:
+      213: -8057378136600932613
+    second: ennemi_1_spritesheet_37
+  - first:
+      213: 1845673747610359824
+    second: ennemi_1_spritesheet_38
+  - first:
+      213: 5076768521446113436
+    second: ennemi_1_spritesheet_39
+  - first:
+      213: -7166775278537232172
+    second: ennemi_1_spritesheet_40
+  - first:
+      213: 6684299723244568886
+    second: ennemi_1_spritesheet_41
+  - first:
+      213: 6765030001746267528
+    second: ennemi_1_spritesheet_42
+  - first:
+      213: 3877899606559199216
+    second: ennemi_1_spritesheet_43
+  - first:
+      213: 2525769664325045325
+    second: ennemi_1_spritesheet_44
+  - first:
+      213: -7255760864962220838
+    second: ennemi_1_spritesheet_45
+  - first:
+      213: 8053911125882807334
+    second: ennemi_1_spritesheet_46
+  - first:
+      213: 1648658399819179339
+    second: ennemi_1_spritesheet_47
+  - first:
+      213: -8766100796187496133
+    second: ennemi_1_spritesheet_48
+  - first:
+      213: -6991889181036267503
+    second: ennemi_1_spritesheet_49
+  - first:
+      213: 5463223162734007508
+    second: ennemi_1_spritesheet_50
+  - first:
+      213: -2785087224724904406
+    second: ennemi_1_spritesheet_51
+  - first:
+      213: 7727221642217447488
+    second: ennemi_1_spritesheet_52
+  - first:
+      213: -7867079094511498521
+    second: ennemi_1_spritesheet_53
+  - first:
+      213: 1918475086667847293
+    second: ennemi_1_spritesheet_54
+  - first:
+      213: 2458406691406814838
+    second: ennemi_1_spritesheet_55
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ennemi_1_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 880
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71a5e7cce2cb84660800000000000000
+      internalID: 7370347699377166871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ennemi_1_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 880
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a060ec7cc16d41730800000000000000
+      internalID: 3969032590719845898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ennemi_1_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 880
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20e7f0df46d1387b0800000000000000
+      internalID: -5223298823240057342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ennemi_1_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 880
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3d6d11467d8e9b80800000000000000
+      internalID: -8386109917079179971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ennemi_1_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 880
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4f67ef5758e45f40800000000000000
+      internalID: 5716449289008803662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ennemi_1_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 880
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34b88fcbdd260df80800000000000000
+      internalID: -8083852626632340669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ennemi_1_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 880
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b294fd6da67d1840800000000000000
+      internalID: 5196440032301585075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ennemi_1_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 880
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d4af3c489253fc00800000000000000
+      internalID: 933180361863570648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ennemi_1_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 680
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 637a79a342a986d80800000000000000
+      internalID: -8257180436391286986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ennemi_1_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 680
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 740e1c21422d4b700800000000000000
+      internalID: 555299706448764999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ennemi_1_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 680
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0635316a47b21c0a0800000000000000
+      internalID: -6863156577133440160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ennemi_1_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 680
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43c469d87262f1520800000000000000
+      internalID: 2674898655002381364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ennemi_1_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 680
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1490a5c08b194810800000000000000
+      internalID: 1749960170095547419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ennemi_1_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 680
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fe24397704185050800000000000000
+      internalID: 5789399343315562232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ennemi_1_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 680
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 482f5857709fefdd0800000000000000
+      internalID: -2450247336811171196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ennemi_1_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 680
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 748fe5bf105b01b90800000000000000
+      internalID: -7273114378086451129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ennemi_1_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6880fa535ef9a6bb0800000000000000
+      internalID: -4941961834288707450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ennemi_1_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 480
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff025a2b11a75e9f0800000000000000
+      internalID: -439811172168556289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ennemi_1_spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 480
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40bce604b8612b130800000000000000
+      internalID: 3580949441050233604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ennemi_1_spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 480
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9be278a4ea1d78ae0800000000000000
+      internalID: -1547037400473588039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ennemi_1_spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 480
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b8dbc032672e76a0800000000000000
+      internalID: -6449674313669027656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ennemi_1_spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 480
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4c2751c0b43da0d0800000000000000
+      internalID: -3410011409086993329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ennemi_1_spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 480
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56ab137168a59eed0800000000000000
+      internalID: -2384274995754714523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ennemi_1_spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 480
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9845fa5919275e220800000000000000
+      internalID: 2514541936563410057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ennemi_1_spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 280
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d944be2fbd9e1a6d0800000000000000
+      internalID: -2980844347459943267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ennemi_1_spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 280
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc43d4d82003912c0800000000000000
+      internalID: -4460481168415050549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ennemi_1_spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 280
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ef856d50e5006440800000000000000
+      internalID: 4926944453541072873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ennemi_1_spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 280
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02eec1f773174d800800000000000000
+      internalID: 636257930535824928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ennemi_1_spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 280
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdf4d68eb04530700800000000000000
+      internalID: 505339993316478939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ennemi_1_spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 280
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40bd46d23997dc980800000000000000
+      internalID: -8517017647259002108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ennemi_1_spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 280
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9c6b5c5a8d1530e0800000000000000
+      internalID: -2290892355355841380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ennemi_1_spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 280
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c928e9e4bebc96c20800000000000000
+      internalID: 3200313221720212124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 781af6d1869e0384c8c150de0a621814
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

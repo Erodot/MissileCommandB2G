@@ -1,0 +1,1198 @@
+fileFormatVersion: 2
+guid: 2f4d04d4de700304bbfcbe31555b740a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -480821920317589149
+    second: IG_ennemiruche_asset_rocher_4_0
+  - first:
+      213: 1512816624881680354
+    second: IG_ennemiruche_asset_rocher_4_1
+  - first:
+      213: -7498933204840949792
+    second: IG_ennemiruche_asset_rocher_4_2
+  - first:
+      213: -1397622994010476708
+    second: IG_ennemiruche_asset_rocher_4_3
+  - first:
+      213: 7655995266226078288
+    second: IG_ennemiruche_asset_rocher_4_4
+  - first:
+      213: 6898450811462985326
+    second: IG_ennemiruche_asset_rocher_4_5
+  - first:
+      213: 3076074267447287176
+    second: IG_ennemiruche_asset_rocher_4_6
+  - first:
+      213: -2860927850207759490
+    second: IG_ennemiruche_asset_rocher_4_7
+  - first:
+      213: -4253390253684188452
+    second: IG_ennemiruche_asset_rocher_4_8
+  - first:
+      213: -2628950131666770949
+    second: IG_ennemiruche_asset_rocher_4_9
+  - first:
+      213: -7958742204698626418
+    second: IG_ennemiruche_asset_rocher_4_10
+  - first:
+      213: 9206937744499897612
+    second: IG_ennemiruche_asset_rocher_4_11
+  - first:
+      213: -578046658223462271
+    second: IG_ennemiruche_asset_rocher_4_12
+  - first:
+      213: 269670594344887323
+    second: IG_ennemiruche_asset_rocher_4_13
+  - first:
+      213: -5393674084230974536
+    second: IG_ennemiruche_asset_rocher_4_14
+  - first:
+      213: -3112451824899237358
+    second: IG_ennemiruche_asset_rocher_4_15
+  - first:
+      213: -3554392538731150030
+    second: IG_ennemiruche_asset_rocher_4_16
+  - first:
+      213: -8970058767364631934
+    second: IG_ennemiruche_asset_rocher_4_17
+  - first:
+      213: 4111107397894620430
+    second: IG_ennemiruche_asset_rocher_4_18
+  - first:
+      213: -6636486983108146462
+    second: IG_ennemiruche_asset_rocher_4_19
+  - first:
+      213: 5689317173978498125
+    second: IG_ennemiruche_asset_rocher_4_20
+  - first:
+      213: 1732247278157038255
+    second: IG_ennemiruche_asset_rocher_4_21
+  - first:
+      213: 6864364978061927212
+    second: IG_ennemiruche_asset_rocher_4_22
+  - first:
+      213: -6073640662080422140
+    second: IG_ennemiruche_asset_rocher_4_23
+  - first:
+      213: 4152049529172340465
+    second: IG_ennemiruche_asset_rocher_4_24
+  - first:
+      213: 7144536044424267997
+    second: IG_ennemiruche_asset_rocher_4_25
+  - first:
+      213: 501221873187901696
+    second: IG_ennemiruche_asset_rocher_4_26
+  - first:
+      213: 5770514888191301145
+    second: IG_ennemiruche_asset_rocher_4_27
+  - first:
+      213: -4826929802841328574
+    second: IG_ennemiruche_asset_rocher_4_28
+  - first:
+      213: 8358506539817562719
+    second: IG_ennemiruche_asset_rocher_4_29
+  - first:
+      213: 8698096765301842850
+    second: IG_ennemiruche_asset_rocher_4_30
+  - first:
+      213: -9075062599638862525
+    second: IG_ennemiruche_asset_rocher_4_31
+  - first:
+      213: -4704750167204895459
+    second: IG_ennemiruche_asset_rocher_4_32
+  - first:
+      213: -7193111240321072792
+    second: IG_ennemiruche_asset_rocher_4_33
+  - first:
+      213: 97164420861000559
+    second: IG_ennemiruche_asset_rocher_4_34
+  - first:
+      213: -5117314601045486412
+    second: IG_ennemiruche_asset_rocher_4_35
+  - first:
+      213: 299717641001736109
+    second: IG_ennemiruche_asset_rocher_4_36
+  - first:
+      213: 5109241950754180943
+    second: IG_ennemiruche_asset_rocher_4_37
+  - first:
+      213: 2485691165879836635
+    second: IG_ennemiruche_asset_rocher_4_38
+  - first:
+      213: 6720360034774790921
+    second: IG_ennemiruche_asset_rocher_4_39
+  - first:
+      213: 1513289151666402913
+    second: IG_ennemiruche_asset_rocher_4_40
+  - first:
+      213: -7627844431445652944
+    second: IG_ennemiruche_asset_rocher_4_41
+  - first:
+      213: -5410749625289015163
+    second: IG_ennemiruche_asset_rocher_4_42
+  - first:
+      213: 2201097046026608368
+    second: IG_ennemiruche_asset_rocher_4_43
+  - first:
+      213: 6309266969021259558
+    second: IG_ennemiruche_asset_rocher_4_44
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 804
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 369bf3fc207c359f0800000000000000
+      internalID: -480821920317589149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_1
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 804
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2efb06084ba9ef410800000000000000
+      internalID: 1512816624881680354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_2
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 804
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e7d2133bff6ee790800000000000000
+      internalID: -7498933204840949792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_3
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 804
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5f6618ba45aa9ce0800000000000000
+      internalID: -1397622994010476708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_4
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 804
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0524a75a12f8f3a60800000000000000
+      internalID: 7655995266226078288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_5
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 804
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e66a1c5a6783cbf50800000000000000
+      internalID: 6898450811462985326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_6
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 804
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88d5aed9f3960ba20800000000000000
+      internalID: 3076074267447287176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_7
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 804
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7338503741fb48d0800000000000000
+      internalID: -2860927850207759490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_8
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 804
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cda9b06891ce8f4c0800000000000000
+      internalID: -4253390253684188452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_9
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 804
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf329c5b8c7148bd0800000000000000
+      internalID: -2628950131666770949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 604
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e86770ec12edc8190800000000000000
+      internalID: -7958742204698626418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_11
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 604
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c057d02291d95cf70800000000000000
+      internalID: 9206937744499897612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_12
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 604
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1882df080ad5af7f0800000000000000
+      internalID: -578046658223462271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_13
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 604
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b14ab4e0aff0eb300800000000000000
+      internalID: 269670594344887323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_14
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 604
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b3be2f4ff1d525b0800000000000000
+      internalID: -5393674084230974536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_15
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 604
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21a5d544e895ec4d0800000000000000
+      internalID: -3112451824899237358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_16
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 604
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23581a861d24caec0800000000000000
+      internalID: -3554392538731150030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_17
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 604
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2825ad49313f38380800000000000000
+      internalID: -8970058767364631934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_18
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 604
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e054df495669d0930800000000000000
+      internalID: 4111107397894620430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_19
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 604
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eac55f104676e3a0800000000000000
+      internalID: -6636486983108146462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 404
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d44848193d384fe40800000000000000
+      internalID: 5689317173978498125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_21
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 404
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa200bdb8bd2a0810800000000000000
+      internalID: 1732247278157038255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_22
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 404
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c23630e149f134f50800000000000000
+      internalID: 6864364978061927212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_23
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 404
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40ff3535ff716bba0800000000000000
+      internalID: -6073640662080422140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_24
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 404
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fe252c5c0b0f9930800000000000000
+      internalID: 4152049529172340465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_25
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 404
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd802e4ddad762360800000000000000
+      internalID: 7144536044424267997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_26
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 404
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 001550953a2b4f600800000000000000
+      internalID: 501221873187901696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_27
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 404
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 916deb1a7bcf41050800000000000000
+      internalID: 5770514888191301145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_28
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 404
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24475e12bec430db0800000000000000
+      internalID: -4826929802841328574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_29
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 404
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f52fa96a9616ff370800000000000000
+      internalID: 8358506539817562719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 204
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a36acd6ce8d5b870800000000000000
+      internalID: 8698096765301842850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_31
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 204
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 345b71ab5a6ee0280800000000000000
+      internalID: -9075062599638862525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_32
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 204
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d15eac656ae55beb0800000000000000
+      internalID: -4704750167204895459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_33
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 204
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8610bca007fec2c90800000000000000
+      internalID: -7193111240321072792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_34
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 204
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6bf936a682395100800000000000000
+      internalID: 97164420861000559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_35
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 204
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b493c8ab75abf8b0800000000000000
+      internalID: -5117314601045486412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_36
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 204
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da793d44b9fc82400800000000000000
+      internalID: 299717641001736109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_37
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 204
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4f0a3afb7ca7e640800000000000000
+      internalID: 5109241950754180943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_38
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 204
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdf189312f2fe7220800000000000000
+      internalID: 2485691165879836635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_39
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 204
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 903bb7b78d3834d50800000000000000
+      internalID: 6720360034774790921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16637873778400510800000000000000
+      internalID: 1513289151666402913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_41
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 4
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03a8db557e3742690800000000000000
+      internalID: -7627844431445652944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_42
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 4
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 580021812e729e4b0800000000000000
+      internalID: -5410749625289015163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_43
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 4
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fed398f91edb8e10800000000000000
+      internalID: 2201097046026608368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IG_ennemiruche_asset_rocher_4_44
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 4
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62f1e9161e40f8750800000000000000
+      internalID: 6309266969021259558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5bde574196c0fee499fe41f1aa218421
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
