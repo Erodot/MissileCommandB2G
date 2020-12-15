@@ -64,7 +64,22 @@ public class GameOverAndCie : MonoBehaviour //Coline Marchal
         if (scoreAdd == false)
         {
             highscoreTableTest.gameObject.SetActive(true);
-            highscoreTableTest.AddHighscoreEntry(levelScoreTest.gameScore, "Player"); //Add high score entry at AddHigh array | "Player" need to be modified by the name choosen by the player.
+
+            if (StockUsernameTest.instance == null)
+            {
+                highscoreTableTest.AddHighscoreEntry(levelScoreTest.gameScore, "Player");
+            } else
+            {
+                if (StockUsernameTest.instance.usernameToShow != "")
+                {
+                    highscoreTableTest.AddHighscoreEntry(levelScoreTest.gameScore, StockUsernameTest.instance.usernameToShow);
+                }
+                else
+                {
+                    highscoreTableTest.AddHighscoreEntry(levelScoreTest.gameScore, "Player"); //Add high score entry at AddHigh array | "Player" is set by default if no name have been set.
+                }
+            }
+            
             scoreAdd = true;
         }
         //..SABIAUX Corentin GCC2
