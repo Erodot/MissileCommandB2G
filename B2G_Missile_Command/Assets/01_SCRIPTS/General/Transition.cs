@@ -12,7 +12,6 @@ public class Transition : MonoBehaviour
     public Animator transitionLeftCloud;
     public Animator transitionUI;
     public Animator transitionPlanet;
-    //public Animator tranistionPlanet;
 
     public float transitionTime = 1f;
     public float localTime;
@@ -64,7 +63,7 @@ public class Transition : MonoBehaviour
             transitionLeftCloud.SetTrigger("GameStart");
             transitionUI.SetTrigger("GameStart");
             transitionPlanet.SetTrigger("GameStart");
-            //tranistionPlanet.SetTrigger("GameStart");
+            transitionPlanet.SetTrigger("GameStart");
             yield return new WaitForSeconds(transitionTime);
 
             DontDestroyOnLoad(DontDestroy);
