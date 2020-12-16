@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 0
+    path: Assets/00_SCENE/Archiver/Test_Menu2.unity
+    guid: ca1522a0f02938d4d976ad3ce9ff4607
+  - enabled: 1
+    path: Assets/00_SCENE/Test_Menu3.unity
+    guid: ac1c8ee44204b1547a6037014afdbe0e
+  - enabled: 0
+    path: Assets/00_SCENE/Archiver/MergeV9.unity
+    guid: 809c4e47c70bd3740bf9c62b36d1f194
+  - enabled: 1
+    path: Assets/00_SCENE/MergeV10.unity
+    guid: 1b084622cbc9e924784a3c29cf63ee24
   m_configObjects: {}

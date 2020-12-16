@@ -8,6 +8,11 @@ TagManager:
   - Bullet
   - Explosion
   - Ennemy
+  - Bonus
+  - audio
+  - Laser
+  - Shield
+  - Freeze
   layers:
   - Default
   - TransparentFX

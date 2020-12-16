@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 615dad478c615c34c8cd51f3ab1bd462
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - LT Reponse Rounded
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 007f46596d9bf4d4498d8d4222e34e17, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
