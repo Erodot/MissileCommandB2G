@@ -3881,7 +3881,7 @@ MonoBehaviour:
   CitiesList: []
   BuildingList: []
   LastActivated: {fileID: 0}
-  silverBulletMax: 25
+  silverBulletMax: 50
   silverBulletCount: 0
   silverBullet: {fileID: 2291136316714757043, guid: 9062b43eac190fe438ca05d00dcf0aff, type: 3}
   silverBulletText: {fileID: 1162804286}
@@ -7668,7 +7668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.27450982, g: 0.2784314, b: 0.45882356, a: 1}
+  m_Color: {r: 0.9529412, g: 0.21176471, b: 0.03137255, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

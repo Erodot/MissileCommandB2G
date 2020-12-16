@@ -183,7 +183,7 @@ MonoBehaviour:
   bomberSpawnTimer: 0
   bomberRotateDistance: 0
   enemyIcon: {fileID: 21300000, guid: fd1ce70effddd54418351e6dd1a51719, type: 3}
-  explosionRadius: 70
+  explosionRadius: 60
   lastOfWave: 0
   virguleActivated: 0
   animator: {fileID: 8677581930451369135}

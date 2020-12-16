@@ -154,7 +154,7 @@ MonoBehaviour:
   isDestroy: 0
   Bullet: {fileID: 58021480688727742, guid: 760e482b27b54584ebcfbb561dddb1d6, type: 3}
   autoBullet: {fileID: 58021480688727742, guid: ab7c430cd6291f54e8495797cca42910, type: 3}
-  bulletSpeed: 5
+  bulletSpeed: 7
   tir: 0
   Canon: {fileID: 7649516973468845305}
   dispersions:
@@ -162,7 +162,7 @@ MonoBehaviour:
   - {fileID: 1409484692469100842}
   - {fileID: 2070372303168201727}
   - {fileID: 7389905232088013458}
-  reloadTime: 0.5
+  reloadTime: 0.75
   controlSettings: {fileID: 0}
   gameManager: {fileID: 0}
   timer: 2

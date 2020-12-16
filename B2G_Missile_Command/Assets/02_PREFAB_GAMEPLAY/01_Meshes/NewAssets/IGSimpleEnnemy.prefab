@@ -74,15 +74,15 @@ MonoBehaviour:
   scoreValue: 100
   levelScoreTest: {fileID: 0}
   multiplierIsOnEnemyMissile: 0
-  speed: 2
-  baseSpeed: 2
+  speed: 1.5
+  baseSpeed: 1.5
   baseVirguleSpeed: 0
   type: simple
   weight: 10
   bomberSpawnTimer: 0
   bomberRotateDistance: 0
   enemyIcon: {fileID: 21300000, guid: 9d2216d9ac1033d46b9502be7bad4a24, type: 3}
-  explosionRadius: 35
+  explosionRadius: 50
   lastOfWave: 0
   virguleActivated: 0
   animator: {fileID: 0}

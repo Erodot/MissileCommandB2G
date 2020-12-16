@@ -119,12 +119,12 @@ MonoBehaviour:
   randomDirection: {x: 0, y: 0, z: 0}
   ennemySpawnTest2: {fileID: 0}
   whereSpawn: 0
-  speedModifier: 3
+  speedModifier: 4.5
   scoreValue: 150
   levelScoreTest: {fileID: 0}
   multiplierIsOnEnemyMissile: 0
-  speed: 2
-  baseSpeed: 2
+  speed: 1.5
+  baseSpeed: 1.5
   baseVirguleSpeed: 0
   type: virgule
   weight: 6
@@ -244,7 +244,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 5884073612932266601, guid: dd85db2005edb4c478b6b0dacebc96a1, type: 3}
-  m_Color: {r: 0.69544953, g: 0.3066038, b: 1, a: 1}
+  m_Color: {r: 0.9528302, g: 0.20818333, b: 0.030562414, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

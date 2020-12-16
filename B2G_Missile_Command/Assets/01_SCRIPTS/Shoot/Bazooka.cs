@@ -7,6 +7,7 @@ public class Bazooka : Shoot
 {
     public GameObject Bullet;
     public int bulletSpeed;
+    public int bulletAutoSpeed;
     public int radiusMultiplication;
     public bool tir = false;
     public GameObject Canon;
@@ -43,6 +44,7 @@ public class Bazooka : Shoot
                     go.GetComponent<NewBullet>().speed = bulletSpeed;
                     go.GetComponent<NewBullet>().explosionRadius = radiusMultiplication;
                     go.GetComponent<NewBullet>().canExplode = true;
+                    go.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
                     shoot = true;
                     canShoot = false;
                     GetComponent<BuildingLifeDamage>().ManageSound("shoot");
@@ -64,7 +66,7 @@ public class Bazooka : Shoot
             {
                 GameObject go = Instantiate(Bullet, Canon.transform.position, gameObject.transform.rotation);
                 go.GetComponent<NewBullet>().direction = Canon.transform.position - transform.position;
-                go.GetComponent<NewBullet>().speed = bulletSpeed;
+                go.GetComponent<NewBullet>().speed = bulletAutoSpeed;
 
                 currentTimer = timer;
             }
