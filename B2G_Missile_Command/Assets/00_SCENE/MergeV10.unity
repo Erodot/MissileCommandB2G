@@ -3125,7 +3125,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -6458,7 +6458,6 @@ MonoBehaviour:
   timeDiviser: 4
   minimumSpawnTime: 1.5
   whereSpawn: 0
-  announcerScript: {fileID: 0}
   gameManager: {fileID: 808077392}
   wave: {fileID: 0}
   pacingStart: 0
