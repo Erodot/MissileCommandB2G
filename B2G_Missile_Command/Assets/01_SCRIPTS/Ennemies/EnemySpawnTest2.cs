@@ -68,8 +68,6 @@ public class EnemySpawnTest2 : MonoBehaviour
 
     public int whereSpawn;
 
-    public EnemyAnnouncerTest announcerScript;
-
     public GameManager gameManager;
 
     public Text wave;
