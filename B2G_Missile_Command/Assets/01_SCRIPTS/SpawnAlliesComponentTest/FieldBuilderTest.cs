@@ -89,8 +89,8 @@ public class FieldBuilderTest : MonoBehaviour
         {
             if(TurretList[i].transform.Find("Zone") != null)
             {
-                TurretList[i].transform.Find("Zone").gameObject.GetComponent<ShootingZoneTest>().enabled = true;  //MACHADO Julien
-                TurretList[i].transform.Find("Zone").gameObject.GetComponent<ShootingZoneTest>().indexTurret = i; //Corentin SABIAUX GCC2
+                //TurretList[i].transform.Find("Zone").gameObject.GetComponent<ShootingZoneTest>().enabled = true;  //MACHADO Julien
+                //TurretList[i].transform.Find("Zone").gameObject.GetComponent<ShootingZoneTest>().indexTurret = i; //Corentin SABIAUX GCC2
                 //We set an index number for the turret. It's used by gameManager for defining the adjustable shooting zone.
             }
         }

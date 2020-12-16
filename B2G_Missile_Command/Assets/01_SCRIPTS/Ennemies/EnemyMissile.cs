@@ -156,7 +156,6 @@ public class EnemyMissile : MonoBehaviour
                 {
                     other.gameObject.GetComponent<BuildingLifeDamage>().Damaged(2);
 
-                    ShootingZoneTest turret;
                     if (other.GetComponent<Shoot>() != null) //if the building is a turret
                     {
                         other.GetComponent<Shoot>().enabled = false;
